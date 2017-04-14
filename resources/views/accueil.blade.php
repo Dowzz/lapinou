@@ -94,7 +94,7 @@
 </div>
 
 <!--Scroll article interaction-->
-
+<img src="{{URL::asset('/img/fille.png')}}" alt="">
 
 
 </body>
