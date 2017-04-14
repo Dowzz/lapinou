@@ -13,7 +13,7 @@ input[type=search-md],
 input[type=search],
 textarea.md-textarea {
     // General Styles
-    background-color: #9d9d9d;
+    background-color: #3b3b3b;
     color:white;
     padding: 10px;
     border: none;
@@ -43,8 +43,9 @@ textarea.md-textarea {
     }
     // Focused input style
     &:focus:not([readonly]) {
-        border-bottom: 1px solid $input-focus-color;
-        box-shadow: 0 1px 0 0 $input-focus-color;
+        border-color:#dddddd;
+        box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 221, 221, 0.6);
+    
     }
     // Focused label style
     &:focus:not([readonly])+label {
@@ -106,12 +107,13 @@ label {
 }
 
 .form-control {
+    color:#9d9d9d;
     padding: 0;
     padding-bottom: 0.6rem;
     padding-top: 0.5rem;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: transparent;
+    background-color: #3b3b3b;
     background-image: none;
     margin-top: 12px;
     margin-bottom: 1rem;
