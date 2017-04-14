@@ -43,28 +43,28 @@
           Catégories<span><img class="icone" src="{{URL::asset('/img/004-signs-1.png')}}"></img></span></a></ul>
         </div> 
         <div id="collapseOne" class="panel-collapse collapse">
-        <div class="panel-body">
-    <ul class ="liste">
-        <li><a href="#">Aventure / Action</a></li>
-        <li><a href="#">Classique</a></li>
-        <li><a href="#">Espionnage</a></li>
-        <li><a href="#">Fantastique</a></li>
-        <li><a href="#">Frisson / Terreur</a></li>
-        <li><a href="#">Guerre</a></li>
-        <li><a href="#">Jeunesse</a></li>
-        <li><a href="#">Historique</a></li>
-        <li><a href="#">Sentimentale</a></li>
-        <li><a href="#">Policier</a></li>
-        <li><a href="#">Roman</a></li>
-        <li><a href="#">Science-fiction</a></li>
-        <li><a href="#">Thriller</a></li>
-        <li><a href="#">Western</a></li>  
-                    </ul>
-      </div>
-    </div>
-    </li> 
+            <div class="panel-body">
+                <ul class ="liste">
+                    <li><a href="#">Aventure / Action</a></li>
+                    <li><a href="#">Classique</a></li>
+                    <li><a href="#">Espionnage</a></li>
+                    <li><a href="#">Fantastique</a></li>
+                    <li><a href="#">Frisson / Terreur</a></li>
+                    <li><a href="#">Guerre</a></li>
+                    <li><a href="#">Jeunesse</a></li>
+                    <li><a href="#">Historique</a></li>
+                    <li><a href="#">Sentimentale</a></li>
+                    <li><a href="#">Policier</a></li>
+                    <li><a href="#">Roman</a></li>
+                    <li><a href="#">Science-fiction</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Western</a></li>  
+                </ul>
+            </div>
+        </div>
+            </li> 
         <li><a href="#">Lapi'cation<span><img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a></li>               
-            </ul>
+        </ul>
         </div>
     </div>
 </nav>
@@ -92,6 +92,10 @@
         </div>
     </div>
 </div>
+
+<!--Scroll article interaction-->
+
+
 
 </body>
 </html>
