@@ -85,6 +85,7 @@ nav.sidebar li {
 .btn{
 	width: 300px;
 	font-size:16px;
+	border-radius:10px;
 
 }
 .icone {
@@ -109,6 +110,7 @@ nav.sidebar li {
 	width: 150px;
 	color: #9d9d9d;
 	background-color: black;
+	font-size: 16px;
 }
 .modal-content{
 	background-color: #212121;
@@ -122,9 +124,32 @@ nav.sidebar li {
 .toto{
 	padding-right:150px;
 }
-.social{
-	color: white;
+
+.control-label{
+	font-size:16px;
+	font-weight:normal;
 }
+.titrage:hover{
+	color:white;
+
+}
+.close{
+	color:white;
+	opacity:1;
+	text-shadow: none;
+}
+input{
+	background-color:grey;
+}
+#fbook{
+	background-color:#3B5998;
+	color:white;
+}
+#gplus{
+	background-color:#DD4B39;
+	color:white;
+}
+
 
 
 

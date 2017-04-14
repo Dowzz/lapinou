@@ -40,7 +40,6 @@ button:focus {
     &:focus,
     &.active {
         outline: 0;
-        color: #9d9d9d;
         @extend .z-depth-1-half;
     } 
     .fa {

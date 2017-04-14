@@ -16,13 +16,13 @@
                         <div class="form-group">
                             <label for="email" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email1" placeholder="Email" />
+                                <input type="email" class="input-dark-bg" class="form-control" id="email1" placeholder="Email" />
                             </div>
                         </div>
                         <div class="form-group">
-                        <label for="exampleInputPassword1" class="col-sm-2 control-label">Mot de passe</label>
+                        <label for="InputPassword1" class="col-sm-2 control-label">Mot de passe</label>
                         <div class="col-sm-10">
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" />
+                        <input type="password" class="input-dark-bg" class="form-control" id="InputPassword1" placeholder="Mot de passe" />
                         </div>
                     </div>
                     <div class="row">
@@ -49,7 +49,7 @@
                     </select>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" placeholder="Name" />
+                        <input type="text" class="input-dark-bg" class="form-control" placeholder="Pseudo" />
                     </div>
                 </div>
             </div>
@@ -57,26 +57,21 @@
         <div class="form-group">
         <label for="email" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Email" />
+                <input type="email" class="input-dark-bg" class="form-control" id="email" placeholder="Email" />
             </div>
         </div>
-        <div class="form-group">
-        <label for="mobile" class="col-sm-2 control-label">Téléphone</label>
-            <div class="col-sm-10">
-            <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
-            </div>
-        </div>
+       
         <div class="form-group">
         <label for="password" class="col-sm-2 control-label">Mot de passe</label>
             <div class="col-sm-10">
-            <input type="password" class="form-control" id="password" placeholder="Mot de passe" />
+            <input type="password" class="input-dark-bg" class="form-control" id="password" placeholder="Mot de passe" />
             </div>
         </div>
         <div class="row">
             <div class="col-sm-2">
             </div>
             <div class="col-sm-10">
-            <button type="button" class="btn btn-elegant btn-sm" id="bouton-panier">Valider</button>
+            <button type="button" class="btn btn btn-sm" id="bouton-panier">Valider</button>
             <button type="button" class="btn btn-danger btn-sm" id="bouton-panier">Annuler</button>
             </div>
         </div>
@@ -92,8 +87,8 @@
         </div>
         <div class="col-md-12">
             <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-primary btn-lg">Facebook</a> 
-            <a href="#" class="btn btn-danger btn-lg">Google</a>
+            <a href="#" id="fbook" class="btn btn-lg">Facebook</a> 
+            <a href="#" id="gplus" class="btn btn-lg">Google</a>
             </div>
         </div>
     </div>
