@@ -1,0 +1,132 @@
+// Variables
+@import "variables";
+// Bootstrap
+@import "resources/assets/stylesheets/bootstrap";
+@import "resources/assets/mdb-sass/mdb.scss";
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+
+
+/*header*/
+.logo{
+
+	width: 100px;
+	height: auto;
+}
+
+/*menu*/
+body,html{
+	height: 100%;
+	text-decoration: none;
+
+	font-family: 'Patrick Hand', cursive;
+}
+nav.sidebar, .main{
+	font-size: 16px;
+	border-radius:10px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;	
+}
+.main{
+	position: absolute;
+	width: calc(100% - 40px); /*keeps 100% minus nav size*/
+	margin-left: 40px;
+	float: right;
+	background-color: #212121;
+}
+/*lets nav bar to be showed on mouseover*/
+nav.sidebar:hover + .main{
+	margin-left: 200px;
+}
+/*Center Brand*/
+nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+}
+ /*adds border top to first nav box */
+nav.sidebar .navbar-nav > li:first-child{
+        border-top: 1px #e5e5e5 solid;
+}
+/*adds border to bottom nav boxes*/
+nav.sidebar .navbar-nav > li{
+        border-bottom: 1px #e5e5e5 solid;
+}
+nav.sidebar .navbar-nav > li:last-child{
+        border-bottom:none;
+}
+/* Colors/style dropdown box*/
+nav.sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        background-color: #212121;
+}
+/*allows nav box to use 100% width*/
+nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+        padding: 0 0px 0 0px;
+}
+/*gives sidebar width/height*/
+nav.sidebar{
+        width: 200px;
+        /*margin-left: -160px;*/
+        float: left;
+        z-index: 8000;
+}
+/* Move nav to full on mouse over*/
+nav.sidebar:hover{
+        margin-left: 0px;
+}
+/*give sidebar 100% width;*/
+nav.sidebar li {
+        width: 100%;
+}
+
+
+.btn{
+	width: 300px;
+	font-size:16px;
+
+}
+.icone {
+	width: 16px;
+	float: right;
+	padding-top: 3px;
+	margin-right: -4px;
+}
+#maison {
+	width: 16px;
+	float: right;
+	padding-top: 3px;
+	margin-right: -16px;
+}
+.panel-heading {
+	color:#9d9d9d;
+}
+.liste{
+	text-decoration: none;
+}
+#bouton-panier{
+	width: 150px;
+	color: #9d9d9d;
+	background-color: black;
+}
+.modal-content{
+	background-color: #212121;
+	color: #9d9d9d;
+	font-size:14px;
+	border-radius: 10px;
+}
+.modal-sm{
+	width: 450px;
+}
+.toto{
+	padding-right:150px;
+}
+.social{
+	color: white;
+}
+
+
+
+
+
