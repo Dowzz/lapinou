@@ -24,7 +24,7 @@
 </div>
 
 <!--Menu-->
-
+<div class="row">
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,7 +68,7 @@
         </div>
     </div>
 </nav>
-
+</div>
 
 <!-- Large modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -94,14 +94,32 @@
 </div>
 
 <!--Miniature-->
-<div class="view">  
-     <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
-     <div class="mask">  
-     <h2>Une fille parfaite</h2>  
-     <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p>  
-         <a href="#" class="info">Voir plus</a>  
-     </div>  
-</div>  
+<div class="miniature">
+    <div  class="view view-fifth">  
+         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
+         <div class="mask">  
+         <h2>Une fille parfaite</h2>  
+         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
+    </div>
+        <div class="view view-fifth">  
+         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
+         <div class="mask">  
+         <h2>Une fille parfaite</h2>  
+         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
+    </div>
+            <div class="view view-fifth">  
+         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
+         <div class="mask">  
+         <h2>Une fille parfaite</h2>  
+         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
+    </div>
+            <div class="view view-fifth">  
+         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
+         <div class="mask">  
+         <h2>Une fille parfaite</h2>  
+         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
+    </div>
+</div>
 
 
 
