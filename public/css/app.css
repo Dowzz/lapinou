@@ -6780,6 +6780,7 @@ button.close {
 
 .modal-header {
   padding: 15px;
+  text-align: center;
 }
 
 .modal-header:before, .modal-header:after {
@@ -7234,8 +7235,7 @@ button.close {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: 0;
   font-size: 20px;
   color: #fff;
   text-align: center;
@@ -16633,6 +16633,7 @@ nav.sidebar li {
   color: #9d9d9d;
   font-size: 14px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .modal-sm {

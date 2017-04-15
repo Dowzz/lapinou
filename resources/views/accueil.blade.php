@@ -14,7 +14,7 @@
 
 <!--Header-->
 
-<div class="container-fluid">
+<di>v class="container-fluid">
     <div class="row">
         <div class="col-md-4"><img class="logo" src="{{URL::asset('/img/logotest.jpg')}}"></div>
         <div class="col-md-5"><img class="lapibook" src="{{URL::asset('/img/lapibook.png')}}"></div>
@@ -63,7 +63,7 @@
             </div>
         </div>
             </li> 
-        <li><a href="#">Lapi'cation<span><img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a></li>               
+        <li><a href="" data-toggle="modal" data-target="#modal-lapication">Lapi'cation<span><img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a></li>               
         </ul>
         </div>
     </div>
@@ -77,6 +77,17 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 @include('connexion')
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-lapication" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    @include('lapication')
             </div>
         </div>
     </div>

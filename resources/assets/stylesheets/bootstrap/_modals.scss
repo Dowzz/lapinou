@@ -78,6 +78,7 @@
 // Top section of the modal w/ title and dismiss
 .modal-header {
   padding: $modal-title-padding;
+  text-align: center;
 
   @include clearfix;
 }

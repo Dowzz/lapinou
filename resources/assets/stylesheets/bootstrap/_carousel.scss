@@ -96,7 +96,7 @@
   left: 0;
   bottom: 0;
   width: $carousel-control-width;
-  @include opacity($carousel-control-opacity);
+  opacity: 0;
   font-size: $carousel-control-font-size;
   color: $carousel-control-color;
   text-align: center;
