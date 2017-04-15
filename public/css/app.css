@@ -16583,7 +16583,7 @@ nav.sidebar {
 
 /* Move nav to full on mouse over*/
 nav.sidebar:hover {
-  margin-left: 0px;
+  margin-left: 10px;
 }
 
 /*give sidebar 100% width;*/
@@ -16595,14 +16595,14 @@ nav.sidebar li {
   width: 16px;
   float: right;
   padding-top: 3px;
-  margin-right: -4px;
+  margin-right: -10px;
 }
 
 #maison {
   width: 16px;
   float: right;
   padding-top: 3px;
-  margin-right: -16px;
+  margin-right: -24px;
 }
 
 /*Fin menu*/
