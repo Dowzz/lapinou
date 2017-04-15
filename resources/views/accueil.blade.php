@@ -14,7 +14,7 @@
 
 <!--Header-->
 
-<di>v class="container-fluid">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-4"><img class="logo" src="{{URL::asset('/img/logotest.jpg')}}"></div>
         <div class="col-md-5"><img class="lapibook" src="{{URL::asset('/img/lapibook.png')}}"></div>
