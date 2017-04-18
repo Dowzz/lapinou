@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -29,12 +30,12 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="accueil">Accueil<img id="maison" src="{{URL::asset('/img/home.png')}}"></img></a>
+            <a class="navbar-brand" href="contenu">Accueil<img id="maison" src="{{URL::asset('/img/home.png')}}"></img></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="#">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
+            <li><a href="profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
             </li>
             <li>
         <div class="panel-heading">
@@ -105,33 +106,11 @@
 </div>
 
 <!--Miniature-->
-<div class="miniature">
-    <div  class="view view-fifth">  
-         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
-         <div class="mask">  
-         <h2>Une fille parfaite</h2>  
-         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
-    </div>
-        <div class="view view-fifth">  
-         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
-         <div class="mask">  
-         <h2>Une fille parfaite</h2>  
-         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
-    </div>
-            <div class="view view-fifth">  
-         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
-         <div class="mask">  
-         <h2>Une fille parfaite</h2>  
-         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
-    </div>
-            <div class="view view-fifth">  
-         <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
-         <div class="mask">  
-         <h2>Une fille parfaite</h2>  
-         <p>«Je la suis depuis plusieurs jours. Je sais où elle fait ses courses, où elle travaille. Je ne connais pas la couleur de ses yeux ni comment est son regard quand elle a peur. Mais je le saurai bientôt.»</p> <a href="#" class="info">Voir plus</a></div>  
-    </div>
-</div>
 
-
+@yield('content')
+<footer>
+@include('footer')
+</footer>
 </body>
+<footer></footer>
 </html>
