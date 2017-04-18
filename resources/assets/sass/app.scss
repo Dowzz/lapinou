@@ -31,57 +31,46 @@ nav.sidebar, .main{
 }
 .main{
 	position: absolute;
-	width: calc(100% - 40px); /*keeps 100% minus nav size*/
+	width: calc(100% - 40px);
 	margin-left: 40px;
 	float: right;
 	background-color: #212121;
 }
-
-/*lets nav bar to be showed on mouseover*/
 nav.sidebar:hover + .main{
 	margin-left: 200px;
 }
-
-/*Center Brand*/
 nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
         text-align: center;
         width: 100%;
         margin-left: 0px;
 }
- /*adds border top to first nav box */
 nav.sidebar .navbar-nav > li:first-child{
         border-top: 1px #e5e5e5 solid;
 }
-/*adds border to bottom nav boxes*/
 nav.sidebar .navbar-nav > li{
         border-bottom: 1px #e5e5e5 solid;
 }
 nav.sidebar .navbar-nav > li:last-child{
         border-bottom:none;
 }
-/* Colors/style dropdown box*/
 nav.sidebar .navbar-nav .open .dropdown-menu {
         position: static;
         float: none;
         width: auto;
         background-color: #212121;
 }
-/*allows nav box to use 100% width*/
 nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
         padding: 0 0px 0 0px;
 }
-/*gives sidebar width/height*/
 nav.sidebar{
         width: 200px;
         margin-left: -160px;
         float: left;
         z-index: 8000;
 }
-/* Move nav to full on mouse over*/
 nav.sidebar:hover{
         margin-left: 10px;
 }
-/*give sidebar 100% width;*/
 nav.sidebar li {
         width: 100%;
 }
@@ -97,7 +86,6 @@ nav.sidebar li {
 	padding-top: 3px;
 	margin-right: -24px;
 }
-
 /*Fin menu*/
 
 .btn{
@@ -155,9 +143,7 @@ nav.sidebar li {
 	background-color:#DD4B39;
 	color:white;
 }
-
 /*Fin modal*/
-
 /*Miniature*/
 .view {
     width: 216px;
@@ -207,14 +193,14 @@ nav.sidebar li {
 .view a.info {
     display: inline-block;
     text-decoration: none;
-    padding: 7px 14px;
+    padding: 7px 16px;
     background: #000;
-    color: #fff;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000
+    border-radius: 80px;
+    font-size: 20px;
 }
 .view a.info:hover {
-    box-shadow: 0 0 5px #000
+    box-shadow: 0 0 5px #9d9d9d;
 }
 .view-fifth img {
 	transition: all 0.3s ease-in-out; 
@@ -228,7 +214,7 @@ nav.sidebar li {
 .view-fifth h2{
     background: #212121;
     color: #9d9d9d;
-    box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+    box-shadow: 0 0 5px #9d9d9d;
 }
 .view-fifth p{
     opacity: 0;
@@ -286,6 +272,9 @@ nav.sidebar li {
 }
 .footer-bottom p.pull-left {
 	color: #212121;
+}
+.copy{
+
 }
 /*Fin footer*/
 

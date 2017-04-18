@@ -40,7 +40,7 @@
     </div>
     
     <div class="footer-bottom">
-        <div class="container">
+        <div class="container" id="copy">
             <p class="pull-left"> Copyright © 2017, LAPIBOOK. All rights reserved.</p>
         </div>
     </div>
