@@ -13,7 +13,8 @@
 <body>
 
 <!--Header-->
-
+<!--Menu-->
+@include('sidebar')
 <div class="container-fluid" id="header">
     <div class="row">
         <div class="col-md-4"><img class="logo" src="{{URL::asset('/img/logotest.jpg')}}"></div>
@@ -23,8 +24,7 @@
     </div>
 </div>
 
-<!--Menu-->
-@include('sidebar')
+
 
 <!-- Large modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -61,8 +61,11 @@
 </div>
 
 <!--Miniature-->
+<div id="miniature">
 
-@yield('content')
+
+</div>
+
 
 <!--Footer-->
 

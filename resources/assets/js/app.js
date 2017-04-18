@@ -19,3 +19,28 @@ const app = new Vue({
     el: '#app'
 });
 
+$(document).ready(function(){
+	$(".ajax a").click(function(){
+		page=$(this).attr("href");
+		$.ajax({
+			url:page,
+			cache:false,
+			success:function(html){
+				afficher(html);
+			},
+			error:function(XMLHttpRequest,textStatus, errorThrown){
+				alert(textStatus);
+			}
+		})
+		return false;
+	});
+});
+
+function afficher(data){
+$("#miniature").slideUp(500,function(){
+	$("#miniature").empty();
+	$("#miniature").append(data);
+	$("#miniature").slideDown(1000);
+})
+}
+
