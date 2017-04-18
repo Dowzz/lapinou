@@ -1,4 +1,5 @@
-
+// Variables
+@import "variables";
 // Bootstrap
 @import "resources/assets/stylesheets/bootstrap";
 @import "resources/assets/mdb-sass/mdb.scss";
@@ -15,7 +16,7 @@
 body,html{
 	height: 100%;
 	text-decoration: none;
-
+    
 	font-family: 'Patrick Hand', cursive;
 }
 nav.sidebar, .main{
@@ -150,9 +151,6 @@ nav.sidebar li {
 #gplus{
 	background-color:#DD4B39;
 	color:white;
-}
-#mme{
-	margin-right:0px;
 }
 
 /*Fin modal*/

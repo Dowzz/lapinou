@@ -40,15 +40,8 @@
         <div class="form-group">
         <label for="email" class="col-sm-2 control-label">Pseudo</label>
             <div class="col-sm-10">
-                <div class="row" id="mme">
-                    <div class="col-md-3">
-                    <select class="form-control">
-                        <option>Mlle</option>
-                        <option>Mme</option>
-                        <option>Mr</option>
-                    </select>
-                    </div>
-                    <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
                         <input type="text" class="input-dark-bg" class="form-control" placeholder="Pseudo" />
                     </div>
                 </div>
@@ -72,7 +65,7 @@
             </div>
             <div class="col-sm-10">
             <button type="button" class="btn btn-elegant btn-sm" id="bouton-panier">Valider</button>
-            <button type="button" class="btn btn-danger btn-sm" id="bouton-panier">Annuler</button>
+            <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button>
             </div>
         </div>
         </form>
