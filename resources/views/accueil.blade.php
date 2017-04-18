@@ -63,8 +63,10 @@
 <!--Miniature-->
 
 @yield('content')
-<footer>
+
+<!--Footer-->
+
 @include('footer')
-</footer>
+
 </body>
 </html>

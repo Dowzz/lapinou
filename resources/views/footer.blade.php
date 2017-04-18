@@ -32,16 +32,11 @@
                     <ul>
                         <li> <a href="#"> Politique de confidentialité </a> </li>
                         <li> <a href="#"> CGV </a> </li>
-                        <li> <a href="#"> Cookies </a> </li>
+                        <li> <a href="#"> Cookies </a> </li></br>
+                        <li> Copyright © 2017, LAPIBOOK. All rights reserved. </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <div class="container" id="copy">
-            <p class="pull-left"> Copyright © 2017, LAPIBOOK. All rights reserved.</p>
         </div>
     </div>
 </footer>
