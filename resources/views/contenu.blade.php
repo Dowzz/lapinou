@@ -1,5 +1,15 @@
 @extends('accueil')
+
+@push('stylesheets')
+    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+@endpush
+@push('scripts')
+    <script src="{{ elixir('js/all.js') }}"></script>
+@endpush
+
 @section('content')
+<link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+<script src="{{ elixir('js/all.js') }}"></script>
 <div class="miniature">
     <div  class="view view-fifth">  
          <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
