@@ -63,7 +63,6 @@
 <!--Miniature-->
 <div id="miniature">
 
-
 </div>
 
 

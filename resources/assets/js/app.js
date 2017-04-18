@@ -19,6 +19,8 @@ const app = new Vue({
     el: '#app'
 });
 
+$("#miniature").load("contenu");
+
 $(document).ready(function(){
 	$(".ajax a").click(function(){
 		page=$(this).attr("href");
