@@ -5,8 +5,7 @@
 
     <meta charset="utf-8" />
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
-    <script src="{{ elixir('js/all.js') }}"></script>
-
+@stack('stylesheets')
     
 
     <title>Lapibook</title>
@@ -68,5 +67,4 @@
 @include('footer')
 </footer>
 </body>
-<footer></footer>
 </html>
