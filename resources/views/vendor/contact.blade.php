@@ -38,13 +38,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="subject">Objet de la demande</label>
-                            <select id="subject" name="subject" class="form-control" required="required">
-                                <option value="na" selected="">Choose One:</option>
-                                <option value="service">General Customer Service</option>
-                                <option value="suggestions">Suggestions</option>
-                                <option value="product">Product Support</option>
-                            </select>
-                        </div>
+                                    <select id="subject" name="subject" class="form-control" required="required">
+                                        <option value="na" selected="">Selection de la demande :</option>
+                                        <option value="annulation">Modification / Annulation de la commande</option>
+                                        <option value="remboursement">Retour et Remboursement</option>
+                                        <option value="telechargement">Téléchargement d'un e-book</option>
+                                        <option value="lecture">Lecture d'un e-book</option>
+                                        <option value="loi">Loi informatique et libertés</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-10">
