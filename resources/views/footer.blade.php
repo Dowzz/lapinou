@@ -11,10 +11,9 @@
                     <ul>
                         <li> Lapibook </li>
                         <li> 7 rue des Carottes </li>
-                        <li> 00 000 Rabbit City </li></ul></br>
-                        <li> <a href="#"> contact@lapibook.fr </a> </li></br>
-                        <li> 02 31 00 00 00 </li></br>
-                        <li> <a href="#"> Contactez-nous </a> </li>
+                        <li> 00 000 Rabbit City </li></br>
+                        <li> 02 31 00 00 00 </li>
+                        <li> <a href="#"> contact@lapibook.fr </a> </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -22,10 +21,10 @@
                     <ul>
                         <li> <a href="#"> Accueil </a> </li>
                         <li> <a href="#"> Catégorie </a> </li>
-                        <li> <a href="#"> Connexion </a> </li>
-                        <li> <a href="#"> Inscription </a> </li>                   
+                        <li> <a href="#"> Connexion / Inscription </a> </li>                 
                         <li> <a href="#"> Lapi'book </a> </li>
                         <li> <a href="#"> Panier </a> </li>
+                        <li> <a href="#"> Contactez-nous </a> </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -37,16 +36,12 @@
                     </ul>
                 </div>
             </div>
-            <!--/.row-->
         </div>
-        <!--/.container-->
     </div>
-    <!--/.footer-->
-
+    
     <div class="footer-bottom">
         <div class="container">
             <p class="pull-left"> Copyright © 2017, LAPIBOOK. All rights reserved.</p>
         </div>
     </div>
-    <!--/.footer-bottom-->
 </footer>
