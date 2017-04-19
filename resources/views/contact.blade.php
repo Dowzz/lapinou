@@ -1,14 +1,9 @@
-<h4 class="modal-title" id="myModalLabel"> Contactez-nous </h4>
+<h4 class="modal-title" id="modal-contact"> Contactez-nous </h4>
 
 <div class="modal-body">
     <div class="row">
         <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
  
-<!-- Navigation -->
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#Login" data-toggle="tab">Connexion</a></li>
-                <li><a href="#Registration" data-toggle="tab">Inscription</a></li>
-            </ul>
 <!-- Formulaires -->
 
                     <div class="tab-pane" id="Registration">
