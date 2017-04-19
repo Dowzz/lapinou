@@ -7,14 +7,19 @@
 
 /*header*/
 .logo{
-
-	width: 100px;
+	padding-left: 100px;
+	width: 380px;
 	height: auto;
 }
 #header{
 	margin-top: 20px;
 }
 
+.btn{
+	width: 300px;
+	font-size:16px;
+	border-radius:10px;
+}
 /*menu*/
 body,html{
 	height: 100%;
@@ -88,13 +93,6 @@ nav.sidebar li {
 	margin-right: -24px;
 }
 /*Fin menu*/
-
-.btn{
-	width: 300px;
-	font-size:16px;
-	border-radius:10px;
-}
-
 /*Modal*/
 .panel-heading {
 	color:#9d9d9d;
@@ -269,16 +267,28 @@ nav.sidebar li {
 .footer a {
 	color: #9d9d9d;
 }
-/*
-.footer-bottom {
-	background: #9d9d9d;
-}
-.footer-bottom p.pull-left {
-	color: #212121;
-}
-.copy{
-
-}*/
 /*Fin footer*/
+/*Formulaire contact*/
+#comment{
+	height: 250px;
+	background-color: #3b3b3b;
+	border: 0px;
+	border-radius: 10px;
 
+	//box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(221, 221, 221, 0.6);
+}
+#bordure{
+	border-right: 1px dotted #C2C2C2;
+	padding-right: 0px; 
+	width: 500px;
+	margin-right: 10px;
+}
+#demande{
+	border-radius: 10px;
+	border: 0px;
+
+
+}
+
+/*Fin formulaire contact*/
 
