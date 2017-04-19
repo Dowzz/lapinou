@@ -16527,6 +16527,7 @@ nav.sidebar, .main {
   border-radius: 10px;
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
+  margin-top: 20px;
 }
 
 .main {

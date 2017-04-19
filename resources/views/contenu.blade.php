@@ -1,4 +1,4 @@
-@if (Auth::check()) 
+@if (Auth::check())
 <div class="mini">
     <div  class="view view-fifth">  
          <img src="{{URL::asset('/img/fille.png')}}" alt=""> 
