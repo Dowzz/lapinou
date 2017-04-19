@@ -24,7 +24,7 @@
                         <li> <a href="#"> Connexion / Inscription </a> </li>                 
                         <li> <a href="#"> Lapi'book </a> </li>
                         <li> <a href="#"> Panier </a> </li>
-                        <li> <a href="#"> Contactez-nous </a> </li>
+                        <li> <a href="contact" data-toggle="modal" data-target="#myModal"> Contactez-nous </a> </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
