@@ -47,7 +47,6 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <input type="text" name="pseudo" class="input-dark-bg" class="form-control" placeholder="Pseudo" />
-                                        @if($errors->has('pseudo')) <p>{{$errors->first('pseudo')}}</p>@endif
                                         </div>
                                     </div>
                                 </div>
@@ -55,23 +54,19 @@
                             <div class="form-group">
                                 <label for="email" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" name="email" class="input-dark-bg" class="form-control" id="email" placeholder="Email" />
-                                    @if($errors->has('email')) <p>{{$errors->first('email')}}</p>@endif
+                                    <input type="email" name="email" class="input-dark-bg" class="form-control" id="email" placeholder="Email" /> 
                                 </div>
                             </div>
-       
                             <div class="form-group">
                                 <label for="password" class="col-sm-2 control-label">Mot de passe</label>
                                 <div class="col-sm-10">
                                     <input type="password" name="password" class="input-dark-bg" class="form-control" id="password" placeholder="Mot de passe" />
-                                    @if($errors->has('password')) <p>{{$errors->first('password')}}</p>@endif
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="col-sm-2 control-label">Confirmation Mot de passe</label>
                                 <div class="col-sm-10">
                                     <input type="password" name="cpassword" class="input-dark-bg" class="form-control" id="cpassword" placeholder="Confirmation Mot de passe" />
-                                    @if($errors->has('cpassword')) <p>{{$errors->first('cpassword')}}</p>@endif
                                 </div>
                             </div>
                             <div class="row">

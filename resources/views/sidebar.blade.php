@@ -19,11 +19,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
         <ul class="nav navbar-nav">
+            @if (Auth::check())
             <li class="ajax"><a href="profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
             </li>
+            @endif
             <li>
         <div class="panel-heading">
-    <ul  class="panel-title">
+        <ul  class="panel-title">
         <a class="titrage" data-toggle="collapse" href="#collapseOne">
           Catégories<span><img class="icone" src="{{URL::asset('/img/004-signs-1.png')}}"></img></span></a></ul>
         </div> 
@@ -55,3 +57,4 @@
     </div>
 </nav>
 </div>
+

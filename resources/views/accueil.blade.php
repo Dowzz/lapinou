@@ -33,7 +33,6 @@
         @if (Auth::user())
         <div class="col-md-3"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><form id="logout-form" action="logout" method="POST" style="display: block;"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
         @else
-
         <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#myModal">Inscription / Connexion</button></div>
         @endif
         <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier">Panier</button></div>
