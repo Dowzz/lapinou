@@ -12,6 +12,16 @@
 </head>
 <body>
 
+            @if(Session::has('success'))
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                        {{Session::get('success')}}
+                    </div>
+                </div>
+            </div>
+            @endif
 <!--Menu-->
 @include('sidebar')
 
@@ -20,7 +30,12 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-6"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
+        @if (Auth::user())
+        <div class="col-md-3"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><form id="logout-form" action="logout" method="POST" style="display: block;"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
+        @else
+
         <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#myModal">Inscription / Connexion</button></div>
+        @endif
         <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier">Panier</button></div>
     </div>
 </div>

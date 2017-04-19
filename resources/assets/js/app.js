@@ -19,7 +19,7 @@ const app = new Vue({
     el: '#app'
 });
 
-$("#miniature").load("contenu");
+$("#miniature").load("home");
 
 $(document).ready(function(){
 	$(".ajax a").click(function(){

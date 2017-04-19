@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="ajax" class="navbar-header">
-            <a class="navbar-brand" href="contenu">Accueil<img id="maison" src="{{URL::asset('/img/home.png')}}"></img></a>
+            <a class="navbar-brand" href="home">Accueil<img id="maison" src="{{URL::asset('/img/home.png')}}"></img></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">

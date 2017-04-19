@@ -5,12 +5,18 @@
         <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
  
 <!-- Navigation -->
+
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#Login" data-toggle="tab">
+                <li class="active"><a href="#Login" data-toggle="tab">Connexion</a></li>
+                <li><a href="#Registration" data-toggle="tab">Inscription</a></li>
+            </ul>
 <!-- Formulaires -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="Login">
-                        <form role="form" class="form-horizontal">
+
+                        <form action="login_check" method="post" role="form" class="form-horizontal">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+
                             <div class="form-group">
                                 <label for="email" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">

@@ -7,6 +7,7 @@ use Input;
 use Validator;
 use Redirect;
 use App\Register;
+use Auth;
 class RegisterController extends Controller{
 		//
 public function store(){
@@ -31,11 +32,47 @@ public function store(){
 		return Redirect::to('accueil')->withErrors($validator);
 	}else{
 		Register::formstore(Input::except(array('token','cpassword')));
-		return Redirect::to('accueil')->with('success','vous etes enregistré');
+		return Redirect::to('accueil')->with('success','Bienvenue !');
 	}
 
 }
+
+public function login(){
+	$data=Input::except(array('token'));
+	//var_dump($data);
+	$rule=array(
+		'email'=>'required|email',
+		'password'=>'required',
+		);
+
+	
+	$validator=Validator::make($data,$rule);
+
+	if ($validator->fails()) {
+		return Redirect::to('accueil')->withErrors($validator);
+	}else{
+		$data=Input::except(array('_token'));
+	}
+	$userdata=array(
+		'email'=>Input::get('email'),
+		'password'=>Input::get('password')
+		);
+
+		if(Auth::attempt($data)){
+			return Redirect::to('accueil');
+		}else{
+			return Redirect::to('accueil');
+		}
+		}
+		public function logout()
+    	{
+        	Auth::Logout();
+        	\Session::flush();
+        	return redirect('accueil');
+    	}
+
 }
+
 
 
 
