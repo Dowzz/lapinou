@@ -31,7 +31,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-6"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
         @if (Auth::user())
-        <div class="col-md-3"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><form id="logout-form" action="logout" method="POST" style="display: block;"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
+        <div class="col-md-3"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
         @else
         <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#myModal">Inscription / Connexion</button></div>
         @endif
@@ -43,7 +43,7 @@
 
 <!-- Large modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
