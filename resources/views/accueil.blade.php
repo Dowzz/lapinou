@@ -31,11 +31,11 @@
         <div class="col-md-2"></div>
         <div class="col-md-6"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
         @if (Auth::user())
-        <div class="col-md-3"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
+        <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
         @else
-        <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#myModal">Inscription / Connexion</button></div>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#myModal">Inscription / Connexion</button></div>
         @endif
-        <div class="col-md-3"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier">Panier</button></div>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier">Panier</button></div>
     </div>
 </div>
 
