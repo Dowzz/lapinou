@@ -1,3 +1,5 @@
+
+
 <h4 class="modal-title" id="myModalLabel"> Connexion / Inscription </h4>
 
 <div class="modal-body">
@@ -35,7 +37,7 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
-                                <a href="javascript:;">Mot de passe oublié ?</a>
+                                <a href="">Mot de passe oublié ?</a>
                             </div>
                         </div>
                     </form>
@@ -44,7 +46,7 @@
 
                 <div class="tab-pane" id="Registration">
 
-                    <form action="register_action" method="post" role="form" class="form-horizontal">
+                    <form action="register_action" method="post" role="form" class="form-horizontal" id="registration" onsubmit="return false">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                         <div class="form-group">
@@ -68,21 +70,23 @@
                         <div class="form-group">
                             <label for="password" class="col-sm-2 control-label">Mot de passe</label>
                             <div class="col-sm-10">
-                                <input type="password" name="password" class="input-dark-bg" class="form-control" id="password" placeholder="Mot de passe" />
+                                <input type="password" name="password" class="input-dark-bg" class="form-control" id="password" placeholder="Mot de passe" required />
+                                <span id="aideMdp"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="password" class="col-sm-2 control-label">Confirmation Mot de passe</label>
                             <div class="col-sm-10">
-                                <input type="password" name="cpassword" class="input-dark-bg" class="form-control" id="cpassword" placeholder="Confirmation Mot de passe" />
+                                <input type="password" name="cpassword" class="input-dark-bg" class="form-control" id="cpassword" placeholder="Confirmation Mot de passe" required/>
+                                <span id="infoMdp"></span>
                             </div>
                         </div>
 
                         <div class="row">
                             
                             <div class="col-sm-12 col-md-12">
-                                <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Valider</button>
+                                <input type="submit" class="btn btn-elegant btn-sm" id="bouton-panier" label="valider"></input>
                                 <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button>
                             </div>
                         </div>
