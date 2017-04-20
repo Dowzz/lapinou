@@ -56,5 +56,8 @@
         </div>
     </div>
 </nav>
+<div class="main">
+<!-- Content Here -->
+</div>
 </div>
 
