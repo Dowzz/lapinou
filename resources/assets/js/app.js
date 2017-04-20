@@ -49,6 +49,101 @@ $("#miniature").slideUp(500,function(){
 }
 //test
 
+    function htmlbodyHeightUpdate(){
+		var height3 = $( window ).height()
+		var height1 = $('.nav').height()+50
+		height2 = $('.main').height()
+		if(height2 > height3){
+			$('html').height(Math.max(height1,height3,height2)+10);
+			$('body').height(Math.max(height1,height3,height2)+10);
+		}
+		else
+		{
+			$('html').height(Math.max(height1,height3,height2));
+			$('body').height(Math.max(height1,height3,height2));
+		}
+		
+	}
+	$(document).ready(function () {
+		htmlbodyHeightUpdate()
+		$( window ).resize(function() {
+			htmlbodyHeightUpdate()
+		});
+		$( window ).scroll(function() {
+			height2 = $('.main').height()
+  			htmlbodyHeightUpdate()
+		});
+	});
+
+	
+var password1 = $("#password");
+var password2 = $("#cpassword");
+var form = $("#registration");
+
+password1.on("input", function(e) {
+    var mdp = e.target.value; // Valeur saisie dans le champ mdp
+    var message = "Erreur : mot de passe trop court";
+    var couleurMsg = "red"; // Longueur faible => couleur rouge
+    var chiffre= false;
+
+    if (mdp.length >= 8) {
+    message = "mot de passe correct";
+    couleurMsg = "green"; // Longueur suffisante => couleur verte
+	}
+    if (mdp.length <= 6) {
+        message = "Erreur : mot de passe trop facile";
+        couleurMsg = "orange"; // Longueur moyenne => couleur orange
+    }
+	for (var i = 0; i < mdp.length; i++) {
+		if(!isNaN(mdp[i])){
+			chiffre= true;
+		}
+	}
+	if(chiffre== false){
+		message = "Erreur : le mot de passe ne contient aucun chiffre";
+		couleurMsg = "red";
+		bool = false;
+    }
+     
+
+    var aideMdpElt = document.getElementById("aideMdp");
+
+    aideMdpElt.textContent = message; // Texte de l'aide
+    aideMdpElt.style.color = couleurMsg; // Couleur du texte de l'aide
+
+});
+
+
+password2.on("input", function(e) {
+	    var password1 = $("#password");
+	    var form = $("#registration");
+	    var mdp1 = password1.val();//NAME ??
+	    var mdp2 = e.target.value;
+
+	    var message = "Erreur : les mots de passe saisis sont différents";
+	    var couleurMsg = "red";
+	    var bool1 = false; 
+
+
+	    
+	    console.log("--------------------");
+	    console.log(mdp1.localeCompare(mdp2));
+	    if (!mdp1.localeCompare(mdp2)) {
+	        message = "Mot de passe OK";
+	        couleurMsg = "green";
+	        form.attr("onsubmit", "return true");
+	    }
+	    else{
+	    	message = "Erreur : les mots de passe saisis sont différents";
+	    	form.attr("onsubmit", "return false");
+	    }
+
+	    var aide = document.getElementById("infoMdp");
+	    aide.textContent = message;
+	    aide.style.color = couleurMsg;
+	    e.preventDefault();
+
+});
 
 
 
