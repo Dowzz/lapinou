@@ -7,8 +7,8 @@
 <script src="{{ elixir('js/all.js') }}"></script>
 @endpush
 
-
-<nav class="navbar navbar-inverse sidebar" role="navigation">
+<div class="row">
+<nav class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -18,7 +18,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Accueil</a>
+            <ul>
+            <li class="ajax">
+            <a class="navbar-brand" href="home">Accueil</a>
+            </li>
+            </ul>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -60,3 +64,4 @@
         </div>
     </div>
 </nav>
+</div>
