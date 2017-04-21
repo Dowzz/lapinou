@@ -32,7 +32,7 @@ public function store(){
 		return Redirect::to('accueil')->withErrors($validator);
 	}else{
 		Register::formstore(Input::except(array('token','cpassword')));
-		return Redirect::to('accueil')->with('success','Bienvenue !');
+		return Redirect::to('accueil')->with('success',' Compte crée, merci et Bienvenue !');
 	}
 
 }
@@ -61,7 +61,7 @@ public function login(){
 		if(Auth::attempt($data)){
 			return Redirect::to('accueil');
 		}else{
-			return Redirect::to('accueil');
+			return Redirect::to('accueil')->with('error','Ce compte n\'existe pas');
 		}
 		}
 		public function logout()

@@ -87,6 +87,7 @@
                             
                             <div class="col-sm-12 col-md-12">
                                 <input type="submit" class="btn btn-elegant btn-sm" id="bouton-panier" label="valider"></input>
+                                
                                 <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button>
                             </div>
                         </div>

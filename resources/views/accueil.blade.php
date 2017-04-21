@@ -22,6 +22,14 @@
                 </div>
             </div>
             @endif
+            @if(Session::has('error'))
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger"><p>Ce compte n'existe pas</p>
+                    <button type="button" class="close" data-dismiss="alert">x</button></div></div>
+            </div>
+            @endif
+
 <!--Menu-->
 @include('sidebar')
 
@@ -31,7 +39,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-6"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
         @if (Auth::user())
-        <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button><input type="hidden" name="_token" value="{{csrf_token()}}"></form></div> 
+        <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div> 
         @else
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#myModal">Inscription / Connexion</button></div>
         @endif

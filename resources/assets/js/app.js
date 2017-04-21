@@ -126,8 +126,8 @@ password2.on("input", function(e) {
 
 
 	    
-	    console.log("--------------------");
-	    console.log(mdp1.localeCompare(mdp2));
+	    //console.log("--------------------");
+	    //console.log(mdp1.localeCompare(mdp2));
 	    if (!mdp1.localeCompare(mdp2)) {
 	        message = "Mot de passe OK";
 	        couleurMsg = "green";
