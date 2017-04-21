@@ -61,7 +61,7 @@ public function login(){
 		if(Auth::attempt($data)){
 			return Redirect::to('accueil');
 		}else{
-			return Redirect::to('accueil')->with('error','Ce compte n\'existe pas');
+			return Redirect::to('accueil')->with('success','Ce compte n\'existe pas');
 		}
 		}
 		public function logout()

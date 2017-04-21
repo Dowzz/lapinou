@@ -16637,7 +16637,7 @@ nav.sidebar, .main {
 }
 
 /* .....NavBar: Fully showing nav bar..... */
-@media (min-width: 1680px) {
+@media (min-width: 2400px) {
   /*Allow main to be next to Nav*/
   .main {
     width: calc(100% - 200px);
@@ -16652,6 +16652,11 @@ nav.sidebar, .main {
   /*Show hidden items on nav*/
   nav.sidebar .forAnimate {
     opacity: 1;
+  }
+  .btn {
+    width: 300px;
+    font-size: 16px;
+    border-radius: 10px;
   }
 }
 
