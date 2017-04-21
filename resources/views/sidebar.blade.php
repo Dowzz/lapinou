@@ -4,7 +4,7 @@
 <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 @endpush
 @push('scripts')
-<script src="{{ elixir('js/all.js') }}"></script>
+<script src="{{ elixir('js/app.js') }}"></script>
 @endpush
 
 <div class="row">

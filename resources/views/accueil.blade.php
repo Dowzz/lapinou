@@ -28,8 +28,8 @@
 <!--Header-->
 <div class="container-fluid" id="header">
     <div class="row">
-        <div class="col-md-2">@include('sidebar')</div>
-        <div class="col-md-6"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
+        <div class="col-md-2 col-sm-12">@include('sidebar')</div>
+        <div class="col-md-6 col-sm-12"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div> 
         @else
@@ -90,8 +90,8 @@
 
 
 <!--Footer-->
-
+<div class="container">
 @include('footer')
-
+</div>
 </body>
 </html>
