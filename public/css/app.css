@@ -16922,18 +16922,49 @@ body {
 }
 
 @media (max-width: 767px) {
-  .profile img {
+  nav.sidebar.navbar {
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  nav.sidebar.navbar .profile img {
     width: 75px;
   }
-  .profile h2 {
+  nav.sidebar.navbar .profile h2 {
     font-size: 1.7em;
   }
-  .stats span {
+  nav.sidebar.navbar .stats span {
     font-size: 2em;
   }
 }
 
-/* Landscape phones and down */
-/*Fin profil*/
+@media (max-width: 767px) and (min-width: 1200px) {
+  nav.sidebar.navbar {
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 768px) and (max-width: 979px) {
+  nav.sidebar.navbar {
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Landscape phones and down */
+}
+
+@media (max-width: 767px) and (max-width: 480px) {
+  nav.sidebar.navbar {
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  /*Fin profil*/
+}
 
 /*# sourceMappingURL=app.css.map */
