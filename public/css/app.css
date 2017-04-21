@@ -16559,7 +16559,7 @@ nav.sidebar, .main {
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 /*small/medium side display*/
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   /*Allow main to be next to Nav*/
   .main {
     position: absolute;
@@ -16567,6 +16567,13 @@ nav.sidebar, .main {
     /*keeps 100% minus nav size*/
     margin-left: 40px;
     float: right;
+  }
+  .icone {
+    width: 20px;
+    float: right;
+    padding-top: 3px;
+    margin-right: 0px;
+    margin-left: 10px;
   }
   /*lets nav bar to be showed on mouseover*/
   nav.sidebar:hover + .main {
@@ -16938,33 +16945,7 @@ body {
   }
 }
 
-@media (max-width: 767px) and (min-width: 1200px) {
-  nav.sidebar.navbar {
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-}
-
-@media (max-width: 767px) and (min-width: 768px) and (max-width: 979px) {
-  nav.sidebar.navbar {
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Landscape phones and down */
-}
-
-@media (max-width: 767px) and (max-width: 480px) {
-  nav.sidebar.navbar {
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-  /*Fin profil*/
-}
+/* Landscape phones and down */
+/*Fin profil*/
 
 /*# sourceMappingURL=app.css.map */

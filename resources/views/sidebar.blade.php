@@ -3,9 +3,7 @@
 @push('stylesheets')
 <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 @endpush
-@push('scripts')
-<script src="{{ elixir('js/app.js') }}"></script>
-@endpush
+
 
 <div class="row">
 <nav class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">

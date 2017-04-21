@@ -60,15 +60,23 @@ nav.sidebar, .main{
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 	/*small/medium side display*/
-@media (min-width: 991px) {
+@media (min-width: 992px) {
 	/*Allow main to be next to Nav*/
 	.main{
 		position: absolute;
 		width: calc(100% - 40px); /*keeps 100% minus nav size*/
 		margin-left: 40px;
 		float: right;
-		
+
 	}
+	.icone {
+	width: 20px;
+	float: right;
+	padding-top: 3px;
+	margin-right: 0px;
+	margin-left:10px;
+	}
+
 	/*lets nav bar to be showed on mouseover*/
 	nav.sidebar:hover + .main{
 		margin-left: 200px;
@@ -386,43 +394,30 @@ body{
 	height: 100px;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
+
 	nav.sidebar.navbar {
-	border-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-top-left-radius: 0px;
-  .profile img{
-    width:75px;
-  }
-  .profile h2{
-    font-size:1.7em;
-  }
-  .stats span{
-    font-size: 2em;
-  }
+		border-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+	  		.profile img{
+	    width:75px;
+	  	}
+	  		.profile h2{
+	    font-size:1.7em;
+	 	}
+	  		.stats span{
+	    font-size: 2em;
+	  	}
+	}
 }
 @media (min-width: 1200px) {
-	nav.sidebar.navbar {
-	border-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-top-left-radius: 0px;
-	}
+
 }
 @media (min-width: 768px) and (max-width: 979px) { 
-	nav.sidebar.navbar {
-	border-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-top-left-radius: 0px;
-	}
+	
 }
  
 /* Landscape phones and down */
-@media (max-width: 480px) { 
-	nav.sidebar.navbar {
-	border-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-top-left-radius: 0px;
-	}
 
 /*Fin profil*/
-}}
