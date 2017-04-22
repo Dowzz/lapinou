@@ -16943,6 +16943,23 @@ body {
   nav.sidebar.navbar .stats span {
     font-size: 2em;
   }
+  .icone {
+    width: 20px;
+    float: right;
+    padding-top: 3px;
+    margin-right: 0px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .icone {
+    width: 20px;
+    float: right;
+    padding-top: 3px;
+    margin-right: 0px;
+    margin-left: 10px;
+  }
 }
 
 /* Landscape phones and down */
