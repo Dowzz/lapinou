@@ -84,7 +84,8 @@
 
 
 <!--Footer-->
-<div class="container">
+<div class="footer" id="footer">
+
 @include('footer')
 </div>
 </body>

@@ -3,10 +3,9 @@
 
 
 <footer>
-    <div class="footer" id="footer">
-        <div class="container">
+
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <h3> Contact </h3>
                     <ul>
                         <li> Lapibook </li>
@@ -14,20 +13,25 @@
                         <li> 00 000 Rabbit City </li></br>
                         <li> 02 31 00 00 00 </li>
                         <li> <a href="#"> contact@lapibook.fr </a> </li>
+                        
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <h3> Liens </h3>
                     <ul>
-                        <li> <a href="#"> Accueil </a> </li>
-                        <li> <a href="#"> Catégorie </a> </li>
-                        <li> <a href="#"> Connexion / Inscription </a> </li>                 
-                        <li> <a href="#"> Lapi'book </a> </li>
-                        <li> <a href="#"> Panier </a> </li>
-                        <li> <a href="contact" data-toggle="modal" data-target="#modal-contact"> Contactez-nous </a> </li>
+                        <li class="ajax"><a href="home">Accueil</a></li>
+                        @if (Auth::check())
+                            <li class="ajax"><a href="profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
+                            </li>
+                        @endif                        
+                        <li> <a data-toggle="modal" data-target="#myModal" href="#"> Connexion / Inscription </a> </li>              
+                        <li> <a data-toggle="modal" data-target="#modal-lapication" href="lapibook"> Lapi'book </a> </li>
+                        <li> <a data-toggle="modal" data-target="#modal-panier" href="panier"> Panier </a> </li>
+                        <li> <a data-toggle="modal" data-target="#modal-contact" href="contact"> Contactez-nous </a> </li>
+                       
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <h3> Mentions Légales </h3>
                     <ul>
                         <li> <a href="#"> Politique de confidentialité </a> </li>

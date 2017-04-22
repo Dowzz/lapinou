@@ -1,7 +1,7 @@
 <h4 class="modal-title" id="modal-contact"> Contactez-nous </h4> 
 <div class="modal-body">
-    <form class="col-md-12">
-        <div class="row">
+    <div class="row">
+        <form class="col-md-12"> 
             <div class="col-md-6 col-sm-12">
                 <div class="form-group">
                 <label for="pseudo" class="control-label">Pseudo</label>
