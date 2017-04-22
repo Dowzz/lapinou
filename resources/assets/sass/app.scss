@@ -61,6 +61,7 @@ nav.sidebar, .main{
 /* .....NavBar: Icon only with coloring/layout.....*/
 	/*small/medium side display*/
 @media (min-width: 992px) {
+
 	/*Allow main to be next to Nav*/
 	.main{
 		position: absolute;
@@ -417,6 +418,9 @@ body{
 		margin-right: 0px;
 		margin-left:10px;
 	}
+		.footer {
+		height: 560px;
+	}
 }
 @media (min-width: 1200px) {
 
@@ -428,6 +432,9 @@ body{
 		padding-top: 3px;
 		margin-right: 0px;
 		margin-left:10px;
+	}
+		.footer {
+		height: 560px;
 	}
 }
  
