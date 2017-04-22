@@ -16575,6 +16575,9 @@ nav.sidebar, .main {
     margin-right: 0px;
     margin-left: 10px;
   }
+  .footer {
+    height: 560px;
+  }
   /*lets nav bar to be showed on mouseover*/
   nav.sidebar:hover + .main {
     margin-left: 200px;
@@ -16950,6 +16953,9 @@ body {
     margin-right: 0px;
     margin-left: 10px;
   }
+  .footer {
+    height: 560px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -16959,6 +16965,9 @@ body {
     padding-top: 3px;
     margin-right: 0px;
     margin-left: 10px;
+  }
+  .footer {
+    height: 560px;
   }
 }
 
