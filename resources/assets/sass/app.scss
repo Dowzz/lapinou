@@ -173,7 +173,7 @@ nav.sidebar, .main{
 	width: 300px;
 	font-size:16px;
 	border-radius:10px;
-}
+	}
 }
 
 /*Fin menu*/
@@ -364,12 +364,14 @@ nav.sidebar, .main{
 #bordure{
 	border-right: 1px dotted #C2C2C2;
 	padding-right: 0px; 
-	width: 500px;
+	width: 300px;
 	margin-right: 10px;
 }
 #demande{
 	border-radius: 10px;
 	border: 0px;
+	width: 97%;
+    margin-left: 5px;
 }
 /*Fin formulaire contact*/
 /*Profil*/
