@@ -19,6 +19,6 @@ elixir(function(mix) {
     .webpack([
         'app.js',	
     ])
-    .version(["public/js/all.js"]);
+    .version(["public/js/app.js"]);
 });
 

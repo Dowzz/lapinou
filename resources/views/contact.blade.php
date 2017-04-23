@@ -34,6 +34,8 @@
                 <label for="comment" class="control-label">Commentaire</label>
                 <textarea class="input-dark-bg" id="comment" class="control-label" class="form-control" id="comment" ></textarea>
                 </div>
+                </div>
+                <div class="col-md-6">
                 <div class="form-group">
                    <button type="button" class="btn btn-elegant btn-sm" id="bouton-panier">Valider</button>
                    <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button> 

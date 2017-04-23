@@ -16859,7 +16859,6 @@ nav.sidebar, .main {
   padding-left: 15px;
   padding-right: 15px;
   background: #222222;
-  height: 220px;
   padding-bottom: 10px;
   padding-top: 0px;
   position: relative;
@@ -16991,5 +16990,32 @@ body {
 
 /* Landscape phones and down */
 /*Fin profil*/
+/*debut panier*/
+.panel {
+  background-color: #222222;
+}
+
+#trash {
+  padding-left: 2px;
+  margin-left: 30px;
+}
+
+#shop {
+  border: 1px solid white;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+#added {
+  vertical-align: center;
+}
+
+#check {
+  border: 1px solid green;
+}
+
+#order {
+  border: 1px solid cyan;
+}
 
 /*# sourceMappingURL=app.css.map */
