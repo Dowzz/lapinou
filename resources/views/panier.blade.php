@@ -45,8 +45,8 @@
         </tr>
     </table>
         <div class="row">
-        <div class="col-md-1"><button class="btn btn-elegant" id="bouton-panier" btn-primary">Paiement</button></div>
-        <div class="col-md-6 col-md-offset-5"><button class="btn btn-elegant" id="bouton-panier" data-dismiss="modal">Fermer</button></div>
+        <div class="col-md-6 col-sm-6"><button class="btn btn-elegant" id="bouton-panier" btn-primary">Paiement</button></div>
+        <div class="col-md-6 col-sm-6"><button class="btn btn-elegant" id="bouton-panier" data-dismiss="modal">Fermer</button></div>
         </div>
     </div>
 

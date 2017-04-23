@@ -15065,7 +15065,7 @@ textarea.md-textarea {
   color: white;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #fff;
   margin-top: 10px;
   border-radius: 10px;
   outline: none;
@@ -16509,6 +16509,7 @@ ul.instagram-photos li img {
   padding-left: 100px;
   width: 380px;
   height: auto;
+  text-align: center;
 }
 
 #header {
@@ -16521,8 +16522,20 @@ ul.instagram-photos li img {
   border-radius: 10px;
 }
 
+#comment {
+  border-bottom: 1px solid #212121;
+  border-color: #dddddd;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 221, 221, 0.6);
+  outline: none;
+}
+
+.lapication {
+  margin: 20px;
+}
+
 /*Menu*/
 body, html {
+  width: 100%;
   font-family: 'Patrick Hand', cursive;
   font-size: 16px;
 }
@@ -16685,6 +16698,7 @@ nav.sidebar, .main {
 }
 
 .modal-content {
+  padding: 15px;
   background-color: #222222;
   color: #9d9d9d;
   font-size: 14px;
@@ -16842,6 +16856,8 @@ nav.sidebar, .main {
 /*Fin miniature*/
 /*Footer*/
 .footer {
+  padding-left: 15px;
+  padding-right: 15px;
   background: #222222;
   height: 220px;
   padding-bottom: 10px;
@@ -16930,11 +16946,10 @@ body {
   height: 100px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   nav.sidebar.navbar {
+    margin-right: -15px;
     border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
   }
   nav.sidebar.navbar .profile img {
     width: 75px;
@@ -16954,13 +16969,23 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) {
   .icone {
     width: 20px;
     float: right;
     padding-top: 3px;
     margin-right: 0px;
     margin-left: 10px;
+  }
+  nav.sidebar.navbar {
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  nav.sidebar.navbar {
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
   }
 }
 

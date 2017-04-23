@@ -28,7 +28,7 @@
 <!--Header-->
 <div class="container-fluid" id="header">
     <div class="row">
-        <div class="col-md-2 col-sm-12">@include('sidebar')</div>
+        <div class="col-md-3 col-sm-12">@include('sidebar')</div>
         <div class="col-md-6 col-sm-12"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div> 
@@ -66,7 +66,7 @@
 
 <div class="modal fade" id="modal-panier" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" >
-        <div class="modal-content">
+        <div class="modal-content" class="lapication">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     @include('panier')

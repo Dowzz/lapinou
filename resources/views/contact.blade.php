@@ -1,4 +1,4 @@
-<h4 class="modal-title" id="modal-contact"> Contactez-nous </h4> 
+<h4 class="modal-title" id="modal-contact"> Contactez-nous <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></h4>
 <div class="modal-body">
     <div class="row">
         <form class="col-md-12"> 
@@ -32,11 +32,11 @@
             <div class="col-md-6">
                 <div class="form-group"> 
                 <label for="comment" class="control-label">Commentaire</label>
-                <textarea id="comment" class="control-label" class="form-control" id="comment" ></textarea>
+                <textarea class="input-dark-bg" id="comment" class="control-label" class="form-control" id="comment" ></textarea>
                 </div>
                 <div class="form-group">
                    <button type="button" class="btn btn-elegant btn-sm" id="bouton-panier">Valider</button>
-                    <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button> 
+                   <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button> 
                 </div>
             </div>
         </div>

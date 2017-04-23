@@ -3,8 +3,9 @@
 <head>
 	<title>lapication</title>
 </head>
-<body>
-<h1>lapi'cation est une application gratuite vous permettant d'acceder directement a votre bibliotheque contenant les livres que vous achetez sur notre site.</h1>
+<body><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>LAPI'CATION</h3>
+<h3>Lapi'cation : l'application qui va vous permettre de bénéficier de votre bibliothèque personnel de façon illimité et ce gratuitement !!</h3>
 
 <!--____________________________________________________________CAROUSSEL__________________________________________________-->
 
@@ -45,8 +46,8 @@
 <h3>Téléchargement</h3>
 </div>
 <div class="row">
-<div class="col-md-6"><a href="#"> <img src="{{URL::asset('/img/android.png')}}"></a></div>
-<div class="col-md-6"><a href="#"> <img src="{{URL::asset('/img/apple.png')}}"></a></div>
+<div class="col-md-6 col-sm-6"><a href="#"> <img src="{{URL::asset('/img/android.png')}}"></a></div>
+<div class="col-md-6 col-sm-6"><a href="#"> <img src="{{URL::asset('/img/apple.png')}}"></a></div>
 </div>
 
 </body>

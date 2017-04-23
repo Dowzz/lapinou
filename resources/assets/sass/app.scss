@@ -10,6 +10,7 @@
 	padding-left: 100px;
 	width: 380px;
 	height: auto;
+	text-align:center;
 }
 #header{
 	margin-top: 10px;
@@ -20,10 +21,20 @@
 	font-size:16px;
 	border-radius:10px;
 }
+#comment{
+	border-bottom: 1px solid #212121;
+	border-color: #dddddd;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 221, 221, 0.6);
+	outline: none;
+}
+.lapication{
+	margin:20px;
+}
 
 /*Menu*/
 
 body,html{
+	width:100%;
 	font-family: 'Patrick Hand', cursive;
 	font-size: 16px;
 }
@@ -58,9 +69,12 @@ nav.sidebar, .main{
 	padding: 10px 10px 0 10px;
 	}
 
+
+
 /* .....NavBar: Icon only with coloring/layout.....*/
 	/*small/medium side display*/
 @media (min-width: 992px) {
+	
 
 	/*Allow main to be next to Nav*/
 	.main{
@@ -162,6 +176,7 @@ nav.sidebar, .main{
 	nav.sidebar{
 		margin-left: 0px;
 		float: left;
+
 	}
 	/*Show hidden items on nav*/
 	nav.sidebar .forAnimate{
@@ -189,6 +204,7 @@ nav.sidebar, .main{
 	font-size: 16px;
 }
 .modal-content{
+	padding:15px; 
 	background-color: #222222;
 	color: #9d9d9d;
 	font-size:14px;
@@ -319,8 +335,9 @@ nav.sidebar, .main{
 /*Fin miniature*/
 /*Footer*/
 .footer {
+	padding-left:15px;
+	padding-right:15px;
 	background: #222222;
-	height: 220px;
 	padding-bottom: 10px;
 	padding-top:0px;
 	position: relative;
@@ -374,25 +391,25 @@ nav.sidebar, .main{
 /*Fin formulaire contact*/
 /*Profil*/
 body{
-  padding-top:25px !important;
+	padding-top:25px !important;
 }
 .stats {
-  text-align:center;
-  text-shadow:1px 1px 0px #fff;
-  margin-top:25px;  
+	text-align:center;
+	text-shadow:1px 1px 0px #fff;
+	margin-top:25px;  
   
 }
 .stats li{
   width:125px; 
 }
 .stats span{
-  font-family:Helvetica;
-  font-weight:bold;
-  text-shadow:1px 1px 0px #fff;
-  font-size:4em;
-  display:block;
-  line-height:1em;
-}
+	font-family:Helvetica;
+	font-weight:bold;
+	text-shadow:1px 1px 0px #fff;
+	font-size:4em;
+	display:block;
+	line-height:1em;
+	}
 .img-polaroid{
 	width: 100px;
 	height: 100px;
@@ -400,10 +417,10 @@ body{
 
 @media (max-width: 767px) {
 
+
 	nav.sidebar.navbar {
+		margin-right: -15px;
 		border-radius: 0px;
-		border-bottom-left-radius: 0px;
-		border-top-left-radius: 0px;
 	  		.profile img{
 	    width:75px;
 	  	}
@@ -414,27 +431,37 @@ body{
 	    font-size: 2em;
 	  	}
 	}
-		.icone {
+	.icone {
 		width: 20px;
 		float: right;
 		padding-top: 3px;
 		margin-right: 0px;
 		margin-left:10px;
 	}
+	
 
 }
 @media (min-width: 1200px) {
-
-	}
-@media (min-width: 768px) and (max-width: 979px) { 
+		
+			}
+@media (min-width: 768px){ 
 		.icone {
 		width: 20px;
 		float: right;
 		padding-top: 3px;
 		margin-right: 0px;
-		margin-left:10px;
-	}
-
+		margin-left: 10px;
+		}
+		nav.sidebar.navbar {
+		border-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		}
+		nav.sidebar.navbar {
+		border-radius: 10px;
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		}
 }
  
 /* Landscape phones and down */
