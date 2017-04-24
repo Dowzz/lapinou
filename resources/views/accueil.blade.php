@@ -31,7 +31,7 @@
 <div class="container-fluid" id="header">
     <div class="row">
         <div class="col-md-0 col-sm-12"></div>
-        <div id="logo" class="col-md-9 col-sm-12"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
+        <div id="logo" class="col-md-9 col-sm-12"><a href="accueil"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></a></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div> 
         @else
@@ -43,12 +43,12 @@
 
 <!--Barre de recherche-->
 <div class="flexsearch">
-        <div class="flexsearch--wrapper">
-            <form class="flexsearch--form" action="#" method="post">
-                <div class="flexsearch--input-wrapper">
-                    <input class="flexsearch--input" type="search" placeholder="Recherche">
+        <div class="flexsearch-wrapper">
+            <form class="flexsearch-form">
+                <div class="flexsearch-input-wrapper">
+                    <input class="flexsearch-input" type="search" placeholder="Recherche" name="q">
                 </div>
-                <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+                <input class="flexsearch-submit" type="submit" value="&#10140;"/>
             </form>
         </div>
 </div>

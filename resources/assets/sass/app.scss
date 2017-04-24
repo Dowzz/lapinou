@@ -32,6 +32,20 @@
 .lapication{
 	margin:20px;
 }
+#search{
+
+}
+input[type=text],
+input[type=password],
+input[type=email]{
+	background-color:#3b3b3b;
+}
+input[type=search]{
+	border-style: solid;
+	border-width: 5px;
+	border-color:#222222;
+	color:#3b3b3b;
+}
 
 /*Menu*/
 #navbar{
@@ -486,7 +500,7 @@ body{
 }
 
 /*Barre de recherche*/
-.flexsearch--wrapper {
+.flexsearch-wrapper {
 	height: auto;
 	width: auto;
 	max-width: 100%;
@@ -496,17 +510,17 @@ body{
 	position: static;
 }
 	
-.flexsearch--form {
+.flexsearch-form {
 	overflow: hidden;
 	position: relative;
 }
 	
-.flexsearch--input-wrapper {
+.flexsearch-input-wrapper {
 	padding: 0 66px 0 0; /* Right padding for submit button width */
 	overflow: hidden;
 }
 
-.flexsearch--input {
+.flexsearch-input {
   	width: 100%;
 }
 
@@ -517,7 +531,7 @@ body{
   	padding: 0 25px 0 200px; /* Padding for other horizontal elements */
 }
 
-.flexsearch--input {
+.flexsearch-input {
  	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -535,7 +549,7 @@ body{
 	-moz-appearance: none;
 }
 	
-.flexsearch--submit {
+.flexsearch-submit {
   	position: absolute;
 	right: 0;
 	top: 0;
@@ -553,16 +567,16 @@ body{
   	line-height: 60px;
 }
 
-.flexsearch--input:focus {
+.flexsearch-input:focus {
   	outline: none;
   	border-color: #9d9d9d;
 }
 
-.flexsearch--input:focus.flexsearch--submit {
+.flexsearch-input:focus.flexsearch-submit {
  	color: #9d9d9d; 
 }
 
-.flexsearch--submit:hover {
+.flexsearch-submit:hover {
   	color: #9d9d9d;
   	cursor: pointer;
 }
