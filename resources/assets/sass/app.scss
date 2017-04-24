@@ -63,8 +63,8 @@ body,html{
 	/*Remove rounded coners*/
 nav.sidebar.navbar {
 	border-radius: 10px;
-	border-bottom-left-radius: 0px;
 	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 nav.sidebar, .main{
 	-webkit-transition: margin 200ms ease-out;
@@ -83,7 +83,11 @@ nav.sidebar, .main{
 /* .....NavBar: Icon only with coloring/layout.....*/
 	/*small/medium side display*/
 @media (min-width: 992px) {
-	
+	nav.sidebar.navbar {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
 	
 
 	/*Allow main to be next to Nav*/
@@ -426,13 +430,18 @@ body{
 }
 
 @media (max-width: 991px) {
+		nav.sidebar.navbar {
+		border-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		}
 
 	#header {
     margin-top: 60px;
 	}
 
 	nav.sidebar.navbar {
-		margin-right: -15px;
+		margin-right: -25px;
 		border-radius: 0px;
 	  		.profile img{
 	    width:75px;
@@ -464,17 +473,6 @@ body{
 		padding-top: 3px;
 		margin-right: 0px;
 		margin-left: 10px;
-		}
-		nav.sidebar.navbar {
-		border-radius: 0px;
-		border-bottom-left-radius: 0px;
-		border-top-left-radius: 0px;
-		}
-		nav.sidebar.navbar {
-		border-radius: 10px;
-		border-bottom-left-radius: 0px;
-		border-top-left-radius: 0px;
-		}
 }
  
 /* Landscape phones and down */
@@ -502,4 +500,5 @@ body{
 }
 #order{
 	border: 1px solid cyan;
+}
 }

@@ -16558,8 +16558,8 @@ body, html {
 /*Remove rounded coners*/
 nav.sidebar.navbar {
   border-radius: 10px;
-  border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 nav.sidebar, .main {
@@ -16575,6 +16575,10 @@ nav.sidebar, .main {
 /* .....NavBar: Icon only with coloring/layout.....*/
 /*small/medium side display*/
 @media (min-width: 992px) {
+  nav.sidebar.navbar {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
   /*Allow main to be next to Nav*/
   .main {
     position: absolute;
@@ -16948,11 +16952,16 @@ body {
 }
 
 @media (max-width: 991px) {
+  nav.sidebar.navbar {
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
   #header {
     margin-top: 60px;
   }
   nav.sidebar.navbar {
-    margin-right: -15px;
+    margin-right: -25px;
     border-radius: 0px;
   }
   nav.sidebar.navbar .profile img {
@@ -16981,46 +16990,30 @@ body {
     margin-right: 0px;
     margin-left: 10px;
   }
-  nav.sidebar.navbar {
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
+  /* Landscape phones and down */
+  /*Fin profil*/
+  /*debut panier*/
+  .panel {
+    background-color: #222222;
   }
-  nav.sidebar.navbar {
-    border-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
+  #trash {
+    padding-left: 2px;
+    margin-left: 30px;
   }
-}
-
-/* Landscape phones and down */
-/*Fin profil*/
-/*debut panier*/
-.panel {
-  background-color: #222222;
-}
-
-#trash {
-  padding-left: 2px;
-  margin-left: 30px;
-}
-
-#shop {
-  border: 1px solid white;
-  margin-top: -5px;
-  margin-bottom: 5px;
-}
-
-#added {
-  vertical-align: center;
-}
-
-#check {
-  border: 1px solid green;
-}
-
-#order {
-  border: 1px solid cyan;
+  #shop {
+    border: 1px solid white;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+  #added {
+    vertical-align: center;
+  }
+  #check {
+    border: 1px solid green;
+  }
+  #order {
+    border: 1px solid cyan;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
