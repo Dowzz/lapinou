@@ -1,4 +1,5 @@
                     <!--CREDIT CART PAYMENT-->
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <div class="panel">
                         <div class="panel-heading"><h2>Paiment sécurisé par carte</h2></div>
                         <div class="form-group">

@@ -17082,26 +17082,23 @@ body {
   -moz-appearance: none;
 }
 
-.flexsearch-submit {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  border: none;
-  margin-top: 20px;
-  /* margin-top + border-width */
-  margin-right: 5px;
-  /* border-width */
-  background: transparent;
-  color: #222222;
-  font-family: 'Helvetica', sans-serif;
-  font-size: 40px;
-  line-height: 60px;
-}
-
+/*.flexsearch-submit {
+  	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+  	padding: 0;
+  	border: none;
+	margin-top: 20px;
+  	margin-right: 5px;
+	background: transparent;
+  	color: #222222;
+  	font-family: 'Helvetica', sans-serif;
+  	font-size: 40px;
+  	line-height: 60px;
+}*/
 .flexsearch-input:focus {
   outline: none;
   border-color: #9d9d9d;

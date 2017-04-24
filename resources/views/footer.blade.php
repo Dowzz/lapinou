@@ -27,7 +27,9 @@
                         <li> <a data-toggle="modal" data-target="#myModal" href="#"> Connexion / Inscription </a> </li>              
                         <li> <a data-toggle="modal" data-target="#modal-lapication" href="lapibook"> Lapi'book </a> </li>
                         <li> <a data-toggle="modal" data-target="#modal-panier" href="panier"> Panier </a> </li>
+                        <li> <a data-toggle="modal" data-target="#modal-pay" href="paiement"> Paiement </a> </li>
                         <li> <a data-toggle="modal" data-target="#modal-contact" href="contact"> Contactez-nous </a> </li>
+
                        
                     </ul>
                 </div>

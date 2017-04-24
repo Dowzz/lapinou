@@ -48,7 +48,7 @@
                 <div class="flexsearch-input-wrapper">
                     <input class="flexsearch-input" type="search" placeholder="Recherche" name="q">
                 </div>
-                <input class="flexsearch-submit" type="submit" value="&#10140;"/>
+                <!--<input class="flexsearch-submit" type="submit" value="&#10140;"/>-->
             </form>
         </div>
 </div>
@@ -86,7 +86,16 @@
         </div>
     </div>
 </div>
-
+<div class="modal fade" id="modal-pay" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" >
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                    @include('paiement')
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!--Miniature-->
