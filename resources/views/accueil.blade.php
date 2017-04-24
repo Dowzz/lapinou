@@ -11,7 +11,9 @@
     <title>Lapibook</title>
 </head>
 <body>
-
+<div id="navbar">
+@include('sidebar')
+</div>
             @if(Session::has('success'))
             <div class="row">
                 <div class="col-md-12">
@@ -28,8 +30,8 @@
 <!--Header-->
 <div class="container-fluid" id="header">
     <div class="row">
-        <div class="col-md-3 col-sm-12">@include('sidebar')</div>
-        <div class="col-md-6 col-sm-12"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
+        <div class="col-md-0 col-sm-12"></div>
+        <div id="logo" class="col-md-9 col-sm-12"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div> 
         @else

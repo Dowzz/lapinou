@@ -21,7 +21,7 @@
                     <ul>
                         <li class="ajax"><a href="home">Accueil</a></li>
                         @if (Auth::check())
-                            <li class="ajax"><a href="profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
+                            <li class="ajax"><a href="profil">Profil<span></span></a>
                             </li>
                         @endif                        
                         <li> <a data-toggle="modal" data-target="#myModal" href="#"> Connexion / Inscription </a> </li>              

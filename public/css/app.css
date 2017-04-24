@@ -4847,14 +4847,6 @@ tbody.collapse.in {
   }
 }
 
-.container > .navbar-header,
-.container > .navbar-collapse,
-.container-fluid > .navbar-header,
-.container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container > .navbar-collapse,
@@ -16506,9 +16498,12 @@ ul.instagram-photos li img {
 
 /*header*/
 .logo {
-  padding-left: 100px;
   width: 380px;
   height: auto;
+  text-align: center;
+}
+
+#logo {
   text-align: center;
 }
 
@@ -16534,6 +16529,13 @@ ul.instagram-photos li img {
 }
 
 /*Menu*/
+#navbar {
+  position: fixed;
+  z-index: 8000;
+  margin-left: 15px;
+  width: 95%;
+}
+
 body, html {
   width: 100%;
   font-family: 'Patrick Hand', cursive;
@@ -16946,6 +16948,9 @@ body {
 }
 
 @media (max-width: 991px) {
+  #header {
+    margin-top: 60px;
+  }
   nav.sidebar.navbar {
     margin-right: -15px;
     border-radius: 0px;

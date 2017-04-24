@@ -7,11 +7,13 @@
 
 /*header*/
 .logo{
-	padding-left: 100px;
 	width: 380px;
 	height: auto;
 	text-align:center;
 }
+#logo{
+	text-align: center;
+	}
 #header{
 	margin-top: 10px;
 }
@@ -32,6 +34,13 @@
 }
 
 /*Menu*/
+#navbar{
+
+    position:fixed;
+    z-index: 8000;
+    margin-left: 15px;
+    width:95%;
+}
 
 body,html{
 	width:100%;
@@ -74,6 +83,7 @@ nav.sidebar, .main{
 /* .....NavBar: Icon only with coloring/layout.....*/
 	/*small/medium side display*/
 @media (min-width: 992px) {
+	
 	
 
 	/*Allow main to be next to Nav*/
@@ -417,6 +427,9 @@ body{
 
 @media (max-width: 991px) {
 
+	#header {
+    margin-top: 60px;
+	}
 
 	nav.sidebar.navbar {
 		margin-right: -15px;
