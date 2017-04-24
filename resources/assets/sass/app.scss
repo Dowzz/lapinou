@@ -37,9 +37,10 @@
 #navbar{
 
     position:fixed;
-    z-index: 8000;
+    z-index: 1;
     margin-left: 15px;
 }
+
 
 body,html{
 	width:100%;
@@ -85,10 +86,7 @@ nav.sidebar, .main{
 	nav.sidebar.navbar {
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
-	}
-
-
-	
+	}	
 
 	/*Allow main to be next to Nav*/
 	.main{
@@ -430,6 +428,25 @@ body{
 }
 
 @media (max-width: 991px) {
+	#trash{
+	padding-left: 2px;
+    margin-left: 30px;
+	}
+	#shop{
+	border: 1px solid white;
+	margin-top: -5px;
+	margin-bottom: 5px;
+	}
+	#added{
+	vertical-align:center;
+	}
+	#check{
+	border: 1px solid green;
+	}
+	#order{
+	border: 1px solid cyan;
+	width: 90%;
+	}
 		#navbar{
    		width:95%;
 		}
@@ -504,5 +521,6 @@ body{
 }
 #order{
 	border: 1px solid cyan;
+	width: 90%;
 }
 }

@@ -6197,7 +6197,6 @@ button.list-group-item-danger.active:focus {
 
 .panel {
   margin-bottom: 22px;
-  background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -16531,7 +16530,7 @@ ul.instagram-photos li img {
 /*Menu*/
 #navbar {
   position: fixed;
-  z-index: 8000;
+  z-index: 1;
   margin-left: 15px;
 }
 
@@ -16951,6 +16950,25 @@ body {
 }
 
 @media (max-width: 991px) {
+  #trash {
+    padding-left: 2px;
+    margin-left: 30px;
+  }
+  #shop {
+    border: 1px solid white;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+  #added {
+    vertical-align: center;
+  }
+  #check {
+    border: 1px solid green;
+  }
+  #order {
+    border: 1px solid cyan;
+    width: 90%;
+  }
   #navbar {
     width: 95%;
   }
@@ -17015,6 +17033,7 @@ body {
   }
   #order {
     border: 1px solid cyan;
+    width: 90%;
   }
 }
 

@@ -9,7 +9,7 @@
                         <div class="panel-title">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-xs-12">
-                                    <button id="shop" type="button" class="btn btn-elegant">
+                                    <button id="shop" type="button" data-dismiss="modal" class="btn btn-elegant">
                                         <h6> Continue shopping</h6>
                                     </button>
                                 </div>
@@ -66,7 +66,7 @@
                                     <h5 id="added" class="text-center">Added items?</h5>
                                 </div>
                                 <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
-                                    <button id="shop" type="button" class="btn btn-elegant btn-block">
+                                    <button id="shop" type="button" class="btn btn-elegant">
                                         Update cart
                                     </button>
                                 </div>
@@ -80,12 +80,22 @@
                         <h4 id="addedclass="text-right">Total <strong>$50.00</strong></h4>
                     </div>
                     <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                        <button id="check" type="button" class="btn btn-elegant btn-block ajax"><a href="paiement">Paiement</a></button>
+                        <button id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Paiement</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+    <div class="modal fade" id="modal-pay" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    @include('paiement')
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

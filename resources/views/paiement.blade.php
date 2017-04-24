@@ -1,8 +1,8 @@
                     <!--CREDIT CART PAYMENT-->
                     <div class="panel">
-                        <div class="panel-heading text-center"><h2>Paiment sécurisé par carte</h2></div>
+                        <div class="panel-heading"><h2>Paiment sécurisé par carte</h2></div>
                         <div class="form-group">
-                                <div class="col-md-12 text-center">
+                                <div class="col-md-12">
                                     <span>Payer en toute sécurité avec votre carte !</span>
                                     <ul class="cards">
                                         <li class="visa hand">Visa</li>
@@ -13,7 +13,7 @@
                                 </div>
                             </div>
                         <div class="panel-body">
-                            <div class="form-group col-md-6 text-center">
+                            <div class="form-group col-md-12">
                                 <div class="col-md-12"><strong>Type de carte</strong></div>
                                 <div class="col-md-12">
                                     <select id="CreditCardType" name="CreditCardType" class="form-control">
@@ -24,12 +24,12 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6 text-center">
-                                <div class="col-md-12"><strong>Numéro de la carte</strong></div>
-                                <div class="col-md-12"><input type="text" class="form-control" name="car_number" value="" /></div>
+                            <div class="form-group col-md-12">
+                                <strong>Numéro de la carte</strong>
+                               <input class="input-dark-bg" type="text" class="form-control" name="car_number"/>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-12 text-center">
+                                <div class="col-md-12">
                                     <strong>date d'expiration</strong>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -66,9 +66,9 @@
                                 </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-12 text-center">
-                                <strong>Numéro Cvv</strong>
-                                <input type="text" class="form-control" name="car_code" value="" />
+                            <div class="form-group col-md-12">
+                                <strong>Cryptogramme visuel (au dos de la carte)</strong>
+                                <input  class="input-dark-bg" type="text" class="form-control" name="car_code" />
                             </div>
                             <div class="form-group col-md-12">
                                     <button id="order" type="submit" class="btn btn-elegant btn-submit-fix">Place Order</button>
