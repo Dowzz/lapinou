@@ -39,7 +39,6 @@
     position:fixed;
     z-index: 8000;
     margin-left: 15px;
-    width:95%;
 }
 
 body,html{
@@ -86,7 +85,8 @@ nav.sidebar, .main{
 	nav.sidebar.navbar {
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
-}
+	}
+
 
 	
 
@@ -430,6 +430,10 @@ body{
 }
 
 @media (max-width: 991px) {
+		#navbar{
+   		width:95%;
+		}
+		
 		nav.sidebar.navbar {
 		border-radius: 0px;
 		border-bottom-left-radius: 0px;
