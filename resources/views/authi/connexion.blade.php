@@ -37,7 +37,7 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
-                                <a href="">Mot de passe oublié ?</a>
+                                <a href="/forgot-password">Mot de passe oublié ?</a>
                             </div>
                         </div>
                     </form>

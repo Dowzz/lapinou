@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="navbar">
-@include('sidebar')
+@include('layouts.include.sidebar')
 </div>
             @if(Session::has('success'))
             <div class="row">
@@ -59,7 +59,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                @include('connexion')
+                @include('authi.connexion')
             </div>
         </div>
     </div>
@@ -70,7 +70,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    @include('lapication')
+                    @include('modals.lapication')
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    @include('panier')
+                    @include('modals.panier')
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 
-                    @include('paiement')
+                    @include('modals.paiement')
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
 <!--Footer-->
 <div class="footer" id="footer">
 
-@include('footer')
+@include('layouts.include.footer')
 </div>
 </body>
 </html>

@@ -49,7 +49,7 @@
         <div class="modal-dialog modal-lg" >
             <div class="modal-content">
                 <div class="modal-header">
-                    @include('contact')
+                    @include('modals.contact')
                 </div>
             </div>
         </div>
