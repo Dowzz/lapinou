@@ -20,6 +20,9 @@ Route::get('accueil', function () {
 Route::get('home', function () {
     return view('contenu.home');
 });
+Route::get('profil', function () {
+    return view('contenu.profil');
+});
 Route::get('classique', function () {
     return view('contenu.classique');
 });
