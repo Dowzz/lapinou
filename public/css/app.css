@@ -16916,30 +16916,6 @@ nav.sidebar, .main {
 }
 
 /*Fin formulaire contact*/
-/*Profil*/
-body {
-  padding-top: 25px !important;
-}
-
-.stats {
-  text-align: center;
-  text-shadow: 1px 1px 0px #fff;
-  margin-top: 25px;
-}
-
-.stats li {
-  width: 125px;
-}
-
-.stats span {
-  font-family: Helvetica;
-  font-weight: bold;
-  text-shadow: 1px 1px 0px #fff;
-  font-size: 4em;
-  display: block;
-  line-height: 1em;
-}
-
 .img-polaroid {
   width: 100px;
   height: 100px;
@@ -16986,15 +16962,6 @@ body {
   nav.sidebar.navbar {
     margin-right: -25px;
     border-radius: 0px;
-  }
-  nav.sidebar.navbar .profile img {
-    width: 75px;
-  }
-  nav.sidebar.navbar .profile h2 {
-    font-size: 1.7em;
-  }
-  nav.sidebar.navbar .stats span {
-    font-size: 2em;
   }
 }
 
@@ -17119,6 +17086,40 @@ body {
 
 input:-moz-placeholder {
   color: #9d9d9d;
+}
+
+/*Profil*/
+body {
+  padding-top: 25px !important;
+}
+
+.stats {
+  text-align: center;
+  text-shadow: 1px 1px 0px #fff;
+  margin-top: 25px;
+}
+
+.stats li {
+  width: 125px;
+}
+
+.stats span {
+  font-weight: bold;
+  font-size: 4em;
+  display: block;
+  line-height: 1em;
+}
+
+.profile img {
+  width: 75px;
+}
+
+.profile h2 {
+  font-size: 1.7em;
+}
+
+.stats span {
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=app.css.map */
