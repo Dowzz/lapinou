@@ -18,7 +18,7 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
-// NE PAS TOUCHERAU DESSUS 
+// NE PAS TOUCHER AU DESSUS 
 
 //affichage dynamique (footer qui remonte)
 $("#miniature").load("home");

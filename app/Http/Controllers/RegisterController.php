@@ -13,7 +13,8 @@ class RegisterController extends Controller{
 public function store(){
 	//echo "test here";
 
-	//var_dump($data);	$data=Input::except(array('token'));
+	//var_dump($data);	
+	$data=Input::except(array('token'));
 	$rule=array(
 		'pseudo'=>'required',
 		'email'=>'required|email',

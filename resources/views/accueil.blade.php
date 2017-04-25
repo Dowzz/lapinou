@@ -17,7 +17,7 @@
             @if(Session::has('success'))
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-info">
+                    <div class="alert alert-info text-center">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                         {{Session::get('success')}}
                     </div>
