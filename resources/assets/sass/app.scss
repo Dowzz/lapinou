@@ -32,9 +32,6 @@
 .lapication{
 	margin:20px;
 }
-#search{
-
-}
 input[type=text],
 input[type=password],
 input[type=email]{
@@ -49,7 +46,6 @@ input[type=search]{
 
 /*Menu*/
 #navbar{
-
     position:fixed;
     z-index: 1;
     margin-left: 15px;
@@ -383,10 +379,7 @@ nav.sidebar, .main{
 }
 /*Fin formulaire contact*/
 
-.img-polaroid{
-	width: 100px;
-	height: 100px;
-}
+
 
 @media (max-width: 991px) {
 	#trash{
@@ -560,12 +553,10 @@ input:-moz-placeholder {
   	color: #9d9d9d;
 }
 /*Profil*/
-body{
-	padding-top:25px !important;
-}
+
 .stats {
 	text-align:center;
-	text-shadow:1px 1px 0px #fff;
+	//text-shadow:1px 1px 0px #fff;
 	margin-top:25px;  
 }
 .stats li{
@@ -580,8 +571,41 @@ body{
 	color:#9d9d9d;
 }
 .profile img{
-	width:75px;
+	width:175px;
+	border-radius:10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(221, 221, 221, 0.6);
 }
 .profile h2{
 	font-size:1.7em;
+}
+.span12{
+	width:250px;
+	height:auto;
+	text-align:center;
+	margin-top: 25px;
+}
+.span6{
+	color:#9d9d9d;
+	padding-left:40px;
+}
+.span4{
+	color:#9d9d9d;
+}
+.well{
+	background-color:#222222;
+	border-radius:10px;
+}
+.panel-default{
+	background-color:white;
+	border-radius:10px;
+}
+#headingTwo, #headingThree, #headingFour, #headingFive {
+	color:#9d9d9d;
+}
+.panel-group{
+	//width:400px;
+	margin-top:25px; 
+}
+.livres{
+	text-align: center;
 }
