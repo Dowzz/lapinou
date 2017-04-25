@@ -19,3 +19,5 @@ Route::get('{n}', function($n) { return view ($n) ; });
 Route::post('/register_action','RegisterController@store');
 Route::post('/login_check','RegisterController@login');
 Route::post('/logout', 'RegisterController@logout');
+
+
