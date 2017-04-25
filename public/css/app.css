@@ -17108,6 +17108,7 @@ body {
   font-size: 4em;
   display: block;
   line-height: 1em;
+  color: #9d9d9d;
 }
 
 .profile img {
@@ -17116,10 +17117,6 @@ body {
 
 .profile h2 {
   font-size: 1.7em;
-}
-
-.stats span {
-  font-size: 2em;
 }
 
 /*# sourceMappingURL=app.css.map */
