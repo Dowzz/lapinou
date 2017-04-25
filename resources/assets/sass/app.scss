@@ -43,6 +43,9 @@ input[type=search]{
 	border-color:#222222;
 	color:#3b3b3b;
 }
+#labelwhite{
+	padding-top: 20px;
+}
 
 /*Menu*/
 #navbar{
@@ -84,6 +87,7 @@ nav.sidebar, .main{
 	}
 
 @media (min-width: 992px) {
+
 	nav.sidebar.navbar {
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
@@ -206,6 +210,7 @@ nav.sidebar, .main{
 	color: #9d9d9d;
 	background-color: black;
 	font-size: 16px;
+	padding: 16px;
 }
 .modal-content{
 	padding:15px; 
@@ -382,6 +387,9 @@ nav.sidebar, .main{
 
 
 @media (max-width: 991px) {
+	#labelwhite{
+	padding-top: 12px;
+	}
 	#trash{
 		padding-left: 2px;
     	margin-left: 30px;
@@ -609,3 +617,5 @@ input:-moz-placeholder {
 .livres{
 	text-align: center;
 }
+
+

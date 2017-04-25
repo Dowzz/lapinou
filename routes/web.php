@@ -1,15 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
+//Pages
 
 Route::get('/', function () {
     return view('layouts.accueil');
@@ -30,14 +21,21 @@ Route::get('aventure', function () {
     return view('contenu.aventure');
 });
 
+//Fin Pages
+
+//Login et register
+
 Route::post('/register_action','RegisterController@store');
 
 Route::post('/login_check','RegisterController@login');
 Route::post('/logout', 'RegisterController@logout');
 
+//fin Login et Register
 
-Route::get('/forgot-password', 'ForgotPasswordController@ForgotPassword');
-Route::post('/forgot-password', 'ForgotPasswordController@postForgotPassword');
+//Password reset
 
+Route::get('authi/reset/{token?}','PasswordController@showResetForm');
+Route::post('authi/email','PasswordController@sendResetlinkEmail');
+Route::post('/reset','PasswordController@reset');
 
-//Route::get('{n}', function($n) { return view ($n) ; });
+//Fin Password Reset

@@ -5,7 +5,7 @@
  <div class="panel-heading">Reset Password</div>
  <div class="panel-body">
 
-<form class="form-horizontal" role="form" method="POST" action="/password/reset">
+<form class="form-horizontal" role="form" method="POST" action="/authi/reset">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 <input type="hidden" name="token" value="{{ $token }}">
 

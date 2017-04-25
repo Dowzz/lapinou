@@ -145,6 +145,19 @@ password2.on("input", function(e) {
 
 });
 
+//switch mot de passe 
+
+$(document).ready(function() {
+  $('#oubli').click(function(e) {
+    e.preventDefault();
+    $('div#login').toggle('500');
+  });
+  $('#access').click(function(e) {
+    e.preventDefault();
+    $('div#login').toggle('500');
+  });
+});
+
 
 
 

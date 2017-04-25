@@ -16540,6 +16540,10 @@ input[type=search] {
   color: #3b3b3b;
 }
 
+#labelwhite {
+  padding-top: 20px;
+}
+
 /*Menu*/
 #navbar {
   position: fixed;
@@ -16709,6 +16713,7 @@ nav.sidebar, .main {
   color: #9d9d9d;
   background-color: black;
   font-size: 16px;
+  padding: 16px;
 }
 
 .modal-content {
@@ -16917,6 +16922,9 @@ nav.sidebar, .main {
 
 /*Fin formulaire contact*/
 @media (max-width: 991px) {
+  #labelwhite {
+    padding-top: 12px;
+  }
   #trash {
     padding-left: 2px;
     margin-left: 30px;

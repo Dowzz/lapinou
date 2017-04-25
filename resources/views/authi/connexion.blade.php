@@ -37,7 +37,7 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
-                                <a href="/forgot-password">Mot de passe oublié ?</a>
+                                <a  class="pull-right text-muted" href="{{ url('authi/reset') }}" id="oubli"">Mot de passe oublié ?</a>
                             </div>
                         </div>
                     </form>
@@ -95,6 +95,27 @@
 
                     </form>
                 </div>
+                               <div style="display: none;" id="login">
+    <h4 class="">
+      Vous avez oublié votre mot de passe ?
+    </h4>
+    <form accept-charset="UTF-8" role="form" action="{{ url('/authi/email') }}" method="post">
+        <span class="control-label">
+          Utilisez L'adresse mail lié a votre compte.
+          <br>
+          Nous vous enverrons un mail pour réinitialiser votre mot de passe.
+        </span>
+        <div class="form-group">
+          <input type="hidden" name="_token" value="{{csrf_token()}}">
+            <div class="col-sm-8">
+                <input type="email" name="email" class="input-dark-bg" class="form-control" id="email" placeholder="Email" /> 
+            </div>
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Envoi du mail</button>
+            </div>
+        </div>      
+    </form>
+  </div>
             </div>
         </div>
     </div>
