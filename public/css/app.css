@@ -16544,7 +16544,7 @@ input[type=search] {
   padding-top: 20px;
 }
 
-/*Menu*/
+/*  ---- Menu ----  */
 #navbar {
   position: fixed;
   z-index: 1;
@@ -16564,13 +16564,11 @@ body, html {
   margin-right: -4px;
 }
 
-/* remove outer padding */
 .main .row {
   padding: 0px;
   margin: 0px;
 }
 
-/*Remove rounded coners*/
 nav.sidebar.navbar {
   border-radius: 10px;
   border-top-left-radius: 0px;
@@ -16582,13 +16580,11 @@ nav.sidebar, .main {
   transition: margin 200ms ease-out;
 }
 
-/* Add gap to nav and right windows.*/
 .main {
   padding: 10px 10px 0 10px;
 }
 
-/*Fin menu*/
-/*Modal*/
+/*  ---- Modal ----  */
 .panel-heading {
   color: #9d9d9d;
 }
@@ -16633,8 +16629,7 @@ nav.sidebar, .main {
   text-shadow: none;
 }
 
-/*Fin modal*/
-/*Miniature*/
+/*  ---- Miniature ----  */
 .view {
   width: 216px;
   height: 294px;
@@ -16747,8 +16742,7 @@ nav.sidebar, .main {
   text-align: center;
 }
 
-/*Fin miniature*/
-/*Footer*/
+/*  ---- Footer ----  */
 .footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -16786,8 +16780,7 @@ nav.sidebar, .main {
   color: #9d9d9d;
 }
 
-/*Fin footer*/
-/*Formulaire contact*/
+/*  ---- Formulaire contact ----  */
 #comment {
   height: 250px;
   background-color: #3b3b3b;
@@ -16809,8 +16802,7 @@ nav.sidebar, .main {
   margin-left: 5px;
 }
 
-/*Fin formulaire contact*/
-/*Barre de recherche*/
+/*  ---- Barre de recherche ----  */
 .flexsearch-wrapper {
   height: auto;
   width: auto;
@@ -16836,9 +16828,6 @@ nav.sidebar, .main {
   width: 100%;
 }
 
-/***********************
- * Configurable Styles *
- ***********************/
 .flexsearch {
   padding: 0 25px 0 200px;
   /* Padding for other horizontal elements */
@@ -16900,7 +16889,7 @@ input:-moz-placeholder {
   color: #9d9d9d;
 }
 
-/*Profil*/
+/*  ---- Profil ----  */
 .stats {
   text-align: center;
   margin-top: 25px;
@@ -16962,19 +16951,16 @@ input:-moz-placeholder {
   margin-top: 25px;
 }
 
+/*  ---- Média Queries ----  */
 @media (min-width: 2400px) {
-  /*Allow main to be next to Nav*/
   .main {
     width: calc(100% - 200px);
-    /*keeps 100% minus nav size*/
     margin-left: 200px;
   }
-  /*Show all nav*/
   nav.sidebar {
     margin-left: 0px;
     float: left;
   }
-  /*Show hidden items on nav*/
   nav.sidebar .forAnimate {
     opacity: 1;
   }
@@ -16999,11 +16985,9 @@ input:-moz-placeholder {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   }
-  /*Allow main to be next to Nav*/
   .main {
     position: absolute;
     width: calc(100% - 40px);
-    /*keeps 100% minus nav size*/
     margin-left: 40px;
     float: right;
   }
@@ -17014,36 +16998,29 @@ input:-moz-placeholder {
     margin-right: 0px;
     margin-left: 10px;
   }
-  /*lets nav bar to be showed on mouseover*/
   nav.sidebar:hover + .main {
     margin-left: 200px;
   }
-  /*Center Brand*/
   nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: 0px;
   }
-  /*Center Brand*/
   nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
     text-align: center;
     width: 100%;
     margin-left: 0px;
   }
-  /*Center Icons*/
   nav.sidebar a {
     padding-right: 13px;
   }
-  /*adds border top to first nav box */
   nav.sidebar .navbar-nav > li:first-child {
     border-top: 1px #e5e5e5 solid;
   }
   nav.sidebar .navbar-nav > li:last-child {
     border-bottom: none;
   }
-  /*adds border to bottom nav boxes*/
   nav.sidebar .navbar-nav > li {
     border-bottom: 1px #e5e5e5 solid;
   }
-  /* Colors/style dropdown box*/
   nav.sidebar .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -17052,11 +17029,9 @@ input:-moz-placeholder {
     border: 0;
     box-shadow: none;
   }
-  /*allows nav box to use 100% width*/
   nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
     padding: 0 0px 0 0px;
   }
-  /*gives sidebar width/height*/
   nav.sidebar {
     width: 200px;
     height: 100%;
@@ -17065,18 +17040,15 @@ input:-moz-placeholder {
     z-index: 8000;
     margin-bottom: 0px;
   }
-  /*give sidebar 100% width;*/
   nav.sidebar li {
     width: 100%;
   }
-  /* Move nav to full on mouse over*/
   nav.sidebar:hover {
     margin-left: 0px;
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
   }
-  /*for hiden things when navbar hidden*/
   .forAnimate {
     opacity: 0;
   }
@@ -17169,7 +17141,6 @@ input:-moz-placeholder {
   .livres {
     display: inline-block;
   }
-  /*debut panier*/
   .panel {
     background-color: #222222;
   }
