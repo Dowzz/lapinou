@@ -4,8 +4,9 @@
 @import "resources/assets/stylesheets/bootstrap";
 @import "resources/assets/mdb-sass/mdb.scss";
 @import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
-/*header*/
+/*  ---- Header ----  */
 .logo{
 	width: 380px;
 	height: auto;
@@ -398,6 +399,7 @@ input:-moz-placeholder {
 	margin-top:25px; 
 }
 
+
 /*  ---- Média Queries ----  */
 
 @media (min-width: 2400px) {
@@ -597,7 +599,7 @@ input:-moz-placeholder {
 		display: inline-block;
 	}
 	.panel{
-		background-color:#222222;
+		background-color:#fff;
 	}
 	#trash{
 		padding-left: 2px;

@@ -86,11 +86,31 @@
         </div>
         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="panel-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+              <table class="table table-xs">
+                <tr>
+                  <th> N° commande </th>
+                  <th> Titre </th>
+                  <th class="text-right"> Date </th>
+                  <th class="text-right"> Prix </th>
+                </tr>
+                <tr>
+                  <td>#017990</td>
+                  <td>Une fille parfaite</td>
+                  <td class="text-right" title="Date"> 05/2017 </td>
+                  <td class="text-right" title="Price"> 6,99 </td>
+                </tr>
+                <tr>
+                  <td>#018384</td>
+                  <td>Voyage au centre de la Terre</td>
+                  <td class="text-right" title="Date"> 06/2017 </td>
+                  <td class="text-right" title="Price"> 0,00 </td>
+                </tr>
+              </table>
+
           </div>
         </div>
       </div>
-
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingFour">
           <h4 class="panel-title">
@@ -101,7 +121,25 @@
         </div>
         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
           <div class="panel-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            
+
+                    <div class="comment-user"><i class="fa fa-book"></i> Une fille parfaite</div>
+                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Le 24 juillet 2017</time>
+                  <div class="comment-post">
+                    <p><br />
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                  <div class="comment-user"><i class="fa fa-book"></i> Voyage au centre de la Terre</div>
+                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Le 24 août 2017</time>
+                  <div class="comment-post">
+                    <p><br />
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+
+
+
           </div>
         </div>
       </div>

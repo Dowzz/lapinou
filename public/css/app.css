@@ -6,6 +6,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand");
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -16495,7 +16496,7 @@ ul.instagram-photos li img {
   display: block;
 }
 
-/*header*/
+/*  ---- Header ----  */
 .logo {
   width: 380px;
   height: auto;
@@ -17142,7 +17143,7 @@ input:-moz-placeholder {
     display: inline-block;
   }
   .panel {
-    background-color: #222222;
+    background-color: #fff;
   }
   #trash {
     padding-left: 2px;
