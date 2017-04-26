@@ -4,7 +4,9 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
-
+use Auth;
+use App\Register;
+use App\ForgotPassword;
 trait SendsPasswordResetEmails
 {
     /**
@@ -25,6 +27,13 @@ trait SendsPasswordResetEmails
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
+        $token=ForgotPassword::where('token',$_POST['token'] )->first(); 
+       
+        $user=Register::where('email',$_POST['email'] )->first();
+        view()->share('token', $token);
+        view()->share('user', $user);
+
+        var_dump($user);
         $response = $this->broker()->sendResetLink(
             $request->only('email')
         );
