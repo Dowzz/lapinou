@@ -3,7 +3,7 @@
 <head>
 	<title>lapication</title>
 </head>
-<body><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<body>
     <h3>LAPI'CATION</h3>
 <h3>Lapi'cation : l'application qui va vous permettre de bénéficier de votre bibliothèque personnel de façon illimité et ce gratuitement !!</h3>
 
