@@ -37,7 +37,7 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
-                                <a  class="pull-right text-muted" href="{{ url('authi/reset') }}" id="oubli"">Mot de passe oublié ?</a>
+                                <a  class="pull-right text-muted" href="" id="oubli"">Mot de passe oublié ?</a>
                             </div>
                         </div>
                     </form>
@@ -107,6 +107,7 @@
         </span>
         <div class="form-group">
           <input type="hidden" name="_token" value="{{csrf_token()}}">
+          
             <div class="col-sm-8">
                 <input type="email" name="email" class="input-dark-bg" class="form-control" id="email" placeholder="Email" /> 
             </div>

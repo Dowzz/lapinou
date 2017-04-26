@@ -5,11 +5,15 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Input;
 use Hash;
+use Illuminate\Notifications\Notifiable;
+use App\Notifications\MyResetPassword;
+
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Register extends Authenticatable
 {
+    use Notifiable;
 //class Register extends Model
 //{
     //
@@ -32,4 +36,8 @@ class Register extends Authenticatable
 
     	$users->save();
     }
+    public function sendPasswordResetNotification($token)
+{
+    $this->notify(new MyResetPassword($token));
+}
 }

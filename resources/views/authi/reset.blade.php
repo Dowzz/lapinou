@@ -1,46 +1,22 @@
-<div class="container-fluid">
-<div class="row">
- <div class="col-md-8 col-md-offset-2">
- <div class="panel panel-default">
- <div class="panel-heading">Reset Password</div>
- <div class="panel-body">
-
-<form class="form-horizontal" role="form" method="POST" action="/authi/reset">
-<input type="hidden" name="_token" value="{{ csrf_token() }}">
-<input type="hidden" name="token" value="{{ $token }}">
-
-<div class="form-group">
-<label class="col-md-4 control-label">E-Mail Address</label>
-<div class="col-md-6">
-<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-</div>
-</div>
-
-<div class="form-group">
-<label class="col-md-4 control-label">Password</label>
-<div class="col-md-6">
-<input type="password" class="form-control" name="password">
-</div>
- </div>
-
- <div class="form-group">
- <label class="col-md-4 control-label">Confirm Password</label>
- <div class="col-md-6">
- <input type="password" class="form-control" name="password_confirmation">
- </div>
-  </div>
-
- <div class="form-group">
- <div class="col-md-6 col-md-offset-4">
- <button type="submit" class="btn btn-primary">
-             Reset Password
- </button>
- </div>
- </div>
- </form>
-
- </div>
- </div>
- </div>
- </div>
-</div>
+<form accept-charset="UTF-8" role="form" action="{{ url('/reset') }}" method="post">
+    <div class="form-group">
+        <input type="email" name="email" class="form-control" value="$email">
+        <label for="password" class="col-sm-2 control-label"  id="labelwhite">Mot de passe</label>
+        <div class="col-sm-10">
+            <input type="password" name="password" class="input-dark-bg" class="form-control" id="password" placeholder="Mot de passe" required />
+        </div>
+        <span id="aideMdp"></span>
+    </div>
+    <input type="hidden" name="_token" value="{{csrf_token()}}">
+    <input type="hidden" name="token" value="$token">
+    <div class="form-group">
+        <label for="password" class="col-sm-2 control-label"  id="labelwhite">Confirmation Mot de passe</label>
+        <div class="col-sm-10">
+            <input type="password" name="cpassword" class="input-dark-bg" class="form-control" id="cpassword" placeholder="Confirmation Mot de passe" required/>
+        <div>
+        <span id="infoMdp"></span>        
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <input type="submit" class="btn btn-elegant btn-sm" id="bouton-panier" label="valider"></input>
+    </div>
+</form>
