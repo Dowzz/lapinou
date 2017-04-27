@@ -158,6 +158,11 @@ $(document).ready(function() {
   });
 });
 
+//tooltips
 
-
+$(document).ready(function () {
+    $('.tooltips').tooltip({
+        trigger: 'focus'
+    })
+});
 

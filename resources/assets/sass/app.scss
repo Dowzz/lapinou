@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
-/*  ---- Header ----  */
+/*  ---- SCSS de base ----  */
 .logo{
 	width: 380px;
 	height: auto;
@@ -36,6 +36,7 @@ input[type=text],
 input[type=password],
 input[type=email]{
 	background-color:#3b3b3b;
+	color:#9d9d9d;
 }
 input[type=search]{
 	border-style: solid;
@@ -43,9 +44,16 @@ input[type=search]{
 	border-color:#222222;
 	color:#3b3b3b;
 }
+input[type=checkbox]{
+	margin:4px 20px 0;
+}
 #labelwhite{
 	padding-top: 20px;
 }
+.form-control::-moz-placeholder{
+	color:#9d9d9d;
+}
+
 
 /*  ---- Menu ----  */
 #navbar{
@@ -93,6 +101,13 @@ nav.sidebar, .main{
 }
 #bouton-panier{
 	width: 150px;
+	color: #9d9d9d;
+	background-color: black;
+	font-size: 16px;
+	padding: 16px;
+}
+#bouton-panier2{
+	width: 250px;
 	color: #9d9d9d;
 	background-color: black;
 	font-size: 16px;
@@ -168,18 +183,6 @@ nav.sidebar, .main{
     padding: 15px 15px 5px;
     text-align: center
 }
-.view a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 16px;
-    background: #000;
-    text-transform: uppercase;
-    border-radius: 80px;
-    font-size: 20px;
-}
-.view a.info:hover {
-    box-shadow: 0 0 5px #9d9d9d;
-}
 .view-fifth img {
 	transition: all 0.3s ease-in-out; 
 }
@@ -192,7 +195,7 @@ nav.sidebar, .main{
 .view-fifth h2{
     background: #222222;
     color: #9d9d9d;
-    box-shadow: 0 0 5px #9d9d9d;
+    box-shadow: 0 0 2px #9d9d9d;
 }
 .view-fifth p{
     opacity: 0;
@@ -212,6 +215,68 @@ nav.sidebar, .main{
 }
 .mini{
     text-align: center;
+}
+
+/*  ---- TagCloud ----  */
+
+.tagCloud span {
+  	display: block;
+	position: absolute;
+	opacity: .55;
+	width: 180px;
+	height:50px;
+	left: 0;
+	right: 0;
+	top:80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tagCloud span:hover {
+	opacity: 1;
+	cursor: pointer!important;
+}
+.tagCloud span:hover p {
+  	transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+ 	-webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+  	cursor: pointer!important;
+}
+.tagCloud span p {
+  	font-size: 15px;
+  	color: #FFF;
+  	margin-left: 20px;
+}
+.tagCloud span::before {
+  	content: "";
+  	left: 0px;
+  	top: 5px;
+  	position: absolute;
+  	width: 100%;
+  	height: 2px;
+  	padding-right: 20px;
+  	background-color: rgba(255, 255, 255, .25);
+}
+.tagCloud span::after {
+  	content: "";
+  	top: 5px;
+  	left: 0px;
+  	position: absolute;
+  	width: 0%;
+  	min-width: 60px;
+  	height: 2px;
+  	background-color: #222222;
+  	transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  	-webkit-transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tagCloud span:hover::after {
+  	content: "";
+  	width: 100%;
+  	padding-right: 20px;
+  	transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  	-webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tagCloud span p b {
+  	font-weight: 800;
+  	letter-spacing: 1.25px;
 }
 
 /*  ---- Footer ----  */
@@ -398,7 +463,9 @@ input:-moz-placeholder {
 .panel-group{
 	margin-top:25px; 
 }
-
+#resume{
+	margin: 0 0 30px;
+}
 
 /*  ---- Média Queries ----  */
 
@@ -523,11 +590,7 @@ input:-moz-placeholder {
 		padding-left: 2px;
     	margin-left: 30px;
 	}
-	#shop{
-		border: 1px solid white;
-		margin-top: -5px;
-		margin-bottom: 5px;
-	}
+	
 	#added{
 		vertical-align:center;
 	}
@@ -599,17 +662,13 @@ input:-moz-placeholder {
 		display: inline-block;
 	}
 	.panel{
-		background-color:#fff;
+		background-color:#222222;
 	}
 	#trash{
 		padding-left: 2px;
     	margin-left: 30px;
 	}
-	#shop{
-		border: 1px solid white;
-		margin-top: -5px;
-		margin-bottom: 5px;
-	}
+
 	#added{
 		vertical-align:center;
 	}

@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <strong>date d'expiration</strong>
+                                    <strong>Date d'expiration</strong>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <select class="form-control" name="">
@@ -72,7 +72,7 @@
                                 <input  class="input-dark-bg" type="text" class="form-control" name="car_code" />
                             </div>
                             <div class="form-group col-md-12">
-                                    <button id="order" type="submit" class="btn btn-elegant btn-submit-fix">Place Order</button>
+                                    <button id="bouton-panier2" id="order" type="submit" class="btn btn-elegant btn-submit-fix">Place Order</button>
                                 </div>
                         </div>
                     </div>

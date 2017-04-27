@@ -24,10 +24,9 @@
                 </div>
             </div>
             @endif
-<!--Menu-->
-
 
 <!--Header-->
+
 <div class="container-fluid" id="header">
     <div class="row">
         <div class="col-md-0 col-sm-12"></div>
