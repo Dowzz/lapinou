@@ -63,6 +63,16 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="modal_forget" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-side modal-top-right">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                @include ('auth.passwords.email')
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade" id="modal-lapication" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" >
@@ -102,7 +112,7 @@
 <div id="miniature">
 
 </div>
-
+@yield('content')
 
 <!--Footer-->
 <div class="footer" id="footer">

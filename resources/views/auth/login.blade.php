@@ -29,7 +29,7 @@
                         </div>
                          <div class="col-sm-12">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
-                                 <a  class="pull-right text-muted" href="" id="{{ url('/password/reset') }}">Mot de passe oublié ?</a>
+                                 <a  class="pull-right text-muted" data-toggle="modal" data-target="#modal_forget" href="" id="{{ url('/password/reset') }}">Mot de passe oublié ?</a>
 
                         </div>
                         <div class="form-group">
