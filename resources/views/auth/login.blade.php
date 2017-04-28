@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <div class="col-md-6">
                                 <div class="checkbox">
-                                    <a href="" data-toggle="modal" data-target="#modal_inscription">Pas encore membre ?</a>
+                                    <a href="" data-toggle="modal" data-target="#modal_inscription"  data-backdrop="false">Pas encore membre ?</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
