@@ -7678,6 +7678,8 @@ button.close {
   width: 100%;
   font-size: 16px;
   border-radius: 10px;
+  background-color: #222222;
+  color: #9d9d9d;
 }
 
 #comment {
@@ -7715,6 +7717,10 @@ input[type=checkbox] {
 
 .form-control::-moz-placeholder {
   color: #9d9d9d;
+}
+
+#trash {
+  border-color: none;
 }
 
 /*  ---- Menu ----  */
@@ -7757,6 +7763,11 @@ nav.sidebar, .main {
 }
 
 /*  ---- Modal ----  */
+hr {
+  clear: both;
+  margin-top: 10px;
+}
+
 .panel-heading {
   color: #9d9d9d;
 }
@@ -7770,7 +7781,6 @@ nav.sidebar, .main {
   color: #9d9d9d;
   background-color: black;
   font-size: 16px;
-  padding: 16px;
 }
 
 #bouton-panier2 {
@@ -7778,7 +7788,6 @@ nav.sidebar, .main {
   color: #9d9d9d;
   background-color: black;
   font-size: 16px;
-  padding: 16px;
 }
 
 .modal-content {
@@ -7807,6 +7816,15 @@ nav.sidebar, .main {
   color: white;
   opacity: 1;
   text-shadow: none;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.img-responsive {
+  width: 60%;
 }
 
 /*  ---- Miniature ----  */
@@ -8025,10 +8043,8 @@ nav.sidebar, .main {
 }
 
 #demande {
-  border-radius: 10px;
-  border: 0px;
+  border-radius: 4px;
   width: 97%;
-  margin-left: 5px;
 }
 
 /*  ---- Barre de recherche ----  */

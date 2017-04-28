@@ -14,9 +14,9 @@
                             </div>
                         <div class="panel-body">
                             <div class="form-group col-md-12">
-                                <div class="col-md-12"><strong>Type de carte</strong></div>
                                 <div class="col-md-12">
                                     <select id="CreditCardType" name="CreditCardType" class="form-control">
+                                        <option value="na" selected="">Type de carte :</option>
                                         <option value="5">Visa</option>
                                         <option value="6">MasterCard</option>
                                         <option value="7">American Express</option>
@@ -24,9 +24,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                <strong>Numéro de la carte</strong>
-                               <input class="input-dark-bg" type="text" class="form-control" name="car_number"/>
+                            <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-slack fa-fw"></i></span>
+                                <input class="form-control" type="text" placeholder="Numéro de la carte">
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
@@ -52,8 +52,6 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <select class="form-control" name="">
                                         <option value="">Année</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
                                         <option value="2017">2017</option>
                                         <option value="2018">2018</option>
                                         <option value="2019">2019</option>
@@ -63,12 +61,14 @@
                                         <option value="2023">2023</option>
                                         <option value="2024">2024</option>
                                         <option value="2025">2025</option>
+                                        <option value="2015">2026</option>
+                                        <option value="2016">2027</option>
                                 </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                <strong>Cryptogramme visuel (au dos de la carte)</strong>
-                                <input  class="input-dark-bg" type="text" class="form-control" name="car_code" />
+                            <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-eye-slash fa-fw"></i></span>
+                                <input class="form-control" type="text" placeholder="Cryptogramme visuel">
                             </div>
                             <div class="form-group col-md-12">
                                     <button id="bouton-panier2" id="order" type="submit" class="btn btn-elegant btn-submit-fix">Place Order</button>
