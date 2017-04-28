@@ -11,22 +11,21 @@
 
                     <form action="{{ url('/login') }}" method="post" role="form" class="form-horizontal">
                     {{ csrf_field() }}
-                        <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" name="email" class="input-dark-bg" class="form-control" id="email1" placeholder="Email" />
-                            </div>
+
+                        <div class="input-group margin-bottom-sm">
+                          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                          <input class="form-control" type="text" placeholder="Email">
                         </div>
 
-                        <div class="form-group">
-                            <label for="InputPassword1" class="col-sm-2 control-label">Mot de passe</label>
-                            <div class="col-sm-10">
-                                <input type="password" name="password" class="input-dark-bg" class="form-control" id="InputPassword1" placeholder="Mot de passe" />
-                                 <label>
+                        <div class="input-group margin-bottom-sm">
+                          <span class="input-group-addon"><i class="fa fa-unlock-alt fa-fw"></i></span>
+                          <input class="form-control" type="text" placeholder="Mot de passe">
+                        </div>
+
+                                <label>
                                     <input type="checkbox" name="remember"> Se souvenir de moi
                                 </label>
-                            </div>
-                        </div>
+
                          <div class="col-sm-12">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
                                  <a  class="pull-right text-muted" data-toggle="modal" data-target="#modal_forget" href="" id="{{ url('/password/reset') }}">Mot de passe oublié ?</a>
