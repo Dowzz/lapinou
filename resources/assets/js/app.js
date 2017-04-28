@@ -21,7 +21,7 @@ const app = new Vue({
 // NE PAS TOUCHER AU DESSUS 
 
 //affichage dynamique (footer qui remonte)
-$("#miniature").load("home");
+$("#miniature").load("template_miniature");
 
 $(document).ready(function(){
 	$(".ajax a").click(function(){

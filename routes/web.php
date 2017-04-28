@@ -1,41 +1,28 @@
 <?php
 
-//Pages
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| This file is where you may define all of the routes that are handled
+| by your application. Just tell Laravel the URIs it should respond
+| to using a Closure or controller method. Build something great!
+|
+*/
 
 Route::get('/', function () {
-    return view('layouts.accueil');
+    return view('welcome');
 });
-Route::get('accueil', function () {
-    return view('layouts.accueil');
-});
-Route::get('home', function () {
-    return view('contenu.home');
-});
+
+
+Auth::routes();
+
+Route::get('/welcome', 'HomeController@index');
 Route::get('profil', function () {
     return view('contenu.profil');
 });
-Route::get('classique', function () {
-    return view('contenu.classique');
-});
-Route::get('aventure', function () {
-    return view('contenu.aventure');
+Route::get('template_miniature', function () {
+    return view('contenu.template_miniature');
 });
 
-//Fin Pages
-
-//Login et register
-
-Route::post('/register_action','RegisterController@store');
-
-Route::post('/login_check','RegisterController@login');
-Route::post('/logout', 'RegisterController@logout');
-
-//fin Login et Register
-
-//Password reset
-
-Route::get('authi/reset/{token?}','PasswordController@showResetForm');
-Route::post('authi/email','PasswordController@sendResetlinkEmail');
-Route::post('/reset','PasswordController@reset');
-
-//Fin Password Reset

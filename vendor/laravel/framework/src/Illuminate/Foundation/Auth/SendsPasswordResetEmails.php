@@ -4,9 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
-use Auth;
-use App\Register;
-use App\ForgotPassword;
+
 trait SendsPasswordResetEmails
 {
     /**
@@ -14,6 +12,11 @@ trait SendsPasswordResetEmails
      *
      * @return \Illuminate\Http\Response
      */
+    public function showLinkRequestForm()
+    {
+        return view('auth.passwords.email');
+    }
+
     /**
      * Send a reset link to the given user.
      *
@@ -27,42 +30,17 @@ trait SendsPasswordResetEmails
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
-        $token=ForgotPassword::where('token',$_POST['token'] )->first(); 
-       
-        $user=Register::where('email',$_POST['email'] )->first();
-        view()->share('token', $token);
-        view()->share('user', $user);
-
-        var_dump($user);
         $response = $this->broker()->sendResetLink(
             $request->only('email')
         );
 
-        return $response == Password::RESET_LINK_SENT
-                    ? $this->sendResetLinkResponse($response)
-                    : $this->sendResetLinkFailedResponse($request, $response);
-    }
+        if ($response === Password::RESET_LINK_SENT) {
+            return back()->with('status', trans($response));
+        }
 
-    /**
-     * Get the response for a successful password reset link.
-     *
-     * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    protected function sendResetLinkResponse($response)
-    {
-        return back()->with('status', trans($response));
-    }
-
-    /**
-     * Get the response for a failed password reset link.
-     *
-     * @param  \Illuminate\Http\Request
-     * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    protected function sendResetLinkFailedResponse(Request $request, $response)
-    {
+        // If an error was returned by the password broker, we will get this message
+        // translated so we can notify a user of the problem. We'll redirect back
+        // to where the users came from so they can attempt this process again.
         return back()->withErrors(
             ['email' => trans($response)]
         );
