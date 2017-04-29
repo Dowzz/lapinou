@@ -26,6 +26,8 @@
        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
         <ul class="nav navbar-nav">
             @if (Auth::check())
+            <li class="ajax"><a href="admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
+            </li>
             <li class="ajax"><a href="profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
             </li>
             @endif
@@ -33,26 +35,26 @@
         <div class="panel-heading">
         <ul  class="panel-title">
         <a class="titrage" data-toggle="collapse" href="#collapseOne">
-          Catégories<span><img class="icone" src="{{URL::asset('/img/004-signs-1.png')}}"></img></span></a></ul>
+          Catégories</a><span><img class="icone" src="{{URL::asset('/img/004-signs-1.png')}}"></img></span></ul>
         </div> 
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class ="liste">
-                    <li class="ajax"><a href="template_miniature">Aventure / Action</a></li>
-                    <li class="ajax"><a href="template_miniature">Classique</a></li>
-                    <li class="ajax"><a href="template_miniature">Espionnage</a></li>
-                    <li class="ajax"><a href="template_miniature">Fantastique</a></li>
-                    <li class="ajax"><a href="template_miniature">Frisson / Terreur</a></li>
-                    <li class="ajax"><a href="template_miniature">Gratuit</a></li>
-                    <li class="ajax"><a href="template_miniature">Guerre</a></li>
-                    <li class="ajax"><a href="template_miniature">Jeunesse</a></li>
-                    <li class="ajax"><a href="template_miniature">Historique</a></li>
-                    <li class="ajax"><a href="template_miniature">Sentimentale</a></li>
-                    <li class="ajax"><a href="template_miniature">Policier</a></li>
-                    <li class="ajax"><a href="template_miniature">Roman</a></li>
-                    <li class="ajax"><a href="template_miniature">Science-fiction</a></li>
-                    <li class="ajax"><a href="template_miniature">Thriller</a></li>
-                    <li class="ajax"><a href="template_miniature">Western</a></li>  
+                    <li class="ajax"><a class="cat" href="template_miniature">Aventure / Action</a></li>
+                    <li class="ajax"><a class="cat" href="template_miniature">Classique</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Espionnage</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Fantastique</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Frisson / Terreur</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Gratuit</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Guerre</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Jeunesse</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Historique</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Sentimentale</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Policier</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Roman</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Science-fiction</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Thriller</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Western</a></li>  
                 </ul>
             </div>
         </div>

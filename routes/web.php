@@ -25,4 +25,8 @@ Route::get('profil', function () {
 Route::get('template_miniature', function () {
     return view('contenu.template_miniature');
 });
+Route::get('admin', function () {
+    return view('contenu.admin');
+});
+
 

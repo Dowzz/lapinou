@@ -7666,6 +7666,14 @@ button.close {
   text-align: center;
 }
 
+.titrage {
+  margin-left: -40px;
+}
+
+#textMdp {
+  margin-bottom: 20px;
+}
+
 #logo {
   text-align: center;
 }
@@ -7773,7 +7781,12 @@ hr {
 }
 
 .liste {
-  text-decoration: none;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.cat:hover {
+  color: white;
 }
 
 #bouton-panier {
@@ -8045,6 +8058,8 @@ hr {
 #demande {
   border-radius: 4px;
   width: 97%;
+  background: #3b3b3b;
+  color: white;
 }
 
 /*  ---- Barre de recherche ----  */
@@ -8226,6 +8241,11 @@ input:-moz-placeholder {
     margin-right: 50px;
     padding-right: 40px;
     padding-left: 40px;
+  }
+  #connect {
+    top: 10px;
+    right: 10px;
+    left: 125%;
   }
 }
 

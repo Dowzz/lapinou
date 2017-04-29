@@ -9,11 +9,11 @@
 
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Email">
+                            <input type="email" name="email" id="email" class=" form-control" type="text" " placeholder="Email">
                         </div>
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-unlock-alt fa-fw"></i></span>
-                            <input class="form-control" type="password" placeholder="Mot de passe">
+                            <input type="password" name="password" id="lpassword"  class="form-control" type="password" placeholder="Mot de passe">
                         </div>
                         <label>
                             <input type="checkbox" name="remember"> Se souvenir de moi

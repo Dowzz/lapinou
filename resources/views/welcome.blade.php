@@ -29,7 +29,11 @@
         
     </div>
 </div>
-
+@if (session('status'))
+    <div class="alert alert-success">
+{{ session('status') }}
+    </div>
+@endif
 <!--Barre de recherche-->
 <div class="flexsearch">
         <div class="flexsearch-wrapper">
