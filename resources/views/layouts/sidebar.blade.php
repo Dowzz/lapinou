@@ -16,7 +16,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <ul>
+            <ul class="liste">
             <li class="ajax">
             <a class="navbar-brand" href="home">Accueil</a>
             </li>

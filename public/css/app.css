@@ -8242,11 +8242,6 @@ input:-moz-placeholder {
     padding-right: 40px;
     padding-left: 40px;
   }
-  #connect {
-    top: 10px;
-    right: 10px;
-    left: 125%;
-  }
 }
 
 @media (min-width: 992px) {
@@ -8276,7 +8271,7 @@ input:-moz-placeholder {
   nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
     text-align: center;
     width: 100%;
-    margin-left: 0px;
+    margin-left: -60px;
   }
   nav.sidebar a {
     padding-right: 13px;
