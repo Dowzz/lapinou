@@ -76,7 +76,7 @@ $("#miniature").slideUp(500,function(){
 	});
 
 	
-var password1 = $("#password");
+var password1 = $("#rpassword");
 var password2 = $("#cpassword");
 var form = $("#registration");
 
@@ -115,7 +115,7 @@ password1.on("input", function(e) {
 
 
 password2.on("input", function(e) {
-	    var password1 = $("#password");
+	    var password1 = $("#rpassword");
 	    var form = $("#registration");
 	    var mdp1 = password1.val();//NAME ??
 	    var mdp2 = e.target.value;
@@ -145,7 +145,16 @@ password2.on("input", function(e) {
 
 });
 
-//switch mot de passe 
+//tooltips
+
+$(document).ready(function () {
+    $('.tooltips').tooltip({
+        trigger: 'focus'
+    })
+});
+
+
+/*//switch mot de passe 
 
 $(document).ready(function() {
   $('#oubli').click(function(e) {
@@ -156,13 +165,6 @@ $(document).ready(function() {
     e.preventDefault();
     $('div#login').toggle('500');
   });
-});
+});*/
 
-//tooltips
-
-$(document).ready(function () {
-    $('.tooltips').tooltip({
-        trigger: 'focus'
-    })
-});
 

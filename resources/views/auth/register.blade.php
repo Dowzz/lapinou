@@ -1,3 +1,5 @@
+<script type="text/javascript" src="{{ URL::asset('js/all.js') }}"></script>
+
 <div class="row">
     <div class="col-sm-12 col-md-12">
         <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Retour</button>

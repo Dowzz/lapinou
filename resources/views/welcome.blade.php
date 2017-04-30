@@ -30,10 +30,20 @@
     </div>
 </div>
 @if (session('status'))
-    <div class="alert alert-success">
-{{ session('status') }}
+    <div class="alert alert-info">
+        {{ session('status') }}
     </div>
 @endif
+@if(Session::has('success'))
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-info">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                        {{Session::get('success')}}
+                    </div>
+                </div>
+            </div>
+            @endif
 <!--Barre de recherche-->
 <div class="flexsearch">
         <div class="flexsearch-wrapper">
@@ -110,8 +120,11 @@
         </div>
     </div>
 </div>
-
-
+@if (Auth::user())
+<div class="row" style="text-align: center;">
+    <h2>Bienvenue, {{ Auth::user()->name }}</h2>
+</div>
+@endif
 <!--Miniature-->
 <div id="miniature">
 
