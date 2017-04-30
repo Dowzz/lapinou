@@ -4,7 +4,7 @@
                         <div class="form-group">
                                 <div class="col-md-12">
                                     <span>Payer en toute sécurité avec votre carte !</span>
-                                    <ul class="cards">
+                                    <ul class="liste" class="cards">
                                         <li class="visa hand">Visa</li>
                                         <li class="mastercard hand">MasterCard</li>
                                         <li class="amex hand">American Express</li>

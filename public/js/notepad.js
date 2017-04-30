@@ -4,7 +4,7 @@ var notepad={
 				+'<form><!--noteHTML goes here--></form>'
 				+'</div>',
 
-	noteHTML:'<fieldset><legend></legend>'
+	noteHTML:'<fieldset><legend>:</legend>'
 					+'<input type="text" /><br />'
 					+'<b>Note content:</b><br />'
 					+'<textarea></textarea>'
