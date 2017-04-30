@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/notepad.css') }}" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="{{ asset('/js/notepad.js') }}"></script>
     
 
     <title>Lapibook</title>
@@ -13,6 +16,8 @@
 <div id="navbar">
 @include('layouts.sidebar')
 </div>
+
+
            
 <!--Header-->
 
@@ -22,7 +27,8 @@
         <div id="logo" class="col-md-9 col-sm-12"><a href="accueil"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></a></div>
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
         @if (Auth::user())
-        <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div> 
+        <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
+        <div class="col-md-3 col-sm-12"><a href="javascript:notepad.loadpad('mynotepad')"><button class="btn btn-elegant">Todolist</button></a></div>
         @else
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion">Connexion</button></div>
         @endif
@@ -31,6 +37,7 @@
 </div>
 @if (session('status'))
     <div class="alert alert-info">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
         {{ session('status') }}
     </div>
 @endif
@@ -67,6 +74,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="modal_inscription" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -77,6 +85,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="modal_forget" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -109,6 +118,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="modal-pay" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" >
         <div class="modal-content">
@@ -120,10 +130,12 @@
         </div>
     </div>
 </div>
+
 @if (Auth::user())
 <div class="row" style="text-align: center;">
     <h2>Bienvenue, {{ Auth::user()->name }}</h2>
 </div>
+
 @endif
 <!--Miniature-->
 <div id="miniature">
@@ -135,6 +147,7 @@
 <div class="footer" id="footer">
 
 @include('layouts.footer')
+
 </div>
 
 </body>

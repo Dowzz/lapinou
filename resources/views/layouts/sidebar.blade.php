@@ -1,10 +1,3 @@
-
-
-@push('stylesheets')
-<link href="{{ elixir('css/app.css') }}" rel="stylesheet">
-@endpush
-
-
 <div class="row">
 <nav class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
@@ -59,7 +52,7 @@
             </div>
         </div>
             </li> 
-        <li><a href="lapication" data-toggle="modal" data-target="#modal-lapication">Lapi'cation<span><img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a></li>               
+        <li><a href="lapication" data-toggle="modal" data-target="#modal-lapication">Lapi'cation<span><img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a></li> 
         </ul>
         </div>
     </div>

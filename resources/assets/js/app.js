@@ -41,10 +41,10 @@ $(document).ready(function(){
 });
 
 function afficher(data){
-$("#miniature").slideUp(500,function(){
+$("#miniature").fadeOut(500,function(){
 	$("#miniature").empty();
 	$("#miniature").append(data);
-	$("#miniature").slideDown(1000);
+	$("#miniature").fadeIn(1000);
 })
 }
 //test
