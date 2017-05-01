@@ -6,9 +6,10 @@
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
     <div id="modal">
-    <div class="modal-title"><h1>TOTO</h1></div>
-    
-        
+    <div class="modal-title"><h4>Todo-List</h4>
+    @include ('modals.todolist')
+    <p id="modal-untrigger" data-buttonTitle="close modal">X</p>    
+    </div>
     </div>
 
     <title>Lapibook</title>
@@ -29,7 +30,7 @@
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
-        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" id="modal-trigger" data-buttonTitle="Open Modal">Open Modal</button>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" id="modal-trigger" data-buttonTitle="Open Modal">Todo-List</button>
         </div>
         @else
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</button></div>

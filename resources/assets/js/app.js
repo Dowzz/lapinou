@@ -203,6 +203,10 @@ $('#modal-trigger').click(function(){
   $('#modal').addClass('show')('z-index',1);
 });
 
+$('#modal-untrigger').click(function(){
+	$('#modal').removeClass("show");
+})
+
 
 /*//switch mot de passe 
 
