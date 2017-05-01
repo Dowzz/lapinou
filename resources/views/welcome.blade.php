@@ -5,10 +5,11 @@
     <meta charset="utf-8" />
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/notepad.css') }}" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script src="{{ asset('/js/notepad.js') }}"></script>
+    <div id="modal">
+    <div class="modal-title"><h1>TOTO</h1></div>
     
+        
+    </div>
 
     <title>Lapibook</title>
 </head>
@@ -24,13 +25,14 @@
 <div class="container-fluid" id="header">
     <div class="row">
         <div class="col-md-0 col-sm-12"></div>
-        <div id="logo" class="col-md-9 col-sm-12"><a href="accueil"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></a></div>
+        <div id="logo" class="col-md-9 col-sm-12"><a href="{{ url('/') }}"><img class="logo" src="{{URL::asset('/img/Logo.jpg')}}"></a></div>
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
-        <div class="col-md-3 col-sm-12"><a href="javascript:notepad.loadpad('mynotepad')"><button class="btn btn-elegant">Todolist</button></a></div>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" id="modal-trigger" data-buttonTitle="Open Modal">Open Modal</button>
+        </div>
         @else
-        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion">Connexion</button></div>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</button></div>
         @endif
         
     </div>
@@ -64,7 +66,7 @@
 </div>
 
 <!-- Large modal -->
-<div class="modal fade" id="modal_connexion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal draggable fade" id="modal_connexion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-side modal-top-right">
         <div class="modal-content">
             <div class="modal-header">

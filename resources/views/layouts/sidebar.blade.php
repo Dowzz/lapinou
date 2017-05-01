@@ -10,8 +10,8 @@
                 <span class="icon-bar"></span>
             </button>
             <ul class="liste">
-            <li class="ajax">
-            <a class="navbar-brand" href="home">Accueil</a>
+            <li>
+            <a class="navbar-brand" href="{{ url('/') }}">Accueil</a>
             </li>
             </ul>
         </div>

@@ -19,16 +19,17 @@
                 <div class="col-md-4 col-sm-4">
                     <h3> Liens </h3>
                     <ul>
-                        <li class="ajax"><a href="home">Accueil</a></li>
+                        <li><a href="{{ url('/') }}">Accueil</a></li>
                         @if (Auth::check())
                             <li class="ajax"><a href="profil">Profil<span></span></a>
                             </li>
                         @endif                        
-                        <li> <a data-toggle="modal" data-target="#myModal" href="#"> Connexion / Inscription </a> </li>              
-                        <li> <a data-toggle="modal" data-target="#modal-lapication" href="lapibook"> Lapi'book </a> </li>
-                        <li> <a data-toggle="modal" data-target="#modal-panier" href="panier"> Panier </a> </li>
-                        <li> <a data-toggle="modal" data-target="#modal-pay" href="paiement"> Paiement </a> </li>
-                        <li> <a data-toggle="modal" data-target="#modal-contact" href="contact"> Contactez-nous </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_connexion" href="connexion">Connexion</a> </li> 
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_inscription" href="inscription">Inscription</a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-lapication" href="lapibook"> Lapi'book </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-panier" href="panier"> Panier </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-pay" href="paiement"> Paiement </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-contact" href="contact"> Contactez-nous </a> </li>
 
                        
                     </ul>
@@ -54,4 +55,4 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> 

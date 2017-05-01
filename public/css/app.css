@@ -7660,6 +7660,38 @@ button.close {
 }
 
 /*  ---- SCSS de base ----  */
+#modal {
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  top: 75%;
+  left: 75%;
+  height: 340px;
+  width: 340px;
+  margin: -150px 0 0 -250px;
+  transition: none;
+  background: #222222;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
+}
+
+#modal.show {
+  opacity: 1;
+}
+
+#modal #content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  line-height: 300px;
+  text-align: center;
+}
+
 .logo {
   width: 380px;
   height: auto;
@@ -7738,7 +7770,7 @@ input[type=checkbox] {
 /*  ---- Menu ----  */
 #navbar {
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   margin-left: 15px;
 }
 
@@ -8114,24 +8146,23 @@ hr {
   -moz-appearance: none;
 }
 
-.flexsearch-submit {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  border: none;
-  margin-top: 20px;
-  margin-right: 5px;
-  background: transparent;
-  color: #222222;
-  font-family: 'Helvetica', sans-serif;
-  font-size: 40px;
-  line-height: 60px;
-}
-
+/*.flexsearch-submit {
+  	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+  	padding: 0;
+  	border: none;
+	margin-top: 20px;
+  	margin-right: 5px;
+	background: transparent;
+  	color: #222222;
+  	font-family: 'Helvetica', sans-serif;
+  	font-size: 40px;
+  	line-height: 60px;
+}*/
 .flexsearch-input:focus {
   outline: none;
   border-color: #9d9d9d;

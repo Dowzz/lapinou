@@ -6,6 +6,39 @@
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
 /*  ---- SCSS de base ----  */
+
+
+
+#modal {
+	z-index: 1;
+	position:absolute;
+	opacity:0;
+	top:75%;
+	left:75%;
+	height:340px;
+	width:340px;
+	margin:-150px 0 0 -250px;
+	transition:none;
+	background:#222222;
+	overflow:hidden;
+	border-radius:10px;
+	box-shadow:0 0 50px 5px rgba(0,0,0,.2);
+	&.show {
+	  opacity:1;
+}
+    #content {
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:1;
+      height:100%;
+      width:100%;
+      background:rgba(255,255,255,.4);
+      line-height:300px;
+      text-align:center;
+    }
+}
+
 .logo{
 	width: 380px;
 	height: auto;
@@ -71,7 +104,7 @@ input[type=checkbox]{
 /*  ---- Menu ----  */
 #navbar{
     position:fixed;
-    z-index: 1;
+    z-index: 5;
     margin-left: 15px;
 }
 body,html{
@@ -706,4 +739,5 @@ input:-moz-placeholder {
 		border: 1px solid cyan;
 		width: 90%;
 	}
+
 }
