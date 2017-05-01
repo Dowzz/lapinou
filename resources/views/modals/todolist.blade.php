@@ -1,5 +1,5 @@
    <form name="toDoList" onsubmit="return false">
-      <input type="text" name="ListItem"/>
+      <input id="todoinput" type="text" name="ListItem"/>
     </form>
     
     <div><button type="button" id="button">ajouter</div>
@@ -26,7 +26,7 @@ form {
 display: inline-block;
 }
 
-input{
+#todoinput{
 padding: 4px 15px 4px 5px;
 }
 
@@ -34,7 +34,7 @@ padding: 4px 15px 4px 5px;
 display: inline-block;
 background-color:#222222;
 color:#ffffff;
-border-radius: 5px;
+border-radius: 10px;
 text-align:center;
 margin-top:2px;
 padding: 5px 15px;

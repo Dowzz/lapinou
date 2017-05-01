@@ -54,8 +54,8 @@ $("#miniature").fadeOut(500,function(){
 		var height1 = $('.nav').height()+50
 		height2 = $('.main').height()
 		if(height2 > height3){
-			$('html').height(Math.max(height1,height3,height2)+10);
-			$('body').height(Math.max(height1,height3,height2)+10);
+			$('html').height(Math.max(height1,height3,height2));
+			$('body').height(Math.max(height1,height3,height2));
 		}
 		else
 		{
@@ -233,6 +233,7 @@ $(document).ready(
       
     }
 );
+
 
 
 /*//switch mot de passe 

@@ -20,7 +20,7 @@
 </div>
 
 
-           
+
 <!--Header-->
 
 <div class="container-fluid" id="header">
@@ -54,20 +54,54 @@
                 </div>
             </div>
             @endif
+
+
+
+
 <!--Barre de recherche-->
+
 <div class="flexsearch">
         <div class="flexsearch-wrapper">
             <form class="flexsearch-form">
                 <div class="flexsearch-input-wrapper">
                     <input class="flexsearch-input" type="search" placeholder="Recherche" name="q">
                 </div>
-                <!--<input class="flexsearch-submit" type="submit" value="&#10140;"/>-->
             </form>
         </div>
 </div>
 
-<!-- Large modal -->
-<div class="modal draggable fade" id="modal_connexion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+@if (Auth::user())
+<div class="row" style="text-align: center;">
+    <h2>Bienvenue, {{ Auth::user()->name }}</h2>
+</div>
+
+@endif
+
+
+<!--Miniature-->
+
+<div id="miniature">
+
+</div>
+@yield('content')
+
+
+
+<!--Footer-->
+
+<div class="footer" id="footer">
+
+@include('layouts.footer')
+
+</div>
+
+</body>
+</html>
+
+
+
+<!--modals -->
+<div class="modal fade" id="modal_connexion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-side modal-top-right">
         <div class="modal-content">
             <div class="modal-header">
@@ -133,25 +167,3 @@
         </div>
     </div>
 </div>
-
-@if (Auth::user())
-<div class="row" style="text-align: center;">
-    <h2>Bienvenue, {{ Auth::user()->name }}</h2>
-</div>
-
-@endif
-<!--Miniature-->
-<div id="miniature">
-
-</div>
-@yield('content')
-
-<!--Footer-->
-<div class="footer" id="footer">
-
-@include('layouts.footer')
-
-</div>
-
-</body>
-</html>

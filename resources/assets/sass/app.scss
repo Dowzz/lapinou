@@ -28,7 +28,7 @@
 	}
 }
 .modal-title{
- 
+
 	text-align: center;
 	color:#9d9d9d;
 	padding-top: 10px;
@@ -103,7 +103,6 @@ input[type=checkbox]{
     margin-left: 15px;
 }
 body,html{
-	width:100%;
 	font-family: 'Patrick Hand', cursive;
 	font-size: 16px;
 }
@@ -390,7 +389,10 @@ hr {
 
 
 /*  ---- Barre de recherche ----  */
-
+.flexsearch{
+	width:100%;
+    display: block;
+}
 .flexsearch-wrapper {
 	height: auto;
 	width: auto;
@@ -399,21 +401,21 @@ hr {
 	background: transparent;
 	margin: 0;
 	position: static;
+	text-align: center;
 }	
 .flexsearch-form {
 	overflow: hidden;
 	position: relative;
+	width:60%;
 }	
 .flexsearch-input-wrapper {
-	padding: 0 66px 0 0; /* Right padding for submit button width */
+
 	overflow: hidden;
 }
 .flexsearch-input {
   	width: 100%;
 }
-.flexsearch {
-  	padding: 0 25px 0 200px; /* Padding for other horizontal elements */
-}
+
 .flexsearch-input {
  	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
@@ -431,23 +433,7 @@ hr {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }	
-/*.flexsearch-submit {
-  	position: absolute;
-	right: 0;
-	top: 0;
-	display: block;
-	width: 60px;
-	height: 60px;
-  	padding: 0;
-  	border: none;
-	margin-top: 20px;
-  	margin-right: 5px;
-	background: transparent;
-  	color: #222222;
-  	font-family: 'Helvetica', sans-serif;
-  	font-size: 40px;
-  	line-height: 60px;
-}*/
+
 .flexsearch-input:focus {
   	outline: none;
   	border-color: #9d9d9d;
@@ -632,6 +618,11 @@ input:-moz-placeholder {
 
 @media (max-width: 991px) {
 
+	.flexsearch{
+	width:100%;
+    display: block;
+}
+
 	.span12{
 		width: 230px;
 	}
@@ -683,7 +674,7 @@ input:-moz-placeholder {
 @media (max-width: 768px){ 
 
 	.flexsearch{
-		padding: 0 0px 0 115px;
+		width: 100%;
 	}
 	.panel-default{
 		width: 75%;
