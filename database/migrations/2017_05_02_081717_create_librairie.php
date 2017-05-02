@@ -13,7 +13,21 @@ class CreateLibrairie extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('librairie', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('couverture');
+            $table->text('titre');
+            $table->text('auteur');
+            $table->text('editeur');
+            $table->date('parution');
+            $table->text('description');
+            $table->text('genre');
+            $table->text('format');
+            $table->integer('notes');
+            $table->text('prix');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +37,6 @@ class CreateLibrairie extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('librairie');
     }
 }
