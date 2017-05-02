@@ -10,10 +10,10 @@
 
 
 #modal {
-	display: inline-block;
+	
 	z-index: 1;
 	position:absolute;
-	opacity:0;
+	display:none;
 	top:50%;
 	left:15%;
 	width:280px;
@@ -24,7 +24,7 @@
 	border-radius:10px;
 	box-shadow:0 0 50px 5px rgba(0,0,0,.2);
 	&.show {
-	  opacity:1;
+	display: inline-block;;
 	}
 }
 .modal-title{
