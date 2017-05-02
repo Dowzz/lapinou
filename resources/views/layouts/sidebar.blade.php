@@ -35,16 +35,16 @@
                 <ul class ="liste">
                     <li class="ajax"><a class="cat" href="template_miniature">Aventure / Action</a></li>
                     <li class="ajax"><a class="cat" href="template_miniature">Classique</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Conte</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Dystopie</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Espionnage</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Fantastique</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Frisson / Terreur</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Gratuit</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Guerre</a></li>
+                    <li class="ajax"><a class="cat"  href="template_miniature">Humour</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Jeunesse</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Historique</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Sentimentale</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Policier</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Roman</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Science-fiction</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Thriller</a></li>
                     <li class="ajax"><a class="cat"  href="template_miniature">Western</a></li>  
