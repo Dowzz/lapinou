@@ -1,62 +1,95 @@
-   <form name="toDoList" onsubmit="return false">
-      <input id="todoinput" type="text" name="ListItem"/>
-    </form>
-    
-    <div><button type="button" id="button">ajouter</div>
-    <br/>
-    <ol></ol>
+  <div><h4>To-Do List</h4></div>
+  <div class="row"><i class="removeall">Effacer</i><i class="add">ajouter</i></div>
 
-    <style>
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
-body {
-font: normal normal 13px/16px "Open Sans", sans-serif;
-background: #ccc;
-}
+  <div class="row"><input id="todoinput" type="text" placeholder="ajouter note"></div>
+  <div class="row">
+  <ul class="todoul">
 
-.container{
-padding: 20px;
-width: 300px;
-margin: 0 auto;
-margin-top: 40px;
-background: white;
-border-radius: 5px;}
+  </ul>
+  </div>
 
-form {
-display: inline-block;
-}
 
-#todoinput{
-padding: 4px 15px 4px 5px;
-}
 
-#button{
-display: inline-block;
-background-color:#222222;
-color:#ffffff;
-border-radius: 10px;
-text-align:center;
-margin-top:2px;
-padding: 5px 15px;
-}
+<style>
 
-#button:hover{
-cursor: pointer;
-opacity: .8;}
-
-ol {padding-left: 20px;}
-
-ol li {padding: 5px;color:#000;}
-
-ol li:nth-child(even){background: #dfdfdf;}
-
-.strike{text-decoration: line-through;}
-
-li:hover{
+.removeall {
+  float :left;
+  margin-right: 0%;
+  line-height: 30px;
+  padding-left: 1.5em;
   cursor: pointer;
- }
-</style>
-      
-      
-    
+}
 
+.add {
+  float :right;
+  cursor: pointer;
+  padding-right: 1.5em;
+
+}
+
+.todoul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todoli {
+  background: #222222;
+  max-height: 400px;
+  line-height: 40px;
+  color:  lightgray;
+}
+
+.todoli:nth-child(2n) {
+  background: #3b3b3b;
+}
+ 
+
+#todoinput {
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  background: #3b3b3b;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  padding: 13px 13px 13px 20px;
+  color: white;
+  display:none;
+}
+
+#todoinput:focus {
+  background: #3b3b3b;
+  outline:none;
+  border: 2px solid #9d9d9d;
+  color: white;
+
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todoli:hover {
+  cursor: pointer;
+}
+
+.todospan {
+
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0px;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+.todoli:hover .todospan {
+  width: 40px;
+  opacity: 1;
+}
+
+}</style>

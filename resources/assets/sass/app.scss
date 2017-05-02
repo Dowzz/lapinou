@@ -16,10 +16,10 @@
 	display:none;
 	top:50%;
 	left:15%;
-	width:280px;
+	width:250px;
 	margin:-150px 0 0 -250px;
 	transition:none;
-	background:white;
+	background:#222222;
 	overflow:hidden;
 	border-radius:10px;
 	box-shadow:0 0 50px 5px rgba(0,0,0,.2);
@@ -407,6 +407,7 @@ hr {
 	overflow: hidden;
 	position: relative;
 	width:60%;
+	display: inline-block;
 }	
 .flexsearch-input-wrapper {
 

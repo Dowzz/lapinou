@@ -6,9 +6,9 @@
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
     <div id="modal">
-    <div class="modal-title"><h4>double click pour effacer une ligne</h4>
+    <div class="modal-title">
     @include ('modals.todolist')
-    <p id="modal-untrigger" data-buttonTitle="close modal">X</p>    
+    <p id="modal-untrigger" data-buttonTitle="close modal">Fermer</p>    
     </div>
     </div>
 
