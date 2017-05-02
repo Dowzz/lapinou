@@ -222,12 +222,12 @@ $('#modal-untrigger').click(function(){
 }
 updateNumbers();
 //Check off Specific Todos By Clicking
-$("ul").on("click", "li", function () {
+$(".todoul").on("click", "li", function () {
   $(this).toggleClass("completed");
 });
 
 //Click on X to delete Todo
-$("ul").on('click', "span", function (e) {
+$(".todoul").on('click', "span", function (e) {
   e.stopPropagation();
   $(this).closest("li").fadeOut(500,function() {
    $(this).remove();
@@ -259,6 +259,12 @@ $("input[type='text']").keypress(function(e) {
 
 $(".add").click(function() {
   $("input[type='text']").fadeToggle(200);
+});
+
+$("#modal").dialog();
+
+$(window).resize(function() {
+    $("#modal").dialog("option", "position", "center");
 });
 
 
