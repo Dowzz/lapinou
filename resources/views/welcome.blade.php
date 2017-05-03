@@ -1,16 +1,10 @@
 <!doctype html>
 <html lang="fr">
 <head>
-
+    <meta name="viewport" content="width=960, initial-scale=1, maximum-scale=1"/>
     <meta charset="utf-8" />
-    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
-    <div id="modal">
-    <div class="modal-title">
-    @include ('modals.todolist')
-    <p id="modal-untrigger" data-buttonTitle="close modal">Fermer</p>    
-    </div>
-    </div>
+
 
     <title>Lapibook</title>
 </head>
@@ -30,7 +24,10 @@
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
         @if (Auth::user())
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
-        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" id="modal-trigger" data-buttonTitle="Open Modal">Todo-List</button>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant">Todo-List</button>
+        <div id="dialog">
+            @include ('modals.todolist')
+        </div>
         </div>
         @else
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</button></div>
@@ -167,3 +164,24 @@
         </div>
     </div>
 </div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style type="text/css">
+#dialog{
+    display: none;
+    background-color: #9d9d9d;
+}
+.ui-widget-content{
+    border:none;
+    background:none; 
+}
+
+</style>
+
+
+
+
+
+
+
