@@ -156,9 +156,10 @@ $(document).ready(function () {
 
 // draggable plugin
 
-    $("button").click(function(){
+    $("#button").click(function(){
         $( "#dialog" ).dialog({
-        	resizable: false
+        	resizable: false,
+        	minHeight: 0
         });
     });
     $(window).resize(function ()
@@ -217,13 +218,13 @@ $("input[type='text']").keypress(function(e) {
 });
 
 $(".add").click(function() {
-  $("input[type='text']").fadeToggle(200);
+  $("#todoinput").fadeToggle(200);
 });
 
-$("#modal").dialog();
+$("#dialog").dialog();
 
 $(window).resize(function() {
-    $("#modal").dialog("option", "position", "center");
+    $("#dialog").dialog("option", "position", "center");
 });
 
 

@@ -7,33 +7,38 @@
 
 /*  ---- SCSS de base ----  */
 
+#dialog{
+    display:none;
+    background-color: #222222;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
-
-#modal {
-	
-	z-index: 1;
-	position:absolute;
-	display:none;
-	top:50%;
-	left:15%;
-	width:250px;
-	margin:-150px 0 0 -250px;
-	transition:none;
-	background:#222222;
-	overflow:hidden;
-	border-radius:10px;
-	box-shadow:0 0 50px 5px rgba(0,0,0,.2);
-	&.show {
-	display: inline-block;;
-	}
 }
-.modal-title{
-
-	text-align: center;
-	color:#9d9d9d;
-	padding-top: 10px;
+.ui-widget-content{
+    border:none;
+    background:none; 
 }
-
+.ui-widget-header{
+    background:none;
+    background-color: #222222;
+    padding:6px;
+    color: #9d9d9d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.ui-button{
+	float:right;
+	margin-top: -3px;
+	background-color: #222222;
+	border-radius: 10px;
+}
+#liinputrow{
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.todotools{
+	background-color:#3b3b3b;
+}
 .logo{
 	width: 380px;
 	height: auto;
@@ -457,7 +462,8 @@ input:-moz-placeholder {
 
 .stats {
 	text-align:center;
-	margin-top:25px;  
+	margin-top:25px;
+	list-style-type:none;  
 }
 .stats li{
   	width:125px; 
@@ -485,7 +491,7 @@ input:-moz-placeholder {
 }
 .span6{
 	color:#9d9d9d;
-	padding-left:55px;
+	padding-left:30px;
 }
 .span4{
 	color:#9d9d9d;
@@ -628,7 +634,7 @@ input:-moz-placeholder {
 		width: 230px;
 	}
 	.span6{
-		padding-left: 35px;
+		padding-left: 0px;
 	}
 	#labelwhite{
 	padding-top: 12px;

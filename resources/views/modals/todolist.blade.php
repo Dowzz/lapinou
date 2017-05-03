@@ -1,8 +1,6 @@
-  <div class="row"><i class="removeall">Effacer</i><i class="add">ajouter</i></div>
-
-
-  <div class="row"><input id="todoinput" type="text" placeholder="ajouter note"></div>
-  <div class="row">
+<div class="row" class="todotools"><i class="removeall">Effacer</i><i class="add">ajouter</i></div>
+<div class="row" id="liinputrow"><input id="todoinput" type="text" placeholder="ajouter note"></div>
+  <div class="row"  id="liinputrow">
   <ul class="todoul">
 
   </ul>
@@ -16,14 +14,16 @@
   float :left;
   margin-right: 0%;
   line-height: 30px;
-  padding-left: 1.5em;
+  padding-left: 0.5em;
   cursor: pointer;
+  color: #9d9d9d;
 }
 
 .add {
   float :right;
   cursor: pointer;
-  padding-right: 1.5em;
+  padding-right: 0.5em;
+  color: #9d9d9d;
 
 }
 
@@ -31,6 +31,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .todoli {
@@ -38,6 +40,8 @@
   max-height: 400px;
   line-height: 40px;
   color:  lightgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .todoli:nth-child(2n) {
@@ -49,19 +53,20 @@
   font-size: 15px;
   text-align: center;
   letter-spacing: 1px;
-  background: #3b3b3b;
+  background: #222222;
   width: 100%;
   border: none;
   box-sizing: border-box;
-  padding: 13px 13px 13px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   color: white;
   display:none;
+  padding: 5px 5px 5px 5px;
 }
 
 #todoinput:focus {
   background: #3b3b3b;
   outline:none;
-  border: 2px solid #9d9d9d;
   color: white;
 
 }

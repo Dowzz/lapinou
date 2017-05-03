@@ -10,7 +10,7 @@
 
                     <div class="span4">
                         <h2>Lapinou</h2> 
-                            <ul class="unstyled">
+                            <ul class="liste" class="unstyled">
                                 <li>Lapinou@mail.com</li>
                                 <li>Né(e) le 25 septembre 2000</li>
                                 <li>Incription le 14 février 2011</li>
