@@ -10,15 +10,17 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+use App\Livre;
 
 Route::get('/', function () {
     return view('welcome');
+    $livre= Livre::all();
 });
-
 
 Auth::routes();
 
 Route::get('/welcome', 'HomeController@index');
+
 Route::get('profil', function () {
     return view('contenu.profil');
 });

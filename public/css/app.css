@@ -7660,6 +7660,11 @@ button.close {
 }
 
 /*  ---- SCSS de base ----  */
+.couv {
+  width: 200px;
+  height: 300px;
+}
+
 #dialog {
   display: none;
   background-color: #222222;
