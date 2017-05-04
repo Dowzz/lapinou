@@ -20,12 +20,6 @@ Route::get('/{categorie?}', function($categorie = null)
 	else return view('welcome');
 });
 
-Route::get('{id?}', function($id)
-{
-	return View::make('detail/')->with('id', $id); 
-
-});
-
 Auth::routes();
 
 Route::get('/welcome', 'HomeController@index');

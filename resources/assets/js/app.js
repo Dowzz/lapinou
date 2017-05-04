@@ -41,7 +41,7 @@ $("#miniature").fadeOut(500,function(){
 	$("#miniature").fadeIn(1000);
 })
 }
-//test
+
 
     function htmlbodyHeightUpdate(){
 		var height3 = $( window ).height()

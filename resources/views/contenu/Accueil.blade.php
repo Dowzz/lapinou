@@ -24,14 +24,14 @@ function tronquer($description)
 use App\Livre;
 $livre= Livre::orderBy('id', 'desc')->take(10)->get();
 foreach ($livre as $l) {
-  $id = ($l->id);
+echo "$l";
 ?>
     <div  class="view view-fifth">  
          <img class="couv" src=" <?php echo ($l->couverture); ?>"> 
          <div class="mask">  
          <h2><?php echo ($l->titre); ?></h2>  
          <p class="description"><?php echo tronquer($l->description);?></p>
-         <a data-toggle="modal" data-target="#modal_detail" href="<?php echo "$id" ?>" >
+         <a data-toggle="modal" data-target="#modal_detail">
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
@@ -41,14 +41,7 @@ foreach ($livre as $l) {
          </a>
          </div> 
     </div>
-   
-
-<?php
-}
-
-?>
-</div>
-<div class="modal fade" id="modal_detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal_detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-side modal-top-right">
         <div class="modal-content">
             <div class="modal-header">
@@ -57,4 +50,11 @@ foreach ($livre as $l) {
             </div>
         </div>
     </div>
+</div>
+   
+
+<?php
+}
+
+?>
 </div>
