@@ -1,8 +1,11 @@
+<?php 
+use App\livre;
+$id = Livre::find($id);
+?>
 
-
-
+<p>id = <?php echo ($l->id) ?></p>
 <div class="">
-	<img class="cover-ebook" src=" <?php echo ($l->couverture); ?>"> 
+	<img class="cover-ebook" src=" <?php echo ($id->couverture); ?>"> 
 </div>
 
 <fieldset class="rating">
@@ -29,7 +32,7 @@
 </fieldset>
 
 <div class="description">
-	<p>(TITRE) de (AUTEUR)</p><br />
-	<p>(CATEGORIE) édité par (EDITEUR) le (PARUTION)</p>
-	<p>(RESUME)</p>
+	<p><?php echo ($id->titre)?> de <?php echo ($id->auteur)?></p><br />
+	<p><?php echo ($id->genre)?> édité par <?php echo ($id->editeur)?> le <?php echo ($id->parution)?></p>
+	<p><?php echo ($id->description)?></p>
 </div>

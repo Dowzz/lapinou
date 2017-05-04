@@ -20,10 +20,10 @@ Route::get('/{categorie?}', function($categorie = null)
 	else return view('welcome');
 });
 
-Route::get('/{id?}', function($id = null)
+Route::get('{id?}', function($id)
 {
-	if (id) return View::make('detail/')->with('id', $id); 
-	else return ('/{categorie}');
+	return View::make('detail/')->with('id', $id); 
+
 });
 
 Auth::routes();

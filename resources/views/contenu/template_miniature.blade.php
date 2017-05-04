@@ -22,13 +22,14 @@ function tronquer($description)
 use App\Livre;
 $livre= Livre::whereGenre($categorie)->get();
 foreach ($livre as $l) {
+    $id = ($l->id);
 ?>
     <div  class="view view-fifth">  
          <img class="couv" src=" <?php echo ($l->couverture); ?>"> 
          <div class="mask">  
          <h2><?php echo ($l->titre); ?></h2>  
          <p class="description"><?php echo tronquer($l->description);?></p>
-         <a data-toggle="modal" data-target="#modal_detail" href="<?php echo ($l->id) ?>" >
+         <a data-toggle="modal" data-target="#modal_detail" href="<?php echo "$id" ?>" >
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
