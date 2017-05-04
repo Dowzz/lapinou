@@ -77,7 +77,7 @@
 <div id="miniature">
 
 </div>
-@yield('content')
+
 
 
 <div class="container" id="dialog" title="Todo-List">

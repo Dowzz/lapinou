@@ -1,5 +1,7 @@
 <div class="mini">
-
+<div class="row">
+  <h2>Dernières Entrées dans la Librairie !</h2>
+</div>
 <?php 
 function tronquer($description)
 {
@@ -20,7 +22,7 @@ function tronquer($description)
 }
 
 use App\Livre;
-$livre= Livre::whereGenre($categorie)->get();
+$livre= Livre::orderBy('id', 'desc')->take(10)->get();
 foreach ($livre as $l) {
 ?>
     <div  class="view view-fifth">  

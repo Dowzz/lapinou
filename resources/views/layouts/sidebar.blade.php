@@ -10,8 +10,8 @@
                 <span class="icon-bar"></span>
             </button>
             <ul class="liste">
-            <li>
-            <a class="navbar-brand" href="{{ url('/') }}">Accueil</a>
+            <li class="ajax">
+            <a class="navbar-brand" href="contenu/accueil">Accueil</a>
             </li>
             </ul>
         </div>
@@ -19,9 +19,9 @@
        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
         <ul class="nav navbar-nav">
             @if (Auth::check())
-            <li class="ajax"><a href="admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
+            <li class="ajax"><a href="contenu/admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
             </li>
-            <li class="ajax"><a href="profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
+            <li class="ajax"><a href="contenu/profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
             </li>
             @endif
             <li>
@@ -33,21 +33,21 @@
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class ="liste">
-                    <li class="ajax"><a class="cat" href="template_miniature">Aventure / Action</a></li>
-                    <li class="ajax"><a class="cat" href="template_miniature">Classique</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Conte</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Dystopie</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Espionnage</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Fantastique</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Frisson / Terreur</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Gratuit</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Humour</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Jeunesse</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Historique</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Policier</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Science-fiction</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Thriller</a></li>
-                    <li class="ajax"><a class="cat"  href="template_miniature">Western</a></li>  
+                    <li class="ajax"><a class="cat" href="aventure">Aventure / Action</a></li>
+                    <li class="ajax"><a class="cat" href="classique">Classique</a></li>
+                    <li class="ajax"><a class="cat" href="contes">Conte</a></li>
+                    <li class="ajax"><a class="cat" href="dystopie">Dystopie</a></li>
+                    <li class="ajax"><a class="cat" href="espionnage">Espionnage</a></li>
+                    <li class="ajax"><a class="cat" href="fantastique">Fantastique</a></li>
+                    <li class="ajax"><a class="cat" href="horreur">Frisson / Terreur</a></li>
+                    <li class="ajax"><a class="cat" href="gratuit">Gratuit</a></li>
+                    <li class="ajax"><a class="cat" href="humour">Humour</a></li>
+                    <li class="ajax"><a class="cat" href="jeunesse">Jeunesse</a></li>
+                    <li class="ajax"><a class="cat" href="historique">Historique</a></li>
+                    <li class="ajax"><a class="cat" href="policier">Policier</a></li>
+                    <li class="ajax"><a class="cat" href="science-fiction">Science-fiction</a></li>
+                    <li class="ajax"><a class="cat" href="thriller">Thriller</a></li>
+                    <li class="ajax"><a class="cat" href="western">Western</a></li>  
                 </ul>
             </div>
         </div>

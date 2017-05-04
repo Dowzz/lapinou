@@ -14,21 +14,28 @@ use App\Livre;
 
 Route::get('/', function () {
     return view('welcome');
+});
 
+Route::get('/{categorie}', function($categorie)
+{
+    return View::make('contenu.template_miniature')->with('categorie', $categorie);
 });
 
 Auth::routes();
 
 Route::get('/welcome', 'HomeController@index');
 
-Route::get('profil', function () {
+Route::get('contenu/profil', function () {
     return view('contenu.profil');
 });
 Route::get('template_miniature', function () {
     return view('contenu.template_miniature');
 });
-Route::get('admin', function () {
+Route::get('contenu/admin', function () {
     return view('contenu.admin');
+});
+Route::get('contenu/accueil', function () {
+    return view('contenu.accueil');
 });
 
 
