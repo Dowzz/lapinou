@@ -1,3 +1,6 @@
+
+
+
 <div class="">
 	<img class="cover-ebook" src=" <?php echo ($l->couverture); ?>"> 
 </div>

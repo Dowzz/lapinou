@@ -28,7 +28,7 @@ foreach ($livre as $l) {
          <div class="mask">  
          <h2><?php echo ($l->titre); ?></h2>  
          <p class="description"><?php echo tronquer($l->description);?></p>
-         <a data-toggle="modal" data-target="#modal_detail" href="detail" >
+         <a data-toggle="modal" data-target="#modal_detail" href="<?php echo ($l->id) ?>" >
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
