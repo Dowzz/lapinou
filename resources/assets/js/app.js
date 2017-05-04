@@ -12,12 +12,6 @@ require('./bootstrap');
  * the body of the page. From here, you may begin adding components to
  * the application, or feel free to tweak this setup for your needs.
  */
-
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
 // NE PAS TOUCHER AU DESSUS 
 
 //affichage dynamique (footer qui remonte)
@@ -220,8 +214,6 @@ $("input[type='text']").keypress(function(e) {
 $(".add").click(function() {
   $("#todoinput").fadeToggle(200);
 });
-
-$("#dialog").dialog();
 
 $(window).resize(function() {
     $("#dialog").dialog("option", "position", "center");

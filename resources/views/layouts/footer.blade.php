@@ -1,5 +1,4 @@
-<link href="{{ elixir('css/app.css') }}" rel="stylesheet">
-<script src="{{ elixir('js/all.js') }}"></script>
+
 
 
 <footer>

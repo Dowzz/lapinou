@@ -12,13 +12,12 @@
 */
 use App\Livre;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/{categorie}', function($categorie)
+
+Route::get('/{categorie?}', function($categorie = null)
 {
-    return View::make('contenu.template_miniature')->with('categorie', $categorie);
+	if ($categorie) return View::make('contenu.template_miniature')->with('categorie', $categorie); 
+	else return view('welcome');
 });
 
 Auth::routes();
@@ -28,9 +27,7 @@ Route::get('/welcome', 'HomeController@index');
 Route::get('contenu/profil', function () {
     return view('contenu.profil');
 });
-Route::get('template_miniature', function () {
-    return view('contenu.template_miniature');
-});
+
 Route::get('contenu/admin', function () {
     return view('contenu.admin');
 });

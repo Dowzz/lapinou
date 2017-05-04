@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=960, initial-scale=1, maximum-scale=1"/>
     <meta charset="utf-8" />
 
@@ -64,14 +65,6 @@
         </div>
 </div>
 
-@if (Auth::user())
-<div class="row" style="text-align: center;">
-    <h2>Bienvenue, {{ Auth::user()->name }}</h2>
-</div>
-
-@endif
-
-
 <!--Miniature-->
 
 <div id="miniature">
@@ -83,6 +76,9 @@
 <div class="container" id="dialog" title="Todo-List">
 @include ('modals.todolist')
 </div>
+
+
+
 <!--Footer-->
 
 <div class="footer" id="footer">
@@ -93,6 +89,7 @@
 
 
 </body>
+
 </html>
 
 
@@ -157,8 +154,7 @@
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                @include('modals.paiement')  
-                    
+                @include('modals.paiement')                      
             </div>
         </div>
     </div>
@@ -166,9 +162,10 @@
 
 
 
+
+<script src="{{ asset('js/all.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
 
 
 

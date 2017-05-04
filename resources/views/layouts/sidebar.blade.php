@@ -11,7 +11,11 @@
             </button>
             <ul class="liste">
             <li class="ajax">
-            <a class="navbar-brand" href="contenu/accueil">Accueil</a>
+            <a class="navbar-brand" href="contenu/accueil">Bienvenue
+            @if (Auth::user())
+            ,{{ Auth::user()->name }}
+            @endif
+            </a>
             </li>
             </ul>
         </div>

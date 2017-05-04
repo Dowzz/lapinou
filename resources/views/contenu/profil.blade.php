@@ -53,7 +53,7 @@
                             <input class="form-control" type="text" placeholder="Nom">
                         </div>   
                         <div class="input-group margin-bottom-sm">
-                            <span class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
                             <input class="form-control" type="text" placeholder="Prénom">
                         </div>
                         <div class="input-group margin-bottom-sm">
