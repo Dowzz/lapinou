@@ -7,7 +7,7 @@
 
 /*  ---- SCSS de base ----  */
 .couv{
-	width:200px;
+	width:210px;
 	height:300px;
 }
 #dialog{
@@ -198,7 +198,9 @@ hr {
 }
 
 /*  ---- Miniature ----  */
-
+.description{
+	line-height: 1.25rem;
+}
 .view {
     width: 216px;
     height: 294px;

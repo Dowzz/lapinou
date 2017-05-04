@@ -14,7 +14,7 @@ use App\Livre;
 
 Route::get('/', function () {
     return view('welcome');
-    $livre= Livre::all();
+
 });
 
 Auth::routes();
