@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" class="marge">
 <nav class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -11,9 +11,9 @@
             </button>
             <ul class="liste">
             <li class="ajax">
-            <a class="navbar-brand" href="contenu/accueil">Bienvenue
+            <a class="navbar-brand" href="contenu/accueil">Bienvenue,
             @if (Auth::user())
-            ,{{ Auth::user()->name }}
+            {{ Auth::user()->name }}
             @endif
             </a>
             </li>

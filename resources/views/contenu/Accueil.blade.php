@@ -1,7 +1,7 @@
 <div class="mini">
-<div class="row">
-  <h2>Dernières Entrées dans la Librairie !</h2>
-</div>
+  <h2 class="line_effect">
+    <span>Les nouveautés</span>
+  </h2>
 <?php 
 function tronquer($description)
 {
@@ -51,10 +51,15 @@ echo "$l";
         </div>
     </div>
 </div>
-   
 
 <?php
 }
-
 ?>
+
+<h2 class="line_effect">
+<span>Les meilleurs ventes</span>
+</h2>
+<h2 class="line_effect">
+<span>Notre sélection</span>
+</h2>
 </div>
