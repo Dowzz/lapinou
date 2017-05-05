@@ -19,7 +19,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-xs-2"><img class="img-responsive" src="{{URL::asset('/img/fille.png')}}">
+                            <div class="col-xs-2"><img class="img-responsive" src="">
                             </div>
                             <div class="col-xs-4">
                                 <h4 class="product-name"><strong>Titre</strong></h4><h4><small>Résumer</small></h4>
