@@ -20,6 +20,11 @@ Route::get('/{categorie?}', function($categorie = null)
 	else return view('welcome');
 });
 
+Route::get('contenu/detail', function()
+{
+	return view('contenu.detail');
+});
+
 Auth::routes();
 
 Route::get('/welcome', 'HomeController@index');

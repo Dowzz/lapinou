@@ -1,7 +1,7 @@
 <div class="mini">
-  <h2 class="line_effect">
-    <span>Les nouveautés</span>
-  </h2>
+<div class="row">
+  <h2>Dernières Entrées dans la Librairie !</h2>
+</div>
 <?php 
 function tronquer($description)
 {
@@ -24,14 +24,17 @@ function tronquer($description)
 use App\Livre;
 $livre= Livre::orderBy('id', 'desc')->take(10)->get();
 foreach ($livre as $l) {
-$id= $l->id;
+  
 ?>
     <div  class="view view-fifth">  
          <img class="couv" src=" <?php echo ($l->couverture); ?>"> 
          <div class="mask">  
-         <h2><?php echo ($l->titre); ?></h2>  
+         <h2><?php echo ($l->titre); ?></h2>
+         <?php $id = $l->id;
+         echo "$id";?>
+
          <p class="description"><?php echo tronquer($l->description);?></p>
-         <a href="/contenu/detail?id=<?php echo $id?>">
+         <a href="/contenu/detail?id=<?php echo $id?>" >
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
@@ -41,15 +44,30 @@ $id= $l->id;
          </a>
          </div> 
     </div>
+   
 
 <?php
 }
-?>
 
-<h2 class="line_effect">
-<span>Les meilleurs ventes</span>
-</h2>
-<h2 class="line_effect">
-<span>Notre sélection</span>
-</h2>
+?>
 </div>
+<div class="modal fade" id="modal_detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-side modal-top-right">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                @include ('contenu.detail')
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+detail <?php 
+$id = $_GET{"id"};
+echo $id;
+use App\Livre;
+$book=Livre::find($id);
+echo $book;
+?>

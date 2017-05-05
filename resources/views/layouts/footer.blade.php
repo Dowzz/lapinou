@@ -20,7 +20,7 @@
                     <ul>
                         <li><a href="{{ url('/') }}">Accueil</a></li>
                         @if (Auth::check())
-                            <li class="ajax"><a href="profil">Profil<span></span></a>
+                            <li class="ajax"><a href="contenu/profil">Profil<span></span></a>
                             </li>
                         @endif                        
                         <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_connexion" href="connexion">Connexion</a> </li> 
