@@ -220,6 +220,7 @@ $(window).resize(function() {
 });
 
 
+
 /*//switch mot de passe 
 
 $(document).ready(function() {

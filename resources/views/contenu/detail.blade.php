@@ -1,4 +1,4 @@
-<?php 
+detail <?php 
 $id = $_GET{"id"};
 echo $id;
 use App\Livre;

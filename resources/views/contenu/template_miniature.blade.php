@@ -46,13 +46,4 @@ foreach ($livre as $l) {
 
 ?>
 </div>
-<div class="modal fade" id="modal_detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-side modal-top-right">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                @include ('contenu.detail')
-            </div>
-        </div>
-    </div>
-</div>
+

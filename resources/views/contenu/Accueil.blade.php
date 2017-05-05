@@ -1,4 +1,4 @@
-<div class="mini">
+<<div class="mini">
   <h2 class="line_effect">
     <span>Les nouveautés</span>
   </h2>
@@ -22,7 +22,7 @@ function tronquer($description)
 }
 
 use App\Livre;
-$livre= Livre::orderBy('id', 'desc')->take(10)->get();
+$livre= Livre::orderBy('id', 'desc')->take(10)->distinct()->get();
 foreach ($livre as $l) {
 $id= $l->id;
 ?>
