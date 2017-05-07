@@ -1,5 +1,7 @@
-<div class="mini">
-
+<<div class="mini">
+  <h2 class="line_effect">
+    <span>Les nouveautés</span>
+  </h2>
 <?php 
 function tronquer($description)
 {
@@ -20,16 +22,17 @@ function tronquer($description)
 }
 
 use App\Livre;
-$livre= Livre::whereGenre($categorie)->get();
-foreach ($livre as $l) {
-    $id = ($l->id);
-?>
-    <div  class="view view-fifth">  
-         <img class="couv" src=" <?php echo ($l->couverture); ?>"> 
+$data=array();
+$livre= Livre::whereGenre($categorie, 'desc')->get();
+foreach ($livre as $l =>$i) {
+  $id=$i->id;
+  $data['id']=$i->id;
+ ?><div  class="view view-fifth">  
+         <img class="couv" src=" <?php echo ($i->couverture); ?>"> 
          <div class="mask">  
-         <h2><?php echo ($l->titre); ?></h2>  
-         <p class="description"><?php echo tronquer($l->description);?></p>
-         <a href="/contenu/detail?id=<?php echo $id?>">
+         <h2><?php echo ($i->titre); ?></h2>  
+         <p class="description"><?php echo tronquer($i->description);?></p>
+         <a class="adam" data_id="<?php echo $id ?>">
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
@@ -39,11 +42,57 @@ foreach ($livre as $l) {
          </a>
          </div> 
     </div>
-   
+ 
 
-<?php
-}
+  <?php
+  }
 
-?>
-</div>
+  ;
+  ?>
+  <div id="dialog_noemie">
+        <div class="content">
+          @include ('contenu.detail')
+        </div>
+    </div>
+  <script>
+
+         $(function() {
+            $( "#noemie" ).dialog({
+                autoOpen: false,
+               
+                    show: {
+                    effect: "blind",
+                    duration: 400,
+                    },
+
+                    hide: {
+                    effect: "explode",
+                    duration: 400
+                    }
+            });
+
+            $( ".adam" ).click(function() {
+                $( "#dialog_noemie").dialog({
+                    open: function(event, ui) {
+
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+      #dialog_noemie
+    {
+      background-color: #9d9d9d;
+      display:none;
+    }
+    </style>
+
+
+
+
+
+
+
 

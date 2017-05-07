@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>lapication</title>
-</head>
-<body>
-    <h3>LAPI'CATION</h3>
+
 <h3>Lapi'cation : l'application qui va vous permettre de bénéficier de votre bibliothèque personnel de façon illimité et ce gratuitement !!</h3>
 
 <!--____________________________________________________________CAROUSSEL__________________________________________________-->
@@ -49,6 +43,3 @@
 <div class="col-md-6 col-sm-6 col-xs-6"><a href="#"> <img src="{{URL::asset('/img/android.png')}}"></a></div>
 <div class="col-md-6 col-sm-6 col-xs-6"><a href="#"> <img src="{{URL::asset('/img/apple.png')}}"></a></div>
 </div>
-
-</body>
-</html>

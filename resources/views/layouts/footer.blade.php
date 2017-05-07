@@ -23,12 +23,12 @@
                             <li class="ajax"><a href="contenu/profil">Profil<span></span></a>
                             </li>
                         @endif                        
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_connexion" href="connexion">Connexion</a> </li> 
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_inscription" href="inscription">Inscription</a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-lapication" href="lapibook"> Lapi'book </a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-panier" href="panier"> Panier </a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-pay" href="paiement"> Paiement </a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-contact" href="contact"> Contactez-nous </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</a> </li> 
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_inscription">Inscription</a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-lapication"> Lapi'book </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-panier"> Panier </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-pay"> Paiement </a> </li>
+                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-contact"> Contactez-nous </a> </li>
 
                        
                     </ul>
