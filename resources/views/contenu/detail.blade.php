@@ -15,9 +15,9 @@ $prix=$data->prix;
 ?>
 
 <h1><?php echo $titre; ?></h1>
-<img src="<?php echo $couverture; ?>" alt="">
-echo $description;
-?>
+<img class="couv" src="<?php echo $couverture; ?>" alt="">
+<p><?php echo $description; ?></p>
+
 
 
 
