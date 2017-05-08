@@ -12,9 +12,10 @@ $genre=$data->genre;
 $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
+?>
 
-echo $titre;
-echo $couverture;
+<h1><?php echo $titre; ?></h1>
+<img src="<?php echo $couverture; ?>" alt="">
 echo $description;
 ?>
 
