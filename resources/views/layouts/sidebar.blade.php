@@ -10,10 +10,10 @@
                 <span class="icon-bar"></span>
             </button>
             <ul class="liste">
-            <li class="ajax">
-            <a class="navbar-brand" href="contenu/accueil">Bienvenue,
+            <li class="">
+            <a class="navbar-brand" href={{ url('/') }}>Bienvenue
             @if (Auth::user())
-            {{ Auth::user()->name }}
+            , {{ Auth::user()->name }}
             @endif
             </a>
             </li>

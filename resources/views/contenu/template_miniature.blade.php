@@ -32,7 +32,7 @@ foreach ($livre as $l =>$i) {
          <div class="mask">  
          <h2><?php echo ($i->titre); ?></h2>  
          <p class="description"><?php echo tronquer($i->description);?></p>
-         <a class="adam" data_id="<?php echo $id ?>">
+                 <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
@@ -42,53 +42,50 @@ foreach ($livre as $l =>$i) {
          </a>
          </div> 
     </div>
+<div id="modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <p>Loading...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
  
-
-  <?php
-  }
-
-  ;
-  ?>
-  <div id="dialog_noemie">
-        <div class="content">
-          @include ('contenu.detail')
         </div>
+        <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- Event modal -->
+<?php
+}
+?>
+ 
   <script>
 
-         $(function() {
-            $( "#noemie" ).dialog({
-                autoOpen: false,
-               
-                    show: {
-                    effect: "blind",
-                    duration: 400,
-                    },
-
-                    hide: {
-                    effect: "explode",
-                    duration: 400
-                    }
-            });
-
-            $( ".adam" ).click(function() {
-                $( "#dialog_noemie").dialog({
-                    open: function(event, ui) {
-
-                    }
-                });
-            });
+        $(".LienModal").click(function(oEvt){
+    oEvt.preventDefault();
+    var Id=$(this).attr("rel");
+        $(".modal-body").fadeIn(1000).html('<div style="text-align:center; margin-right:auto; margin-left:auto">Patientez...</div>');
+        $.ajax({
+            type:"GET",
+            data : "Id="+Id,
+            url:"{{ url('/contenu/detail') }}",
+            error:function(msg){
+                $(".modal-body").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
+            },
+            success:function(data){
+                $(".modal-body").fadeIn(1000).html(data);
+            }
         });
+    });          
     </script>
-
-    <style>
-      #dialog_noemie
-    {
-      background-color: #9d9d9d;
-      display:none;
-    }
-    </style>
-
 
 
 
