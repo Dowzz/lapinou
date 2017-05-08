@@ -49,7 +49,7 @@ echo $id;
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title"></h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-text">
                     <p>Loading...</p>
                 </div>
                 <div class="modal-footer">
@@ -72,16 +72,16 @@ echo $id;
         $(".LienModal").click(function(oEvt){
     oEvt.preventDefault();
     var Id=$(this).attr("rel");
-        $(".modal-body").fadeIn(1000).html('<div style="text-align:center; margin-right:auto; margin-left:auto">Patientez...</div>');
+        $(".modal-text").fadeIn(1000).html('<div style="text-align:center; margin-right:auto; margin-left:auto">Patientez...</div>');
         $.ajax({
             type:"GET",
             data : "Id="+Id,
             url:"{{ url('/contenu/detail') }}",
             error:function(msg){
-                $(".modal-body").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
+                $(".modal-text").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
             },
             success:function(data){
-                $(".modal-body").fadeIn(1000).html(data);
+                $(".modal-text").fadeIn(1000).html(data);
             }
         });
     });          
