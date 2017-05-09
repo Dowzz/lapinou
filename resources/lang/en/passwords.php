@@ -16,7 +16,7 @@ return [
     'password' => 'Passwords must be at least six characters and match the confirmation.',
     'reset' => 'Votre mot de passe a été modifié avec succès !',
     'sent' => 'Veuillez vérifier votre boite mail.',
-    'token' => 'cette demande ne peut aboutir.',
-    'user' => "désolé, je ne trouve pas cet utilisateur.",
+    'token' => 'Cette demande ne peut aboutir.',
+    'user' => "Désolé, je ne trouve pas cet utilisateur.",
 
 ];

@@ -113,11 +113,7 @@ trait AuthenticatesUsers
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        return redirect()->back()
-            ->withInput($request->only($this->username(), 'remember'))
-            ->withErrors([
-                $this->username() => Lang::get('auth.failed'),
-            ]);
+        return Redirect()->back()->with('status', 'Mot de passe erroné ou compte non-existant. Merci de réessayer.');
     }
 
     /**

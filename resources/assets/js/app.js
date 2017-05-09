@@ -195,6 +195,7 @@ $(document).ready(function () {
   function updateNumbers() {
   //update variable
     var lists = document.querySelectorAll("number");
+
     //update number
     for(var i = 0; i < lists.length; i++) {
       $(lists[i]).html(i+1 + ") ");
@@ -225,6 +226,12 @@ $(".removeall").on('click', function (e) {
 //Add new todos
 $("input[type='text']").keypress(function(e) {
   if(e.which === 13) {
+  	var data = $("#todoinput").serialize();
+  	$.ajax({
+         data: data,
+         type: "post",
+         url: "inserttodo.php",
+         });
     //grab text
     var todoText = $(this).val();
     //append todotext to ul
