@@ -34,6 +34,7 @@ $todolist =0;
         ?>
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
         @else
+        <?php $user_id=0;?>
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</button></div>
         @endif
         @if  ($todo=='1')

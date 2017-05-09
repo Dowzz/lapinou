@@ -51,9 +51,7 @@ $id= $l->id;
                 <div class="modal-text">
                     <p>Chargement en cours...</p>
                 </div>
-                
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-default">Dans mon panier</button>
+                    
                 
  
         </div>
@@ -125,7 +123,7 @@ $id= $ln->id;
 }
 ?>
 </div>
-
+ <div></div> 
  <script>
 
         $(".LienModal").click(function(oEvt){
@@ -143,7 +141,8 @@ $id= $ln->id;
                 $(".modal-text").fadeIn(1000).html(data);
             }
         });
-    });          
+    });      
+
     </script>
 
 

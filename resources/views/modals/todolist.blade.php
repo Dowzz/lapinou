@@ -9,7 +9,7 @@ $lignes= todolist::where('user_id',$user_id)->get();
   <ul class="todoul">
 <?php foreach ($lignes as $ligne) {
   ?>
-  <li class="todoli"><span class="todospan"><i class="fa fa-trash"> </i></span><?php echo ($ligne->string)?></li>
+  <li class="todoli"><span class="todospan"><i class="fa fa-trash"> </i></span><?php echo ($ligne->champ)?></li>
 <?php 
 }
 ?>
