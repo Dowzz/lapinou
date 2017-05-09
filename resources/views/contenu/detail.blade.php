@@ -40,7 +40,12 @@ $prix=$data->prix;
 			
 
 		</div>
-		<p class="synopsis"><?php echo $description; ?></p>
+		<div class="summaryText">
+  			<a  id="show-more" class="show-less" href="#show-less">Fermer</a>
+  			<a  id="show-less" class="show-more" href="#show-more">Ouvrir</a>
+				<p class="synopsis"><?php echo $description; ?></p>
+		</div>
+		
 		
 
 
