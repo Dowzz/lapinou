@@ -1,4 +1,4 @@
-<<div class="mini">
+<div class="mini">
   <h2 class="line_effect">
     <span>Les nouveautés</span>
   </h2>
@@ -42,6 +42,7 @@ foreach ($livre as $l =>$i) {
          </a>
          </div> 
     </div>
+    
 <div id="modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -50,7 +51,7 @@ foreach ($livre as $l =>$i) {
                     <h4 class="modal-title"></h4>
                 </div>
                 <div class="modal-body">
-                    <p>Loading...</p>
+                    <p>Chargement en cours...</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -66,7 +67,7 @@ foreach ($livre as $l =>$i) {
 <?php
 }
 ?>
- 
+ </div>
   <script>
 
         $(".LienModal").click(function(oEvt){

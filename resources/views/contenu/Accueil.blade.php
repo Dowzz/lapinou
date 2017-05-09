@@ -1,4 +1,4 @@
-<<div class="mini">
+<div class="mini">
   <h2 class="line_effect">
     <span>Les nouveautés</span>
   </h2>
@@ -41,6 +41,7 @@ $id= $l->id;
          </a>
          </div> 
     </div>
+
 <div id="modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -49,7 +50,7 @@ $id= $l->id;
                     <h4 class="modal-title">Descriptif</h4>
                 </div>
                 <div class="modal-text">
-                    <p>Loading...</p>
+                    <p>Chargement en cours...</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
@@ -65,8 +66,111 @@ $id= $l->id;
 <?php
 }
 ?>
+</div>
  
-  <script>
+ 
+<div class="mini">
+<h2 class="line_effect">
+<span>Les meilleurs ventes</span>
+</h2>
+<?php 
+$livre= Livre::where ('prix', '>', 12)->take(10)->distinct()->get();
+foreach ($livre as $lp) {
+$id= $lp->id;
+?>
+    <div  class="view view-fifth">  
+         <img class="couv" src=" <?php echo ($lp->couverture); ?>"> 
+         <div class="mask">  
+         <h2><?php echo ($lp->titre); ?></h2>  
+         <p class="description"><?php echo tronquer($lp->description);?></p>
+        <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
+            <div class="tagCloud">
+              <span>
+                <p>Lire la suite.
+                </p>
+              </span>
+            </div>
+         </a>
+         </div> 
+    </div>
+<div id="modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Descriptif</h4>
+                </div>
+                <div class="modal-text">
+                    <p>Chargement en cours...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Dans mon panier</button>
+                </div>
+ 
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- Event modal -->
+<?php
+}
+?>
+</div>
+<div class="mini">
+<h2 class="line_effect">
+<span>Notre sélection</span>
+</h2>
+<?php 
+$livre= Livre::where ('notes', '>=', 4)->take(10)->distinct()->get();
+foreach ($livre as $ln) {
+$id= $ln->id;
+?>
+
+    <div  class="view view-fifth">  
+         <img class="couv" src=" <?php echo ($ln->couverture); ?>"> 
+         <div class="mask">  
+         <h2><?php echo ($ln->titre); ?></h2>  
+         <p class="description"><?php echo tronquer($ln->description);?></p>
+        <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
+            <div class="tagCloud">
+              <span>
+                <p>Lire la suite.
+                </p>
+              </span>
+            </div>
+         </a>
+         </div> 
+    </div>
+
+<div id="modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Descriptif</h4>
+                </div>
+                <div class="modal-text">
+                    <p>Chargement en cours...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Dans mon panier</button>
+                </div>
+ 
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- Event modal -->
+<?php
+}
+?>
+</div>
+
+ <script>
 
         $(".LienModal").click(function(oEvt){
     oEvt.preventDefault();
@@ -86,10 +190,5 @@ $id= $l->id;
     });          
     </script>
 
-<h2 class="line_effect">
-<span>Les meilleurs ventes</span>
-</h2>
-<h2 class="line_effect">
-<span>Notre sélection</span>
-</h2>
-</div>
+
+
