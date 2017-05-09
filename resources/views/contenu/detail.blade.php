@@ -13,8 +13,8 @@ $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
 ?>
-
-<h1><?php echo $titre; ?></h1>
+<h1 class="modal-title"><?php echo $titre; ?></h1>
+<h1></h1>
 <img class="couv" src="<?php echo $couverture; ?>">
 <p><?php echo $description; ?></p>
 <p><?php echo $prix; ?></p>
