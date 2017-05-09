@@ -13,12 +13,21 @@ $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
 ?>
-<h1 class="modal-title"><?php echo $titre; ?></h1>
-<h1></h1>
-<img class="couv" src="<?php echo $couverture; ?>">
-<p><?php echo $description; ?></p>
-<p><?php echo $prix; ?></p>
+	<h1 class="modal-title title"><?php echo $titre; ?></h1>
+		<div class="row">
+			<div class="col-md-6">
+			<img class="couverture" src="<?php echo $couverture; ?>">
+			</div>
+			<div class="col-md-6 genre">
+			<p><?php echo $genre; ?></p>
+			<p>Auteur : <?php echo $auteur; ?></p>
+			<p>Editeur : <?php echo $editeur; ?></p>
+			<p>Le <?php echo $parution; ?></p>
+			</div>
 
+		</div>
+		<p class="synopsis"><?php echo $description; ?></p>
+		<p><?php echo $prix; ?></p>
 
 
 
