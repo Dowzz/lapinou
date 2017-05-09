@@ -1,13 +1,18 @@
-
-
-
-
+<?php 
+use App\todolist;
+$lignes= todolist::where('user_id',$user_id)->get();
+?>
 
 <div class="row" class="todotools"><i class="removeall">Effacer</i><i class="add">Ajouter</i></div>
 <div class="row" id="liinputrow"><input id="todoinput" type="text" placeholder="Ajouter note"></div>
   <div class="row"  id="liinputrow">
   <ul class="todoul">
-
+<?php foreach ($lignes as $ligne) {
+  ?>
+  <li class="todoli"><span class="todospan"><i class="fa fa-trash"> </i></span><?php echo ($ligne->string)?></li>
+<?php 
+}
+?>
   </ul>
   </div>
 

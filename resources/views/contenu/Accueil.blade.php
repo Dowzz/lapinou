@@ -92,27 +92,6 @@ $id= $lp->id;
          </a>
          </div> 
     </div>
-<div id="modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Descriptif</h4>
-                </div>
-                <div class="modal-text">
-                    <p>Chargement en cours...</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-primary">Dans mon panier</button>
-                </div>
- 
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- Event modal -->
 <?php
 }
 ?>
@@ -142,28 +121,6 @@ $id= $ln->id;
          </a>
          </div> 
     </div>
-
-<div id="modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Descriptif</h4>
-                </div>
-                <div class="modal-text">
-                    <p>Chargement en cours...</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-primary">Dans mon panier</button>
-                </div>
- 
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- Event modal -->
 <?php
 }
 ?>

@@ -178,8 +178,6 @@ $(document).ready(function () {
     });
 
 
-
-
 //repositionnement automatique 
 
     $(window).resize(function ()
@@ -243,9 +241,6 @@ $(".add").click(function() {
 
   $("#todoinput").fadeToggle(200);
 });
-
-
-
 
 //repositionnement responsif
 
