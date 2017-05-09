@@ -17,17 +17,31 @@ $prix=$data->prix;
 		<div class="row">
 			<div class="col-md-6">
 			<img class="couverture" src="<?php echo $couverture; ?>">
-			</div>
-			<div class="col-md-6 genre">
+		</div>
+		<div class="col-md-6 genre">
 			<p><?php echo $genre; ?></p>
 			<p>Auteur : <?php echo $auteur; ?></p>
 			<p>Editeur : <?php echo $editeur; ?></p>
 			<p>Le <?php echo $parution; ?></p>
-			</div>
+		</div>
+		<div class="wrap">
+			<ul class="stars">
+			    <li title="5"></li>
+			    <li title="4"></li>
+			    <li title="3"></li>
+			    <li title="2"></li>
+			    <li title="1"></li>
+			</ul>
+  			<input id="rating" type="hidden" class="required">
+		</div>
+		<div class="col-md-6 prix">
+			<h1><?php echo $prix; ?> €</h1>
+		</div>
+			
 
 		</div>
 		<p class="synopsis"><?php echo $description; ?></p>
-		<p><?php echo $prix; ?></p>
+		
 
 
 

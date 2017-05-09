@@ -8298,15 +8298,79 @@ input:-moz-placeholder {
 .couverture {
   width: 210px;
   height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .synopsis {
-  text-align: right;
   text-align: justify;
+  font-size: 16px;
 }
 
 .genre {
   text-align: left;
+  margin-top: 20px;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.prix {
+  text-align: right;
+}
+
+.stars li::before, .stars li.current::before,
+.stars li.current ~ li::before, .stars li:hover::before,
+.stars li:hover ~ li::before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+.wrap {
+  text-align: center;
+}
+
+.stars {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  display: inline-block;
+  text-align: left;
+}
+
+.stars li {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 0 0.375rem;
+  display: inline-block;
+  font-size: 22px;
+  color: #76B295;
+}
+
+.stars li::before {
+  content: "";
+}
+
+.stars li.current,
+.stars li.current ~ li, .stars li:hover,
+.stars li:hover ~ li {
+  color: #277650;
+}
+
+.stars li.current::before,
+.stars li.current ~ li::before, .stars li:hover::before,
+.stars li:hover ~ li::before {
+  content: "";
 }
 
 /*  ---- Média Queries ----  */

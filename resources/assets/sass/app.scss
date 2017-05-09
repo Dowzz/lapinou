@@ -563,13 +563,84 @@ input:-moz-placeholder {
 .couverture{
 	width: 210px;
 	height: 300px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .synopsis{
-	text-align: right;
 	text-align: justify;
+	font-size: 16px;
 }
 .genre{
 	text-align: left;
+	margin-top: 20px;
+	font-size: 18px;
+	padding-bottom: 20px;
+}
+.prix{
+	text-align: right;
+}
+$stars-settings: (
+  'font-size': 22px,
+  'color': #277650,
+  'unset-color': #76B295
+);
+
+$icon: (
+  'star': "\f005",
+  'star-o': "\f006"
+);
+
+%icon {
+  font: {
+    family: FontAwesome;
+    weight: normal;
+    style: normal;
+  }
+  display: inline-block;
+  text-decoration: inherit;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+@mixin icon($icon) {  
+  &::before {
+    @extend %icon;
+    content: $icon;
+  }
+}
+
+.wrap {
+  text-align: center;
+}
+
+.stars {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  display: inline-block;
+  text-align: left;
+  li {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 0 0.375rem;
+    display: inline-block;
+    font-size: map-get($stars-settings, 'font-size');
+    color: map-get($stars-settings, 'unset-color');
+    @include icon( map-get($icon, 'star-o') );
+    &.current,
+    &.current ~ li,
+    &:hover,
+    &:hover ~ li {
+      color: map-get($stars-settings, 'color');
+      @include icon( map-get($icon, 'star') );
+    }
+  }
 }
 
 /*  ---- Média Queries ----  */

@@ -51,10 +51,10 @@ $id= $l->id;
                 <div class="modal-text">
                     <p>Chargement en cours...</p>
                 </div>
-                <div class="modal-footer">
+                
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-primary">Dans mon panier</button>
-                </div>
+                    <button type="submit" class="btn btn-default">Dans mon panier</button>
+                
  
         </div>
         <!-- /.modal-content -->
