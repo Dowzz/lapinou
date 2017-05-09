@@ -39,7 +39,8 @@ Route::get('contenu/admin', function () {
 Route::get('contenu/accueil', function () {
     return view('contenu.accueil');
 });
-
+Route::post('insertodo', 'TodoController@store');
+Route::post('deleteall', 'TodoController@deleteall');
 
 
 

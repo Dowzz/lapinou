@@ -4,6 +4,7 @@
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=960, initial-scale=1, maximum-scale=1"/>
     <meta charset="utf-8" />
+    <meta name="_token" content="{!! csrf_token() !!}"/>
 
 
 
@@ -31,6 +32,7 @@ $todolist =0;
         $user = (Auth::user());
         $todo =$user->todo;
         $user_id = $user->id;
+        view()->share('user_id', $user_id);
         ?>
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
         @else
@@ -174,7 +176,11 @@ $todolist =0;
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-
+<script type="text/javascript">
+$.ajaxSetup({
+   headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+});
+</script>
 
 
 

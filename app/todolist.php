@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class todolist extends Model
 {
+    public $timestamps = false;
 
 }

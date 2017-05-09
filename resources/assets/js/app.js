@@ -211,6 +211,13 @@ $(".todoul").on("click", "li", function () {
 $(".todoul").on('click', "span", function (e) {
   e.stopPropagation();
   $(this).closest("li").fadeOut(500,function() {
+  	var userid = $("#user_id").val();
+  	var id = $();
+  	$.ajax({
+      	data:({userid:userid}),
+      	type:"post",
+      	url: "./deleteall",
+      });
    $(this).remove();
     updateNumbers();
   });
@@ -219,25 +226,34 @@ $(".todoul").on('click', "span", function (e) {
 //Clear All
 $(".removeall").on('click', function (e) {
     $(".todoli").fadeOut(500, function() {
+    	var userid = $("#user_id").val();
+      	$.ajax({
+      	data:({userid:userid}),
+      	type:"post",
+      	url: "./deleteall",
+      });
       $(this).remove();
+     
     });
 });
 
 //Add new todos
-$("input[type='text']").keypress(function(e) {
+$("#todoinput").keypress(function(e) {
   if(e.which === 13) {
-  	var data = $("#todoinput").serialize();
-  	$.ajax({
-         data: data,
-         type: "post",
-         url: "inserttodo.php",
-         });
     //grab text
+    var userid = $("#user_id").val();
     var todoText = $(this).val();
+    var data = $("#todoinput").val();
+    console.log(todoText, data, userid);
+    $.ajax({
+         data: ({userid:userid, todoText:data}),
+         type: "post" ,
+         url: "./insertodo",
+         });
     //append todotext to ul
     if( $(this).val() !== "") {
     $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'> </i></span>"  + todoText + "</li>");
-      }
+    }
     updateNumbers();
     //clear text
     $(this).val("");

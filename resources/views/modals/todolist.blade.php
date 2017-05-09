@@ -5,6 +5,10 @@ $lignes= todolist::where('user_id',$user_id)->get();
 
 <div class="row" class="todotools"><i class="removeall">Effacer</i><i class="add">Ajouter</i></div>
 <div class="row" id="liinputrow"><input id="todoinput" type="text" placeholder="Ajouter note"></div>
+
+<input type="hidden" id="user_id" value="<?php echo $user_id ?>">
+
+
   <div class="row"  id="liinputrow">
   <ul class="todoul">
 <?php foreach ($lignes as $ligne) {
