@@ -1,3 +1,7 @@
+<?php 
+use App\User;
+$admin=0;
+?>
 <div class="row" class="marge">
 <nav class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
@@ -22,10 +26,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            @if (Auth::check())
-            <li class="ajax"><a href="contenu/admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
-            </li>
+            @if (Auth::user())
+             <?php 
+            $user = (Auth::user());
+            $admin =$user->admin;
+            ?>           
             <li class="ajax"><a href="contenu/profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
+            </li>
+            @endif
+            @if  ($admin=='1')
+            <li class="ajax"><a href="contenu/admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
             </li>
             @endif
             <li>

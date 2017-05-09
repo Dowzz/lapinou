@@ -14,23 +14,28 @@
 @include('layouts.sidebar')
 </div>
 
-
-
 <!--Header-->
-
+<?php use App\User;
+$todo=0;
+?>
 <div class="container-fluid" id="header">
     <div class="row">
         <div class="col-md-0 col-sm-12"></div>
         <div id="logo" class="col-md-9 col-sm-12"><a href="{{ url('/') }}"><img class="logo" src="{{URL::asset('/img/Logo.png')}}"></a></div>
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
         @if (Auth::user())
+        <?php 
+        $user = (Auth::user());
+        $todo =$user->todo;
+        ?>
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
-        <div class="col-md-3 col-sm-12"><button id="button" class="btn btn-elegant">Todo-List</button>
-        </div>
         @else
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</button></div>
         @endif
-        
+        @if  ($todo=='1')
+        <div class="col-md-3 col-sm-12"><button id="button" class="btn btn-elegant">Todo-List</button>
+        </div>
+        @endif
     </div>
 </div>
 @if (session('status'))

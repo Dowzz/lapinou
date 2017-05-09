@@ -8,7 +8,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Votre Adresse Mail</label>
+                           
 
                             <div class="input-group margin-bottom-sm">
                                 <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-12">
                                 <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Envoyer moi le mail !</button>
                             </div>
                         </div>

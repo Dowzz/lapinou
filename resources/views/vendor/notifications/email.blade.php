@@ -18,7 +18,8 @@
 
 <!-- Action Button -->
 @if (isset($actionText))
-<h1><a href="{{ $actionUrl }}">BOOM !</a></h1>
+
+<h1><a href="{{ $actionUrl }}">Afin de réinitialiser votre mot de passe, merci de bien vouloir cliquer sur ce lien.</a></h1>
 @endif
 
 
