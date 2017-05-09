@@ -1,3 +1,8 @@
+
+
+
+
+
 <div class="row" class="todotools"><i class="removeall">Effacer</i><i class="add">Ajouter</i></div>
 <div class="row" id="liinputrow"><input id="todoinput" type="text" placeholder="Ajouter note"></div>
   <div class="row"  id="liinputrow">

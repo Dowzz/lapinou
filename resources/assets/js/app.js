@@ -14,7 +14,13 @@ require('./bootstrap');
  */
 // NE PAS TOUCHER AU DESSUS 
 
+
+
+
+
+
 //affichage dynamique (footer qui remonte)
+
 $("#miniature").load("contenu/accueil");
 
 $(document).ready(function(){
@@ -43,6 +49,10 @@ $("#miniature").fadeOut(500,function(){
 }
 
 
+
+
+//redimensionnement responsif
+
     function htmlbodyHeightUpdate(){
 		var height3 = $( window ).height()
 		var height1 = $('.nav').height()+50
@@ -69,7 +79,11 @@ $("#miniature").fadeOut(500,function(){
 		});
 	});
 
-	
+
+
+
+//Script mot de passe adam
+
 var password1 = $("#rpassword");
 var password2 = $("#cpassword");
 var form = $("#registration");
@@ -139,6 +153,9 @@ password2.on("input", function(e) {
 
 });
 
+
+
+
 //tooltips
 
 $(document).ready(function () {
@@ -148,23 +165,34 @@ $(document).ready(function () {
 });
 
 
+
+
 // draggable plugin
 
     $("#button").click(function(){
+
         $( "#dialog" ).dialog({
         	resizable: false,
         	minHeight: 0
         });
     });
+
+
+
+
+//repositionnement automatique 
+
     $(window).resize(function ()
-{
-    $(".ui-dialog").position({
+	{
+    	$(".ui-dialog").position({
         my: "center", at: "center", of: window
     });
-});
+	});
 
 
 
+
+//todolist
 
   function updateNumbers() {
   //update variable
@@ -212,13 +240,18 @@ $("input[type='text']").keypress(function(e) {
 });
 
 $(".add").click(function() {
+
   $("#todoinput").fadeToggle(200);
 });
+
+
+
+
+//repositionnement responsif
 
 $(window).resize(function() {
     $("#dialog").dialog("option", "position", "center");
 });
-
 
 
 /*//switch mot de passe 

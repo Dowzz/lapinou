@@ -15,8 +15,11 @@
 </div>
 
 <!--Header-->
-<?php use App\User;
+<?php 
+use App\User;
+use App\todolist;
 $todo=0;
+$todolist =0;
 ?>
 <div class="container-fluid" id="header">
     <div class="row">
@@ -27,13 +30,17 @@ $todo=0;
         <?php 
         $user = (Auth::user());
         $todo =$user->todo;
+        $user_id = $user->id;
+        $todolist = todolist::where('user_id',$user_id)->first();
+        $todo_id = $todolist->id;
+        
         ?>
         <div class="col-md-3 col-sm-12"><form id="logout-form" action="logout" method="POST" style="display: block;"><button class="btn btn-elegant"><input type="hidden" name="_token" value="{{csrf_token()}}">Deconnexion</button></form></div>
         @else
         <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</button></div>
         @endif
         @if  ($todo=='1')
-        <div class="col-md-3 col-sm-12"><button id="button" class="btn btn-elegant">Todo-List</button>
+        <div class="col-md-3 col-sm-12"><button id="button" class="btn btn-elegant" id_todo="<?php echo $todo_id?>">Todo-List</button>
         </div>
         @endif
     </div>
