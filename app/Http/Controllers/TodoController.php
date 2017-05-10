@@ -24,4 +24,9 @@ class TodoController extends Controller
 		todolist::where('user_id', $user_id)->delete();
 
     }
+    public function deleteid(Request $request)
+    {
+        $id=$request->todoid;
+        todolist::where('id', $id)->delete();
+    }
 }

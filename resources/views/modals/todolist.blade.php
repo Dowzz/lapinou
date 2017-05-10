@@ -12,6 +12,7 @@ $lignes= todolist::where('user_id',$user_id)->get();
   <div class="row"  id="liinputrow">
   <ul class="todoul">
 <?php foreach ($lignes as $ligne) {
+  $id= $ligne->id;
   ?>
   <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo ($ligne->champ)?></li>
 <?php 
