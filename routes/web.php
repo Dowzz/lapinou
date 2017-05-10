@@ -41,6 +41,9 @@ Route::get('contenu/accueil', function () {
 });
 Route::post('insertodo', 'TodoController@store');
 Route::post('deleteall', 'TodoController@deleteall');
+Route::post('deleteid', 'TodoController@deleteid');
+
+
 
 
 

@@ -16,7 +16,7 @@ class CreateTodolistTable extends Migration
         Schema::create('todolists', function (Blueprint $table) {
             $table->increments('id');
             $table->text('user_id');
-            $table->text('string');
+            $table->text('champ');
         
         });
     }
