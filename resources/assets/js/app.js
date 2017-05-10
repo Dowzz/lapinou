@@ -212,9 +212,10 @@ $(".todoul").on('click', "span", function (e) {
   e.stopPropagation();
   $(this).closest("li").fadeOut(500,function() {
   	var userid = $("#user_id").val();
-  	var id = $();
+  	var todoText = $(this).text();;
+    console.log(userid, todoText);
   	$.ajax({
-      	data:({userid:userid}),
+      	data:({userid:userid, todoText:todoText}),
       	type:"post",
       	url: "./deleteid",
       });
@@ -252,7 +253,7 @@ $("#todoinput").keypress(function(e) {
          });
     //append todotext to ul
     if( $(this).val() !== "") {
-    $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + "<number></number>" + todoText + "</li>");
+    $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + todoText + "</li>");
     }
     updateNumbers();
     //clear text

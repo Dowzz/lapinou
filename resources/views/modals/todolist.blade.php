@@ -14,7 +14,7 @@ $lignes= todolist::where('user_id',$user_id)->get();
 <?php foreach ($lignes as $ligne) {
   $id= $ligne->id;
   ?>
-  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><number></number><?php echo ($ligne->champ)?></li>
+  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo ($ligne->champ)?></li>
 <?php 
 }
 ?>
