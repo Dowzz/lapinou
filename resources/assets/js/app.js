@@ -252,7 +252,7 @@ $("#todoinput").keypress(function(e) {
          });
     //append todotext to ul
     if( $(this).val() !== "") {
-    $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>"  + todoText + "</li>");
+    $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + "<number></number>" + todoText + "</li>");
     }
     updateNumbers();
     //clear text
