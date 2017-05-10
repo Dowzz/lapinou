@@ -2,8 +2,8 @@
 use App\User;
 $admin=0;
 ?>
-<div class="row" class="marge">
-<nav class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">
+<div class="row" >
+<nav id="marge" class="navbar navbar-toggleable navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

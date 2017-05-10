@@ -14,7 +14,8 @@
             <span class="input-group-addon"><i class="fa fa-slack fa-fw"></i></span>
             <input class="form-control" type="text" placeholder="Numéro de commande">
         </div>
-        <div class="input-group margin-bottom-sm">        
+        <div class="input-group margin-bottom-sm"> 
+            <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
             <select id="demande" id="subject" name="subject" class="form-control" required="required">
             <option value="na" selected="">Selection de la demande :</option>
             <option value="annulation">Modification / Annulation de la commande</option>

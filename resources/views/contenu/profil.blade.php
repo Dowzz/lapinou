@@ -60,14 +60,14 @@
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
                             <input class="form-control" type="text" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <label class="col-xs-3 control-label">Date de naissance</label>
-                        <div class="col-xs-5 date">
-                            <div class="input-group input-append date" id="datePicker">
-                                <input type="text" class="form-control" name="date" />
-                                <span class="input-group-addon add-on"><span class="fa fa-calendar"></span></span>
-                            </div>
+                        
+                        <div class="input-group margin-bottom-sm">    
+                            <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
+                            <input type="text" id="datepicker" placeholder="Date de naissance">
                         </div>
+                        </div>
+                        <div>
+                            <button id="bouton-panier" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
                         </div>
                     </div>
                 </div>
