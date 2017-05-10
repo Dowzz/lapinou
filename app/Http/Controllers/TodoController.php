@@ -26,9 +26,9 @@ class TodoController extends Controller
     }
     public function deleteid(Request $request)
     {
-        $id=$request->todoid;
+        $user_id=$request->user_id;
         $todoText=$request->todoText;
 
-        todolist::where('id', $id)AND todolist::Where('champ', $todoText)->delete();
+        todolist::where('user_id', $user_id)AND todolist::Where('champ', $todoText)->first()->delete();
     }
 }
