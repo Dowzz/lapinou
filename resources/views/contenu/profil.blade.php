@@ -65,7 +65,7 @@
                             <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
                             <input type="text" id="datepicker" placeholder="Date de naissance">
                         </div>
-                        </div>
+                        
                         <div>
                             <button id="bouton-panier" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
                         </div>

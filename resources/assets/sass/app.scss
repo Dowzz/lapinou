@@ -1008,6 +1008,7 @@ $icon: (
 	.panel-default{
 		width: 75%;
     	margin-left: 85px;
+
 	}
 	.span12{
 		width: 75%;
@@ -1037,7 +1038,7 @@ $icon: (
 		display: inline-block;
 	}
 	.panel{
-		background-color:#222222;
+		background-color:white;
 	}
 	#added{
 		vertical-align:center;
@@ -1048,6 +1049,11 @@ $icon: (
 	#order{
 		border: 1px solid cyan;
 		width: 90%;
+	}
+	input[type=text],
+	input[type=email],
+	input[type=date],{
+		color:#9d9d9d;
 	}
 
 }

@@ -8771,7 +8771,7 @@ input:-moz-placeholder {
     display: inline-block;
   }
   .panel {
-    background-color: #222222;
+    background-color: white;
   }
   #added {
     vertical-align: center;
@@ -8782,6 +8782,11 @@ input:-moz-placeholder {
   #order {
     border: 1px solid cyan;
     width: 90%;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=date] {
+    color: #9d9d9d;
   }
 }
 
