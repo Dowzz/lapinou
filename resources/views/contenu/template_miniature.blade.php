@@ -24,15 +24,15 @@ function tronquer($description)
 use App\Livre;
 $data=array();
 $livre= Livre::whereGenre($categorie, 'desc')->get();
-foreach ($livre as $l =>$i) {
-  $id=$i->id;
-  $data['id']=$i->id;
- ?><div  class="view view-fifth">  
-         <img class="couv" src=" <?php echo ($i->couverture); ?>"> 
+foreach ($livre as $l) {
+$id= $l->id;
+?>
+    <div  class="view view-fifth">  
+         <img class="couv" src=" <?php echo ($l->couverture); ?>"> 
          <div class="mask">  
-         <h2><?php echo ($i->titre); ?></h2>  
-         <p class="description"><?php echo tronquer($i->description);?></p>
-                 <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
+         <h2><?php echo ($l->titre); ?></h2>  
+         <p class="description"><?php echo tronquer($l->description);?></p>
+        <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
             <div class="tagCloud">
               <span>
                 <p>Lire la suite.
@@ -42,21 +42,18 @@ foreach ($livre as $l =>$i) {
          </a>
          </div> 
     </div>
-    
+
 <div id="modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-text">
                     <p>Chargement en cours...</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </div>
+                    
+                
  
         </div>
         <!-- /.modal-content -->
@@ -67,30 +64,86 @@ foreach ($livre as $l =>$i) {
 <?php
 }
 ?>
- </div>
-  <script>
+</div>
+ 
+ 
+<div class="mini">
+<h2 class="line_effect">
+<span>Les meilleurs ventes</span>
+</h2>
+<?php 
+$livre= Livre::where ('prix', '>', 12)->take(10)->distinct()->get();
+foreach ($livre as $lp) {
+$id= $lp->id;
+?>
+    <div  class="view view-fifth">  
+         <img class="couv" src=" <?php echo ($lp->couverture); ?>"> 
+         <div class="mask">  
+         <h2><?php echo ($lp->titre); ?></h2>  
+         <p class="description"><?php echo tronquer($lp->description);?></p>
+        <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
+            <div class="tagCloud">
+              <span>
+                <p>Lire la suite.
+                </p>
+              </span>
+            </div>
+         </a>
+         </div> 
+    </div>
+<?php
+}
+?>
+</div>
+<div class="mini">
+<h2 class="line_effect">
+<span>Notre sélection</span>
+</h2>
+<?php 
+$livre= Livre::where ('notes', '>=', 4)->take(10)->distinct()->get();
+foreach ($livre as $ln) {
+$id= $ln->id;
+?>
+
+    <div  class="view view-fifth">  
+         <img class="couv" src=" <?php echo ($ln->couverture); ?>"> 
+         <div class="mask">  
+         <h2><?php echo ($ln->titre); ?></h2>  
+         <p class="description"><?php echo tronquer($ln->description);?></p>
+        <a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $id ?>">
+            <div class="tagCloud">
+              <span>
+                <p>Lire la suite.
+                </p>
+              </span>
+            </div>
+         </a>
+         </div> 
+    </div>
+<?php
+}
+?>
+</div>
+ <div></div> 
+ <script>
 
         $(".LienModal").click(function(oEvt){
     oEvt.preventDefault();
     var Id=$(this).attr("rel");
-        $(".modal-body").fadeIn(1000).html('<div style="text-align:center; margin-right:auto; margin-left:auto">Patientez...</div>');
+        $(".modal-text").fadeIn(1000).html('<div style="text-align:center; margin-right:auto; margin-left:auto">Patientez...</div>');
         $.ajax({
             type:"GET",
             data : "Id="+Id,
             url:"{{ url('/contenu/detail') }}",
             error:function(msg){
-                $(".modal-body").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
+                $(".modal-text").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
             },
             success:function(data){
-                $(".modal-body").fadeIn(1000).html(data);
+                $(".modal-text").fadeIn(1000).html(data);
             }
         });
-    });          
+    });      
+
     </script>
-
-
-
-
-
 
 

@@ -34,7 +34,7 @@ $prix=$data->prix;
 			<p>Editeur : <?php echo $editeur; ?></p>
 			<p>Le <?php echo $parution; ?></p>
 		</div>
-		
+		<input type="hidden" id="idbook" value="<?php echo $data->id ?> ">
 		<div class="prix">
 			<h1><?php echo $prix; ?> €</h1>
 		</div>	
@@ -58,6 +58,21 @@ $prix=$data->prix;
     				</div>
   				</div>
 		</div>
+		<script>
+			$('.stars').on('click', 'li', function() {
+  var el = $(this);
+  var note=$(this).attr("title");
+  var bookid=$("#idbook").val();
+  console.log(note, bookid);
+  $.ajax({
+      	data:({note:note, bookid}),
+      	type:"post",
+      	url: "./notation",
+      });
+  el.addClass('current').siblings().removeClass('current');
+  $('#rating').val( el.attr('title') ); // save value
+});
+	</script>
 		
 		
 
