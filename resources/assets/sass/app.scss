@@ -840,6 +840,24 @@ $icon: (
 	text-align: justify;
 }
 
+/*  ---- Datepicker ----  */
+.ui-datepicker-calendar{
+	background-color:#222222;
+}
+.ui-datepicker-calendar{
+	color:#9d9d9d;
+	width: 200px;
+	border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.ui-datepicker-header{
+	text-align: center;
+
+}
+.ui-datepicker-buttonpane{
+	text-align: center;
+}
+
 /*  ---- Média Queries ----  */
 
 @media (min-width: 2400px) {
@@ -999,7 +1017,7 @@ $icon: (
 	}
 }
 
-@media (max-width: 768px){ 
+@media (max-width: 767px){ 
 
 
 	.flexsearch{

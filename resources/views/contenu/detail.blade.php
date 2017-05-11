@@ -19,11 +19,19 @@ $prix=$data->prix;
 			<img class="couverture" src="<?php echo $couverture; ?>">
 			<div class="wrap">
 			<ul class="stars">
-			    <li title="5"></li>
-			    <li title="4"></li>
-			    <li title="3"></li>
-			    <li title="2"></li>
-			    <li title="1"></li>
+			<?php for ($i=1; $i <6 ; $i++) {
+				if ($notes==$i) {
+					?>
+					<li class="current" title="<?php echo $i?>"></li>
+					<?php 
+				}
+				else{
+					?>
+					<li title="<?php echo $i?>"></li>
+					<?php
+				} 	
+			}
+				   ?>
 			</ul>
   			<input id="rating" type="hidden" class="required">
 		</div>
@@ -73,8 +81,3 @@ $prix=$data->prix;
   $('#rating').val( el.attr('title') ); // save value
 });
 	</script>
-		
-		
-
-
-

@@ -4553,10 +4553,6 @@ tbody.collapse.in {
   margin-left: -1px;
 }
 
-.input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
-  z-index: 2;
-}
-
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
@@ -8584,6 +8580,26 @@ input:-moz-placeholder {
   text-align: justify;
 }
 
+/*  ---- Datepicker ----  */
+.ui-datepicker-calendar {
+  background-color: #222222;
+}
+
+.ui-datepicker-calendar {
+  color: #9d9d9d;
+  width: 200px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.ui-datepicker-header {
+  text-align: center;
+}
+
+.ui-datepicker-buttonpane {
+  text-align: center;
+}
+
 /*  ---- Média Queries ----  */
 @media (min-width: 2400px) {
   .main {
@@ -8736,7 +8752,7 @@ input:-moz-placeholder {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .flexsearch {
     width: 100%;
   }

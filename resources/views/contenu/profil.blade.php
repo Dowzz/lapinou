@@ -63,7 +63,7 @@
                         
                         <div class="input-group margin-bottom-sm">    
                             <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
-                            <input type="text" id="datepicker" placeholder="Date de naissance">
+                            <input type="text" id="date-picker" placeholder="Date de naissance">
                         </div>
                         
                         <div>
@@ -158,6 +158,15 @@
     </div>
   </div>
 </div>
+
+<script>$(document).ready(function(){
+  $("#date-picker").datepicker({
+    dateFormat: "d MM, yy",
+    showButtonPanel: true,
+    changeMonth: true,
+    changeYear: true
+  });
+});</script>
 
 
 

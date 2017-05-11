@@ -61,7 +61,7 @@
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-            <input class="form-control" type="date" placeholder="Date de parution">
+            <input class="form-control" type="text" id="date-picker" placeholder="Date de parution">
         </div>
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-eur fa-fw"></i></span>
@@ -112,3 +112,14 @@
         	       
 	</div>
 </div>
+
+<script>
+    $(document).ready(function(){
+  $("#date-picker").datepicker({
+    dateFormat: "d MM, yy",
+    showButtonPanel: true,
+    changeMonth: true,
+    changeYear: true
+  });
+});
+</script>
