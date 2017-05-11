@@ -52,8 +52,8 @@ $prix=$data->prix;
   			
   				<div class='inner'>
     				<div class='add-new'>
-      					<input class='input your-name' placeholder='Votre nom ...' type='text'>
-      					<textarea class='input your-msg' placeholder='Votre message ...'></textarea>
+      					<input class='input your-name' placeholder='Votre nom' type='text'>
+      					<textarea class='input your-msg' type='text' placeholder='Votre message'></textarea>
       					<button class="btn btn-default btn-msg">Envoyer</button>
     				</div>
   				</div>

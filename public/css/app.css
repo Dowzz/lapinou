@@ -7781,6 +7781,10 @@ input[type=checkbox] {
   background-color: #222222;
 }
 
+.close:hover, .close:focus {
+  color: #9d9d9d;
+}
+
 /*  ---- Menu ----  */
 #navbar {
   position: fixed;

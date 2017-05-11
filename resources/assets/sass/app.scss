@@ -107,6 +107,9 @@ input[type=checkbox]{
 	border-color:#222222;
 	background-color: #222222;
 }
+.close:hover, .close:focus{
+	color: #9d9d9d;
+}
 
 /*  ---- Menu ----  */
 #navbar{
