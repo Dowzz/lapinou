@@ -37,6 +37,6 @@ class CreateLivres extends Migration
      */
     public function down()
     {
-        Schema::drop('librairie');
+        Schema::drop('livres');
     }
 }

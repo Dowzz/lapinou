@@ -12,6 +12,8 @@ $genre=$data->genre;
 $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
+$id_livre=$data->id;
+ 
 ?>
 	<h1 class="modal-title title"><?php echo $titre; ?></h1>
 		<div class="row">
@@ -42,7 +44,7 @@ $prix=$data->prix;
 			<p>Editeur : <?php echo $editeur; ?></p>
 			<p>Le <?php echo $parution; ?></p>
 		</div>
-		<input type="hidden" id="idbook" value="<?php echo $data->id ?> ">
+		<input type="hidden" id="idbook" value="<?php echo $id_livre ?> ">
 		<div class="prix">
 			<h1><?php echo $prix; ?> €</h1>
 		</div>	
@@ -60,11 +62,21 @@ $prix=$data->prix;
   			
   				<div class='inner'>
     				<div class='add-new'>
-      					<input class='input your-name' placeholder=@if (Auth::user())
-'{{ Auth::user()->email }}'
-@endif type='text' disabled/>
-      					<textarea class='input your-msg' type='text' placeholder='Votre message'></textarea>
-      					<button class="btn btn-default btn-msg">Envoyer</button>
+    					<form id="adding" action="/addcomment" method="POST">
+							@if (Auth::user())
+							<?php $id_user=Auth::user()->id; ?>
+	      					<input class='input your-name' placeholder="{{ Auth::user()->email }}" disabled/>
+	      					<input type="hidden" id="user" value="<?php echo $id_user ?>" />
+							@else 
+							<input class='input your-name' placeholder="Anonymous" disabled/>
+							<input type="hidden" id="user" value="0" />
+							@endif
+							<?php $id_livre=$data->id; ?>
+							<input class='input your-name' type="hidden" id="livre" value ="<?php echo $id_livre?>" />
+							<input type="hidden" name="_token" value="{{csrf_token()}}" />
+	      					<textarea class='input your-msg' id="comment" type='text' placeholder='Votre message'></textarea>
+	      					<button class="btn btn-msg" id="addcom" type="submit">Envoyer</button>
+      					</form>
     				</div>
   				</div>
 		</div>
@@ -80,6 +92,18 @@ $prix=$data->prix;
       	url: "./notation",
       });
   el.addClass('current').siblings().removeClass('current');
-  $('#rating').val( el.attr('title') ); // save value
+  $('#rating').val( el.attr('title') );
+});
+
+			$('#addcom').click(function() {
+  var id_user=$("#user").val() ;
+  var id_livre=$("#livre").val();
+  var comment=$("#comment").text();
+  console.log(id_user,id_book, comment );
+  $.ajax({
+      	data:({user:user,livre:livre, comment:comment}),
+      	type:"post",
+      	url: "./addcomment",
+      });
 });
 	</script>

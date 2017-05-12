@@ -71,7 +71,7 @@
             <input class="form-control" type="text" placeholder="Prix du livre" name="prix">
         </div> 
         <div>
-            <button id="bouton-panier" id="enregitre" type="submit" class="btn btn-elegant" href="livrestore">Enregistrer</button>
+            <button id="bouton-panier"  type="submit" class="btn btn-elegant">Enregistrer</button>
         </div>
         </form>
 	</div>
@@ -137,24 +137,5 @@
     firstDay: 1,
 
   });
-});
-        $(".Enregistre").click(function(oEvt){
-    oEvt.preventDefault();
-    var titre=$("#titre").val();
-    var couverture=$("#couverture").val();
-    var auteur=$("#auteur").val();
-    var editeur=$("#editeur").val();
-    var genre =$("#genre").val();
-    var description =description$("#description").val();
-    var format =$("#format").val();
-    var parution =$("#parution").val();
-    var prix =$("#prix").val();
-    console.log(titre, couverture, auteur, parution,genre, format);
-        $.ajax({
-            type:"POST",
-            data:({titre}),
-            url:"./livrestore",
-        });
-    }); 
-
+});     
 </script>
