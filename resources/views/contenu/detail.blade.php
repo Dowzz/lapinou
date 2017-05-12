@@ -1,7 +1,9 @@
 <?php
+use App\user;
 use App\Livre;
 "variable get : ".$_GET["Id"];
 $data= Livre::find($_GET["Id"]);
+$id_livre= $data->id;
 $couverture=$data->couverture;
 $titre=$data->titre;
 $auteur=$data->auteur;
@@ -12,6 +14,9 @@ $genre=$data->genre;
 $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
+$iduser= Auth::user()->id;
+
+
 ?>
 	<h1 class="modal-title title"><?php echo $titre; ?></h1>
 		<div class="row">
@@ -61,13 +66,19 @@ $prix=$data->prix;
   				<div class='inner'>
     				<div class='add-new'>
       					<input class='input your-name' placeholder=@if (Auth::user())
-'{{ Auth::user()->email }}'
-@endif type='text' disabled/>
-      					<textarea class='input your-msg' type='text' placeholder='Votre message'></textarea>
-      					<button class="btn btn-default btn-msg">Envoyer</button>
+						'{{ Auth::user()->email }}'
+						@endif type='text' disabled/>
+						<form action="/addcomment" id="addcom" method="post">
+      					<textarea class='input your-msg' type='text' id="comm" placeholder='Votre message'></textarea>
+      					<input type="hidden" id="id_user" value="<?php echo $iduser ?>">
+
+
+      					<button class="btn btn-default btn-msg" type="submit">Envoyer</button>
+      					</form>
     				</div>
   				</div>
 		</div>
+
 		<script>
 			$('.stars').on('click', 'li', function() {
   var el = $(this);
@@ -82,4 +93,16 @@ $prix=$data->prix;
   el.addClass('current').siblings().removeClass('current');
   $('#rating').val( el.attr('title') ); // save value
 });
+
+			$(".Enregistre").click(function(oEvt){
+    oEvt.preventDefault();
+    var id_user=$("#id_user").val();
+    var id_livre=$("#id_livre").val();
+    var commentaire=$("#comm").val();
+        $.ajax({
+            type:"POST",
+            data:({id_user}),
+            url:"./addcomment",
+        });
+    }); 
 	</script>
