@@ -12,11 +12,12 @@ class Commentcontroller extends Controller
 {
     public function addcomment(Request $request)
     {
-    	session()->flash('success', 'livre ajouté !');
+    	session()->flash('message', 'Votre commentaire est enregistré !');
         $commentaire = new commentaire;
     	$commentaire->id_livre = $request->livre;
     	$commentaire->id_user = $request->user;
     	$commentaire->comment = $request->comment;
     	$commentaire->save();
+    	return redirect('/welcome');
     }
 }

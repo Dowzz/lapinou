@@ -59,28 +59,39 @@ $id_livre=$data->id;
     <span>Commentaires</span>
   </h4>
 		<div class='comments'>
-  			
+  			@if(Session::has('message'))
+				            <div class="row">
+				                <div class="col-md-12">
+				                    <div class="alert alert-info">{{ Session::get('message') }}
+				                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+				                    </div>
+				                </div>
+				            </div>
+            			@endif
   				<div class='inner'>
     				<div class='add-new'>
-    					<form id="adding" action="/addcomment" method="POST">
-							@if (Auth::user())
+						@if (Auth::user())
 							<?php $id_user=Auth::user()->id; ?>
 	      					<input class='input your-name' placeholder="{{ Auth::user()->email }}" disabled/>
-	      					<input type="hidden" id="user" value="<?php echo $id_user ?>" />
-							@else 
+	      					<input type="hidden" id="iduser" value="<?php echo $id_user ?>" />
+						@else 
 							<input class='input your-name' placeholder="Anonymous" disabled/>
-							<input type="hidden" id="user" value="0" />
-							@endif
-							<?php $id_livre=$data->id; ?>
-							<input class='input your-name' type="hidden" id="livre" value ="<?php echo $id_livre?>" />
+							<input type="hidden" id="iduser" value="0" />
+						@endif
+						<?php $id_livre=$data->id; ?>
+							<input class='input your-name' type="hidden" id="idlivre" value ="<?php echo $id_livre?>" />
 							<input type="hidden" name="_token" value="{{csrf_token()}}" />
-	      					<textarea class='input your-msg' id="comment" type='text' placeholder='Votre message'></textarea>
-	      					<button class="btn btn-msg" id="addcom" type="submit">Envoyer</button>
-      					</form>
+							<!--<p><?php echo $id_livre; echo $id_user;?></p>-->
+	      					<textarea class='input your-msg' id="comment" type='text' placeholder='Votre message' required></textarea>
+	      					<button class="btn btn-msg" id="addcom">Envoyer</button>      					
     				</div>
   				</div>
 		</div>
 		<script>
+		var user=$("#iduser").val(); ;
+ 	 	var livre=$("#idlivre").val();;
+  		var comment=$("#comment").val();
+		console.log(user,livre, comment );
 			$('.stars').on('click', 'li', function() {
   var el = $(this);
   var note=$(this).attr("title");
@@ -94,16 +105,19 @@ $id_livre=$data->id;
   el.addClass('current').siblings().removeClass('current');
   $('#rating').val( el.attr('title') );
 });
-
-			$('#addcom').click(function() {
-  var id_user=$("#user").val() ;
-  var id_livre=$("#livre").val();
-  var comment=$("#comment").text();
-  console.log(id_user,id_book, comment );
+$('#addcom').click(function() {
+  var id_user=$(this).attr("user"); ;
+  var id_livre=$(this).attr("livre");;
+  var comment=$("#comment").val();
   $.ajax({
-      	data:({user:user,livre:livre, comment:comment}),
-      	type:"post",
-      	url: "./addcomment",
+        data:({user:user,livre:livre, comment:comment}),
+        type:"post",
+        url: "./addcomment",
+        success: function(msg){
+        	{ alert("Votre Commentaire a été enregistré ; merci !"); }
+        }
+
       });
 });
+
 	</script>

@@ -272,7 +272,7 @@ $(window).resize(function() {
     $("#dialog").dialog("option", "position", "center");
 });
 
-
+      
 /*//switch mot de passe 
 
 $(document).ready(function() {
