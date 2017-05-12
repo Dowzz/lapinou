@@ -19,7 +19,7 @@ $prix=$data->prix;
 			<img class="couverture" src="<?php echo $couverture; ?>">
 			<div class="wrap">
 			<ul class="stars">
-			<?php for ($i=1; $i <6 ; $i++) {
+			<?php for ($i=5; $i >0 ; $i--) {
 				if ($notes==$i) {
 					?>
 					<li class="current" title="<?php echo $i?>"></li>
@@ -60,7 +60,9 @@ $prix=$data->prix;
   			
   				<div class='inner'>
     				<div class='add-new'>
-      					<input class='input your-name' placeholder='Votre nom' type='text'>
+      					<input class='input your-name' placeholder=@if (Auth::user())
+'{{ Auth::user()->email }}'
+@endif type='text' disabled/>
       					<textarea class='input your-msg' type='text' placeholder='Votre message'></textarea>
       					<button class="btn btn-default btn-msg">Envoyer</button>
     				</div>

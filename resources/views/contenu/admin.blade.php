@@ -1,33 +1,36 @@
-<?php
+@if (session('status'))
+    <div class="alert alert-info">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        {{ session('status') }}
+    </div>
+@endif
 
-	/*$livre = new Livre;
-	$livre->title = '';
-	$livre->etc etc 
 
-	$livre->save;*/
-?>
+
 <div class="mini">
 	<div class="span-ajout">
+    <form id="logout-form" action="/livrestore" method="POST">
 		<h3>Ajout d'un livre</h3>
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
 		<div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-link fa-fw"></i></span>
-            <input class="form-control" id="couverture" type="text" placeholder="URL de couverture">
+            <input class="form-control" name="couverture" type="text" placeholder="URL de couverture">
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Titre" id="titre">
+            <input class="form-control" type="text" placeholder="Titre" name="titre">
         </div> 
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Auteur" id="auteur">
+            <input class="form-control" type="text" placeholder="Auteur" name="auteur">
         </div> 
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-file-text-o fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Editeur" id="editeur">
+            <input class="form-control" type="text" placeholder="Editeur" name="editeur">
         </div> 
         <div class="input-group margin-bottom-sm"> 
             <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
-            <select id="demande" id="subject" id="genre" name="subject" class="form-control" required="required">
+            <select id="demande" id="subject" name="genre" name="subject" class="form-control" required="required">
             <option value="na" selected="">Genre :</option>
             <option value="aventure">Aventure / Action</option>
             <option value="classique">Classique</option>
@@ -48,11 +51,11 @@
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-comments-o fa-fw"></i></span>
-            <textarea class="form-control" type="text" placeholder="Résumé" id="description"></textarea>
+            <textarea class="form-control" type="text" placeholder="Résumé" name="description"></textarea>
         </div> 
         <div class="input-group margin-bottom-sm"> 
             <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
-            <select id="demande" id="subject" id="format" name="subject" class="form-control" required="required">
+            <select id="demande" id="subject" name="format" name="subject" class="form-control" required="required">
             <option value="na" selected="">Format :</option>
             <option value="epub">Epub</option>
             <option value="multi">Multi</option>
@@ -61,15 +64,16 @@
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-            <input class="form-control" type="text" id="date-picker" id="parution" placeholder="Date de parution">
+            <input class="form-control" type="text" id="date-picker" name="parution" placeholder="Date de parution">
         </div>
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-eur fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Prix du livre" id="prix">
+            <input class="form-control" type="text" placeholder="Prix du livre" name="prix">
         </div> 
         <div>
-            <button id="bouton-panier" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
+            <button id="bouton-panier" id="enregitre" type="submit" class="btn btn-elegant" href="livrestore">Enregistrer</button>
         </div>
+        </form>
 	</div>
 </div>
 
@@ -116,7 +120,7 @@
     $(document).ready(function(){
   $("#date-picker").datepicker({
     dateFormat: "yy-mm-dd",
-    showButtonPanel: true,
+    showButtonPanel: false,
     changeMonth: true,
     changeYear: true,
     closeText: "OK", 
@@ -129,10 +133,28 @@
     dayNames: ["dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"], 
     dayNamesShort: ["dim", "lun", "mar", "mer", "jeu", "ven", "Sam"], 
     dayNamesMin: ["di","lu","ma","me","je","ve","Sa"], 
-    weekHeader: "Wk", 
-    dateFormat: "mm/dd/yy", 
+    weekHeader: "Wk",  
     firstDay: 1,
 
   });
 });
+        $(".Enregistre").click(function(oEvt){
+    oEvt.preventDefault();
+    var titre=$("#titre").val();
+    var couverture=$("#couverture").val();
+    var auteur=$("#auteur").val();
+    var editeur=$("#editeur").val();
+    var genre =$("#genre").val();
+    var description =description$("#description").val();
+    var format =$("#format").val();
+    var parution =$("#parution").val();
+    var prix =$("#prix").val();
+    console.log(titre, couverture, auteur, parution,genre, format);
+        $.ajax({
+            type:"POST",
+            data:({titre}),
+            url:"./livrestore",
+        });
+    }); 
+
 </script>

@@ -43,6 +43,7 @@ Route::post('insertodo', 'TodoController@store');
 Route::post('deleteall', 'TodoController@deleteall');
 Route::post('deleteid', 'TodoController@deleteid');
 Route::post('notation', 'Bookcontrol@notation');
+Route::post('/livrestore', 'Bookcontrol@livrestore');
 
 
 

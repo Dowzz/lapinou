@@ -17,4 +17,20 @@ class Bookcontrol extends Controller
 		$livre->notes = $note;
 		$livre->save();
     }
+    public function livrestore(Request $request)
+    {
+        session()->flash('success', 'livre ajouté !');
+        $livre = new livre;
+        $livre->titre=$request->titre;
+        $livre->couverture=$request->couverture;
+        $livre->auteur=$request->auteur;
+        $livre->editeur=$request->editeur;
+        $livre->genre=$request->genre;
+        $livre->description=$request->description;
+        $livre->format=$request->format;
+        $livre->parution=$request->parution;
+        $livre->prix=$request->prix;
+        $livre->save();
+        return redirect('/');
+    }
 }
