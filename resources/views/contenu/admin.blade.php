@@ -11,23 +11,23 @@
 		<h3>Ajout d'un livre</h3>
 		<div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-link fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="URL de couverture">
+            <input class="form-control" id="couverture" type="text" placeholder="URL de couverture">
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Titre">
+            <input class="form-control" type="text" placeholder="Titre" id="titre">
         </div> 
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Auteur">
+            <input class="form-control" type="text" placeholder="Auteur" id="auteur">
         </div> 
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-file-text-o fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Editeur">
+            <input class="form-control" type="text" placeholder="Editeur" id="editeur">
         </div> 
         <div class="input-group margin-bottom-sm"> 
             <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
-            <select id="demande" id="subject" name="subject" class="form-control" required="required">
+            <select id="demande" id="subject" id="genre" name="subject" class="form-control" required="required">
             <option value="na" selected="">Genre :</option>
             <option value="aventure">Aventure / Action</option>
             <option value="classique">Classique</option>
@@ -48,11 +48,11 @@
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-comments-o fa-fw"></i></span>
-            <textarea class="form-control" type="text" placeholder="Résumé"></textarea>
+            <textarea class="form-control" type="text" placeholder="Résumé" id="description"></textarea>
         </div> 
         <div class="input-group margin-bottom-sm"> 
             <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
-            <select id="demande" id="subject" name="subject" class="form-control" required="required">
+            <select id="demande" id="subject" id="format" name="subject" class="form-control" required="required">
             <option value="na" selected="">Format :</option>
             <option value="epub">Epub</option>
             <option value="multi">Multi</option>
@@ -61,11 +61,11 @@
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-            <input class="form-control" type="text" id="date-picker" placeholder="Date de parution">
+            <input class="form-control" type="text" id="date-picker" id="parution" placeholder="Date de parution">
         </div>
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-eur fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Prix du livre">
+            <input class="form-control" type="text" placeholder="Prix du livre" id="prix">
         </div> 
         <div>
             <button id="bouton-panier" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
@@ -112,12 +112,27 @@
 </div>
 
 <script>
+
     $(document).ready(function(){
   $("#date-picker").datepicker({
-    dateFormat: "d MM, yy",
+    dateFormat: "yy-mm-dd",
     showButtonPanel: true,
     changeMonth: true,
-    changeYear: true
+    changeYear: true,
+    closeText: "OK", 
+    prevText: "Prec", 
+    nextText: "suiv",
+    currentText: "aujourdhui", 
+    monthNames: ["Janvier","Fevrier","Mars","Avril","Mai","Juin",
+            "Juillet","Aout","Septembre","Octobre","Novembre","Decembre"], 
+    monthNamesShort: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"], 
+    dayNames: ["dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"], 
+    dayNamesShort: ["dim", "lun", "mar", "mer", "jeu", "ven", "Sam"], 
+    dayNamesMin: ["di","lu","ma","me","je","ve","Sa"], 
+    weekHeader: "Wk", 
+    dateFormat: "mm/dd/yy", 
+    firstDay: 1,
+
   });
 });
 </script>

@@ -161,10 +161,23 @@
 
 <script>$(document).ready(function(){
   $("#date-picker").datepicker({
-    dateFormat: "d MM, yy",
+    dateFormat: "yy-mm-dd",
     showButtonPanel: true,
     changeMonth: true,
-    changeYear: true
+    changeYear: true,
+    closeText: "OK", 
+    prevText: "Prec", 
+    nextText: "suiv",
+    currentText: "aujourdhui", 
+    monthNames: ["Janvier","Fevrier","Mars","Avril","Mai","Juin",
+            "Juillet","Aout","Septembre","Octobre","Novembre","Decembre"], 
+    monthNamesShort: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"], 
+    dayNames: ["dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"], 
+    dayNamesShort: ["dim", "lun", "mar", "mer", "jeu", "ven", "Sam"], 
+    dayNamesMin: ["di","lu","ma","me","je","ve","Sa"], 
+    weekHeader: "Wk", 
+    dateFormat: "mm/dd/yy", 
+    firstDay: 1,
   });
 });</script>
 
