@@ -7656,6 +7656,14 @@ button.close {
 }
 
 /*  ---- SCSS de base ----  */
+input::-webkit-input-placeholder {
+  color: #9d9d9d;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #9d9d9d;
+}
+
 .couv {
   width: 210px;
   height: 300px;
