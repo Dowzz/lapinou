@@ -62,12 +62,12 @@
                         </div>
                         
                         <div class="input-group margin-bottom-sm">    
-                            <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
-                            <input type="text" id="date-picker" placeholder="Date de naissance">
+                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                            <input type="text" id="date-picker" class="form-control" placeholder="Date de naissance">
                         </div>
                         
                         <div>
-                            <button id="bouton-panier" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
+                            <button id="bouton-panier3" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
                         </div>
                     </div>
                 </div>
@@ -162,21 +162,19 @@
 <script>$(document).ready(function(){
   $("#date-picker").datepicker({
     dateFormat: "yy-mm-dd",
-    showButtonPanel: true,
+    showButtonPanel: false,
     changeMonth: true,
     changeYear: true,
     closeText: "OK", 
-    prevText: "Prec", 
-    nextText: "suiv",
-    currentText: "aujourdhui", 
-    monthNames: ["Janvier","Fevrier","Mars","Avril","Mai","Juin",
-            "Juillet","Aout","Septembre","Octobre","Novembre","Decembre"], 
+    prevText: "Prec. ", 
+    nextText: " Suiv.",
+    currentText: "Aujourd'hui", 
+    monthNames: ["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"], 
     monthNamesShort: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"], 
-    dayNames: ["dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"], 
-    dayNamesShort: ["dim", "lun", "mar", "mer", "jeu", "ven", "Sam"], 
-    dayNamesMin: ["di","lu","ma","me","je","ve","Sa"], 
+    dayNames: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"], 
+    dayNamesShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"], 
+    dayNamesMin: ["Di","Lu","Ma","Me","Je","Ve","Sa"], 
     weekHeader: "Wk", 
-    dateFormat: "mm/dd/yy", 
     firstDay: 1,
   });
 });</script>
