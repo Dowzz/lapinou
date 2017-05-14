@@ -93,10 +93,7 @@ $id_livre=$data->id;
   				<div class="commentscrolled">
   					<?php $coms=commentaire::where('id_livre', $id_livre)->get();
   					foreach ($coms as $com) {
-  						$user=$coms->id_user;
-						$userid=user::find($user);
-						$name=$userid->name; ?>
-  						<div><input type="text" placeholder="<?php echo $name ?>" disabled />
+  						?>
   						<p><?php echo $com->comment; ?></p></div>
   						<?php
   					}
