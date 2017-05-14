@@ -1,5 +1,7 @@
 <?php
+use App\user;
 use App\Livre;
+use App\commentaire;
 "variable get : ".$_GET["Id"];
 $data= Livre::find($_GET["Id"]);
 $couverture=$data->couverture;
@@ -13,6 +15,7 @@ $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
 $id_livre=$data->id;
+
  
 ?>
 	<h1 class="modal-title title"><?php echo $titre; ?></h1>
@@ -75,16 +78,29 @@ $id_livre=$data->id;
 	      					<input class='input your-name' placeholder="{{ Auth::user()->email }}" disabled/>
 	      					<input type="hidden" id="iduser" value="<?php echo $id_user ?>" />
 						@else 
+						<?php $id_user='999';?>
 							<input class='input your-name' placeholder="Anonymous" disabled/>
-							<input type="hidden" id="iduser" value="0" />
+							<input type="hidden" id="iduser" value="<?php echo $id_user ?>" />
 						@endif
 						<?php $id_livre=$data->id; ?>
 							<input class='input your-name' type="hidden" id="idlivre" value ="<?php echo $id_livre?>" />
 							<input type="hidden" name="_token" value="{{csrf_token()}}" />
 							<!--<p><?php echo $id_livre; echo $id_user;?></p>-->
 	      					<textarea class='input your-msg' id="comment" type='text' placeholder='Votre message' required></textarea>
-	      					<button class="btn btn-msg" id="addcom">Envoyer</button>      					
+	      					<button class="btn btn-msg" id="addcom">Envoyer</button>
     				</div>
+  				</div>
+  				<div class="commentscrolled">
+  					<?php $coms=commentaire::where('id_livre', $id_livre)->get();
+  					foreach ($coms as $com) {
+  						$user=$coms->id_user;
+						$userid=user::find($user);
+						$name=$userid->name; ?>
+  						<div><input type="text" placeholder="<?php echo $name ?>" disabled />
+  						<p><?php echo $com->comment; ?></p></div>
+  						<?php
+  					}
+  					?>
   				</div>
 		</div>
 		<script>
