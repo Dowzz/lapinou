@@ -15,7 +15,7 @@ $admin=0;
             </button>
             <ul class="liste">
             <li class="">
-            <a class="navbar-brand" href={{ url('/') }}>Bienvenue,
+            <a class="navbar-brand" href={{ url('/') }}>Bienvenue
             @if (Auth::user())
             {{ Auth::user()->name }}
             @endif
