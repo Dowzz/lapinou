@@ -9,11 +9,11 @@
                     </div>
 
                     <div class="span4">
-                        <h2>Lapinou</h2> 
+                        <h2>{{ Auth::user()->name }}</h2> 
                             <ul class="liste" class="unstyled">
-                                <li>Lapinou@mail.com</li>
+                                <li>{{ Auth::user()->email }}</li>
                                 <li>Né(e) le 25 septembre 2000</li>
-                                <li>Incription le 14 février 2011</li>
+                                <li>Inscrit le {{ Auth::user()->created_at->format('d-m-Y') }}</li>
                             </ul>
                     </div>
 
@@ -50,24 +50,25 @@
                     <div class="panel-body">
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Nom">
+                            <input class="form-control" type="text" placeholder="{{ Auth::user()->nom }}">
                         </div>   
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Prénom">
+                            <input class="form-control" type="text" placeholder="{{ Auth::user()->prenom }}">
                         </div>
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Email">
+                            <input class="form-control" type="text" placeholder="{{ Auth::user()->email }}">
                         </div>
                         
                         <div class="input-group margin-bottom-sm">    
                             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                            <input type="text" id="date-picker" class="form-control" placeholder="Date de naissance">
+                            <input type="text" id="date-picker" class="form-control" placeholder="{{ Auth::user()->naissance }}">
                         </div>
                         
                         <div>
                             <button id="bouton-panier3" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
+
                         </div>
                     </div>
                 </div>
@@ -115,20 +116,23 @@
 
                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                     <div class="panel-body">
-                        <div class="comment-user"><i class="fa fa-book"></i> Une fille parfaite</div>
-                            <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Le 24 juillet 2017</time>
+                    <?php 
+                    use App\commentaire;
+                    use App\Livre;
+                    $id_user=Auth::user()->id;
+                    $coms=commentaire::where('id_user',$id_user)->get();
+                    foreach ($coms as $com) {
+                    ?>
+                        <div class="comment-user"><i class="fa fa-book"></i><?php echo $com ?></div>
                         <div class="comment-post">
                             <p id="resume"><br />
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                         </div>
                         <hr>
-                        <div class="comment-user"><i class="fa fa-book"></i> Voyage au centre de la Terre</div>
-                            <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Le 24 août 2017</time>
-                        <div class="comment-post">
-                            <p id="resume"><br />
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
+                        <?php 
+                        }
+                        ?>
                         </div>
                     </div>
                 </div>

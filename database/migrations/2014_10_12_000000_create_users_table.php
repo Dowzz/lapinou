@@ -22,6 +22,9 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->integer('todo');
             $table->integer('admin');
+            $table->text('nom');
+            $table->text('prenom');
+            $table->date('naissance');
         });
     }
 
