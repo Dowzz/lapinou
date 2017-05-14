@@ -8542,6 +8542,7 @@ input:-moz-placeholder {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
+  text-align: center;
 }
 
 .add-new .input.your-name.dived {
@@ -8555,6 +8556,27 @@ input:-moz-placeholder {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 100%;
+}
+
+.comment-previous {
+  border-bottom: 1px solid #9d9d9d;
+}
+
+.comment-text {
+  border: 1px solid #9d9d9d;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.comment-name {
+  margin-top: -5px;
+  max-height: 150px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  text-align: center;
 }
 
 /*  ---- Page Admin ----  */

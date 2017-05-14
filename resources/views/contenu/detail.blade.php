@@ -90,16 +90,20 @@ $id_livre=$data->id;
 	      					<button class="btn btn-msg" id="addcom">Envoyer</button>
     				</div>
   				</div>
-  				<div class="commentscrolled">
+  				<div class="comment-previous">
+  				<h4 class="line_effect"><span>Avis Clients</span></h4>
   					<?php $coms=commentaire::where('id_livre', $id_livre)->get();
   					foreach ($coms as $com) {
-  						?>
-  						<p><?php echo $com->comment; ?></p></div>
+  						$user=$com->id_user;
+  						$iduser=user::where('id',$user)->first();
+  						$name=$iduser->name;?>
+						<div class="comment-text"><input type="text" class='comment-name' placeholder="<?php echo $name; ?>" disabled/>
+  						<p>"<?php echo $com->comment; ?>"</p></div>
   						<?php
   					}
   					?>
   				</div>
-		</div>
+  		</div>
 		<script>
 		var user=$("#iduser").val(); ;
  	 	var livre=$("#idlivre").val();;
