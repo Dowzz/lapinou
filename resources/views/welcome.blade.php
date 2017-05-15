@@ -171,10 +171,10 @@ $todolist =0;
         </div>
     </div>
 </div>
-
 <script src="{{ asset('js/all.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 
 <script type="text/javascript">
 $.ajaxSetup({

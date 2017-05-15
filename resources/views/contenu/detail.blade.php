@@ -16,7 +16,6 @@ $notes=$data->notes;
 $prix=$data->prix;
 $id_livre=$data->id;
 
- 
 ?>
 	<h1 class="modal-title title"><?php echo $titre; ?></h1>
 		<div class="row">
@@ -90,8 +89,9 @@ $id_livre=$data->id;
 	      					<button class="btn btn-msg" id="addcom">Envoyer</button>
     				</div>
   				</div>
-  				<div class="comment-previous">
   				<h4 class="line_effect"><span>Avis Clients</span></h4>
+
+  					<div class="comment_previous">
   					<?php $coms=commentaire::where('id_livre', $id_livre)->get();
   					foreach ($coms as $com) {
   						$user=$com->id_user;
@@ -103,8 +103,8 @@ $id_livre=$data->id;
   						<?php
   					}
   					?>
+
   				</div>
-  		</div>
 		<script>
 		var user=$("#iduser").val(); ;
  	 	var livre=$("#idlivre").val();;
@@ -137,5 +137,5 @@ $('#addcom').click(function() {
 
       });
 });
+</script>
 
-	</script>
