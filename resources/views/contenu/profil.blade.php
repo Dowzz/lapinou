@@ -123,10 +123,10 @@
                     $coms=commentaire::where('id_user',$id_user)->get();
                     foreach ($coms as $com) {
                     ?>
-                        <div class="comment-user"><i class="fa fa-book"></i><?php echo $com ?></div>
+                        <div class="comment-user"><i class="fa fa-book"></i><?php echo $com->id_livre ?></div>
                         <div class="comment-post">
                             <p id="resume"><br />
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                "<?php echo $com->comment ?>"
                             </p>
                         </div>
                         <hr>
