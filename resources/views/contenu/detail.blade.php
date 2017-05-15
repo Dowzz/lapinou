@@ -75,7 +75,7 @@ $id_livre=$data->id;
     				<div class='add-new'>
 						@if (Auth::user())
 							<?php $id_user=Auth::user()->id; ?>
-	      					<input class='input your-name' placeholder="{{ Auth::user()->name }}" disabled/>
+	      					<input class='input your-name' placeholder="{{ Auth::user()->email }}" disabled/>
 	      					<input type="hidden" id="iduser" value="<?php echo $id_user ?>" />
 						@else 
 						<?php $id_user='999';?>
@@ -97,7 +97,7 @@ $id_livre=$data->id;
   						$user=$com->id_user;
   						$iduser=user::where('id',$user)->first();
   						$name=$iduser->name;?>
-						<div class="comment-text"><input class='comment-name' placeholder="<?php echo $name; ?>" disabled/>
+						<div class="comment-text"><input type="text" class='comment-name' placeholder="<?php echo $name; ?>" disabled/>
   						<p>"<?php echo $com->comment; ?>"</p></div>
   						<?php
   					}
