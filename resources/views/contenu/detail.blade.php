@@ -75,7 +75,7 @@ $id_livre=$data->id;
     				<div class='add-new'>
 						@if (Auth::user())
 							<?php $id_user=Auth::user()->id; ?>
-	      					<input class='input your-name' placeholder="{{ Auth::user()->email }}" disabled/>
+	      					<input class='input your-name' placeholder="{{ Auth::user()->name }}" disabled/>
 	      					<input type="hidden" id="iduser" value="<?php echo $id_user ?>" />
 						@else 
 						<?php $id_user='999';?>
@@ -86,7 +86,7 @@ $id_livre=$data->id;
 							<input class='input your-name' type="hidden" id="idlivre" value ="<?php echo $id_livre?>" />
 							<input type="hidden" name="_token" value="{{csrf_token()}}" />
 							<!--<p><?php echo $id_livre; echo $id_user;?></p>-->
-	      					<textarea class='input your-msg' id="comment" type='text' placeholder='Votre message' required></textarea>
+	      					<textarea class='form-control2' id="commentaire" type='text' placeholder='Votre message' required></textarea>
 	      					<button class="btn btn-msg" id="addcom">Envoyer</button>
     				</div>
   				</div>
@@ -97,7 +97,8 @@ $id_livre=$data->id;
   						$user=$com->id_user;
   						$iduser=user::where('id',$user)->first();
   						$name=$iduser->name;?>
-						<div class="comment-text"><input type="text" class='comment-name' placeholder="<?php echo $name; ?>" disabled/>
+						<div class="add-new">
+						<input class='input name' placeholder="<?php echo $name; ?>" disabled/>
   						<p>"<?php echo $com->comment; ?>"</p></div>
   						<?php
   					}
@@ -107,7 +108,7 @@ $id_livre=$data->id;
 		<script>
 		var user=$("#iduser").val(); ;
  	 	var livre=$("#idlivre").val();;
-  		var comment=$("#comment").val();
+  		var comment=$("#commentaire").val();
 		console.log(user,livre, comment );
 			$('.stars').on('click', 'li', function() {
   var el = $(this);
@@ -125,7 +126,7 @@ $id_livre=$data->id;
 $('#addcom').click(function() {
   var id_user=$(this).attr("user"); ;
   var id_livre=$(this).attr("livre");;
-  var comment=$("#comment").val();
+  var comment=$("#commentaire").val();
   $.ajax({
         data:({user:user,livre:livre, comment:comment}),
         type:"post",
