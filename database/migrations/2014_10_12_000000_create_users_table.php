@@ -20,11 +20,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->integer('todo');
-            $table->integer('admin');
-            $table->text('nom');
-            $table->text('prenom');
-            $table->date('naissance');
+            $table->integer('todo')->default('0');
+            $table->integer('admin')->default('0');
+            $table->text('nom')->nullable();
+            $table->text('prenom')->nullable();
+            $table->date('naissance')->nullable();
         });
     }
 
