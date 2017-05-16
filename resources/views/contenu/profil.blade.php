@@ -63,15 +63,15 @@
                         <input type="hidden" id="maj_id" value="{{ Auth::user()->id }}">
                         <div class="input-group margin-bottom-sm">    
                             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                            <input onfocusout="update(id)"  type="text" id="date-picker" class="form-control" placeholder="{{ Auth::user()->naissance }}">
+                            <input onfocusout="update(id)"  type="text" id="naissance" class="form-control" placeholder="{{ Auth::user()->naissance }}">
                         </div>
                         <script>
                         function update(id) {
                         var x = document.getElementById(id).value;
                         var user=$("#maj_id").val();
-                        console.log(x);
+                        console.log(x, id, user);
                             $.ajax({
-                                data:({x, user}),
+                                data:({id, x, user}),
                                 type:"post",
                                 url: "./majuser",
                             });
@@ -171,7 +171,7 @@
 </div>
 
 <script>$(document).ready(function(){
-  $("#date-picker").datepicker({
+  $("#naissance").datepicker({
     dateFormat: "yy-mm-dd",
     showButtonPanel: false,
     changeMonth: true,
@@ -187,8 +187,13 @@
     dayNamesMin: ["Di","Lu","Ma","Me","Je","Ve","Sa"], 
     weekHeader: "Wk", 
     firstDay: 1,
-  });
-});</script>
+    onClose: function () {
+        $(this).focus();  
+        } 
+    });
+});
+
+</script>
 
 
 

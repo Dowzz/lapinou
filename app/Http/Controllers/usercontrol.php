@@ -11,8 +11,11 @@ class usercontrol extends Controller
 {
     public function majuser(Request $request)
     {	$user= $request->user;
+    	$id= $request->id;
     	$user=user::find($user);
-    	$user->nom = $request->x;
+    	if (!empty($request->x)) {
+    	$user->$id = $request->x;	
+    	}
 		$user->save();
     }
 }
