@@ -12,7 +12,7 @@
                         <h2>{{ Auth::user()->name }}</h2> 
                             <ul class="liste" class="unstyled">
                                 <li>{{ Auth::user()->email }}</li>
-                                <li>Né(e) le 25 septembre 2000</li>
+                                <li>Né(e) le {{ Auth::user()->naissance }} </li>
                                 <li>Inscrit le {{ Auth::user()->created_at->format('d-m-Y') }}</li>
                             </ul>
                     </div>
@@ -131,9 +131,9 @@
                     foreach ($coms as $com) {
                         $idlivre=$com->id_livre;
                         $livre=Livre::where('id', $idlivre)->first();
-                        $titre=$livre->titre;
+                        $titre=$livre['titre'];
                     ?>
-                        <div class="comment-user"><i class="fa fa-book"></i><?php echo $titre ?></div>
+                        <div class="comment-user"><i class="fa fa-book"></i><?php echo $titre; ?></div>
                         <div class="comment-post">
                             <p id="resume"><br />
                                 "<?php echo $com->comment; ?>"
@@ -146,8 +146,6 @@
                         </div>
                     </div>
                 </div>
-            
-
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingFive">
                     <h4 class="panel-title">
@@ -196,7 +194,7 @@
                             });
                         </script>
 
-                        <button type="button" class="btn btn-elegant tooltips" data-toggle="tooltip" data-placement="top" title="Votre compte va être supprimé, vous ne pourrez plus y acceder.">Suppression de compte</button>
+                        
 
                     </div>
                 </div>
@@ -204,8 +202,29 @@
         </div>
     </div>
   </div>
-</div>
+  <button type="button" id="supprimer" class="btn btn-elegant tooltips" data-toggle="tooltip" data-placement="top" title="Votre compte va être supprimé, vous ne pourrez plus y acceder.">Suppression de compte</button>
+  <script>
+      $('#supprimer').click(function showConfirm()
+            {   
+                var user=$("#maj_id").val();
+                var answer=confirm("Vous voulez vraiment nous quitter ?");
+                if (answer==true)
+                {
+                    $.ajax({
+                    data:({user}),
+                    type:"post",
+                    url: "./delaccount",
+                    });
+                    alert("Votre compte est désactivé.");
 
+                    window.location="{{URL::to('/')}}";
+                }
+                else
+                {
+                    alert("Ouf ! Vous nous avez fait peur !");
+                }
+});
+  </script>
 <script>$(document).ready(function(){
   $("#naissance").datepicker({
     dateFormat: "yy-mm-dd",
@@ -228,7 +247,6 @@
         } 
     });
 });
-
 </script>
 
 

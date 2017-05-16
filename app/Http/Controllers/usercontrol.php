@@ -18,4 +18,10 @@ class usercontrol extends Controller
     	}
 		$user->save();
     }
+    public function delaccount(Request $request)
+    {
+    	$user= $request->user;
+    	$user= user::find($user)->first()->delete();
+    	Session::flush();	
+    }
 }

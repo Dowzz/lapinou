@@ -47,6 +47,8 @@ Route::post('/livrestore', 'Bookcontrol@livrestore');
 Route::post('/addcomment', 'Commentcontroller@addcomment');
 Route::post('/majuser', 'usercontrol@majuser');
 Route::post('/majtodo', 'Todocontroller@majtodo');
+Route::post('/delaccount', 'usercontrol@delaccount');
+
 
 
 
