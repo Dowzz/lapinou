@@ -768,78 +768,85 @@ $icon: (
 
 // ****** Commentaire box ******
 
+.coms{
+	text-align: justify;
+	padding-right: 10px;
+	padding-top: 10px;
+	font-size: 16px;
+}
 .comments .inner .comment {
-  border: 1px dashed #ccc;
-  padding: 15px;
-  min-height: 48px;
-  margin-bottom: 10px;
-  color: #ccc;
+  	border: 1px dashed #ccc;
+  	padding: 15px;
+  	min-height: 48px;
+  	margin-bottom: 10px;
+  	color: #ccc;
 }
 .comments .inner .comment .avatar {
-  width: 48px;
-  height: 48px;
-  float: left;
+  	width: 48px;
+  	height: 48px;
+  	float: left;
 }
 .comments .inner .comment .body {
-  margin-left: 55px;
+  	margin-left: 55px;
 }
 .comments .inner .comment .body p {
-  color: black;
+  	color: black;
 }
 .comments .inner .comment:hover {
-  color: rgba(0, 39, 59, 0.35);
-  background-color: rgba(200, 200, 200, 0.1);
-  border-style: solid;
+  	color: rgba(0, 39, 59, 0.35);
+  	background-color: rgba(200, 200, 200, 0.1);
+  	border-style: solid;
 }
 .add-new .input {
-  display: block;
-  width: 475px;
-  border: 1px solid #ccc;
-  color: #3b3b3b;
-  padding: 4px;
-  outline: 0;
-  font-size: 15px;
+  	display: block;
+  	width: 475px;
+  	border: 1px solid #ccc;
+  	color: #3b3b3b;
+  	padding: 4px;
+  	outline: 0;
+  	font-size: 15px;
 }
 .add-new .input.name {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    width: 40%;
+    width: 35%;
+    height: 25px;
     text-align: center;
 }
 .add-new .input.your-name {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 100%;
-  text-align: center;
+  	border-top-left-radius: 5px;
+  	border-top-right-radius: 5px;
+  	width: 100%;
+  	text-align: center;
 }
 .add-new .input.your-name.dived {
-  margin-top: 2px;
-  padding: 9px 10px 11px 10px;
+  	margin-top: 2px;
+  	padding: 9px 10px 11px 10px;
 }
 .add-new .input.your-msg {
-  margin-top: -5px;
-  max-height: 150px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  width: 100%;
+  	margin-top: -5px;
+  	max-height: 150px;
+  	border-bottom-left-radius: 5px;
+  	border-bottom-right-radius: 5px;
+  	width: 100%;
 }
 .comment_previous{
-  border-bottom:1px solid #9d9d9d;
+  	border-bottom:1px solid #9d9d9d;
 }
 .comment-text{
-  border:1px solid #9d9d9d;
-  width: 100%;
-  margin-bottom: 5px;
-  text-align: center;
-  font-size: 15px;
+  	border:1px solid #9d9d9d;
+  	width: 100%;
+  	margin-bottom: 5px;
+  	text-align: center;
+  	font-size: 15px;
 }
 .comment-name{
-  margin-top: -5px;
-  max-height: 150px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  width: 100%;
-  text-align: center;
+  	margin-top: -5px;
+  	max-height: 150px;
+ 	border-bottom-left-radius: 5px;
+  	border-bottom-right-radius: 5px;
+  	width: 100%;
+  	text-align: center;
 }
 .form-control2{
     display: block;
@@ -1022,6 +1029,30 @@ $icon: (
   background-color: #222222;
 	border-style: none;
 }
+
+/*  ---- ScrollBar ----  */
+
+
+.scroll-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  
+  h1:after {
+    content: " hidden";
+  } 
+  &:hover, &:focus {
+    overflow-y: auto;
+    
+    h1:after {
+      content: " shown";
+    }
+    
+  }
+  
+}
+
+
 
 
 /*  ---- Média Queries ----  */
