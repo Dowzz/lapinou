@@ -50,26 +50,27 @@
                     <div class="panel-body">
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="{{ Auth::user()->nom }}">
+                            <input id="nom" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->nom }}">
                         </div>   
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="{{ Auth::user()->prenom }}">
+                            <input id="prenom" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->prenom }}">
                         </div>
                         <div class="input-group margin-bottom-sm">
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="{{ Auth::user()->email }}">
+                            <input id="email" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->email }}">
                         </div>
                         
                         <div class="input-group margin-bottom-sm">    
                             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                            <input type="text" id="date-picker" class="form-control" placeholder="{{ Auth::user()->naissance }}">
+                            <input onfocusout="update(id)"  type="text" id="date-picker" class="form-control" placeholder="{{ Auth::user()->naissance }}">
                         </div>
-                        
-                        <div>
-                            <button id="bouton-panier3" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Enregistrer</button>
-
-                        </div>
+                        <script>
+                        function update(id) {
+                        var x = document.getElementById(id).value;
+                        console.log(x);
+                        }
+                        </script>
                     </div>
                 </div>
             </div>
