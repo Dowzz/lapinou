@@ -157,14 +157,47 @@
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                     <div class="panel-body">
                         <b>To do list </b>
-                            <input type="checkbox" name="check" id="squaredThree" value="None" /><label for="squaredThree"> Oui </label>
-                            <input type="checkbox" name="check" id="squaredThree" value="None" /><label for="squaredThree"> Non </label>
-                        <br />
+                            <input type="checkbox" name="checked" id="checkbox1" value="None" />
+                        <script>
+                            $('#checkbox1').change(function() {
+                              var id_user=$("#maj_id").val();   
+                              if ($(this).is(':checked')) {
+                                var todo = 1;
+                                var div=document.getElementById("texte");
+                                div.textContent = "Todolist activée !";
+                                var text = div.textCont
+                              } else {
+                                var todo = 0;
+                                var div=document.getElementById("texte");
+                                div.textContent = "Todolist Désactivée !";
+                                var text = div.textCont
+                              }
+                              console.log(todo);
+                                $.ajax({
+                                data:({todo, id_user}),
+                                type:"post",
+                                url: "./majtodo",
+                                }); 
+                            });
+                        </script>
                         <b>Newletter</b>
-                            <input type="checkbox" name="check" id="squaredThree" value="None" /><label for="squaredThree"> Oui </label>
-                            <input type="checkbox" name="check" id="squaredThree" value="None" /><label for="squaredThree"> Non </label>
-                        <br />
-                            <button type="button" class="btn btn-elegant tooltips" data-toggle="tooltip" data-placement="top" title="Votre compte va être supprimé, vous ne pourrez plus y acceder.">Suppression de compte</button>
+                            <input type="checkbox" name="checked" id="checkbox2" value="None" />
+                            <div id=texte></div>
+                        <script>
+                            $('#checkbox2').change(function() {
+                              if ($(this).is(':checked')) {
+                                console.log('Checked');
+                                var div=document.getElementById("texte");
+                                div.textContent = "Merci pour votre souscription. Vous recevrez bientot votre première Newsletter !";
+                                var text = div.textContent;
+                              } else {
+                                console.log('Unchecked');
+                              } 
+                            });
+                        </script>
+
+                        <button type="button" class="btn btn-elegant tooltips" data-toggle="tooltip" data-placement="top" title="Votre compte va être supprimé, vous ne pourrez plus y acceder.">Suppression de compte</button>
+
                     </div>
                 </div>
             </div>

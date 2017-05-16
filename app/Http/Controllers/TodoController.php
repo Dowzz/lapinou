@@ -31,4 +31,12 @@ class TodoController extends Controller
 
         todolist::where('user_id', $user_id)AND todolist::Where('champ', $todoText)->first()->delete();
     }
+    public function majtodo(Request $request)
+    {
+        $todo = $request->todo;
+        $user= $request->id_user;
+        $maj_user=User::where('id',$user)->first();
+        $maj_user->todo= $todo;
+        $maj_user->save();
+    }
 }
