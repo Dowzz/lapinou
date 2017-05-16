@@ -22,9 +22,9 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->integer('todo')->default('0');
             $table->integer('admin')->default('0');
-            $table->text('nom')->nullable();
-            $table->text('prenom')->nullable();
-            $table->date('naissance')->nullable();
+            $table->text('nom')->default('nom');
+            $table->text('prenom')->default('prenom');
+            $table->date('naissance')->default('2007-01-01');
         });
     }
 

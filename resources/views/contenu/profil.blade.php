@@ -60,7 +60,7 @@
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
                             <input id="email" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->email }}">
                         </div>
-                        
+                        <input type="hidden" id="maj_id" value="{{ Auth::user()->id }}">
                         <div class="input-group margin-bottom-sm">    
                             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                             <input onfocusout="update(id)"  type="text" id="date-picker" class="form-control" placeholder="{{ Auth::user()->naissance }}">
@@ -68,7 +68,13 @@
                         <script>
                         function update(id) {
                         var x = document.getElementById(id).value;
+                        var user=$("#maj_id").val();
                         console.log(x);
+                            $.ajax({
+                                data:({x, user}),
+                                type:"post",
+                                url: "./majuser",
+                            });
                         }
                         </script>
                     </div>
