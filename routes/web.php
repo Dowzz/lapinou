@@ -14,7 +14,7 @@ use App\Livre;
 
 
 
-Route::get('/{categorie?}', function($categorie = null)
+Route::get('contenu.{categorie?}', function($categorie = null)
 {
 	if ($categorie) return View::make('contenu.template_miniature')->with('categorie', $categorie); 
 	else return view('/welcome');
