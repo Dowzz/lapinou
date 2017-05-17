@@ -57,5 +57,18 @@ class DatabaseSeeder extends Seeder
             'champ' => str_random(10),
                ]);
         }
+        for ($i=0; $i < 6; $i++) { 
+            DB::table('contacts')->insert([
+            'pseudo' => str_random(10),
+            'mail' => str_random(10)."@gmail.com",
+            'commande' => str_random(10),
+            'objet' => str_random(15),
+            'demande' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sit minus fugit distinctio mollitia temporibus quia odio tempora officia quo, quos nostrum consequuntur accusamus molestias iusto, veniam, aliquid debitis placeat.
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sit minus fugit distinctio mollitia temporibus quia odio tempora officia quo, quos nostrum consequuntur accusamus molestias iusto, veniam, aliquid debitis placeat.',
+            'created_at' => rand(2007,2018)."-".$rand."-".rand(1, 30),
+               ]);
+
+        }
+
     }
 }

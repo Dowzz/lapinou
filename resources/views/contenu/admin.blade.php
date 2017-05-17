@@ -104,8 +104,8 @@
                     <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>   <?php echo $contact->created_at ?></time>
                     <div class="comment-user">  <?php echo $client ?>  </div>
             </div>
-            <div class="col-md-2">Message : </div>
-            <div class="col-md-10">        
+            <div class="col-md-12">Message : </div>
+            <div class="col-md-12">        
                 <p class="mail">
                     "<?php echo $contact->demande ?>"
                 </p>
