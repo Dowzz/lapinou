@@ -1,4 +1,4 @@
-<h4 class="modal-title" id="myModalLabel"> Connexion </h4>
+<h3 class="modal-title" id="myModalLabel"> Connexion </h3>
     <div class="modal-body">
         <div class="row">
             <div class="col-md-12">
@@ -15,9 +15,7 @@
                             <span class="input-group-addon"><i class="fa fa-unlock-alt fa-fw"></i></span>
                             <input type="password" name="password" id="lpassword"  class="form-control" type="password" placeholder="Mot de passe">
                         </div>
-                        <label>
-                            <input type="checkbox" name="remember"> Se souvenir de moi
-                        </label>
+                        <input type="checkbox" name="remember">Se souvenir de moi
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-elegant btn-sm" id="bouton-panier">Connexion</button>
                         </div>

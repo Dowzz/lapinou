@@ -83,7 +83,7 @@ $todolist =0;
 
 </div>
 
-<div class="container" id="dialog" title="todolist">
+<div class="container" id="dialog" title="Todo List">
 @include ('modals.todolist')
 </div>
 

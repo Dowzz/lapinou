@@ -1,34 +1,29 @@
-
-
-
 <footer>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <h3> Contact </h3>
-                    <ul>
-                        <li> Lapibook </li>
-                        <li> 7 rue des Carottes </li>
-                        <li> 00 000 Rabbit City </li></br>
-                        <li> 02 31 00 00 00 </li>
-                        <li> <a href="#"> contact@lapibook.fr </a> </li>
-                        
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <h3> Liens </h3>
-                    <ul>
-                        <li><a href="{{ url('/') }}">Accueil</a></li>
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <h3> Contact </h3>
+                <ul>
+                    <li> Lapibook </li>
+                    <li> 7 rue des Carottes </li>
+                    <li> 00 000 Rabbit City </li></br>
+                    <li> 02 31 00 00 00 </li>
+                    <li><a href="#"> contact@lapibook.fr </a></li>
+                </ul>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <h3> Liens </h3>
+                <ul>
+                    <li><a href="{{ url('/') }}">Accueil</a></li>
                         @if (Auth::check())
                             <li class="ajax"><a href="contenu/profil">Profil<span></span></a>
                             </li>
                         @endif                        
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</a> </li> 
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal_inscription">Inscription</a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-lapication"> Lapi'book </a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-panier"> Panier </a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-pay"> Paiement </a> </li>
-                        <li> <a data-toggle="modal" data-backdrop="false" data-target="#modal-contact"> Contactez-nous </a> </li>
+                    <li><a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal_connexion">Connexion</a></li> 
+                    <li><a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal_inscription">Inscription</a></li>
+                    <li><a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-lapication"> Lapi'book </a></li>
+                    <li><a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-panier"> Panier </a></li>
+                    <li><a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-pay"> Paiement </a></li>
+                    <li><a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-contact"> Contactez-nous </a></li>
 
                        
                     </ul>
