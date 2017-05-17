@@ -80,38 +80,42 @@
 <div class="mini">
 	<div class="span-recep">
 		<h3>Reception demande de contact</h3>
-		  	<div class="panel-body">
-		  	<div class="col-md-6 reception">
-                <div class="comment-user"><i class="fa fa-user"></i> Pseudo</div>
-                <div class="comment-user"><i class="fa fa-envelope-o"></i> Mail</div>
-                <div class="comment-user"><i class="fa fa-slack"></i> Commande</div>
+        <div class="panel-body">
+        <?php 
+        use App\contact;
+        use App\user;
+        
+            
+            $contacts=contact::orderBy('created_at', 'desc')->distinct()->get();
+            foreach ($contacts as $contact) {
+                $client = user::where('email', $contact->mail)->first();
+                if (!empty($client)){
+                    $client = '<i class="fa fa-star"></i>   Client';
+                }
+                ?>
+		  	           
+                <div class="col-md-6 reception">
+                <div class="comment-user"><i class="fa fa-user"></i>   <?php echo $contact->pseudo ?>  </div>
+                <div class="comment-user"><i class="fa fa-envelope-o"></i>   <?php echo $contact->mail ?>  </div>
+                <div class="comment-user"><i class="fa fa-slack"></i>   <?php echo $contact->commande ?>  </div>
             </div>  
             <div class="col-md-6 reception">  
-                <div class="comment-user"><i class="fa fa-question"></i> Demande</div>
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Le 10 mai 2017</time>
+                <div class="comment-user"><i class="fa fa-question"></i>   <?php echo $contact->objet ?>  </div>
+                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>   <?php echo $contact->created_at ?></time>
+                    <div class="comment-user">  <?php echo $client ?>  </div>
             </div>
-          
-            </div>        
+            <div class="col-md-2">Message : </div>
+            <div class="col-md-10">        
                 <p class="mail">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    "<?php echo $contact->demande ?>"
                 </p>
+            </div>
                     
                 <hr>
-            <div class="panel-body">
-		  	<div class="col-md-6 reception">
-                <div class="comment-user"><i class="fa fa-user"></i> Pseudo</div>
-                <div class="comment-user"><i class="fa fa-envelope-o"></i> Mail</div>
-                <div class="comment-user"><i class="fa fa-slack"></i> Commande</div>
-            </div>  
-            <div class="col-md-6 reception">  
-                <div class="comment-user"><i class="fa fa-question"></i> Demande</div>
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Le 10 mai 2017</time>
-            </div>
-          
-            </div>        
-                <p class="mail">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>    	       
+                <?php
+                } ?>
+		  	
+                	       
 	</div>
 </div>
 

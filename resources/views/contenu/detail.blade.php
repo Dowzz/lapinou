@@ -108,8 +108,8 @@ $id_livre=$data->id;
   		</div>
 
 		<script>
-		var user=$("#iduser").val(); ;
- 	 	var livre=$("#idlivre").val();;
+		var user=$("#iduser").val();
+ 	 	var livre=$("#idlivre").val();
   		var comment=$("#commentaire").val();
 		console.log(user,livre, comment );
 			$('.stars').on('click', 'li', function() {
@@ -126,8 +126,8 @@ $id_livre=$data->id;
   $('#rating').val( el.attr('title') );
 });
 $('#addcom').click(function() {
-  var id_user=$(this).attr("user"); ;
-  var id_livre=$(this).attr("livre");;
+  var id_user=$(this).attr("user");
+  var id_livre=$(this).attr("livre");
   var comment=$("#commentaire").val();
   $.ajax({
         data:({user:user,livre:livre, comment:comment}),
@@ -139,9 +139,4 @@ $('#addcom').click(function() {
 
       });
 });
-
-
-
-
-
-	</script>
+</script>

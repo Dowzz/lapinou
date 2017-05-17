@@ -2,18 +2,20 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </h4>
     <div class="modal-body">
+    <form id="logout-form" action="/ajoutcontact" method="POST">
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Pseudo">
+            <input class="form-control" name="pseudo" type="text" placeholder="Pseudo">
         </div>
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Email">
+            <input class="form-control" name="email" type="text" placeholder="Email">
         </div>
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-slack fa-fw"></i></span>
-            <input class="form-control" type="text" placeholder="Numéro de commande">
+            <input class="form-control" name="Ncommande" type="text" placeholder="Numéro de commande">
         </div>
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
         <div class="input-group margin-bottom-sm"> 
             <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
             <select id="demande" id="subject" name="subject" class="form-control" required="required">
@@ -28,11 +30,11 @@
         </div>   
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-comments-o fa-fw"></i></span>
-                <textarea class="form-control" type="text" placeholder="Commentaire"></textarea>
+                <textarea class="form-control" name="contact-text" type="text" placeholder="Commentaire"></textarea>
         </div>            
         <div class="form-group">
-            <button type="button" class="btn btn-elegant btn-sm" id="bouton-panier">Valider</button>
+            <button class="btn btn-elegant btn-sm" id="bouton-panier" tye="submit">Valider</button>
             <button type="button" class="btn btn-danger btn-sm" class="close" data-dismiss="modal" id="bouton-panier">Annuler</button> 
         </div>
+        </form>
     </div>
-
