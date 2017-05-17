@@ -81,6 +81,7 @@
 	<div class="span-recep">
 		<h3>Reception demande de contact</h3>
         <div class="panel-body">
+        <div class="scroll-container"> 
         <?php 
         use App\contact;
         use App\user;
@@ -115,7 +116,7 @@
                 <?php
                 } ?>
 		  	
-                	       
+        </div>          	       
 	</div>
 </div>
 

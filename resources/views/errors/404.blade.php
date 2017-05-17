@@ -41,7 +41,7 @@
   
 @import url(http://fonts.googleapis.com/css?family=Gilda+Display);
 
-html {
+.bod {
   background-color:black;
   color: white;
   overflow: hidden;
