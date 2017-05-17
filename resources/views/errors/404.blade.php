@@ -1,4 +1,4 @@
-<a href="http://codepen.io/ZonFire99/full/njdls/" class="viewFull" target="_parent">View in full it looks way better :)</a>
+<div class="bod">
 
 <div class="error">
 
@@ -36,7 +36,7 @@
 
 
 </span>
-
+</div>
 <style>
   
 @import url(http://fonts.googleapis.com/css?family=Gilda+Display);
@@ -71,7 +71,7 @@ html {
   overflow: default;
 }
 
-body:after {
+.bod:after {
   content: 'error 404';
   font-family: OCR-A;
   font-size: 100px;
@@ -89,7 +89,7 @@ body:after {
   -webkit-animation: noise-1 .2s linear infinite;
           animation: noise-1 .2s linear infinite;
 }
-body:before {
+.bod:before {
   content: 'error 404';
   font-family: OCR-A;
   font-size: 100px;
