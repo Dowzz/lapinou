@@ -173,7 +173,8 @@ $(document).ready(function () {
 
         $( "#dialog" ).dialog({
         	resizable: false,
-        	minHeight: 0
+        	minHeight: 0,
+          closeText: "Fermer",
         });
     });
 

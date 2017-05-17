@@ -12,8 +12,8 @@
                         <h2>{{ Auth::user()->name }}</h2> 
                             <ul class="liste" class="unstyled">
                                 <li>{{ Auth::user()->email }}</li>
-                                <li>Né(e) le {{ Auth::user()->naissance }} </li>
-                                <li>Inscrit le {{ Auth::user()->created_at->format('d-m-Y') }}</li>
+                                <li>Né(e) le {{ Auth::user()->naissance->format('d/m/Y') }} </li>
+                                <li>Inscrit le {{ Auth::user()->created_at->format('d/m/Y') }}</li>
                             </ul>
                     </div>
 
@@ -133,7 +133,7 @@
                         $livre=Livre::where('id', $idlivre)->first();
                         $titre=$livre['titre'];
                     ?>
-                        <div class="comment-user"><i class="fa fa-book"></i><?php echo $titre; ?></div>
+                        <div class="comment-user"><i class="fa fa-book"> </i><?php echo $titre; ?></div>
                         <div class="comment-post">
                             <p id="resume"><br />
                                 "<?php echo $com->comment; ?>"
@@ -155,7 +155,8 @@
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                     <div class="panel-body">
                         <b>To do list </b>
-                            <input type="checkbox" name="checked" id="checkbox1" value="None" />
+                        <?php $todo=Auth::user()->todo;?>
+                            <input type="checkbox" name="checked" id="checkbox1" <?php if ($todo == 1){?> checked="checked" <?php } ?>/>
                         <script>
                             $('#checkbox1').change(function() {
                               var id_user=$("#maj_id").val();   

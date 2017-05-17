@@ -28,7 +28,8 @@ input::-webkit-input-placeholder {
 }
 .ui-widget-content{
     border:none;
-    background:none; 
+    background:none;
+    z-index: 1; 
 }
 .ui-widget-header{
     background:none;
@@ -212,9 +213,11 @@ hr {
 	margin-top:20px;
 	margin-right: 20px;
 	margin-left: 20px;
+  z-index: 1;
 }
 .img-responsive{
 	width:60%;
+
 }
 .expiration{
 	margin-top: 10px;
