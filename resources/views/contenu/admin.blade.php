@@ -102,9 +102,9 @@
             <div class="col-md-6 reception">  
                 <div class="comment-user"><i class="fa fa-question"></i>   <?php echo $contact->objet ?>  </div>
                     <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>   <?php echo $contact->created_at ?></time>
-                    <div class="comment-user">  <?php echo $client ?>  </div>
+                    <div class="comment-user">  <?php echo $client ?>  </div><br />
             </div>
-            <div class="col-md-12">Message : </div>
+            <div class="col-md-3 message">Message : </div>
             <div class="col-md-12">        
                 <p class="mail">
                     "<?php echo $contact->demande ?>"
