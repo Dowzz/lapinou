@@ -45,6 +45,9 @@ Route::get('contenu/admin', function () {
 Route::get('contenu/accueil', function () {
     return view('contenu.accueil');
 });
+Route::get('search', function() {
+	return view('contenu.search');
+});
 
 /* ----  route Catégorie  ---- */
 
@@ -66,6 +69,7 @@ Route::post('/majuser', 'usercontrol@majuser');
 Route::post('/majtodo', 'Todocontroller@majtodo');
 Route::post('/delaccount', 'usercontrol@delaccount');
 Route::post('/ajoutcontact', 'contactcontrol@storecontact');
+
 
 /* ----  routes mentions  ---- */
 

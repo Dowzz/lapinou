@@ -273,6 +273,33 @@ $(window).resize(function() {
     $("#dialog").dialog("option", "position", "center");
 });
 
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+
+    page="search";
+    $.ajax({
+        url:page,
+        cache:false,
+  
+      success:function(html){
+            afficher(html);
+        },
+        error:function(XMLHttpRequest,textStatus, errorThrown){
+            alert(textStatus);
+        }
+    })
+    return false;
+}
+
+var form = document.getElementById('recherche');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
+
+
       
 /*//switch mot de passe 
 
@@ -286,5 +313,4 @@ $(document).ready(function() {
     $('div#login').toggle('500');
   });
 });*/
-
 
