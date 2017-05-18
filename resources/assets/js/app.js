@@ -273,14 +273,17 @@ $(window).resize(function() {
     $("#dialog").dialog("option", "position", "center");
 });
 
+//recherche 
 
 function processForm(e) {
     if (e.preventDefault) e.preventDefault();
-
+    var data= $('.flexsearch-input').val();
     page="search";
+    console.log(data);
     $.ajax({
         url:page,
         cache:false,
+        data:({data}),
   
       success:function(html){
             afficher(html);
