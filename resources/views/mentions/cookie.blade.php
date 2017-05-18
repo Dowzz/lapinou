@@ -1,4 +1,4 @@
-<h2>Cookies</h2>
+<h2 class="secu">Cookies</h2>
 
 	<h3>L´utilisation des cookies lors de votre visite sur notre Site</h3><br />
 
