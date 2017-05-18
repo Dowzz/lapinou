@@ -68,14 +68,25 @@ $todolist =0;
 <!--Barre de recherche-->
 
 <div class="flexsearch">
-        <div class="flexsearch-wrapper">
-            <form class="flexsearch-form">
-                <div class="flexsearch-input-wrapper">
-                    <input class="flexsearch-input" type="search" placeholder="Recherche" name="q">
-                </div>
-            </form>
-        </div>
+    <div class="flexsearch-wrapper">
+        <form class="flexsearch-form">
+            <div class="flexsearch-input-wrapper">
+                <input class="flexsearch-input" type="text" placeholder="Recherche" name="q" required/>
+            </div>
+        </form>
+    </div>
 </div>
+<script>
+    $(".flexsearch-input").keypress(function(e) {
+  if(e.which === 13) {
+    var data = $("flexsearch-input").val();
+    console.log(data);
+    $.ajax({
+         data: ({data}),
+         type: "post",
+         url: "./search",
+         });
+</script>
 
 <!--Miniature-->
 
