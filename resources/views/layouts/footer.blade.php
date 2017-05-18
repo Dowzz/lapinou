@@ -50,9 +50,10 @@
         </div>
     </div>
     <div class="modal fade" id="modal-politique" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" >
+        <div class="modal-dialog modal-lg" >
             <div class="modal-content">
                 <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <div id="bodymodal">
                 @include('mentions.politique')
                 </div>
@@ -61,9 +62,10 @@
         </div>
     </div>
     <div class="modal fade" id="modal-cgv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" >
+        <div class="modal-dialog modal-lg" >
             <div class="modal-content">
                 <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <div id="bodymodal">
                 @include('mentions.cgv')
                 </div>
@@ -72,9 +74,10 @@
         </div>
     </div>
     <div class="modal fade" id="modal-cookie" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" >
+        <div class="modal-dialog modal-lg" >
             <div class="modal-content">
                 <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <div id="bodymodal">
                 @include('mentions.cookie')
                 </div>

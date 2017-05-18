@@ -8833,6 +8833,12 @@ input:-moz-placeholder {
   content: " shown";
 }
 
+/*  ---- Datepicker ----  */
+.mention {
+  text-align: left;
+  text-align: justify;
+}
+
 /*  ---- Média Queries ----  */
 @media (min-width: 2400px) {
   .main {
