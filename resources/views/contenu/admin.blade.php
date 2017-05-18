@@ -95,15 +95,19 @@
                 }
                 ?>
 		  	           
-                <div class="col-md-6 reception">
+                <div class="col-md-5 reception">
                 <div class="comment-user"><i class="fa fa-user"></i>   <?php echo $contact->pseudo ?>  </div>
                 <div class="comment-user"><i class="fa fa-envelope-o"></i>   <?php echo $contact->mail ?>  </div>
                 <div class="comment-user"><i class="fa fa-slack"></i>   <?php echo $contact->commande ?>  </div>
             </div>  
-            <div class="col-md-6 reception">  
+            <div class="col-md-5 reception">  
                 <div class="comment-user"><i class="fa fa-question"></i>   <?php echo $contact->objet ?>  </div>
                     <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>   <?php echo $contact->created_at ?></time>
                     <div class="comment-user">  <?php echo $client ?>  </div><br />
+            </div>
+            <div class="col-md-2">
+                <button id="trash" type="button" class="btn btn-elegant"><img class="fa fa-envelope"></button>
+                <button id="trash" type="button" class="btn btn-elegant" class="fa fa-times"></button>
             </div>
             <div class="col-md-3 message">Message : </div>
             <div class="col-md-12">        
