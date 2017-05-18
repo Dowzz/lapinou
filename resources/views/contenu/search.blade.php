@@ -19,9 +19,9 @@ function tronquer($description)
 ?>
 
 <div class="mini">
-  <h2 class="line_effect">
-    <h1>Resultats de votre Recherche</h1>
-  </h2>
+  <h1 class="line_effect">
+    <span>Resultats de votre Recherche</span>
+  </h1>
   <?php 
   use App\Livre;
   $query=$_GET["data"];
@@ -30,10 +30,11 @@ function tronquer($description)
                 ->orwhere('editeur', 'LIKE', '%'.$query.'%')
                 ->orwhere('format', 'LIKE', '%'.$query.'%')
                 ->orderBy('id')->paginate();
+if ($livre) {
   foreach ($livre as $l) {
   $id= $l->id;
   ?>
-  <div  class="view view-fifth">  
+  <div class="view view-fifth">  
      <img class="couv" src=" <?php echo ($l->couverture); ?>"> 
      <div class="mask">  
      <h2><?php echo ($l->titre); ?></h2>  
@@ -47,6 +48,15 @@ function tronquer($description)
      </a>
      </div> 
   </div>
+  <?php
+  }
+}
+else{
+  ?>
+  <h1><span>Desolé</span></h1>
+  <?php
+}
+  ?>
 
   <div id="modal" class="modal fade">
     <div class="modal-dialog">
@@ -63,10 +73,6 @@ function tronquer($description)
     <!-- /.modal-dialog -->
   </div>
 <!-- Event modal -->
-<?php
-}
-?>
-
 
   <div class="mini">
     <h2 class="line_effect">
