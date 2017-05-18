@@ -53,7 +53,7 @@ if ($livre) {
 }
 else{
   ?>
-  <h1><span>Desolé</span></h1>
+  <h1><span>Desolé, nous n'avons pas reussi a trouvé le livre de vos rèves...</span></h1>
   <?php
 }
   ?>
