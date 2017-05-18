@@ -31,9 +31,9 @@
                 <div class="col-md-4 col-sm-4">
                     <h3> Mentions Légales </h3>
                     <ul>
-                        <li> <a href="#"> Politique de confidentialité </a> </li>
-                        <li> <a href="#"> CGV </a> </li>
-                        <li> <a href="#"> Cookies </a> </li></br>
+                        <li> <a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-politique"> Politique de confidentialité </a> </li>
+                        <li> <a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-cgv"> CGV </a> </li>
+                        <li> <a class="curseur" data-toggle="modal" data-backdrop="false" data-target="#modal-cookie"> Cookies </a> </li></br>
                         <li> Copyright © 2017, LAPIBOOK. All rights reserved. </li>
                     </ul>
                 </div>
@@ -49,4 +49,38 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-politique" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" >
+            <div class="modal-content">
+                <div class="modal-header">
+                <div id="bodymodal">
+                @include('mentions.politique')
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-cgv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" >
+            <div class="modal-content">
+                <div class="modal-header">
+                <div id="bodymodal">
+                @include('mentions.cgv')
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-cookie" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" >
+            <div class="modal-content">
+                <div class="modal-header">
+                <div id="bodymodal">
+                @include('mentions.cookie')
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </footer> 
