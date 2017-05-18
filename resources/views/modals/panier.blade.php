@@ -22,14 +22,11 @@
                             <div class="col-xs-2"><img class="img-responsive" src="">
                             </div>
                             <div class="col-xs-4">
-                                <h4 class="product-name"><strong>Titre</strong></h4><h4><small>Résumer</small></h4>
+                                <h4 class="product-name"><strong>Titre</strong></h4><h4><small>Auteur</small>Format</h4>
                             </div>
                             <div class="col-xs-6">
                                 <div class="col-xs-6 text-right">
                                     <h6><strong>6,99<span class="text-muted">x</span></strong></h6>
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="text" class="form-control input-sm" value="1">
                                 </div>
                                 <div class="col-xs-2">
                                     <button id="trash" type="button" class="btn btn-elegant">
@@ -48,9 +45,6 @@
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                 <div class="col-xs-6 text-right">
                                     <h6><strong>0.00 <span class="text-muted">x</span></strong></h6>
-                                </div>
-                                <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4">
-                                    <input type="text" class="form-control input-sm" value="1">
                                 </div>
                                 <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2">
                                    <button id="trash" type="button" class="btn btn-elegant">
