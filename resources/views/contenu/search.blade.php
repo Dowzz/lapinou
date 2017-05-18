@@ -20,12 +20,16 @@ function tronquer($description)
 
 <div class="mini">
   <h2 class="line_effect">
-    <span>Resultats de votre Recherche</span>
+    <h1>Resultats de votre Recherche</h1>
   </h2>
   <?php 
   use App\Livre;
   $query=$_GET["data"];
-  $livre= Livre::where('titre','LIKE','%'.$query.'%')->orderBy('id')->paginate(4);
+  $livre= Livre::where('titre','LIKE','%'.$query.'%')
+                ->orwhere('auteur', 'LIKE', '%'.$query.'%')
+                ->orwhere('editeur', 'LIKE', '%'.$query.'%')
+                ->orwhere('format', 'LIKE', '%'.$query.'%')
+                ->orderBy('id')->paginate();
   foreach ($livre as $l) {
   $id= $l->id;
   ?>
