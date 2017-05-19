@@ -8693,11 +8693,6 @@ input:-moz-placeholder {
   margin-bottom: 10px;
 }
 
-.btn-danger {
-  background-color: #222222;
-  border-color: #222222;
-}
-
 /*  ---- Datepicker ----  */
 #ui-datepicker-div {
   float: left;
@@ -9100,6 +9095,12 @@ input:-moz-placeholder {
   input[type=email],
   input[type=date] {
     color: #9d9d9d;
+  }
+  .btn-msg {
+    margin-right: 0px;
+  }
+  .btn-detail {
+    margin-right: 0px;
   }
 }
 
