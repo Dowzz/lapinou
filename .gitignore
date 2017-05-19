@@ -6,3 +6,5 @@ public/js/all.js
 public/js/all.js
 public/css/app.css
 *.map
+app/Http/Controllers/panierctrl.php
+database/migrations/2017_05_19_093813_create_paniers_table.php
