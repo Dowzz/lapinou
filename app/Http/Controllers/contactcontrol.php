@@ -20,7 +20,14 @@ class contactcontrol extends Controller
     	$contact->save();
     	return redirect('/');
     }
+    public function deletecontact(Request $request)
+    {
+        contact::where('id', $_GET["id"])->delete();
+        return redirect('/');
 
+
+
+    }
 
 
 }

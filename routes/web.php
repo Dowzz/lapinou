@@ -69,6 +69,7 @@ Route::post('/majuser', 'usercontrol@majuser');
 Route::post('/majtodo', 'Todocontroller@majtodo');
 Route::post('/delaccount', 'usercontrol@delaccount');
 Route::post('/ajoutcontact', 'contactcontrol@storecontact');
+Route::get('/deletecontact', 'contactcontrol@deletecontact');
 
 
 /* ----  routes mentions  ---- */
