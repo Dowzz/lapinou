@@ -8320,7 +8320,21 @@ input:-moz-placeholder {
 }
 
 #resume {
-  margin: 0 0 30px;
+  margin-top: -30px;
+}
+
+.epais {
+  border-top: 2px solid #3b3b3b;
+  margin-bottom: 0px;
+}
+
+.panel-body {
+  padding: 0px;
+}
+
+.newt {
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 /*  ---- Modal détail ebook ----  */
@@ -9037,7 +9051,7 @@ input:-moz-placeholder {
     display: inline-block;
   }
   .panel {
-    background-color: #222222;
+    background-color: white;
   }
   #added {
     vertical-align: center;
