@@ -129,7 +129,7 @@ $id= $ln->id;
         $(".LienModal").click(function(oEvt){
     oEvt.preventDefault();
     var Id=$(this).attr("rel");
-        $(".modal-text").fadeIn(1000).html('<div style="text-align:center; margin-right:auto; margin-left:auto">Patientez...</div>');
+        $(".modal-text").fadeIn(1000).html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
         $.ajax({
             type:"GET",
             data : "Id="+Id,
