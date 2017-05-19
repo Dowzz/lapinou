@@ -281,6 +281,7 @@ class ComposerStaticInit056c6d4bb60d3a6bb606cf037d1c77d5
         'CreateCommentairesTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_12_195039_create_commentaires_table.php',
         'CreateContactsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_17_122247_create_contacts_table.php',
         'CreateLivres' => __DIR__ . '/../..' . '/database/migrations/2017_05_02_081717_create_livres.php',
+        'CreatePaniersTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_19_093813_create_paniers_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateTodolistTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_09_110906_create_todolist_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',

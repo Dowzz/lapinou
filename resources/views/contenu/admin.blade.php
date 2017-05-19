@@ -106,10 +106,11 @@
                     <div class="comment-user">  <?php echo $client ?>  </div><br />
             </div>
             <div class="col-md-2">
-                <a class="btn btn-elegants" href="" aria-label="Delete">
+                <a class="btn btn-elegants" href="mailto:<?php echo $contact->mail ?>" aria-label="mail">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </a>
-                <a class="btn btn-elegants" href="" aria-label="Delete">
+                <a class="btn btn-elegants" href="/deletecontact?id=<?php echo $contact->id ?>" aria-label="Delete">
+                <input type="hidden" id="idcontact" value="<?php echo $contact->id ?>">
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                 </a>
             </div>
