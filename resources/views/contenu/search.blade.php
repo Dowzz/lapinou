@@ -29,6 +29,7 @@ function tronquer($description)
                 ->orwhere('auteur', 'LIKE', '%'.$query.'%')
                 ->orwhere('editeur', 'LIKE', '%'.$query.'%')
                 ->orwhere('format', 'LIKE', '%'.$query.'%')
+                ->orwhere('description', 'LIKE', '%'.$query.'%')
                 ->orderBy('id')->paginate();
 if ($livre->count()) {
   foreach ($livre as $l) {
@@ -54,7 +55,7 @@ if ($livre->count()) {
 else{
   ?>
   <div>
-  <h1><span>Desolé, nous n'avons pas reussi a trouvé le livre de vos rèves...</span></h1>
+  <h1><span>Désolé, nous n'avons pas réussi à trouver le livre de vos rêves...</span></h1>
   </div>
   <?php
 }
