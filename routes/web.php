@@ -70,7 +70,7 @@ Route::post('/majtodo', 'Todocontroller@majtodo');
 Route::post('/delaccount', 'usercontrol@delaccount');
 Route::post('/ajoutcontact', 'contactcontrol@storecontact');
 Route::get('/deletecontact', 'contactcontrol@deletecontact');
-Route::post('/addpanier', 'panierctrl@addpanier');
+
 
 /* ----  routes mentions  ---- */
 
