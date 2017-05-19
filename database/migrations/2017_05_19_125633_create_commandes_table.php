@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLivres extends Migration
+class CreateCommandesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,14 @@ class CreateLivres extends Migration
      */
     public function up()
     {
-        Schema::create('livres', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('commandes', function (Blueprint $table) {
+            $table->increments('Ncommande');
             $table->text('couverture');
             $table->text('titre');
             $table->text('auteur');
-            $table->text('editeur');
-            $table->date('parution');
-            $table->text('description');
-            $table->text('genre');
             $table->text('format');
-            $table->integer('notes');
             $table->double('prix');
-            $table->rememberToken();
-            $table->timestamps();
+   
         });
     }
 
@@ -37,6 +31,9 @@ class CreateLivres extends Migration
      */
     public function down()
     {
-        Schema::drop('livres');
+        Schema::drop('commandes');
     }
 }
+
+
+
