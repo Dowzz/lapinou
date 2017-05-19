@@ -8679,6 +8679,11 @@ input:-moz-placeholder {
   margin-bottom: 10px;
 }
 
+.btn-danger {
+  background-color: #222222;
+  border-color: #222222;
+}
+
 /*  ---- Datepicker ----  */
 #ui-datepicker-div {
   float: left;

@@ -106,8 +106,12 @@
                     <div class="comment-user">  <?php echo $client ?>  </div><br />
             </div>
             <div class="col-md-2">
-                <button id="trash" type="button" class="btn btn-elegant"><img class="fa fa-envelope"></button>
-                <button id="trash" type="button" class="btn btn-elegant" class="fa fa-times"></button>
+                <a class="btn btn-elegants" href="" aria-label="Delete">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-elegants" href="" aria-label="Delete">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </a>
             </div>
             <div class="col-md-3 message">Message : </div>
             <div class="col-md-12">        
