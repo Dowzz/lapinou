@@ -91,23 +91,30 @@
                     <div class="panel-body">
 
                         <table class="table table-xs">
-                            <tr>
+                            <tr class="ligne">
                                 <th> N° commande </th>
-                                <th> Titre </th>
+                                <th> Titre / Téléchargement </th>
                                 <th class="text-right"> Date </th>
                                 <th class="text-right"> Prix </th>
                             </tr>
-                            <tr>
-                                <td>#017990</td>
-                                <td>Une fille parfaite</td>
+                            <tr class="epais">
+                                <td rowspan="2">#017990</td>
+                                <td>Docteur Sleep</td>
                                 <td class="text-right" title="Date"> 05/2017 </td>
-                                <td class="text-right" title="Price"> 6,99 </td>
+                                <td class="text-right" title="Price"> 9,99 </td>
                             </tr>
                             <tr>
-                                <td>#018384</td>
-                                <td>Voyage au centre de la Terre</td>
+                                <td href="Telecharger">Télécharger le livre</td>
+                            </tr>
+                            
+                            <tr class="epais">
+                                <td rowspan="2">#018384</td>
+                                <td>Time Riders</td>
                                 <td class="text-right" title="Date"> 06/2017 </td>
-                                <td class="text-right" title="Price"> 0,00 </td>
+                                <td class="text-right" title="Price"> 11,99 </td>
+                            </tr>
+                            <tr>
+                                <td href="Telecharger">Télécharger le livre</td>
                             </tr>
                         </table>
                     </div>
@@ -133,13 +140,13 @@
                         $livre=Livre::where('id', $idlivre)->first();
                         $titre=$livre['titre'];
                     ?>
-                        <div class="comment-user"><i class="fa fa-book"> </i><?php echo $titre; ?></div>
-                        <div class="comment-post">
+                        <div class="newt" class="comment-user"><i class="fa fa-book"></i> <?php echo $titre; ?></div>
+                        <div class="newt" class="comment-post">
                             <p id="resume"><br />
-                                "<?php echo $com->comment; ?>"
+                                <?php echo $com->comment; ?>
                             </p>
                         </div>
-                        <hr>
+                        <hr class="epais">
                         <?php 
                         }
                         ?>
@@ -154,7 +161,7 @@
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                     <div class="panel-body">
-                        <b>To do list </b>
+                        <b class="newt">To do list </b>
                         <?php $todo=Auth::user()->todo;?>
                             <input type="checkbox" name="checked" id="checkbox1" <?php if ($todo == 1){?> checked="checked" <?php } ?>/>
                         <script>
@@ -179,7 +186,7 @@
                                 }); 
                             });
                         </script>
-                        <b>Newletter</b>
+                        <b class="newt">Newletter</b>
                             <input type="checkbox" name="checked" id="checkbox2" value="None" />
                             <div id=texte></div>
                         <script>
