@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaniersTable extends Migration
+class CreateCommandesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreatePaniersTable extends Migration
      */
     public function up()
     {
-        Schema::create('paniers', function (Blueprint $table) {
-            $table->increments('idpanier');
-            $table->integer('Ncommande');
+        Schema::create('commandes', function (Blueprint $table) {
+            $table->increments('Ncommande');
+            $table->text('couverture');
+            $table->text('titre');
+            $table->text('auteur');
+            $table->text('format');
+            $table->double('prix');
    
         });
     }
@@ -27,6 +31,6 @@ class CreatePaniersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('paniers');
+        Schema::drop('commandes');
     }
 }
