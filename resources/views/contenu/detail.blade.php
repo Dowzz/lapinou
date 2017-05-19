@@ -2,7 +2,6 @@
 use App\user;
 use App\Livre;
 use App\commentaire;
-use App\commande;
 "variable get : ".$_GET["Id"];
 $data= Livre::find($_GET["Id"]);
 $couverture=$data->couverture;
@@ -16,6 +15,8 @@ $format=$data->format;
 $notes=$data->notes;
 $prix=$data->prix;
 $id_livre=$data->id;
+
+ 
 ?>
 	<h1 class="modal-title title"><?php echo $titre; ?></h1>
 		<div class="row">
@@ -115,7 +116,6 @@ $id_livre=$data->id;
   											<p class="coms">"<?php echo $com->comment; ?>"</p>
   										</div>
   							<?php
-  							
   								}
   							?>
   						</div>

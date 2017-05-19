@@ -24,7 +24,7 @@ class CreateLivres extends Migration
             $table->text('genre');
             $table->text('format');
             $table->integer('notes');
-            $table->double('prix');
+            $table->text('prix');
             $table->rememberToken();
             $table->timestamps();
         });

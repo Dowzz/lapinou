@@ -14,8 +14,12 @@ class CreatePaniersTable extends Migration
     public function up()
     {
         Schema::create('paniers', function (Blueprint $table) {
-            $table->increments('idpanier');
-            $table->integer('Ncommande');
+            $table->increments('Ncommande');
+            $table->text('couverture');
+            $table->text('titre');
+            $table->text('auteur');
+            $table->text('format');
+            $table->text('prix');
    
         });
     }
