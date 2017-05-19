@@ -30,7 +30,7 @@ function tronquer($description)
                 ->orwhere('editeur', 'LIKE', '%'.$query.'%')
                 ->orwhere('format', 'LIKE', '%'.$query.'%')
                 ->orderBy('id')->paginate();
-if ($livre) {
+if ($livre->count()) {
   foreach ($livre as $l) {
   $id= $l->id;
   ?>
@@ -53,27 +53,12 @@ if ($livre) {
 }
 else{
   ?>
+  <div>
   <h1><span>Desolé, nous n'avons pas reussi a trouvé le livre de vos rèves...</span></h1>
+  </div>
   <?php
 }
   ?>
-
-  <div id="modal" class="modal fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-text">
-            <p>Chargement en cours...</p>
-        </div> 
-      </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-<!-- Event modal -->
-
   <div class="mini">
     <h2 class="line_effect">
       <span>Les nouveautés</span>
@@ -158,7 +143,26 @@ else{
   }
   ?>
   </div>
-   <div></div> 
+  
+
+
+
+  <div id="modal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-text">
+            <p>Chargement en cours...</p>
+        </div> 
+      </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+<!-- Event modal -->
+ 
    <script>
 
     $(".LienModal").click(function(oEvt){
