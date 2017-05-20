@@ -3550,45 +3550,55 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "caouecs/laravel-lang",
-        "version": "3.0.29",
-        "version_normalized": "3.0.29.0",
+        "name": "gloudemans/shoppingcart",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/caouecs/Laravel-lang.git",
-            "reference": "9502a9b5377649e0b0644b64004d8028eac1b42c"
+            "url": "https://github.com/Crinsane/LaravelShoppingcart.git",
+            "reference": "195cc095f53c66b60afaf0753295bc9c6b2773c3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/9502a9b5377649e0b0644b64004d8028eac1b42c",
-            "reference": "9502a9b5377649e0b0644b64004d8028eac1b42c",
+            "url": "https://api.github.com/repos/Crinsane/LaravelShoppingcart/zipball/195cc095f53c66b60afaf0753295bc9c6b2773c3",
+            "reference": "195cc095f53c66b60afaf0753295bc9c6b2773c3",
             "shasum": ""
         },
+        "require": {
+            "illuminate/events": "5.1.*|5.2.*|5.3.*|5.4.*",
+            "illuminate/session": "5.1.*|5.2.*|5.3.*|5.4.*",
+            "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*"
+        },
         "require-dev": {
-            "friendsofphp/php-cs-fixer": "^1.10"
+            "mockery/mockery": "~0.9.0",
+            "orchestra/testbench": "~3.0",
+            "phpunit/phpunit": "~4.0"
         },
         "suggest": {
-            "overtrue/laravel-lang": "Command to add languages in your project"
+            "gloudemans/notify": "Simple flash notifications for Laravel"
         },
-        "time": "2017-05-15T19:19:07+00:00",
+        "time": "2017-01-25T09:56:35+00:00",
         "type": "library",
         "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Gloudemans\\Shoppingcart\\": "src/"
+            }
+        },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
         "authors": [
             {
-                "name": "caouecs",
-                "email": "caouecs@caouecs.net"
+                "name": "Rob Gloudemans",
+                "email": "info@robgloudemans.nl"
             }
         ],
-        "description": "Languages for Laravel",
+        "description": "Laravel Shoppingcart",
         "keywords": [
-            "lang",
-            "languages",
             "laravel",
-            "lpm"
+            "shoppingcart"
         ]
     }
 ]

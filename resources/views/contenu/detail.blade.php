@@ -49,8 +49,10 @@ $id_livre=$data->id;
 		<input type="hidden" id="idbook" value="<?php echo $id_livre ?> ">
 		<div class="prix">
 			<h1><?php echo $prix; ?> €</h1>
-		</div>	
+		</div>
+		<div class="notif"> </div>	
 			<button type="button" class="btn btn-default btn-detail" id="addpanier">Ajouter au panier</button>
+			
 			<script>
 			$('#addpanier').click(function() {
 			  var id_livre=$("#idbook").val();
@@ -59,8 +61,8 @@ $id_livre=$data->id;
 		        data:({livre:id_livre}),
 		        type:"post",
 		        url: "./addpanier",
-		        success: function(msg){
-		        	{}
+		        success: function(data){
+					 $(".notif").append("Le livre a été ajouté a votre panier !");	        	
 		        }
 			      });
 				});	

@@ -301,8 +301,6 @@ if (form.attachEvent) {
 } else {
     form.addEventListener("submit", processForm);
 }
-
-
       
 /*//switch mot de passe 
 

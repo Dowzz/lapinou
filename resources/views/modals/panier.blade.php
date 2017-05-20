@@ -1,10 +1,12 @@
+<script src="{{ asset('js/all.js') }}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <h4 class="modal-title" id="myModalLabel"> Votre Panier</h4>
     <div class="modal-body">
         <form class="form-horizontal" method="post" action="">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <!--REVIEW ORDER-->
                 <div class="panel">
-
                     <div class="panel-heading">
                         <div class="panel-title">
                             <div class="row">
@@ -18,51 +20,51 @@
                     </div>
 
                     <div class="panel-body">
+                    <?php $content = Cart::content();
+                    use App\livre;
+                    foreach ($content as $row) {
+                        $livre = livre::find($row->id);
+                        ?>
                         <div class="row">
-                            <div class="col-xs-2"><img class="img-responsive" src="">
+                            <div class="col-xs-2"><img class="img-responsive" src="<?php echo $livre->couverture ?>">
                             </div>
                             <div class="col-xs-4">
-                                <h4 class="product-name"><strong>Titre</strong></h4><h4><small>Auteur</small>Format</h4>
+                                <h4 class="product-name"><strong><?php echo $livre->titre?></strong></h4><h4><small><?php echo $livre->auteur ?></h4>
+                                <input type="hidden" id="rowid" value="<?php echo $row->rowId ?>">
                             </div>
                             <div class="col-xs-6">
                                 <div class="col-xs-6 text-right">
-                                    <h6><strong>6,99<span class="text-muted">x</span></strong></h6>
+                                    <h5><strong><?php echo $livre->prix ?> €<span class="text-muted"></span></strong></h5>
                                 </div>
-                                <div class="col-xs-2">
-                                    <button id="trash" type="button" class="btn btn-elegant">
-                                        <img src="{{URL::asset('/img/trash.png')}}">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                <h4 class="product-name"><strong>Titre</strong></h4><h4><small>Résumer</small></h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
-                                <div class="col-xs-6 text-right">
-                                    <h6><strong>0.00 <span class="text-muted">x</span></strong></h6>
-                                </div>
-                                <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2">
-                                   <button id="trash" type="button" class="btn btn-elegant">
-                                        <img src="{{URL::asset('/img/trash.png')}}">
-                                    </button>
+                                <div class="col-xs-2">                                    
+                                        <img id="trash" src="{{URL::asset('/img/trash.png')}}">                                   
+                                    <script>
+                                        $('#trash').click(function() {
+                                            var rowid=$("#rowid").val();
+                                            console.log(rowid);
+                                              $.ajax({
+                                              data:({rowid:rowid}),
+                                              type:"post",
+                                              url: "./deleterow",
+                                             });
+                                              
+                                          });
+                                    </script>  
                                 </div>
                             </div>
                         </div>
                         <hr>
+                        <?php                        
+                    }
+                    ?>
                         <div class="row">
                             <div class="text">
                                 <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
-                                    <h5 id="added" class="text-center">Article(s) ajouté(s) ?</h5>
+                                    <h5 id="added" class="text-center">Vous avez <?php echo Cart::count() ?> livre(s) dans le panier</h5>
                                 </div>
                                 <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
-                                    <button id="bouton-panier2" type="button" class="btn btn-elegant">
-                                        Actualisation du total
-                                    </button>
+                                    <a href="deletepanier"><button id="bouton-panier2" type="button" class="btn btn-elegant">Vider le panier
+</button></a>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +73,7 @@
 
                 <div class="panel">
                     <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                        <h4 id="addedclass="text-right">Total <strong>6,99 €</strong></h4>
+                        <h4 id="addedclass="text-right">Total <strong><?php echo Cart::total(); ?></strong></h4>
                     </div>
                     <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                         <button id="bouton-panier2" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Paiement</button>
