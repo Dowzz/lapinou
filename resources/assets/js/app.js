@@ -249,7 +249,7 @@ $("#todoinput").keypress(function(e) {
     console.log(todoText, data, userid);
     $.ajax({
          data: ({userid:userid, todoText:data}),
-         type: "post" ,
+         type: "get" ,
          url: "./insertodo",
          });
     //append todotext to ul
@@ -294,14 +294,29 @@ function processForm(e) {
     })
     return false;
 }
-
+//suppression panier
 var form = document.getElementById('recherche');
 if (form.attachEvent) {
     form.attachEvent("submit", processForm);
 } else {
     form.addEventListener("submit", processForm);
 }
-      
+
+$(".trash").on('click', function (e) {
+  e.stopPropagation();
+  $(this).closest("tr").fadeOut(500,function() {
+    var rowid =$('#rowid').val();
+    console.log(rowid);
+    $.ajax({
+        data:({rowid:rowid}),
+        type:"post",
+        url: "./deleterow",
+      });
+   $(this).remove();
+  });
+});
+
+
 /*//switch mot de passe 
 
 $(document).ready(function() {

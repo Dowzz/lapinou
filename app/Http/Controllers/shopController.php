@@ -17,13 +17,12 @@ class shopController extends Controller
     	$livre= livre::find($id);
     	$titre= $livre->titre;
     	$prix =$livre->prix;
-    	Cart::add(['id' => $id, 'name' => $titre, 'qty' => 1, 'price' => $prix,]);
+    	Cart::add(['id' => $id, 'name' => $titre, 'qty' => 1, 'price' => $prix,])->associate('livre');
     }
     public function deleterow(Request $request)
     {
     	$id = $request->rowid;
     	Cart::remove($id);
-    	Cart::update($id);
     }
     public function deletepanier()
     {
