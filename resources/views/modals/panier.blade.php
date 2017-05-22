@@ -1,4 +1,5 @@
-
+<script src="{{ asset('js/all.js') }}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <h4 class="modal-title" id="myModalLabel"> Votre Panier</h4>
     <div class="modal-body">
         <form class="form-horizontal" method="post" action="">
@@ -30,13 +31,28 @@
                                 <div class="col-xs-2"><img class="img-responsive" src="<?php echo $livre->couverture ?>"/></div>
                                 <div class="col-xs-10">
                                 <h4 class="product-name"><strong><?php echo $livre->titre?></strong></h4><h4><small><?php echo $row->auteur ?></small></h4>
-                                <input type="hidden" id="rowid" value="<?php echo $row->rowId ?>">
+                                <input type="hidden" class="rowid" value="<?php echo $row->rowId ?>">
                             </div>
                             </td>
                             <td><div class="col-xs-2"><h4><?php echo $row->qty ?>ex.</h4></div></td>
                             <td><div class="col-xs-8"><?php echo $row->price; ?>€</div></td> 
                             <td> <div class="col-xs-2">                                    
-                                        <img class="trash" src="{{URL::asset('/img/trash.png')}}">                                   
+                                        <img class="trash" src="{{URL::asset('/img/trash.png')}}"> 
+                                        <script>
+                                           $(".trash").on('click', function (e) {
+                                              e.stopPropagation();
+                                              $(this).closest("tr").fadeOut(500,function() {
+                                                var rowid =$('.rowid').val();
+                                                console.log(rowid);
+                                                $.ajax({
+                                                    data:({rowid:rowid}),
+                                                    type:"post",
+                                                    url: "./deleterow",
+                                                  });
+                                               $(this).remove();
+                                              });
+                                            }); 
+                                        </script>                                  
                                 </div></td>                           
                         </tr>
                         <?php }

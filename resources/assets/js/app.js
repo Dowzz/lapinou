@@ -302,19 +302,7 @@ if (form.attachEvent) {
     form.addEventListener("submit", processForm);
 }
 
-$(".trash").on('click', function (e) {
-  e.stopPropagation();
-  $(this).closest("tr").fadeOut(500,function() {
-    var rowid =$('#rowid').val();
-    console.log(rowid);
-    $.ajax({
-        data:({rowid:rowid}),
-        type:"post",
-        url: "./deleterow",
-      });
-   $(this).remove();
-  });
-});
+
 
 
 /*//switch mot de passe 
