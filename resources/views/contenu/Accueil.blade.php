@@ -68,7 +68,7 @@ $id= $l->id;
  
 <div class="mini">
 <h2 class="line_effect">
-<span>Les meilleurs ventes</span>
+<span>Les meilleures ventes</span>
 </h2>
 <?php 
 $livre= Livre::where ('prix', '>', 12)->take(10)->distinct()->get();

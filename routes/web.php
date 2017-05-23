@@ -48,6 +48,9 @@ Route::get('contenu/accueil', function () {
 Route::get('search', function() {
 	return view('contenu.search');
 });
+Route::get('panier', function() {
+	return view('modals.panier');
+});
 
 /* ----  route Catégorie  ---- */
 

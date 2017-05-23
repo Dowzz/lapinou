@@ -26,7 +26,7 @@ $todolist =0;
     <div class="row">
         <div class="col-md-0 col-sm-12"></div>
         <div id="logo" class="col-md-9 col-sm-12"><a href="{{ url('/') }}"><img class="logo" src="{{URL::asset('/img/Logo.png')}}"></a></div>
-        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
+        <div class="col-md-3 col-sm-12"><button class="btn btn-elegant" id="open-panier" href="#" data-toggle="modal" data-target="#modal-panier" data-backdrop="false">Panier</button></div>
         @if (Auth::user())
         <?php 
         $user = (Auth::user());
@@ -149,16 +149,12 @@ $todolist =0;
     </div>
 </div>
 
-<div class="modal" id="modal-panier" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" >
+<div id="modal-panier" class="modal fade">
+    <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                @include('modals.panier')    
-            </div>
+            <p>Chargement en cours...</p>
         </div>
     </div>
-</div>
 
 <div class="modal" id="modal-pay" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" >
@@ -170,15 +166,28 @@ $todolist =0;
         </div>
     </div>
 </div>
+
 <script src="{{ asset('js/all.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
 <script type="text/javascript">
-$.ajaxSetup({
-   headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-});
+
+       $("#open-panier").click(function(oEvt){
+    oEvt.preventDefault();
+        $(".modal-content").fadeIn(1000).html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
+        $.ajax({
+            type:"GET",
+            url:"{{ url('panier') }}",
+            error:function(msg){
+                $(".modal-content").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
+            },
+            success:function(data){
+                $(".modal-content").fadeIn(1000).html((data));
+            }
+        });
+    }); 
 </script>
 
 
