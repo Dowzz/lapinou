@@ -1,5 +1,5 @@
 <script src="{{ asset('js/all.js') }}"></script>
-<div class="child">
+
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </div>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="panel-body">
-               
+                <div class="scroll-container">
                 <table cellspacing="10">
                 <tbody>
                     <?php
@@ -47,8 +47,10 @@
                     </tr>
                     <?php }
                     ?>
+
                 </tbody>
-                </table>                 
+                </table>
+                </div>                 
                     <div class="row">
                         <div class="text">
                             <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
@@ -76,7 +78,7 @@
         </div>
     </form>
 </div>
-</div>
+
     <script>
     $(".trash").on('click', function (e) {
     $(this).closest("tr").fadeOut(500,function() {

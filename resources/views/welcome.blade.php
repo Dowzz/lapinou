@@ -151,7 +151,7 @@ $todolist =0;
 
 <div id="modal-panier" class="modal fade">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content test">
             <p>Chargement en cours...</p>
         </div>
     </div>
@@ -176,15 +176,15 @@ $todolist =0;
 
        $("#open-panier").click(function(oEvt){
     oEvt.preventDefault();
-        $(".modal-content").fadeIn(1000).html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
+        $(".test").fadeIn(1000).html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
         $.ajax({
             type:"GET",
             url:"{{ url('panier') }}",
             error:function(msg){
-                $(".modal-content").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
+                $(".test").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
             },
             success:function(data){
-                $(".modal-content").fadeIn(1000).html((data));
+                $(".test").fadeIn(1000).html((data));
             }
         });
     }); 
