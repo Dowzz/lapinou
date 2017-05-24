@@ -7868,6 +7868,9 @@ hr {
   font-size: 14px;
   border-radius: 10px;
   text-align: center;
+}
+
+.test {
   height: 600px;
 }
 

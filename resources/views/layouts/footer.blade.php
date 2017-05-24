@@ -87,22 +87,4 @@
 
 </footer> 
 
-<script>
-    <script type="text/javascript">
 
-       $("#open-panier").click(function(oEvt){
-    oEvt.preventDefault();
-        $(".test").fadeIn(1000).html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
-        $.ajax({
-            type:"GET",
-            url:"{{ url('panier') }}",
-            error:function(msg){
-                $(".test").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
-            },
-            success:function(data){
-                $(".test").fadeIn(1000).html((data));
-            }
-        });
-    }); 
-</script>
-</script>

@@ -1,4 +1,4 @@
-<script src="{{ asset('js/all.js') }}"></script>
+
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
