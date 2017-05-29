@@ -50,7 +50,7 @@ $id_livre=$data->id;
 		<div class="prix">
 			<h1><?php echo $prix; ?> €</h1>
 		</div>
-		<div class="notif"> </div>	
+		<div id="notif"> </div>	
 			<button type="button" class="btn btn-default btn-detail" id="addpanier">Ajouter au panier</button>
 			
 			<script>
@@ -62,9 +62,15 @@ $id_livre=$data->id;
 		        type:"post",
 		        url: "./addpanier",
 		        success: function(data){
-					 $(".notif").append("Le livre a été ajouté a votre panier !");	        	
+		        	$("#notif").empty();
+					$("#notif").append("Le livre a été ajouté a votre panier !");
+					$('#notif').show(0).delay(1500).hide(200);	        	
 		        }
 			      });
+  				function hidebox() { 
+					document.getElementById("notif").visibility = "hidden";
+				}
+					setTimeout(hidebox(), 5000); 
 				});	
 			</script>
 		</div>

@@ -7838,6 +7838,10 @@ hr {
   color: #9d9d9d;
 }
 
+.panel1 {
+  margin: none;
+}
+
 .liste {
   list-style: none;
   padding-left: 0px;

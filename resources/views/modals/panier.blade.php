@@ -64,15 +64,25 @@
                     </div>
                 </div>
             </div>
-        
-
             <div class="panel">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                     <h4 id="addedclass=">Total H.T. <strong><?php echo Cart::subtotal(); ?> €</strong></h4>
                     <h4 id="addedclass=">Total <strong><?php echo Cart::total(); ?> €</strong></h4>
                 </div>
+                
+                <?php if(Auth::user())
+                {
+                ?>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                    <button id="bouton-panier2" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Paiement</button>
+                <button id="bouton-panier2" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Paiement</button>
+                <?php }else {
+                ?>
+                <p>Afin de régler votre commande, vous devez être connecté a votre compte.</p>
+                <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                <button id="bouton-panier2" id="open-panier" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion">Connexion</button>
+                <?php
+                }
+                ?>
                 </div>
             </div>
         </div>
