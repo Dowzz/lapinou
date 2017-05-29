@@ -7,7 +7,6 @@
 <div class="modal-body">
     <form class="form-horizontal" method="post" action="">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <!--REVIEW ORDER-->
             <div class="panel">
                 <div class="panel-heading">
                     <div class="panel-title">
@@ -15,7 +14,6 @@
                             <div class="col-sm-12 col-md-12 col-xs-12">
                                 <button type="button" data-dismiss="modal" class="btn btn-elegant btn-sm" id="bouton-panier2" label="">Continuer votre shopping
                                 </button>
-                                
                             </div>
                         </div>
                     </div>
@@ -34,6 +32,21 @@
                         
 
                         ?>
+
+                    <tr value="<?php echo $row->rowId ?>">
+                        <td rowspan="3"><img class="couv_livre" src="<?php echo $couv_livre ?>"/></td>
+                        <td colspan="4" class="product"><h4><?php echo $product_name?></h4></td>
+                    </tr>
+                    <tr>
+                        <td class="product">De <?php echo $livre->auteur ?></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="pan3"><?php echo $livre->prix; ?>€</td>
+                        <td>x<?php echo $row->qty ?></td>
+                        <td><img class="trash" src="{{URL::asset('/img/trash.png')}}"></td>
+                    </tr>
+<!--
                     <tr value="<?php echo $row->rowId ?>">
                         <td>
                             <div class="col-xs-2"><img class="couv_livre" src="<?php echo $couv_livre ?>"/></div>
@@ -47,7 +60,7 @@
                         <td> <div class="col-xs-2">                                    
                                     <img class="trash" src="{{URL::asset('/img/trash.png')}}">
                                     </div></td>                           
-                    </tr>
+                    </tr>-->
                     <?php }
                     ?>
 
@@ -69,8 +82,8 @@
             </div>
             <div class="panel">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                    <h4 id="added" class="totalht">Total H.T. <strong><?php echo Cart::subtotal(); ?> €</strong></h4>
-                    <h4 id="added">Total <strong><?php echo Cart::total(); ?> €</strong></h4>
+                    
+                    <h4 id="added">Total <strong><?php echo Cart::subtotal(); ?> €</strong></h4>
                 </div>
                 
                 <?php if(Auth::user())

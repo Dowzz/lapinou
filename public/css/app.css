@@ -7670,7 +7670,7 @@ input::-webkit-input-placeholder {
 }
 
 .couv_livre {
-  width: 150px;
+  width: 80px;
 }
 
 .logo {
@@ -7918,6 +7918,7 @@ hr {
   border: none;
   border-color: #222222;
   background-color: #222222;
+  width: 20px;
 }
 
 .date {
@@ -7930,6 +7931,15 @@ hr {
 
 .souvenir {
   font-weight: none;
+}
+
+.product {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.pan3 {
+  width: 50px;
 }
 
 /*  ---- Miniature ----  */
