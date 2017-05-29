@@ -105,7 +105,16 @@ $todolist =0;
 
 
 <!--modals -->
-
+<div class="modal fade" id="modal_connexion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-side modal-top-right">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                @include ('auth.login')
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal" id="modal_inscription" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
@@ -158,16 +167,7 @@ $todolist =0;
     </div>
 </div>
 
-<div class="modal fade" id="modal_connexion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-side modal-top-right">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                @include ('auth.login')
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <script src="{{ asset('js/all.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>

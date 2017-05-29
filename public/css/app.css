@@ -7669,6 +7669,10 @@ input::-webkit-input-placeholder {
   height: 300px;
 }
 
+.couv_livre {
+  width: 150px;
+}
+
 .logo {
   width: 380px;
   height: auto;
@@ -7836,10 +7840,6 @@ hr {
 
 .panel-heading {
   color: #9d9d9d;
-}
-
-.panel1 {
-  margin: none;
 }
 
 .liste {
@@ -9085,9 +9085,6 @@ input:-moz-placeholder {
   }
   .livres {
     display: inline-block;
-  }
-  .panel {
-    background-color: white;
   }
   #added {
     vertical-align: center;

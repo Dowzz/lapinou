@@ -19,6 +19,9 @@ input::-webkit-input-placeholder {
 	width:210px;
 	height:300px;
 }
+.couv_livre{
+  width:70px;
+}
 .logo{
 	width: 380px;
 	height: auto;
@@ -1328,9 +1331,6 @@ $icon: (
 	}
 	.livres{
 		display: inline-block;
-	}
-	.panel{
-		background-color: white;
 	}
 	#added{
 		vertical-align:center;

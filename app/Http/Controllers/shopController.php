@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\livre;
 use Cart;
+use App\order;
+use App\recap;
 
 class shopController extends Controller
 {
@@ -28,5 +30,19 @@ class shopController extends Controller
     {
     	Cart::destroy();
     	return redirect('/');
+    }
+    public function createorder(Request $request)
+    {
+        $recap = new recap;
+        $recap->id_user=$request->user_id;
+        $recap->totalttc=$request->totalttc;
+        $recap->save();
+        foreach (Cart::content() as $row) {
+        $livre=livre::find($row->id);
+        $order = new order;
+        $order->Norder=(recap::orderBy('identifier', 'desc')->first())->identifier;
+        $order->id_livre=$row->id;        
+        $order->save();
+         }
     }
 }

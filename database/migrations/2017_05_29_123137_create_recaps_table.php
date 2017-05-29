@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommandesTable extends Migration
+class CreateRecapsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateCommandesTable extends Migration
      */
     public function up()
     {
-        Schema::create('commandes', function (Blueprint $table) {
-            $table->increments('Ncommande');
-            $table->text('couverture');
-            $table->text('titre');
-            $table->text('auteur');
-            $table->text('format');
-            $table->double('prix');
+        Schema::create('recaps', function (Blueprint $table) {
+            $table->increments('identifier');
+            $table->integer('id_user');
+            $table->integer('paiement')->default('0');
+            $table->double('totalttc');
+            $table->timestamps();
    
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -31,9 +29,9 @@ class CreateCommandesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('commandes');
+        Schema::drop('orders');
     }
 }
 
 
-
+            

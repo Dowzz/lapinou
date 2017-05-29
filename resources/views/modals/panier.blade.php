@@ -29,14 +29,17 @@
                      use App\livre;
                      foreach(Cart::content() as $row) {
                         $livre=livre::find($row->id);
+                        $couv_livre=$livre->couverture;
+                        $product_name=$livre->titre;
+                        
 
                         ?>
                     <tr value="<?php echo $row->rowId ?>">
                         <td>
-                            <div class="col-xs-2"><img class="img-responsive" src="<?php echo $livre->couverture ?>"/></div>
+                            <div class="col-xs-2"><img class="couv_livre" src="<?php echo $couv_livre ?>"/></div>
                             <div class="col-xs-10">
-                            <h4 class="product-name"><strong><?php echo $livre->titre?></strong></h4><h4><small><?php echo $livre->auteur ?></small></h4>
-                            <input type="hidden" class="rowid">
+                            <h4 class="product-name"><strong><?php echo $product_name?></strong></h4><h4><small><?php echo $livre->auteur ?></small></h4>
+                            <input type="hidden" class="livre_id" value="<?php echo $livre->id ?>">
                         </div>
                         </td>
                         <td><div class="col-xs-2"><h4><?php echo $row->qty ?>ex.</h4></div></td>
@@ -66,20 +69,24 @@
             </div>
             <div class="panel">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                    <h4 id="addedclass=">Total H.T. <strong><?php echo Cart::subtotal(); ?> €</strong></h4>
-                    <h4 id="addedclass=">Total <strong><?php echo Cart::total(); ?> €</strong></h4>
+                    <h4 id="added" class="totalht">Total H.T. <strong><?php echo Cart::subtotal(); ?> €</strong></h4>
+                    <h4 id="added">Total <strong><?php echo Cart::total(); ?> €</strong></h4>
                 </div>
                 
                 <?php if(Auth::user())
                 {
+                    $user_id=Auth::user()->id;
+                    $total=Cart::total();
                 ?>
+                <input type="hidden" id="totalttc" value="<?php echo $total; ?>">
+                <input type="hidden" id="user_id" value="<?php echo $user_id?>">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                <button id="bouton-panier2" id="check" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal-pay">Paiement</button>
+                <button id="bouton-panier2" type="button" class="btn btn-elegant paiement" data-toggle="modal" data-target="#modal-pay">Paiement</button>
                 <?php }else {
                 ?>
                 <p>Afin de régler votre commande, vous devez être connecté a votre compte.</p>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                <button id="bouton-panier2" id="open-panier" type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion">Connexion</button>
+                <button id="bouton-panier2" id="open-panier" type="button"  class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion" class="close" data-dismiss="modal">Connexion</button>
                 <?php
                 }
                 ?>
@@ -91,17 +98,34 @@
 
     <script>
     $(".trash").on('click', function (e) {
-    $(this).closest("tr").fadeOut(500,function() {
-    var rowid =$(this).attr('value');
-    console.log(rowid);
-    $.ajax({
-        data:({rowid:rowid}),
-        type:"post",
-        url: "./deleterow",
-      });
-    $(this).remove();
+        $(this).closest("tr").fadeOut(500,function() {
+            var rowid =$(this).attr('value');
+            console.log(rowid);
+            $.ajax({
+                data:({rowid:rowid}),
+                type:"post",
+                url: "./deleterow",
+            });
+        $(this).remove();
+        });
     });
-    }); 
+
+    $('.paiement').click(function() {
+        var user_id=$("#user_id").val();
+        var cartid=$("tr").val();
+        var id_livre=$(".livre_id").val();
+        var totalttc=$("#totalttc").val();
+        var product_name=$(".product-name").text();
+        console.log(id_livre, totalttc, product_name);
+                $.ajax({
+                data:({ user_id, cartid, id_livre, totalttc, product_name}),
+                type:"post",
+                url: "./createorder",
+                });
+            }); 
+   
+
+   
     </script>            
     
 
