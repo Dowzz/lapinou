@@ -14,7 +14,7 @@
                     <div class="clearfix"></div>
             </div>
         </div>
-        <form name="Form" action="/deletepanier2" method ="get" onsubmit="return validateForm()">
+        <form name="Form" action="/deletepanier" method ="get" onsubmit="return validateForm()">
         <div class="panel-body">
             <div class="input-group margin-bottom-sm">
                 <span class="input-group-addon"><i class="fa fa-credit-card fa-fw"></i></span>       
@@ -66,7 +66,7 @@ function validateForm()
     var d=document.forms["Form"]["answer_d"].value;
     if (a==null || a=="",b==null || b=="",c==null || c=="",d==null || d=="")
         {
-        alert("Merci de votre achat ! Vous trouverez vos nouveaux E-books dans profil, rubrique mes achats.");
+        alert("Merci d'entrer vos coordonnées bancaires.");
         return false;
         }
     else{

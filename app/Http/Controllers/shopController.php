@@ -31,6 +31,7 @@ class shopController extends Controller
     	Cart::destroy();
     	return redirect('/');
     }
+
     public function createorder(Request $request)
     {
         $recap = new recap;
