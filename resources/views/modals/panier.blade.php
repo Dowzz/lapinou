@@ -85,9 +85,9 @@
                 <button id="bouton-panier2" type="button" class="btn btn-elegant paiement" data-toggle="modal" data-target="#modal-pay">Paiement</button>
                 <?php }else {
                 ?>
-                <p>Afin de régler votre commande, vous devez être connecté a votre compte.</p>
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
                 <button id="bouton-panier2" id="open-panier" type="button"  class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion" class="close" data-dismiss="modal">Connexion</button>
+                <p class="regle">Afin de régler votre commande, vous devez être connecté a votre compte.</p>
                 <?php
                 }
                 ?>
