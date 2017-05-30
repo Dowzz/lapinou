@@ -14,7 +14,7 @@
                     <div class="clearfix"></div>
             </div>
         </div>
-        <form name="Form" onsubmit="return validateForm()">
+        <form name="Form" action="/deletepanier2" method ="get" onsubmit="return validateForm()">
         <div class="panel-body">
             <div class="input-group margin-bottom-sm">
                 <span class="input-group-addon"><i class="fa fa-credit-card fa-fw"></i></span>       
@@ -38,9 +38,15 @@
                 <span class="input-group-addon"><i class="fa fa-eye-slash fa-fw"></i></span>
                 <input class="form-control" name="answer_d" type="text" placeholder="Cryptogramme visuel">
             </div>
+            @if (Auth::user())
             <?php 
             $userid = Auth::user()->id;
             ?>
+            @else
+            <?php
+            $userid=0;
+            ?>
+            @endif           
             <p id="totalpaiement">Total a Payer : <?php echo Cart::total() ?> €</p>
             
 
