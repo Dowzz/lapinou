@@ -3,7 +3,7 @@
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </div>
-<h4 class="modal-title" id="myModalLabel"> Votre Panier</h4>
+<h3 class="modal-titlep" id="myModalLabel"> Votre Panier</h3>
 <div class="modal-body">
     <form class="form-horizontal" method="post" action="">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -21,7 +21,7 @@
 
                 <div class="panel-body">
                 <div class="scroll-container">
-                <table cellspacing="10">
+                <table class="cell">
                 <tbody>
                     <?php
                      use App\livre;
@@ -43,8 +43,8 @@
                     <input type="hidden" class="livre_id" value="<?php echo $livre->id ?>">
                     <tr>
                         <td></td>
-                        <td class="pan3"><?php echo $livre->prix; ?>€</td>
-                        <td>x<?php echo $row->qty ?></td>
+                        <td class="taille"><?php echo $livre->prix; ?>€</td>
+                        <td class="taille">x<?php echo $row->qty ?></td>
                         <td><img class="trash" src="{{URL::asset('/img/trash.png')}}"></td>
                     </tr>
                     </thead>

@@ -1,6 +1,6 @@
-<h4 class="modal-title" id="modal-contact"> Contactez-nous 
+<h3 class="modal-title" id="modal-contact"> Contactez-nous 
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-</h4>
+</h3>
     <div class="modal-body">
     <form id="logout-form" action="/ajoutcontact" method="POST">
         <div class="input-group margin-bottom-sm">
