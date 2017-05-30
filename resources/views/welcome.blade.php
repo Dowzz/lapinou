@@ -52,15 +52,25 @@ $todolist =0;
     </div>
 @endif
 @if(Session::has('success'))
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-info">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                        {{Session::get('success')}}
-                    </div>
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                {{Session::get('success')}}
             </div>
-            @endif
+        </div>
+    </div>
+@endif
+@if(Session::has('achat'))
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                {{Session::get('achat')}}
+            </div>
+        </div>
+    </div>
+@endif
 
 
 

@@ -79,7 +79,6 @@ Route::get('deletepanier', 'shopcontroller@deletepanier');
 Route::post('/createorder', 'shopcontroller@createorder');
 Route::post('/paiementOK', 'shopcontroller@payok');
 
-
 /* ----  routes mentions  ---- */
 
 Route::get('politique', function()

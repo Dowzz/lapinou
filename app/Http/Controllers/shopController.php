@@ -46,12 +46,12 @@ class shopController extends Controller
          }
     }
     public function payok(Request $request)
-    {
+    {   
+        
         $user=$request->userid; 
         $recap = recap::where('id_user',$user)->orderBy('identifier', 'desc')->first();
         $recap->paiement = '1';
         $recap->save();
-        return redirect('/');
-        session()->flash('success', 'Nous vous remercions por votre achat ! Vous trouverez vose-books sur votre page de profil, rubrique "mes commandes".');
+        Cart::destroy();      
     }
 }
