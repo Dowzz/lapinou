@@ -7865,6 +7865,13 @@ hr {
   font-size: 16px;
 }
 
+#bouton-panier3 {
+  margin-left: 120px;
+  color: #9d9d9d;
+  background-color: black;
+  font-size: 16px;
+}
+
 .modal-content {
   padding: 15px;
   background-color: #222222;
@@ -7918,7 +7925,7 @@ hr {
   border: none;
   border-color: #222222;
   background-color: #222222;
-  width: 20px;
+  cursor: pointer;
 }
 
 .date {
@@ -7938,8 +7945,24 @@ hr {
   padding-left: 20px;
 }
 
-.pan3 {
-  width: 50px;
+.modal-titlep {
+  margin-top: -40px;
+}
+
+.cell {
+  width: 100%;
+}
+
+#added {
+  text-align: right;
+}
+
+.taille {
+  font-size: 18px;
+}
+
+.details {
+  margin-bottom: 0px;
 }
 
 /*  ---- Miniature ----  */

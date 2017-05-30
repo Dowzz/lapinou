@@ -3,11 +3,11 @@
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </div>
-<h4 class="modal-title" id="myModalLabel"> Votre Panier</h4>
+<h3 class="modal-titlep" id="myModalLabel"> Votre Panier</h3>
 <div class="modal-body">
     <form class="form-horizontal" method="post" action="">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="panel">
+            <div class="panel details">
                 <div class="panel-heading">
                     <div class="panel-title">
                         <div class="row">
@@ -21,7 +21,7 @@
 
                 <div class="panel-body">
                 <div class="scroll-container">
-                <table cellspacing="10">
+                <table class="cell">
                 <tbody>
                     <?php
                      use App\livre;
@@ -42,8 +42,8 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td class="pan3"><?php echo $livre->prix; ?>€</td>
-                        <td>x<?php echo $row->qty ?></td>
+                        <td class="taille"><?php echo $livre->prix; ?>€</td>
+                        <td class="taille">x<?php echo $row->qty ?></td>
                         <td><img class="trash" src="{{URL::asset('/img/trash.png')}}"></td>
                     </tr>
 <!--
@@ -69,19 +69,20 @@
                 </div>                 
                     <div class="row">
                         <div class="text">
-                            <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
+                            <div class="col-xs-5 col-md-5 col-sm-5 col-lg-5">
                                 <h5 id="added" class="text-center">Vous avez <?php echo Cart::count() ?> livre(s) dans le panier</h5>
                             </div>
+                            <!--
                             <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
                                 <a href="deletepanier"><button id="bouton-panier2" type="button" class="btn btn-elegant">Vider le panier
                                 </button></a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="panel">
-                <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
                     
                     <h4 id="added">Total <strong><?php echo Cart::subtotal(); ?> €</strong></h4>
                 </div>
@@ -94,12 +95,13 @@
                 <input type="hidden" id="totalttc" value="<?php echo $total; ?>">
                 <input type="hidden" id="user_id" value="<?php echo $user_id?>">
                 <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                <button id="bouton-panier2" type="button" class="btn btn-elegant paiement" data-toggle="modal" data-target="#modal-pay">Paiement</button>
+                <button id="bouton-panier3" type="button" class="btn btn-elegant paiement" data-toggle="modal" data-target="#modal-pay">Paiement</button>
                 <?php }else {
                 ?>
-                <p>Afin de régler votre commande, vous devez être connecté a votre compte.</p>
-                <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
-                <button id="bouton-panier2" id="open-panier" type="button"  class="btn btn-elegant" data-toggle="modal" data-target="#modal_connexion" class="close" data-dismiss="modal">Connexion</button>
+                <p>Afin de régler votre commande, vous devez être connecté à votre compte.</p>
+
+                <div class="col-sm-12 col-md-12 col-xs-12">
+                <button id="bouton-panier" id="open-panier" type="button"  class="btn btn-elegant btn-sm" data-toggle="modal" data-target="#modal_connexion" class="close" data-dismiss="modal">Connexion</button>
                 <?php
                 }
                 ?>
