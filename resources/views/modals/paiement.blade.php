@@ -1,3 +1,6 @@
+
+
+
 <div class="panel">
     <h3 class="secu">Paiment sécurisé par carte</h3>
         <div class="form-group">
@@ -12,9 +15,9 @@
             </div>
         </div>
         <div class="panel-body">
-            <div class="input-group margin-bottom-sm"> 
+            <div class="input-group margin-bottom-sm">
                 <span class="input-group-addon"><i class="fa fa-credit-card fa-fw"></i></span>       
-                    <select id="demande" id="CreditCardType" name="CreditCardType" class="form-control" required="required">
+                    <select id="demande" id="CreditCardType" class="form-control">
                         <option value="na" selected="">Type de carte :</option>
                         <option value="5">Visa</option>
                         <option value="6">MasterCard</option>
@@ -34,8 +37,30 @@
                 <span class="input-group-addon"><i class="fa fa-eye-slash fa-fw"></i></span>
                 <input class="form-control" type="text" placeholder="Cryptogramme visuel">
             </div>
+            <?php 
+            $userid = Auth::user()->id;
+            ?>
+            <p id="totalpaiement">Total a Payer : <?php echo Cart::total() ?> €</p>
+            
+
             <div class="form-group col-md-12">
-                <button id="bouton-panier2" id="order" type="submit" class="btn btn-elegant btn-submit-fix">Valider</button>
+                <button id="bouton-panier2" type="submit" class="btn btn-elegant payOK">Paiement</button>
+                <input type="hidden" id="userid" value="<?php echo $userid ?>">
             </div>
-        </div>
+        </div> 
 </div>
+<script>
+    $(".payOK").click(function() {    
+        var userid = $("#userid").val();
+        $.ajax({
+            data:({userid:userid}),
+            type:"post",
+            url: "./paiementOK",
+            });
+    
+}); 
+</script>
+
+
+
+

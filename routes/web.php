@@ -77,6 +77,7 @@ Route::post('/addpanier', 'shopController@addpanier');
 Route::post('/deleterow', 'shopcontroller@deleterow');
 Route::get('deletepanier', 'shopcontroller@deletepanier');
 Route::post('/createorder', 'shopcontroller@createorder');
+Route::post('/paiementOK', 'shopcontroller@payok');
 
 
 /* ----  routes mentions  ---- */
