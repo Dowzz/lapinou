@@ -5,7 +5,7 @@
             <div class="span12">
                 <div class="well well-small clearfix">
                     <div class="span2">
-                        <img src="{{URL::asset('/img/profil.jpg')}}" class="img-polaroid"/>
+                        <!--<img src="{{URL::asset('/img/profil.jpg')}}" class="img-polaroid"/>-->
                     </div>
 
                     <div class="span4">
@@ -89,14 +89,30 @@
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
-
-                        <table class="table table-xs">
+                     <table class="table table-xs">
                             <tr class="ligne">
                                 <th> N° commande </th>
                                 <th> Titre / Téléchargement </th>
                                 <th class="text-right"> Date </th>
                                 <th class="text-right"> Prix </th>
                             </tr>
+                            
+                        <?php 
+                        use App\recap;
+                        use App\order;
+                        use App\livre;
+                        $userid=Auth::user()->id;
+                        $recaps=recap::where("id_user", $userid)->orderBy('identifier', 'desc')->distinct()->get();
+                        foreach ($recaps as $recap) {
+                            $Norder = $recap->identifier;
+                            ?><?php
+                            $orders = order::where('Norder',$Norder)->orderBy('identifier', 'desc')->distinct()->get();
+                                foreach ($orders as $order) {
+                                    $idlivre=$order->id_livre;
+                                    $livre=livre::where('id', $idlivre)->first();
+                                }
+                        }
+                        ?>
                             <tr class="epais">
                                 <td rowspan="2">#017990</td>
                                 <td>Docteur Sleep</td>
@@ -132,7 +148,6 @@
                     <div class="panel-body">
                     <?php 
                     use App\commentaire;
-                    use App\Livre;
                     $id_user=Auth::user()->id;
                     $coms=commentaire::where('id_user',$id_user)->get();
                     foreach ($coms as $com) {
