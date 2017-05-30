@@ -47,21 +47,21 @@ $admin=0;
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class ="liste">
-                    <li class="ajax"><a class="cat" href="contenu.aventure">Aventure / Action</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.classique">Classique</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.contes">Conte</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.dystopie">Dystopie</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.espionnage">Espionnage</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.fantastique">Fantastique</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.horreur">Frisson / Terreur</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.gratuit">Gratuit</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.humour">Humour</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.jeunesse">Jeunesse</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.historique">Historique</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.policier">Policier</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.science-fiction">Science-fiction</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.thriller">Thriller</a></li>
-                    <li class="ajax"><a class="cat" href="contenu.western">Western</a></li>  
+                    <li class="ajax"><a class="cat" href="contenu.Aventure">Aventure / Action</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Classique">Classique</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Contes">Conte</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Dystopie">Dystopie</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Espionnage">Espionnage</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Fantastique">Fantastique</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Horreur">Frisson / Terreur</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Gratuit">Gratuit</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Historique">Historique</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Humour">Humour</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Jeunesse">Jeunesse</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Policier">Policier</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Science-fiction">Science-fiction</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Thriller">Thriller</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Western">Western</a></li>  
                 </ul>
             </div>
         </div>

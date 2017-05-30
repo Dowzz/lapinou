@@ -1,6 +1,7 @@
 <div class="mini">
-  <h2 class="line_effect">
-  </h2>
+<h2 class="line_effect">
+<span><?php echo $categorie ?></span>
+</h2>
 <?php 
 function tronquer($description)
 {
