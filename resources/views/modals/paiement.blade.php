@@ -44,7 +44,7 @@
             
 
             <div class="form-group col-md-12">
-                <button id="bouton-panier2" type="submit" class="btn btn-elegant payOK">Paiement</button>
+                <button id="bouton-panier2" type="submit" class="payOK btn btn-elegant">Paiement</button>
                 <input type="hidden" id="userid" value="<?php echo $userid ?>">
             </div>
         </div> 

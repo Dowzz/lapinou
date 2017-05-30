@@ -26,41 +26,29 @@
                     <?php
                      use App\livre;
                      foreach(Cart::content() as $row) {
+                     	$rowid=$row->rowId;
                         $livre=livre::find($row->id);
                         $couv_livre=$livre->couverture;
                         $product_name=$livre->titre;
                         
 
                         ?>
-
-                    <tr value="<?php echo $row->rowId ?>">
+					<thead value="<?php echo $row->rowId ?>">
                         <td rowspan="3"><img class="couv_livre" src="<?php echo $couv_livre ?>"/></td>
                         <td colspan="4" class="product"><h4><?php echo $product_name?></h4></td>
                     </tr>
-                    <tr>
+                    <div class="row">
                         <td class="product">De <?php echo $livre->auteur ?></td>
                     </tr>
+                    <input type="hidden" class="livre_id" value="<?php echo $livre->id ?>">
                     <tr>
                         <td></td>
                         <td class="pan3"><?php echo $livre->prix; ?>€</td>
                         <td>x<?php echo $row->qty ?></td>
                         <td><img class="trash" src="{{URL::asset('/img/trash.png')}}"></td>
                     </tr>
-<!--
-                    <tr value="<?php echo $row->rowId ?>">
-                        <td>
-                            <div class="col-xs-2"><img class="couv_livre" src="<?php echo $couv_livre ?>"/></div>
-                            <div class="col-xs-10">
-                            <h4 class="product-name"><strong><?php echo $product_name?></strong></h4><h4><small><?php echo $livre->auteur ?></small></h4>
-                            <input type="hidden" class="livre_id" value="<?php echo $livre->id ?>">
-                        </div>
-                        </td>
-                        <td><div class="col-xs-2"><h4><?php echo $row->qty ?>ex.</h4></div></td>
-                        <td><div class="col-xs-8"><?php echo $livre->prix; ?>€</div></td> 
-                        <td> <div class="col-xs-2">                                    
-                                    <img class="trash" src="{{URL::asset('/img/trash.png')}}">
-                                    </div></td>                           
-                    </tr>-->
+                    </thead>
+
                     <?php }
                     ?>
 
@@ -111,7 +99,7 @@
 
     <script>
     $(".trash").on('click', function (e) {
-        $(this).closest("tr").fadeOut(500,function() {
+        $(this).closest("thead").fadeOut(500,function() {
             var rowid =$(this).attr('value');
             console.log(rowid);
             $.ajax({
