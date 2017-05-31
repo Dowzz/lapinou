@@ -258,6 +258,7 @@
     dayNamesMin: ["Di","Lu","Ma","Me","Je","Ve","Sa"], 
     weekHeader: "Wk", 
     firstDay: 1,
+    yearRange: "c-100:c+100",
     onClose: function () {
         $(this).focus();  
         } 
