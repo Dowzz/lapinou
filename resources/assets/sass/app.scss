@@ -503,7 +503,6 @@ hr {
     color: #9d9d9d;
 }
 
-
 /*  ---- Barre de recherche ----  */
 
 .flexsearch{
@@ -533,7 +532,6 @@ hr {
 .flexsearch-input {
   	width: 100%;
 }
-
 .flexsearch-input {
  	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
@@ -551,7 +549,6 @@ hr {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }	
-
 .flexsearch-input:focus {
   	outline: none;
   	border-color: #9d9d9d;
@@ -635,6 +632,9 @@ input:-moz-placeholder {
 .newt{
 	margin-left: 15px;
 	margin-top: 15px;
+}
+#supprimer{
+	width: 100%;
 }
 
 
