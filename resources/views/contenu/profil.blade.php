@@ -4,7 +4,7 @@
             <div class="span12">
                 <div class="well well-small clearfix">
                     <div class="span2">
-                        <!--<img src="{{URL::asset('/img/profil.jpg')}}" class="img-polaroid"/>-->
+                        <img src="{{URL::asset('/img/profil.jpg')}}" class="img-polaroid"/>
                     </div>
 
                     <div class="span4">
@@ -62,7 +62,7 @@
                             <input type="hidden" id="maj_id" value="{{ Auth::user()->id }}">
                             <div class="input-group margin-bottom-sm">    
                                 <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                <input onfocusout="update(id)"  type="text" id="naissance" class="form-control" placeholder="{{ Auth::user()->naissance }}">
+                                <input onfocusout="update(id)"  type="text" id="naissance" class="form-control" placeholder="{{ Auth::user()->naissance->format('j-m-Y') }}">
                             </div>
                             <script>
                             function update(id) {

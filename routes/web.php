@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
-
 use App\Livre;
 
 /* ----  routes principales  ---- */
@@ -66,7 +55,7 @@ Route::get('contenu.{categorie?}', function($categorie = null)
 
 /* ----  routes methodes  ---- */
 
-Route::post('insertodo', 'TodoController@store');
+Route::get('insertodo', 'TodoController@store');
 Route::post('deleteall', 'TodoController@deleteall');
 Route::post('deleteid', 'TodoController@deleteid');
 Route::post('notation', 'Bookcontrol@notation');
