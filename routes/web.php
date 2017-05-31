@@ -66,7 +66,7 @@ Route::get('contenu.{categorie?}', function($categorie = null)
 
 /* ----  routes methodes  ---- */
 
-Route::get('insertodo', 'TodoController@store');
+Route::post('insertodo', 'TodoController@store');
 Route::post('deleteall', 'TodoController@deleteall');
 Route::post('deleteid', 'TodoController@deleteid');
 Route::post('notation', 'Bookcontrol@notation');
