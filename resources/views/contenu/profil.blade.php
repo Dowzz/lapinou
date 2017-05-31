@@ -1,4 +1,3 @@
-
 <div class="container profile">
     <div class="row" id="profile">
         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -39,48 +38,50 @@
 
         <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Mes informations personnelles</a>
                         </h4>
                     </div>  
-
-                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        <div class="input-group margin-bottom-sm">
-                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input id="nom" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->nom }}">
-                        </div>   
-                        <div class="input-group margin-bottom-sm">
-                            <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
-                            <input id="prenom" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->prenom }}">
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                <input id="nom" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->nom }}">
+                            </div>   
+                            <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
+                                <input id="prenom" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->prenom }}">
+                            </div>
+                            <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                <input id="email" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->email }}">
+                            </div>
+                            <input type="hidden" id="maj_id" value="{{ Auth::user()->id }}">
+                            <div class="input-group margin-bottom-sm">    
+                                <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                <input onfocusout="update(id)"  type="text" id="naissance" class="form-control" placeholder="{{ Auth::user()->naissance }}">
+                            </div>
+                            <script>
+                            function update(id) {
+                            var x = document.getElementById(id).value;
+                            var user=$("#maj_id").val();
+                            console.log(x, id, user);
+                                $.ajax({
+                                    data:({id, x, user}),
+                                    type:"post",
+                                    url: "./majuser",
+                                });
+                            }
+                            </script>
                         </div>
-                        <div class="input-group margin-bottom-sm">
-                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input id="email" onfocusout="update(id)" class="form-control" type="text" placeholder="{{ Auth::user()->email }}">
-                        </div>
-                        <input type="hidden" id="maj_id" value="{{ Auth::user()->id }}">
-                        <div class="input-group margin-bottom-sm">    
-                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                            <input onfocusout="update(id)"  type="text" id="naissance" class="form-control" placeholder="{{ Auth::user()->naissance }}">
-                        </div>
-                        <script>
-                        function update(id) {
-                        var x = document.getElementById(id).value;
-                        var user=$("#maj_id").val();
-                        console.log(x, id, user);
-                            $.ajax({
-                                data:({id, x, user}),
-                                type:"post",
-                                url: "./majuser",
-                            });
-                        }
-                        </script>
                     </div>
                 </div>
-            </div>
 
+
+            
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
@@ -95,8 +96,7 @@
                                 <th> Titre / Téléchargement </th>
                                 <th class="text-right"> Date </th>
                                 <th class="text-right"> Prix </th>
-                            </tr>
-                            
+                            </tr>                            
                         <?php 
                         use App\recap;
                         use App\order;
@@ -110,28 +110,21 @@
                                 foreach ($orders as $order) {
                                     $idlivre=$order->id_livre;
                                     $livre=livre::where('id', $idlivre)->first();
+
+                                    ?>
+                                     <tr class="epais">
+                                <td rowspan="2"><?php echo $Norder ?></td>
+                                <td><?php echo $livre->titre ?></td>
+                                <td class="text-right" title="Date"><?php echo $recap->created_at->format('d-m-Y') ?> </td>
+                                <td class="text-right" title="Price"><?php echo number_format((float)$recap->totalttc, 2, '.', ''); ?> €</td>
+                            </tr>
+                            <tr>
+                                <td><a href="<?php echo $livre->link ?>">Télécharger le livre</a></td>
+                            </tr>
+                            <?php        
                                 }
                         }
                         ?>
-                            <tr class="epais">
-                                <td rowspan="2">#017990</td>
-                                <td>Docteur Sleep</td>
-                                <td class="text-right" title="Date"> 05/2017 </td>
-                                <td class="text-right" title="Price"> 9,99 </td>
-                            </tr>
-                            <tr>
-                                <td href="Telecharger">Télécharger le livre</td>
-                            </tr>
-                            
-                            <tr class="epais">
-                                <td rowspan="2">#018384</td>
-                                <td>Time Riders</td>
-                                <td class="text-right" title="Date"> 06/2017 </td>
-                                <td class="text-right" title="Price"> 11,99 </td>
-                            </tr>
-                            <tr>
-                                <td href="Telecharger">Télécharger le livre</td>
-                            </tr>
                         </table>
                     </div>
                 </div>

@@ -10,6 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+
 use App\Livre;
 
 /* ----  routes principales  ---- */
@@ -28,6 +29,9 @@ Route::get('style', function(){
 
 Route::get('error', function(){
 	return view('error');
+});
+Route::get('livre', function(){
+	return view('vendor.livre');
 });
 
 /* ----  routes ajax contenu ---- */
@@ -78,6 +82,7 @@ Route::post('/deleterow', 'shopcontroller@deleterow');
 Route::get('deletepanier', 'shopcontroller@deletepanier');
 Route::post('/createorder', 'shopcontroller@createorder');
 Route::post('/paiementOK', 'shopcontroller@payok');
+
 
 /* ----  routes mentions  ---- */
 

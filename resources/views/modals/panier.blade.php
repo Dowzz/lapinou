@@ -77,7 +77,7 @@
                 <?php if(Auth::user())
                 {
                     $user_id=Auth::user()->id;
-                    $total=Cart::total();
+                    $total=Cart::subtotal();
                 ?>
                 <input type="hidden" id="totalttc" value="<?php echo $total; ?>">
                 <input type="hidden" id="user_id" value="<?php echo $user_id?>">

@@ -69,7 +69,11 @@
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-eur fa-fw"></i></span>
             <input class="form-control" type="text" placeholder="Prix du livre" name="prix">
-        </div> 
+        </div>
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-eur fa-fw"></i></span>
+            <input class="form-control" type="text" placeholder="Lien de Téléchargement" name="link">
+        </div>  
         <div>
             <button id="bouton-panier"  type="submit" class="btn btn-elegant">Enregistrer</button>
         </div>

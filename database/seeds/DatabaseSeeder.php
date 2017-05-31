@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\livre;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         
-        for ($i=0; $i <15 ; $i++) { 
+        /*for ($i=0; $i <15 ; $i++) { 
             $rand = rand(1, 12);
             if($rand < 10){
               $rand = "0".$rand;
@@ -69,6 +70,13 @@ class DatabaseSeeder extends Seeder
                ]);
 
         }
+        */
+        $livres = livre::all();
+        foreach ($livres as $livre) {
+            $livre->link = "livre";
+            $livre->save();
+        }
+        
 
     }
 }

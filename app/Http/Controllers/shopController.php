@@ -11,6 +11,7 @@ use Cart;
 use App\order;
 use App\recap;
 
+
 class shopController extends Controller
 {
     public function addpanier(Request $request)
@@ -47,12 +48,11 @@ class shopController extends Controller
          }
     }
     public function payok(Request $request)
-    {   
-        
+    {          
         $user=$request->userid; 
         $recap = recap::where('id_user',$user)->orderBy('identifier', 'desc')->first();
         $recap->paiement = '1';
         $recap->save();
-        Cart::destroy();      
+        Cart::destroy();           
     }
 }
