@@ -33,6 +33,8 @@ $admin=0;
             ?>           
             <li class="ajax"><a href="contenu/profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
             </li>
+            <li class="ajax"><a href="contenu/publish">Publication<span><img class="icone" src="{{URL::asset('/img/publish.png')}}"></img></span></a>
+            </li>
             @endif
             @if  ($admin=='1')
             <li class="ajax"><a href="contenu/admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>

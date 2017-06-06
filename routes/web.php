@@ -35,6 +35,9 @@ Route::get('contenu/profil', function () {
 Route::get('contenu/admin', function () {
     return view('contenu.admin');
 });
+Route::get('contenu/publish', function () {
+    return view('contenu.publish');
+});
 Route::get('contenu/accueil', function () {
     return view('contenu.accueil');
 });
@@ -43,6 +46,9 @@ Route::get('search', function() {
 });
 Route::get('panier', function() {
 	return view('modals.panier');
+});
+Route::get('/modals/publishmodal', function() {
+	return view('modals.publishmodal');
 });
 
 /* ----  route Catégorie  ---- */
@@ -71,6 +77,9 @@ Route::post('/deleterow', 'shopcontroller@deleterow');
 Route::get('deletepanier', 'shopcontroller@deletepanier');
 Route::post('/createorder', 'shopcontroller@createorder');
 Route::post('/paiementOK', 'shopcontroller@payok');
+Route::post('/dempublish', 'Bookcontrol@dempublish');
+Route::post('/validpub', 'Bookcontrol@validpub');
+Route::post('/refuspub', 'Bookcontrol@refuspub');
 
 
 /* ----  routes mentions  ---- */

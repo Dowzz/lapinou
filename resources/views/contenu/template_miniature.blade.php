@@ -52,15 +52,9 @@ $id= $l->id;
                 <div class="modal-text">
                     <p>Chargement en cours...</p>
                 </div>
-                    
-                
- 
         </div>
-        <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
 </div>
-<!-- Event modal -->
 <?php
 }
 ?>

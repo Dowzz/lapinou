@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\livre;
+use App\publication;
 
 class Bookcontrol extends Controller
 {
@@ -32,5 +33,30 @@ class Bookcontrol extends Controller
         $livre->prix=$request->prix;
         $livre->save();
         return redirect('/');
+    }
+    public function dempublish(Request $request)
+    {
+        session()->flash('success', 'Votre publication est en cours de validation !');
+        $ask = new publication;
+        $ask->titre=$request->titre;
+        $ask->couverture=$request->couverture;
+        $ask->auteur=$request->auteur;
+        $ask->editeur=$request->editeur;
+        $ask->genre=$request->genre;
+        $ask->description=$request->description;
+        $ask->format=$request->format;
+        $ask->parution=$request->parution;
+        $ask->prix=$request->prix;
+        $ask->user=$request->id_user; 
+        $ask->save();
+        return redirect('/');
+    }
+    public function validpub()
+    {
+
+    }
+    public function refuspub()
+    {
+        
     }
 }

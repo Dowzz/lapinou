@@ -11,6 +11,7 @@ return array(
     'CreateLivres' => $baseDir . '/database/migrations/2017_05_02_081717_create_livres.php',
     'CreateOrdersTable' => $baseDir . '/database/migrations/2017_05_29_095830_create_orders_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreatePublicationsTable' => $baseDir . '/database/migrations/2017_06_06_085549_create_publications_table.php',
     'CreateRecapsTable' => $baseDir . '/database/migrations/2017_05_29_123137_create_recaps_table.php',
     'CreateTodolistTable' => $baseDir . '/database/migrations/2017_05_09_110906_create_todolist_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',

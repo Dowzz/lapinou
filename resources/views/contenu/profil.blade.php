@@ -105,19 +105,17 @@
                         $recaps=recap::where("id_user", $userid)->orderBy('identifier', 'desc')->distinct()->get();
                         foreach ($recaps as $recap) {
                             $Norder = $recap->identifier;
-                            ?><?php
                             $orders = order::where('Norder',$Norder)->orderBy('identifier', 'desc')->distinct()->get();
                                 foreach ($orders as $order) {
                                     $idlivre=$order->id_livre;
                                     $livre=livre::where('id', $idlivre)->first();
-
                                     ?>
                                      <tr class="epais">
                                 <td rowspan="2"><?php echo $Norder ?></td>
                                 <td><?php echo $livre->titre ?></td>
                                 <td class="text-right" title="Date"><?php echo $recap->created_at->format('d-m-Y') ?> </td>
                                 <td class="text-right" title="Price"><?php echo number_format((float)$recap->totalttc, 2, '.', ''); ?> €</td>
-                            </tr>
+                                    </tr>
                             <tr>
                                 <td><a href="<?php echo $livre->link ?>">Télécharger le livre</a></td>
                             </tr>
