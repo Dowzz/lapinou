@@ -76,7 +76,24 @@ class DatabaseSeeder extends Seeder
             $livre->link = "livre";
             $livre->save();
         }
-        
+        for ($i=0; $i <12 ; $i++) { 
+            DB::table('publications')->insert([
+            'couverture'=>$faker->image,
+            'titre'=>$faker->word,
+            'auteur'=>$faker->name,
+            'editeur'=>$faker->lastName,
+            'parution'=>rand(2007,2018)."-".$rand."-".rand(1, 30),
+            'description'=>$faker->text,
+            'genre'=>"amateur",
+            'notes'=>1,
+            'format'=>"epub",
+            'prix'=>'10.99',
+            'link'=>$faker->sentence,
+            'publiable'=>0,
+            'user'=>rand(1,15),
+               ]);
+        }
+         
         
 
     }
