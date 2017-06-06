@@ -12,15 +12,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create('fr_FR');
         
-        /*for ($i=0; $i <15 ; $i++) { 
+        for ($i=0; $i <15 ; $i++) { 
             $rand = rand(1, 12);
             if($rand < 10){
               $rand = "0".$rand;
             }
           	DB::table('users')->insert([
-                'name' => str_random(10),
-                'email' => str_random(10).'@gmail.com',
+                'name' => $faker->name,
+                'email' => $faker->freeEmail,
                 'password' => bcrypt('secret'),
                 'created_at' => rand(2007,2018)."-".$rand."-".rand(1, 30),
             ]);
@@ -30,7 +31,7 @@ class DatabaseSeeder extends Seeder
         	DB::table('commentaires')->insert([
             'id_livre' => rand(1,158),
             'id_user' => rand(1,15),
-            'comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sit minus fugit distinctio mollitia temporibus quia odio tempora officia quo, quos nostrum consequuntur accusamus molestias iusto, veniam, aliquid debitis placeat.' ,
+            'comment' =>  $faker->text,
                ]);
         }
         
@@ -55,27 +56,27 @@ class DatabaseSeeder extends Seeder
         for ($i=0; $i < 250; $i++) { 
             DB::table('todolists')->insert([
             'user_id' => rand(1,15),
-            'champ' => str_random(10),
+            'champ' => $faker->text(10),
                ]);
         }
         for ($i=0; $i < 6; $i++) { 
             DB::table('contacts')->insert([
-            'pseudo' => str_random(10),
-            'mail' => str_random(10)."@gmail.com",
+            'pseudo' => $faker->lastName,
+            'mail' => $faker->freeEmail,
             'commande' => str_random(10),
-            'objet' => str_random(15),
-            'demande' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sit minus fugit distinctio mollitia temporibus quia odio tempora officia quo, quos nostrum consequuntur accusamus molestias iusto, veniam, aliquid debitis placeat.
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sit minus fugit distinctio mollitia temporibus quia odio tempora officia quo, quos nostrum consequuntur accusamus molestias iusto, veniam, aliquid debitis placeat.',
+            'objet' => $faker->sentence,
+            'demande' => $faker->text,
             'created_at' => rand(2007,2018)."-".$rand."-".rand(1, 30),
                ]);
 
         }
-        */
+        
         $livres = livre::all();
         foreach ($livres as $livre) {
             $livre->link = "livre";
             $livre->save();
         }
+        
         
 
     }
