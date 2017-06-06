@@ -23,7 +23,7 @@ class CreateLivres extends Migration
             $table->text('description');
             $table->text('genre');
             $table->text('format');
-            $table->integer('notes');
+            $table->integer('notes')->default('0');
             $table->double('prix');
             $table->text('link')->default('0');
             $table->rememberToken();

@@ -80,6 +80,7 @@ Route::post('/paiementOK', 'shopcontroller@payok');
 Route::post('/dempublish', 'Bookcontrol@dempublish');
 Route::post('/validpub', 'Bookcontrol@validpub');
 Route::post('/refuspub', 'Bookcontrol@refuspub');
+Route::get('pubclean', 'Bookcontrol@pubclean');
 
 
 /* ----  routes mentions  ---- */

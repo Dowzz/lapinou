@@ -22,8 +22,8 @@ class CreatePublicationsTable extends Migration
             $table->date('parution');
             $table->text('description');
             $table->text('genre');
+            $tbale->integer('notes')->default('0');
             $table->text('format');
-            $table->integer('notes')->default('1');
             $table->double('prix');
             $table->text('link')->default('0');
             $table->integer('publiable')->default('0');

@@ -36,6 +36,7 @@
             <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
             <select id="demande" id="subject" name="genre" name="subject" class="form-control" required="required">
             <option value="na" selected="">Genre :</option>
+            <option value="amateur">Auteur Amateur/indépendant</option>
             <option value="aventure">Aventure / Action</option>
             <option value="classique">Classique</option>
             <option value="conte">Conte</option>

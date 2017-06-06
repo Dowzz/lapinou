@@ -11,15 +11,6 @@ use App\user;
 use App\publication;
 ?>
 
-
-            
-
-
-
-
-
-
-
 <div class="mini">
 	<div class="span-ajout">
         <div class="panel-heading">
@@ -30,12 +21,13 @@ use App\publication;
                 </ul>
         </div>
         <div class="tab-content">
-            <div class="tab-pane fade in active" id="tab1default">               
+            <div class="tab-pane fade in active" id="tab1default">
+            <h2>Livres en attente de publications</h2>               
                 <table class="cell">
                    <thead>
                        <th>Titre</th>
                        <th>Auteur</th>
-                       <th>publié par</th>
+                       <th>Publié par</th>
                     </thead>
                     <body>
                         
@@ -43,12 +35,38 @@ use App\publication;
             $publish = publication::where('publiable',0)->get();
             foreach ($publish as $livre) {
                 $id= $livre->id;
-                echo $id;
+                $user = user::where('id', $id)->first();
                ?>
-                        <tr class="clickable">
+                        <tr>
                             <td><?php echo $livre->titre ?></td>
                             <td><?php echo $livre->auteur?></td>
-                            <td><?php echo $livre->user?></td>
+                            <td><?php echo $user->email?></td>
+                            <td><a data-toggle="modal" href="#" data-target="#modalinfos" class="LinkModal" rel="<?php echo $id ?>">Infos Supplémentaires</a></td>
+                        </tr>
+            <?php
+            }
+            ?>
+                    </body>
+                </table>
+                <h2>Livres refusés</h2>               
+                <table class="cell">
+                   <thead>
+                       <th>Titre</th>
+                       <th>Auteur</th>
+                       <th>Publié par</th>
+                    </thead>
+                    <body>
+                        
+            <?php 
+            $publish = publication::where('publiable',2)->get();
+            foreach ($publish as $livre) {
+                $id= $livre->id;
+                $user = user::where('id', $id)->first();
+               ?>
+                        <tr>
+                            <td><?php echo $livre->titre ?></td>
+                            <td><?php echo $livre->auteur?></td>
+                            <td><?php echo $user->email?></td>
                             <td><a data-toggle="modal" href="#" data-target="#modalinfos" class="LinkModal" rel="<?php echo $id ?>">Infos Supplémentaires</a></td>
                         </tr>
             <?php
@@ -57,7 +75,7 @@ use App\publication;
                     </body>
                 </table>
                 <div>
-                <button id="bouton-panier"class="btn btn-elegant">Nettoyer</button>
+                <a href="pubclean"><button id="bouton-panier" class="btn btn-elegant">Nettoyer</button></a>
                 </div>
             </div>
 
@@ -130,6 +148,7 @@ use App\publication;
                         <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>       
                         <select id="demande" id="subject" name="genre" name="subject" class="form-control" required="required">
                         <option value="na" selected="">Genre :</option>
+                        <option value="amateur">Auteur Amateur/indépendant</option>
                         <option value="aventure">Aventure / Action</option>
                         <option value="classique">Classique</option>
                         <option value="conte">Conte</option>
@@ -173,7 +192,7 @@ use App\publication;
                         <input class="form-control" type="text" placeholder="Lien de Téléchargement" name="link">
                     </div>  
                     <div>
-                    <button id="bouton-panier"  type="submit" class="btn btn-elegant">Envoyer la demande de publication</button>
+                    <button id="bouton-panier"  type="submit" class="btn btn-elegant">Enregistrer</button>
                     </div>
                 </form>
             </div>

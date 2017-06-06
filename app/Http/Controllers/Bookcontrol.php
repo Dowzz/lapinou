@@ -51,12 +51,37 @@ class Bookcontrol extends Controller
         $ask->save();
         return redirect('/');
     }
-    public function validpub()
+    public function validpub(Request $request)
     {
-
+        session()->flash('success', 'livre ajouté !');
+        $livre=$request->livre;
+        $ask=publication::where('id', $livre)->first();
+        $ask->publiable='2';
+        $ask->save(); 
+        $livre = new livre;
+        $livre->titre=$ask->titre;
+        $livre->couverture=$ask->couverture;
+        $livre->auteur=$ask->auteur;
+        $livre->editeur=$ask->editeur;
+        $livre->genre="amateur";
+        $livre->notes=0;
+        $livre->description=$ask->description;
+        $livre->format=$ask->format;
+        $livre->parution=$ask->parution;
+        $livre->prix=$ask->prix;
+        $livre->save();
+        return redirect('/');
     }
-    public function refuspub()
+    public function refuspub(Request $request)
     {
-        
+        $livre=$request->livre;
+        $ask=publication::where('id', $livre)->first();
+        $ask->publiable='2';
+        $ask->save();
     }
+    public function pubclean()
+    {
+        $livre=publication::where('publiable',2)->delete();
+        return redirect('/');
+    } 
 }

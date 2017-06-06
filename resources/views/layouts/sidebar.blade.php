@@ -49,6 +49,7 @@ $admin=0;
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class ="liste">
+                    <li class="ajax"><a class="cat" href="contenu.Amateur">Auteur amateur/indépendant</a></li>
                     <li class="ajax"><a class="cat" href="contenu.Aventure">Aventure / Action</a></li>
                     <li class="ajax"><a class="cat" href="contenu.Classique">Classique</a></li>
                     <li class="ajax"><a class="cat" href="contenu.Contes">Conte</a></li>

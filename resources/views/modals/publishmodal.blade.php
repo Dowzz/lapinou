@@ -55,7 +55,7 @@ function tronquer($description)
 			<p class="synopsis"><?php echo $description; ?></p>
 		</div>
 		</div>
-		
+			<div id="notif"> </div>
 			<button type="button" class="btn btn-default" id="validpub">Valider</button>
 			<button type="button" class="btn btn-default" id="refuspub">Refuser</button>
 		</div>
@@ -71,7 +71,7 @@ function tronquer($description)
 		        url: "./validpub",
 		        success: function(data){
 		        	$("#notif").empty();
-					$("#notif").append("Le livre a été validé !");
+					$("#notif").append("Le livre est validé !");
 					$('#notif').show(0).delay(1500).hide(200);	        	
 		        }
 			      });
@@ -90,7 +90,7 @@ function tronquer($description)
 		        url: "./refuspub",
 		        success: function(data){
 		        	$("#notif").empty();
-					$("#notif").append("Le livre a été refusé !");
+					$("#notif").append("Le livre est refusé !");
 					$('#notif').show(0).delay(1500).hide(200);	        	
 		        }
 			      });
