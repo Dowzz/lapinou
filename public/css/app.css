@@ -8352,7 +8352,6 @@ input:-moz-placeholder {
 }
 
 .panel-default {
-  background-color: white;
   border-radius: 10px;
 }
 
@@ -8717,7 +8716,7 @@ input:-moz-placeholder {
   background-color: #222222;
   color: #9d9d9d;
   border-radius: 10px;
-  width: 60%;
+  width: 100%;
   height: auto;
   margin: auto;
   padding-top: 1px;

@@ -17,7 +17,7 @@ use App\publication;
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab1default" data-toggle="tab">Publication en attente</a></li>
                     <li><a href="#tab2default" data-toggle="tab">Demandes de Contact</a></li>
-                    <li><a href="#tab3default" data-toggle="tab">AJout de livre</a></li>
+                    <li><a href="#tab3default" data-toggle="tab">Ajout de livre</a></li>
                 </ul>
         </div>
         <div class="tab-content">
