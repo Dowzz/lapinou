@@ -212,11 +212,14 @@
 
                     </div>
                 </div>
+                
             </div>
+
         </div>
     </div>
+ <button type="button" id="supprimer" class="btn btn-elegant tooltips" data-toggle="tooltip" data-placement="top" title="Votre compte va être supprimé, vous ne pourrez plus y acceder.">Suppression de compte</button>    
   </div>
-  <button type="button" id="supprimer" class="btn btn-elegant tooltips" data-toggle="tooltip" data-placement="top" title="Votre compte va être supprimé, vous ne pourrez plus y acceder.">Suppression de compte</button>
+ 
   <script>
       $('#supprimer').click(function showConfirm()
             {   

@@ -8382,6 +8382,10 @@ input:-moz-placeholder {
   margin-top: 15px;
 }
 
+#supprimer {
+  width: 100%;
+}
+
 /*  ---- Modal détail ebook ----  */
 .cover-ebook {
   height: 400px;
