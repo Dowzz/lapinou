@@ -504,7 +504,7 @@ jQuery.extend({
 	},
 
 	error: function( msg ) {
-		throw new Error( msg );
+		
 	},
 
 	// data: string of html

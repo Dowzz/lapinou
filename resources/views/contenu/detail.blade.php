@@ -1,3 +1,5 @@
+{{ HTML::script('js/all.js') }}
+
 <?php
 use App\user;
 use App\Livre;
@@ -47,11 +49,19 @@ $id_livre=$data->id;
 			<p>Le <?php echo $parution; ?></p>
 		</div>
 		<input type="hidden" id="idbook" value="<?php echo $id_livre ?> ">
+	<?php if (Auth::user()){
+		$id_user=Auth::user()->id;
+	}else{
+		$id_user=0;
+	}
+	?>
+		<input type="hidden" id="user_id" value="<?php echo $id_user ?> ">
 		<div class="prix">
 			<h1><?php echo $prix; ?> €</h1>
 		</div>
 		<div id="notif"> </div>	
-			<button type="button" class="btn btn-default btn-detail" id="addpanier">Ajouter au panier</button>
+			<div class="col-md-6"><button type="button" class="btn btn-default btn-detail" id="addpanier">Ajouter au panier</button></div>
+			<div class="col-md-6"><button type="button" class="btn btn-default btn-detail" id="addfav"><i class="fa fa-heart-o" aria-hidden="true"></i>  Ajout à la Todolist</button></div>
 			
 			<script>
 			$('#addpanier').click(function() {
@@ -161,4 +171,7 @@ $('#addcom').click(function() {
 
       });
 });
+
+
+
 </script>
