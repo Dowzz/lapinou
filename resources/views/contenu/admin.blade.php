@@ -16,19 +16,21 @@ use App\publication;
         <div class="panel-heading">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab1default" data-toggle="tab">Publication en attente</a></li>
-                    <li><a href="#tab2default" data-toggle="tab">Demandes de Contact</a></li>
+                    <li><a href="#tab2default" data-toggle="tab">Demandes de contact</a></li>
                     <li><a href="#tab3default" data-toggle="tab">Ajout de livre</a></li>
                 </ul>
         </div>
         <div class="tab-content">
-            <div class="tab-pane fade in active" id="tab1default">
-            <h2>Livres en attente de publications</h2>               
-                <table class="cell">
-                   <thead>
-                       <th>Titre</th>
-                       <th>Auteur</th>
-                       <th>Publié par</th>
-                    </thead>
+            <div class="tab-pane fade in active" id="tab1default"> 
+            
+                <h4>Livres en attente de publication</h4>
+                  <table class="table">
+                            <tr>
+                                <th> Titre </th>
+                                <th> Auteur </th>
+                                <th> Publié par </th>
+                                <th></th>
+                            </tr>                            
                     <body>
                         
             <?php 
@@ -37,7 +39,7 @@ use App\publication;
                 $id= $livre->id;
                 $user = user::where('id', $id)->first();
                ?>
-                        <tr>
+                        <tr class="text-left">
                             <td><?php echo $livre->titre ?></td>
                             <td><?php echo $livre->auteur?></td>
                             <td><?php echo $user->email?></td>
@@ -48,13 +50,14 @@ use App\publication;
             ?>
                     </body>
                 </table>
-                <h2>Livres refusés</h2>               
-                <table class="cell">
-                   <thead>
-                       <th>Titre</th>
-                       <th>Auteur</th>
-                       <th>Publié par</th>
-                    </thead>
+                <h4>Livres refusés</h4>
+                  <table class="table">
+                            <tr>
+                                <th> Titre </th>
+                                <th> Auteur </th>
+                                <th> Publié par </th> 
+                                <th></th> 
+                            </tr>      
                     <body>
                         
             <?php 
@@ -63,7 +66,7 @@ use App\publication;
                 $id= $livre->id;
                 $user = user::where('id', $id)->first();
                ?>
-                        <tr>
+                        <tr class="text-left">
                             <td><?php echo $livre->titre ?></td>
                             <td><?php echo $livre->auteur?></td>
                             <td><?php echo $user->email?></td>
