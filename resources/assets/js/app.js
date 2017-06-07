@@ -202,10 +202,15 @@ $(document).ready(function () {
       $(lists[i]).html(i+1 + ") ");
     }
 }
+
+
 updateNumbers();
 //Check off Specific Todos By Clicking
 $(".todoul").on("click", "li", function () {
   $(this).toggleClass("completed");
+});
+$("#button").on("click", function(e){
+  updateNumbers();
 });
 
 //Click on X to delete Todo
@@ -256,25 +261,6 @@ $("#todoinput").keypress(function(e) {
     if( $(this).val() !== "") {
     $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + todoText + "</li>");
     }
-    updateNumbers();
-    //clear text
-    $(this).val("");
-  }
-});
-
-$("#addfav").on('click', function (e){
-  var userid = $("#user_id").val();
-  var data = $("#idbook").val();
-  var title= $(".title").html();
-  console.log(userid, data, title);
-  $.ajax({
-         data: ({userid:userid, todoText:data, title:title}),
-         type: "get" ,
-         url: "./insertodo",
-         });
-  if( $(this).val() !== "") {
-    $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + title + "</li>");
-    } 
     updateNumbers();
     //clear text
     $(this).val("");

@@ -1,4 +1,3 @@
-{{ HTML::script('js/all.js') }}
 
 <?php
 use App\user;
@@ -171,7 +170,21 @@ $('#addcom').click(function() {
 
       });
 });
+$("#addfav").on('click', function (e){
+  var userid = $("#user_id").val();
+  var data = $("#idbook").val();
+  var title= $(".title").html();
+  console.log(userid, data, title);
+  $.ajax({
+         data: ({userid:userid, todoText:title, title:title}),
+         type: "get" ,
+         url: "./insertodo",
+         });
+  if( title !== "") {
+    $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + title + "</li>");
+    } 
 
+});
 
 
 </script>

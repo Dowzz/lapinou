@@ -1,7 +1,23 @@
 <?php 
 use App\todolist;
 $lignes= todolist::where('user_id',$user_id)->get();
-
+function tronquer($champ)
+{
+    //nombre de caractères à afficher
+    $max_caracteres=30;
+    // Test si la longueur du texte dépasse la limite
+    if (strlen($champ)>$max_caracteres)
+    {    
+        // Séléction du maximum de caractères
+        $champ = substr($champ, 0, $max_caracteres);
+        // Récupération de la position du dernier espace (afin déviter de tronquer un mot)
+        $position_espace = strrpos($champ, " ");    
+        $champ = substr($champ, 0, $position_espace);    
+        // Ajout des "..."
+        $champ = $champ."...";
+    }
+    return $champ;
+}
 ?>
 
 <div class="row" class="todotools"><i class="removeall">Effacer</i><i class="add">Ajouter</i></div>
@@ -13,8 +29,9 @@ $lignes= todolist::where('user_id',$user_id)->get();
   <ul class="todoul">
 <?php foreach ($lignes as $ligne) {
   $id= $ligne->id;
+  $champ=$ligne->champ;
   ?>
-  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo ($ligne->champ)?></li>
+  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo tronquer($champ)?></li>
 <?php 
 }
 ?>
