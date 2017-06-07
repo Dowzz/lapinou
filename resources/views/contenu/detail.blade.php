@@ -176,9 +176,14 @@ $("#addfav").on('click', function (e){
   var title= $(".title").html();
   console.log(userid, data, title);
   $.ajax({
-         data: ({userid:userid, todoText:title, title:title}),
+         data: ({userid:userid, todoText:title, data:data}),
          type: "get" ,
          url: "./insertodo",
+         success: function(data){
+		        	$("#notif").empty();
+					$("#notif").append("Lelivre a été ajouté a votre Todolist");
+					$('#notif').show(0).delay(1500).hide(200);	        	
+		        }
          });
   if( title !== "") {
     $(".todoul").append("<li class=\"todoli\"><span class=\"todospan\"><i class='fa fa-trash'></i></span>" + title + "</li>");

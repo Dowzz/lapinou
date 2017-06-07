@@ -20,4 +20,9 @@ elixir(function(mix) {
         'app.js',	
     ])
 });
+elixir(function(mix) {
+    mix.browserSync({
+        proxy: 'lapinou.dev'
+    });
+});
 

@@ -17,6 +17,7 @@ class CreateTodolistTable extends Migration
             $table->increments('id');
             $table->text('user_id');
             $table->text('champ');
+            $table->integer('idbook');
         
         });
     }

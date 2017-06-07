@@ -16,6 +16,7 @@ class TodoController extends Controller
     	$todolist = new todolist;
     	$todolist->champ = $request->todoText;
     	$todolist->user_id = $request->userid;
+        $todolist->idbook = $request->data;
     	$todolist->save();
     }
     public function deleteall(Request $request)
@@ -27,9 +28,9 @@ class TodoController extends Controller
     public function deleteid(Request $request)
     {
         $user_id=$request->user_id;
-        $todoText=$request->todoText;
+        $idline=$request->idline;
 
-        todolist::where('user_id', $user_id)AND todolist::Where('champ', $todoText)->first()->delete();
+        todolist::where('user_id', $user_id)AND todolist::Where('id', $idline)->first()->delete();
     }
     public function majtodo(Request $request)
     {

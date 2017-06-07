@@ -218,10 +218,10 @@ $(".todoul").on('click', "span", function (e) {
   e.stopPropagation();
   $(this).closest("li").fadeOut(500,function() {
   	var userid = $("#user_id").val();
-  	var todoText = $(this).text();;
-    console.log(userid, todoText);
+  	var idline = $("#idline").val();;
+    console.log(userid, idline);
   	$.ajax({
-      	data:({userid:userid, todoText:todoText}),
+      	data:({userid:userid, idline:idline}),
       	type:"post",
       	url: "./deleteid",
       });
@@ -250,10 +250,9 @@ $("#todoinput").keypress(function(e) {
     //grab text
     var userid = $("#user_id").val();
     var todoText = $(this).val();
-    var data = $("#todoinput").val();
     console.log(todoText, data, userid);
     $.ajax({
-         data: ({userid:userid, todoText:data}),
+         data: ({userid:userid, todoText:todoText}),
          type: "get" ,
          url: "./insertodo",
          });

@@ -30,8 +30,19 @@ function tronquer($champ)
 <?php foreach ($lignes as $ligne) {
   $id= $ligne->id;
   $champ=$ligne->champ;
+  $idbook= $ligne->idbook;
+  
+  if($idbook !=null){ ?>
+  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo tronquer($champ)?><a data-toggle="modal" href="#" data-target="#modal" class="LienModal" rel="<?php echo $idbook ?>">  <img id="added" src="{{URL::asset('/img/add.png')}}"></a>
+  <input type="hidden" id="idline" value="<?php echo $id ?>"></li>
+  <?php
+  }else{
   ?>
-  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo tronquer($champ)?></li>
+  <li class="todoli"><span class="todospan"><i class="fa fa-trash"></i></span><?php echo tronquer($champ)?><input type="hidden" id="idline" value="<?php echo $id ?>"></li>
+  <?php
+  } 
+?>
+  <input type="hidden" id="idbook" value="<?php echo $ligne->idbook ?>">
 <?php 
 }
 ?>
@@ -130,3 +141,6 @@ function tronquer($champ)
 }
 
 }</style>
+<script>
+
+</script>
