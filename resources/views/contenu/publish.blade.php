@@ -98,12 +98,13 @@
                                
             </tr>        
         <body>
-            <tr class="text-left">
+            
 <?php
 use App\publication; 
 $user= Auth::user()->id;
 $livres = publication::where('user', $user)->get();
 foreach ($livres as $livre) {   ?> 
+<tr class="text-left">
         <td><?php echo $livre->titre ?></td>
         <td><?php echo $livre->auteur ?></td>
         <td><?php if ($livre->publiable == 0){
