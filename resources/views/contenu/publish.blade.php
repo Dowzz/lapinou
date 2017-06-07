@@ -85,17 +85,20 @@
         </form>
 	</div>
 </div>
-<h2 class="line_effect">
-    <span>Mes publications</span>
-  </h2>
-  <table class="cell">
-        <thead>
-            <th>Titre</th>
-            <th>Auteur</th>
-            <th>Status</th>
-        </thead>
+    <h2 class="line_effect">
+        <span>Mes publications</span>
+    </h2>
+    <div class="mini">
+    <div class="span-ajout">
+        <table class="table table-xs">
+            <tr class="ligne">
+                <th> Titre </th>
+                <th> Auteur </th>
+                <th> Status </th>
+                               
+            </tr>        
         <body>
-            <tr>
+            <tr class="text-left">
 <?php
 use App\publication; 
 $user= Auth::user()->id;
@@ -119,6 +122,8 @@ foreach ($livres as $livre) {   ?>
             
         </body>
     </table>
+    </div>
+    </div>
 
 
 
