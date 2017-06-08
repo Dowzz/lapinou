@@ -29,6 +29,7 @@ input::-webkit-input-placeholder {
 }
 .titrage{
 	margin-left: -40px;
+  text-decoration: none;
 }
 #textMdp{
 	margin-bottom:20px;
@@ -167,6 +168,7 @@ nav.sidebar, .main{
 	}
 
 /*  ---- Modal ----  */
+
 hr {
 	clear: both;
 	margin-top: 10px;
@@ -220,6 +222,7 @@ hr {
 }
 .titrage:hover{
 	color:white;
+  text-decoration: none;
 }
 .close{
 	color:white;
@@ -482,6 +485,9 @@ hr {
 }
 .curseur{
 	cursor: pointer;
+}
+.link{
+  padding-left:0px;
 }
 
 /*  ---- Formulaire contact ----  */

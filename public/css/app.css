@@ -7681,6 +7681,7 @@ input::-webkit-input-placeholder {
 
 .titrage {
   margin-left: -40px;
+  text-decoration: none;
 }
 
 #textMdp {
@@ -7902,6 +7903,7 @@ hr {
 
 .titrage:hover {
   color: white;
+  text-decoration: none;
 }
 
 .close {
@@ -8209,6 +8211,10 @@ hr {
 
 .curseur {
   cursor: pointer;
+}
+
+.link {
+  padding-left: 0px;
 }
 
 /*  ---- Formulaire contact ----  */

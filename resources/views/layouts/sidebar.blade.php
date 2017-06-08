@@ -24,32 +24,36 @@ $admin=0;
             </ul>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-       <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
         <ul class="nav navbar-nav">
             @if (Auth::user())
              <?php 
             $user = (Auth::user());
             $admin =$user->admin;
             ?>           
-            <li class="ajax"><a href="contenu/profil">Profil<span><img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
-            </li>
-            <li class="ajax"><a href="contenu/publish">Publication<span><img class="icone" src="{{URL::asset('/img/publish.png')}}"></img></span></a>
-            </li>
+                <li class="ajax"><a href="contenu/profil">Profil<span>
+                    <img class="icone" src="{{URL::asset('/img/007-easter-bunny.png')}}"></img></span></a>
+                </li>
+                <li class="ajax"><a href="contenu/publish">Publication<span>
+                    <img class="icone" src="{{URL::asset('/img/publish.png')}}"></img></span></a>
+                </li>
             @endif
             @if  ($admin=='1')
-            <li class="ajax"><a href="contenu/admin">Administration<span><img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
-            </li>
+                <li class="ajax"><a href="contenu/admin">Administration<span>
+                    <img class="icone" src="{{URL::asset('/img/admin.png')}}"></img></span></a>
+                </li>
             @endif
-            <li>
-        <div class="panel-heading">
-        <ul  class="panel-title">
-        <a class="titrage" data-toggle="collapse" href="#collapseOne">
-          Catégories</a><span><img class="icone" src="{{URL::asset('/img/004-signs-1.png')}}"></img></span></ul>
-        </div> 
+                <li>
+                    <div class="panel-heading">
+                        <ul>
+                        <a class="titrage" data-toggle="collapse" href="#collapseOne">Catégories<span>
+                        <img class="icone" src="{{URL::asset('/img/004-signs-1.png')}}"></img></span></a>
+                        </ul>
+                    </div> 
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class ="liste">
-                    <li class="ajax"><a class="cat" href="contenu.Amateur">Auteur amateur/indépendant</a></li>
+                    <li class="ajax"><a class="cat" href="contenu.Amateur">Amateur/indépendant</a></li>
                     <li class="ajax"><a class="cat" href="contenu.Aventure">Aventure / Action</a></li>
                     <li class="ajax"><a class="cat" href="contenu.Classique">Classique</a></li>
                     <li class="ajax"><a class="cat" href="contenu.Contes">Conte</a></li>
@@ -69,7 +73,9 @@ $admin=0;
             </div>
         </div>
             </li> 
-        <li><a data-toggle="modal" data-target="#modal-lapication">Lapi'cation<span><img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a></li> 
+            <li><a data-toggle="modal" data-target="#modal-lapication">Lapi'cation<span>
+                <img class="icone" src="{{URL::asset('/img/screen.png')}}"></img></span></a>
+            </li> 
         </ul>
         </div>
     </div>
