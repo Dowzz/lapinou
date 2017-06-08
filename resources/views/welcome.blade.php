@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="fr">
 <head>
+<link rel="icon" type="image/png" sizes="32x32" href="{{URL::asset('/img/favicon.ico')}}">
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=960, initial-scale=1, maximum-scale=1"/>
     <meta charset="utf-8" />
     <meta name="_token" content="{!! csrf_token() !!}"/>
-
 
 
     <title>Lapibook</title>
