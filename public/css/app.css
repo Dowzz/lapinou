@@ -7656,6 +7656,10 @@ button.close {
 }
 
 /*  ---- SCSS de base ----  */
+.col {
+  padding-left: 0;
+}
+
 input::-webkit-input-placeholder {
   color: #9d9d9d;
 }
