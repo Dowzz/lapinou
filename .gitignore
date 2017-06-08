@@ -9,3 +9,4 @@ public/css/app.css
 app/Http/Controllers/panierctrl.php
 database/migrations/2017_05_19_093813_create_paniers_table.php
 public/css/app.css.map
+public/js/all.js

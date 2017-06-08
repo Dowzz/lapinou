@@ -246,9 +246,10 @@ $("#todoinput").keypress(function(e) {
     //grab text
     var userid = $("#user_id").val();
     var todoText = $(this).val();
+    var data = $("#idbook").val();
     console.log(todoText, data, userid);
     $.ajax({
-         data: ({userid:userid, todoText:todoText}),
+         data: ({userid:userid, todoText:todoText, data:data}),
          type: "get" ,
          url: "./insertodo",
          });
