@@ -753,91 +753,40 @@ $icon: (
   }
 }
 
-// ****** Show more/less ******
+// ****** Description box ******
+#profile-description {
+  margin-top: 50px; 
+  position:relative;
+}
+#profile-description .text {
+/*   width: 660px;  */
+  margin-bottom: 5px; 
+  color: #777; 
+  padding: 0 15px; 
+  position:relative; 
+  font-family: Arial; 
+  font-size: 14px; 
+  display: block;
+}
+#profile-description .show-more {
+/*   width: 690px;  */
 
-.summaryText {
-  	display: -webkit-box;
-  	display: -ms-flexbox;
-  	display: flex;
-  	-ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  color: #ffffff;
+  position:relative; 
+  font-size: 12px; 
+  padding-top: 5px; 
+  height: 20px; 
+  text-align: center; 
+ 
+  cursor: pointer;
 }
-.summaryText a {
-  	-webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    margin: auto;
-
+#profile-description .show-more:hover { 
+    color: #9d9d9d;
 }
-.summaryText p {
-	overflow: hidden;
-	position: relative;
-	line-height: 1.6em;
-	max-height: 8em;
-	text-align: justify;
-	display: inline-block;
+#profile-description .show-more-height { 
+  height: 65px; 
+  overflow:hidden; 
 }
-.summaryText p:before {
-
-  	position: absolute;
-  	right: 0;
-  	bottom: 0;
-}
-.summaryText p:after {
-
-  	position: absolute;
-  	right: 0;
-  	width: 1em;
-  	height: 1em;
-  	margin-top: 0.2em;
-  	background: white;
-}
-.summaryText p:after {
-  	content: "";
-  	text-align: right;
-  	position: absolute;
-  	bottom: 0;
-  	right: 0;
-  	width: 100%;
-  	height: 2em;
-  	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #222222 100%);
-  	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #222222 100%);
-}
-.show-less {
-  	display: none;
-}
-.show-less:target {
-  	display: block;
-}
-.show-less:target ~ p {
-  	display: block;
-  	max-height: 100%;
-}
-.show-less:target ~ p:before {
-  	content: "";
-}
-.show-less:target ~ p:after {
-  	content: "";
-  	text-align: right;
-  	position: absolute;
-  	bottom: 0;
-  	right: 0;
-  	width: 100%;
-  	height: 2em;
-  	background: none;
-}
-.show-less:target + a {
-  	display: none;
-}
-.wrapper {
-  	max-width: 300px;
-  	margin: 50px auto;
-}
-.wrapper p {
-  	font-size: 16px;
-  	line-height: 20px;
-}
-
 // ****** Commentaire box ******
 
 .coms{

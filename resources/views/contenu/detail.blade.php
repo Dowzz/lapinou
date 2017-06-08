@@ -83,11 +83,12 @@ $id_livre=$data->id;
 				});	
 			</script>
 		</div>
-		<div class="summaryText">
-  			<a  id="show-more" class="show-less" href="#show-less">Fermer</a>
-  			<a  id="show-less" class="show-more" href="#show-more">Ouvrir</a>
-			<p class="synopsis"><?php echo $description; ?></p>
-		</div>
+		<div id="profile-description">
+            <div class="text show-more-height">
+                <p><?php echo $description ?></p>
+            </div>
+            <div class="show-more"><--- Lire la suite ---></div>
+</div>
 <h4 class="line_effect">
     <span>Commentaires</span>
 </h4>
@@ -192,4 +193,13 @@ $("#addfav").on('click', function (e){
 });
 
 
+    $(".show-more").click(function () {
+        if($(".text").hasClass("show-more-height")) {
+            $(this).text("(Fermer)");
+        } else {
+            $(this).text("(<--- Lire la suite --->)");
+        }
+
+        $(".text").toggleClass("show-more-height");
+    });
 </script>

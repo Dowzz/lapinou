@@ -47,7 +47,7 @@
             $userid=0;
             ?>
             @endif           
-            <p id="totalpaiement">Total a Payer : <?php echo Cart::total() ?> €</p>
+            <p id="totalpaiement">Total a Payer : <?php echo Cart::subtotal() ?> €</p>
             
 
             <div class="form-group col-md-12">

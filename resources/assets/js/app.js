@@ -15,10 +15,6 @@ require('./bootstrap');
 // NE PAS TOUCHER AU DESSUS 
 
 
-
-
-
-
 //affichage dynamique (footer qui remonte)
 
 $("#miniature").load("contenu/accueil");
