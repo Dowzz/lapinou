@@ -40,6 +40,5 @@
 <h3>Téléchargement</h3>
 </div>
 <div class="row">
-<div class="col-md-6 col-sm-6 col-xs-6"><a href="#"> <img src="{{URL::asset('/img/android.png')}}"></a></div>
-<div class="col-md-6 col-sm-6 col-xs-6"><a href="#"> <img src="{{URL::asset('/img/apple.png')}}"></a></div>
+<h1>L'application sera bientôt disponible sur Android et Iphone.</h1>
 </div>
