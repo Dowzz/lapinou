@@ -4,7 +4,7 @@
             <div class="span12">
                 <div class="well well-small clearfix">
                     <div class="span2">
-                        <img src="{{URL::asset('/img/profil.jpg')}}" class="img-polaroid"/>
+                        <img src="{{URL::asset('/img/profil.png')}}" class="img-polaroid"/>
                     </div>
 
                     <div class="span4">
